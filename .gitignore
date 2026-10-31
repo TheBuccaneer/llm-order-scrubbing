@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Zugangsdaten
+.env
+.env.*
+!.env.example
+
+# Modelle und Rohdaten
+*.safetensors
+*.gguf
+data/raw/
+data/models/
+
+# Betriebssystem
+.DS_Store
