@@ -195,3 +195,20 @@ der eigenen Arbeit ist nun abgeschlossen: Die neue Fragestellung
 erweitert deren bewusst rangbeschränktes Modell. Ein allgemeiner
 Neuheitsclaim benötigt weitere Prüfung der Übertragbarkeit und
 verwandter LLM-Schutzarbeiten.
+
+## Release-Boundary-Nachprüfung (02.11.2026)
+
+Gezielte aktuelle Online-Lektüre der für den neuen Claim relevanten
+Originalabschnitte, jeweils **RDNA L2**; keine vollständige
+systematische Neuheitsrecherche. Einzelheiten und die konkrete
+Abgrenzung stehen in `docs/release-boundary-20261102.md`.
+
+| Fassung und Fundstelle | Aussage für die Entscheidung |
+| --- | --- |
+| [PROMPTPEEK, NDSS 2025](https://www.ndss-symposium.org/wp-content/uploads/2025-1772-paper.pdf), §IV-A, S. 4–6 | LPM-gestützte Antwortreihenfolge mit Ein-Token-Probes und Dummies. Kein Test eines Freigabe-Fallbacks vollständiger Antworten. |
+| [OptiLeak v1](https://arxiv.org/html/2602.20595v1), §§3.1, 4.2, 6 | Ein Rangpositionsabstand dient bereits als Cachefeedback. „Gap“ hier ist Rangabstand; der neue Versuch misst einen Zeitabstand, aber ein Gap-Merkmal allein ist nicht neu. |
+| [Carlini/Nasr 2024](https://arxiv.org/html/2410.17175), §§III–IV, VII | Aktive Timing-Probes und fester Ausgabetakt mit Leernachrichten bei nicht bereiten Tokens; Schutz-/Kostenprinzipien sind bekannt. |
+| [Pacer, USENIX Security 2022](https://www.usenix.org/system/files/sec22-mehta.pdf), §§2.2–4 | Tatsächliche Abweichungen von einem geheimnisunabhängigen Sendeplan dürfen selbst keinen geheimen Laufzeitverlauf zeigen. Unser lokaler Fallback illustriert diesen bekannten Punkt. |
+| [Accumulate-and-Serve, 2013](https://arxiv.org/pdf/1302.6123), §§V–VI | Sammelintervalle und formale Verzögerungs-/Privatsphäre-Grenze; nicht direkt auf den LLM-Proxy übertragbar. |
+| [SafeKV v2](https://arxiv.org/html/2508.08438v2), §§4.1–4.2, 7.2 | Der dortige Safeguard-Fallback isoliert verdächtige Cacheblöcke; keine späte Einzelfreigabe von HTTP-Antworten. |
+| [CacheSolidarity v1](https://arxiv.org/html/2603.10726v1) und [PrefixWall v2](https://arxiv.org/html/2603.10726v2), §§2.4, 4–5 | Versionswechsel desselben arXiv-Eintrags; selektive Cacheisolation und benannte Schutzgrenzen, keine BOS-/Slot-Evaluation. |

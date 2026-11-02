@@ -1,0 +1,30 @@
+{
+  "frozen_before_new_runs": true,
+  "rule": "max gap between sorted complete client receives > 10 ms predicts warm position in {1,2}; otherwise {3,4}",
+  "four_class_model": "boundary log gaps plus split, trained only on slot24_dev; compare fixed R1,T1,T2,RT definitions",
+  "c0": {
+    "tokens": 24,
+    "positive": 32,
+    "unwarmed": 4,
+    "server": "C0 threshold64 budget256"
+  },
+  "c1": {
+    "tokens": 24,
+    "positive": 16,
+    "unwarmed": 4,
+    "server": "C1 threshold0 budget256"
+  },
+  "cacheoff": {
+    "tokens": 24,
+    "marked_positions": 16,
+    "unwarmed": 0,
+    "server": "C0 with APC disabled"
+  },
+  "seeds": {
+    "c0_confirm": 17581173094638711317,
+    "c1_transfer": 5366446699370444483,
+    "c0_cacheoff": 9765752471764860039
+  },
+  "old_case_seed": 20261108,
+  "max_new_positive": 64
+}

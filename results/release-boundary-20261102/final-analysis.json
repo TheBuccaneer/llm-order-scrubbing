@@ -1,0 +1,5310 @@
+{
+  "comparisons": [
+    {
+      "train": "slot24_dev",
+      "test": "slot24_holdout",
+      "train_n": 16,
+      "threshold_ms": 10,
+      "boundary_four_class": {
+        "n": 32,
+        "hits": 14,
+        "accuracy": 0.4375,
+        "balanced_accuracy": 0.4375,
+        "wilson95": [
+          0.2817,
+          0.6067
+        ],
+        "chance_p_one_sided": 0.01586455,
+        "confusion_actual_predicted": [
+          [
+            4,
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            3,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            1,
+            0,
+            7
+          ]
+        ]
+      },
+      "boundary_early_vs_late": {
+        "n": 32,
+        "hits": 28,
+        "accuracy": 0.875,
+        "wilson95": [
+          0.7193,
+          0.9503
+        ],
+        "chance_p_one_sided": 9.650597348809242e-06
+      },
+      "binary_T1": {
+        "n": 32,
+        "hits": 20,
+        "accuracy": 0.625,
+        "wilson95": [
+          0.4525,
+          0.7707
+        ],
+        "chance_p_one_sided": 0.10766357486136258
+      },
+      "binary_T2": {
+        "n": 32,
+        "hits": 24,
+        "accuracy": 0.75,
+        "wilson95": [
+          0.5789,
+          0.8675
+        ],
+        "chance_p_one_sided": 0.0035001833457499743
+      },
+      "binary_RT": {
+        "n": 32,
+        "hits": 23,
+        "accuracy": 0.7188,
+        "wilson95": [
+          0.5463,
+          0.8444
+        ],
+        "chance_p_one_sided": 0.010030803503468633
+      },
+      "boundary_detected": 16,
+      "R1": {
+        "n": 32,
+        "hits": 8,
+        "accuracy": 0.25,
+        "balanced_accuracy": 0.25,
+        "wilson95": [
+          0.1325,
+          0.4211
+        ],
+        "chance_p_one_sided": 0.56752916,
+        "confusion_actual_predicted": [
+          [
+            2,
+            6,
+            0,
+            0
+          ],
+          [
+            3,
+            3,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            3,
+            1
+          ],
+          [
+            5,
+            0,
+            3,
+            0
+          ]
+        ]
+      },
+      "T1": {
+        "n": 32,
+        "hits": 8,
+        "accuracy": 0.25,
+        "balanced_accuracy": 0.25,
+        "wilson95": [
+          0.1325,
+          0.4211
+        ],
+        "chance_p_one_sided": 0.56752916,
+        "confusion_actual_predicted": [
+          [
+            0,
+            1,
+            0,
+            7
+          ],
+          [
+            1,
+            1,
+            1,
+            5
+          ],
+          [
+            1,
+            0,
+            3,
+            4
+          ],
+          [
+            2,
+            0,
+            2,
+            4
+          ]
+        ]
+      },
+      "T2": {
+        "n": 32,
+        "hits": 14,
+        "accuracy": 0.4375,
+        "balanced_accuracy": 0.4375,
+        "wilson95": [
+          0.2817,
+          0.6067
+        ],
+        "chance_p_one_sided": 0.01586455,
+        "confusion_actual_predicted": [
+          [
+            2,
+            4,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            3,
+            5
+          ],
+          [
+            0,
+            0,
+            1,
+            7
+          ]
+        ]
+      },
+      "RT": {
+        "n": 32,
+        "hits": 14,
+        "accuracy": 0.4375,
+        "balanced_accuracy": 0.4375,
+        "wilson95": [
+          0.2817,
+          0.6067
+        ],
+        "chance_p_one_sided": 0.01586455,
+        "confusion_actual_predicted": [
+          [
+            2,
+            5,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            3,
+            5
+          ],
+          [
+            1,
+            0,
+            0,
+            7
+          ]
+        ]
+      },
+      "cases": [
+        {
+          "truth_position": 4,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.104,
+              27.015,
+              10.845
+            ],
+            "largest_gap_ms": 27.015,
+            "split": 2,
+            "first_ms": 1051.972,
+            "features": [
+              1.1325833490391168,
+              3.3327394028089152,
+              2.471915799570415,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.092,
+              2.149,
+              6.488
+            ],
+            "largest_gap_ms": 6.488,
+            "split": 0,
+            "first_ms": 1051.399,
+            "features": [
+              1.1287641189172755,
+              1.1471913194393433,
+              2.0133307184562423,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              1.849,
+              0.228,
+              20.693
+            ],
+            "largest_gap_ms": 20.693,
+            "split": 3,
+            "first_ms": 1051.427,
+            "features": [
+              1.0468616967535256,
+              0.2054487170607044,
+              3.076967500662725,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.163,
+              1.332,
+              0.771
+            ],
+            "largest_gap_ms": 2.163,
+            "split": 0,
+            "first_ms": 1051.484,
+            "features": [
+              1.151491225260343,
+              0.8466550824211303,
+              0.5714252099749196,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.443,
+              0.62,
+              21.115
+            ],
+            "largest_gap_ms": 21.115,
+            "split": 3,
+            "first_ms": 1051.339,
+            "features": [
+              1.236210151981978,
+              0.48243602573872985,
+              3.096246660676492,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.098,
+              2.145,
+              2.177
+            ],
+            "largest_gap_ms": 2.177,
+            "split": 0,
+            "first_ms": 1051.415,
+            "features": [
+              1.1307063856590323,
+              1.1458758914099365,
+              1.1558476439924308,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              24.749,
+              20.428,
+              20.119
+            ],
+            "largest_gap_ms": 24.749,
+            "split": 1,
+            "first_ms": 1051.489,
+            "features": [
+              3.248385460852561,
+              3.0647126182958164,
+              3.050176187024745,
+              1
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.099,
+              2.169,
+              2.192
+            ],
+            "largest_gap_ms": 2.192,
+            "split": 0,
+            "first_ms": 1051.556,
+            "features": [
+              1.1312062858669016,
+              1.1535063259265583,
+              1.1605555700824541,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.359,
+              4.092,
+              18.347
+            ],
+            "largest_gap_ms": 18.347,
+            "split": 3,
+            "first_ms": 1051.517,
+            "features": [
+              1.2115212430432654,
+              1.627667734893492,
+              2.9625486882167156,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.056,
+              17.516,
+              20.988
+            ],
+            "largest_gap_ms": 20.988,
+            "split": 3,
+            "first_ms": 1051.432,
+            "features": [
+              1.1169798998929603,
+              2.9186416500224266,
+              3.0905035354408654,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.058,
+              2.156,
+              12.286
+            ],
+            "largest_gap_ms": 12.286,
+            "split": 3,
+            "first_ms": 1051.519,
+            "features": [
+              1.117598242708167,
+              1.1494558986294392,
+              2.5867353107833937,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.068,
+              2.106,
+              17.787
+            ],
+            "largest_gap_ms": 17.787,
+            "split": 3,
+            "first_ms": 1051.418,
+            "features": [
+              1.1211507127408957,
+              1.133469006249785,
+              2.9331696656801007,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.029,
+              2.198,
+              0.64
+            ],
+            "largest_gap_ms": 2.198,
+            "split": 0,
+            "first_ms": 1051.484,
+            "features": [
+              1.1083817450786735,
+              1.1625994078115391,
+              0.49481574689021557,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.084,
+              2.138,
+              2.126
+            ],
+            "largest_gap_ms": 2.138,
+            "split": 0,
+            "first_ms": 1051.557,
+            "features": [
+              1.1260727744778591,
+              1.1436764723664887,
+              1.1396339432549671,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              3.494,
+              20.395,
+              20.01
+            ],
+            "largest_gap_ms": 20.395,
+            "split": 2,
+            "first_ms": 1051.503,
+            "features": [
+              1.502843079764801,
+              3.0631363569185774,
+              3.044985758944996,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.113,
+              15.78,
+              20.296
+            ],
+            "largest_gap_ms": 20.296,
+            "split": 3,
+            "first_ms": 1051.457,
+            "features": [
+              1.1355560525644264,
+              2.820205817680674,
+              3.058534757400465,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.094,
+              2.112,
+              2.161
+            ],
+            "largest_gap_ms": 2.161,
+            "split": 0,
+            "first_ms": 1051.607,
+            "features": [
+              1.1295529835524873,
+              1.1353668222733289,
+              1.1508836878884665,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.072,
+              2.169,
+              5.484
+            ],
+            "largest_gap_ms": 5.484,
+            "split": 0,
+            "first_ms": 1051.675,
+            "features": [
+              1.122297239266075,
+              1.1534397472005824,
+              1.8692714388221403,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.046,
+              14.415,
+              20.975
+            ],
+            "largest_gap_ms": 20.975,
+            "split": 3,
+            "first_ms": 1051.602,
+            "features": [
+              1.1136887324531353,
+              2.735368890986545,
+              3.089923054337672,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.065,
+              4.058,
+              21.269
+            ],
+            "largest_gap_ms": 21.269,
+            "split": 3,
+            "first_ms": 1051.419,
+            "features": [
+              1.120038433946773,
+              1.6209976405817041,
+              3.103212416214477,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.116,
+              9.046,
+              21.851
+            ],
+            "largest_gap_ms": 21.851,
+            "split": 3,
+            "first_ms": 1051.361,
+            "features": [
+              1.136522849074176,
+              2.3071726540260444,
+              3.128991816730801,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.118,
+              2.166,
+              2.319
+            ],
+            "largest_gap_ms": 2.319,
+            "split": 0,
+            "first_ms": 1051.452,
+            "features": [
+              1.13724116005093,
+              1.152331870571454,
+              1.199518599065831,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.084,
+              2.147,
+              12.998
+            ],
+            "largest_gap_ms": 12.998,
+            "split": 3,
+            "first_ms": 1051.609,
+            "features": [
+              1.1261862745678082,
+              1.1464384963172138,
+              2.638929678611073,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.102,
+              2.205,
+              14.159
+            ],
+            "largest_gap_ms": 14.159,
+            "split": 3,
+            "first_ms": 1051.496,
+            "features": [
+              1.131951960296536,
+              1.1645953908958075,
+              2.7185727774326227,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.187,
+              30.95,
+              21.153
+            ],
+            "largest_gap_ms": 30.95,
+            "split": 2,
+            "first_ms": 1051.476,
+            "features": [
+              1.1590285750587366,
+              3.4641725564103276,
+              3.09797527480966,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.086,
+              2.225,
+              2.218
+            ],
+            "largest_gap_ms": 2.225,
+            "split": 0,
+            "first_ms": 1051.381,
+            "features": [
+              1.1267668692057236,
+              1.170878995303822,
+              1.1687125023808465,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.06,
+              1.962,
+              0.193
+            ],
+            "largest_gap_ms": 2.06,
+            "split": 0,
+            "first_ms": 1051.466,
+            "features": [
+              1.1184289681531385,
+              1.0858275780864615,
+              0.17634959339865164,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.131,
+              2.165,
+              4.235
+            ],
+            "largest_gap_ms": 4.235,
+            "split": 0,
+            "first_ms": 1051.564,
+            "features": [
+              1.1413795898518497,
+              1.152081963021729,
+              1.6554258683685126,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.127,
+              1.068,
+              1.082
+            ],
+            "largest_gap_ms": 2.127,
+            "split": 0,
+            "first_ms": 1051.415,
+            "features": [
+              1.1401652159918862,
+              0.7264257548921982,
+              0.7333424187094539,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.207,
+              2.127,
+              2.166
+            ],
+            "largest_gap_ms": 2.207,
+            "split": 0,
+            "first_ms": 1051.415,
+            "features": [
+              1.1654472335052288,
+              1.1399570265342513,
+              1.1525119169480962,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              0.57,
+              1.488,
+              2.157
+            ],
+            "largest_gap_ms": 2.157,
+            "split": 0,
+            "first_ms": 1051.671,
+            "features": [
+              0.45078513131277637,
+              0.911410442611388,
+              1.1496076386746408,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.131,
+              2.172,
+              2.145
+            ],
+            "largest_gap_ms": 2.172,
+            "split": 0,
+            "first_ms": 1051.636,
+            "features": [
+              1.1412483168339675,
+              1.1545060513218903,
+              1.1459076854355237,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "train": "slot24_dev",
+      "test": "slot24_confirm",
+      "train_n": 16,
+      "threshold_ms": 10,
+      "boundary_four_class": {
+        "n": 32,
+        "hits": 15,
+        "accuracy": 0.4688,
+        "balanced_accuracy": 0.4688,
+        "wilson95": [
+          0.3087,
+          0.6355
+        ],
+        "chance_p_one_sided": 0.00596341,
+        "confusion_actual_predicted": [
+          [
+            4,
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            4,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            1,
+            0,
+            7
+          ]
+        ]
+      },
+      "boundary_early_vs_late": {
+        "n": 32,
+        "hits": 27,
+        "accuracy": 0.8438,
+        "wilson95": [
+          0.6825,
+          0.9314
+        ],
+        "chance_p_one_sided": 5.653710104525089e-05
+      },
+      "binary_T1": {
+        "n": 32,
+        "hits": 17,
+        "accuracy": 0.5312,
+        "wilson95": [
+          0.3645,
+          0.6913
+        ],
+        "chance_p_one_sided": 0.4300250329542905
+      },
+      "binary_T2": {
+        "n": 32,
+        "hits": 27,
+        "accuracy": 0.8438,
+        "wilson95": [
+          0.6825,
+          0.9314
+        ],
+        "chance_p_one_sided": 5.653710104525089e-05
+      },
+      "binary_RT": {
+        "n": 32,
+        "hits": 26,
+        "accuracy": 0.8125,
+        "wilson95": [
+          0.6469,
+          0.9111
+        ],
+        "chance_p_one_sided": 0.0002675263676792383
+      },
+      "boundary_detected": 19,
+      "R1": {
+        "n": 32,
+        "hits": 14,
+        "accuracy": 0.4375,
+        "balanced_accuracy": 0.4375,
+        "wilson95": [
+          0.2817,
+          0.6067
+        ],
+        "chance_p_one_sided": 0.01586455,
+        "confusion_actual_predicted": [
+          [
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            3,
+            2,
+            0
+          ],
+          [
+            2,
+            4,
+            2,
+            0
+          ],
+          [
+            3,
+            1,
+            0,
+            4
+          ]
+        ]
+      },
+      "T1": {
+        "n": 32,
+        "hits": 10,
+        "accuracy": 0.3125,
+        "balanced_accuracy": 0.3125,
+        "wilson95": [
+          0.1795,
+          0.4857
+        ],
+        "chance_p_one_sided": 0.26334096,
+        "confusion_actual_predicted": [
+          [
+            1,
+            0,
+            1,
+            6
+          ],
+          [
+            0,
+            1,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            3,
+            3
+          ],
+          [
+            0,
+            0,
+            3,
+            5
+          ]
+        ]
+      },
+      "T2": {
+        "n": 32,
+        "hits": 20,
+        "accuracy": 0.625,
+        "balanced_accuracy": 0.625,
+        "wilson95": [
+          0.4525,
+          0.7707
+        ],
+        "chance_p_one_sided": 7.98e-06,
+        "confusion_actual_predicted": [
+          [
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            8
+          ]
+        ]
+      },
+      "RT": {
+        "n": 32,
+        "hits": 13,
+        "accuracy": 0.4062,
+        "balanced_accuracy": 0.4062,
+        "wilson95": [
+          0.2552,
+          0.5774
+        ],
+        "chance_p_one_sided": 0.03775129,
+        "confusion_actual_predicted": [
+          [
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            0,
+            1,
+            5
+          ]
+        ]
+      },
+      "cases": [
+        {
+          "truth_position": 4,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.125,
+              13.677,
+              10.169
+            ],
+            "largest_gap_ms": 13.677,
+            "split": 2,
+            "first_ms": 1051.98,
+            "features": [
+              1.139396202463303,
+              2.6863004473851393,
+              2.413170554816017,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.092,
+              2.144,
+              24.801
+            ],
+            "largest_gap_ms": 24.801,
+            "split": 3,
+            "first_ms": 1051.38,
+            "features": [
+              1.1288443270185309,
+              1.1455820667810577,
+              3.250407592154947,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.104,
+              2.454,
+              18.971
+            ],
+            "largest_gap_ms": 18.971,
+            "split": 3,
+            "first_ms": 1051.405,
+            "features": [
+              1.1327402480449664,
+              1.2394339591880679,
+              2.9942931885677293,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.199,
+              2.234,
+              2.128
+            ],
+            "largest_gap_ms": 2.234,
+            "split": 0,
+            "first_ms": 1051.843,
+            "features": [
+              1.1627141519845292,
+              1.1735787493579315,
+              1.1403720833163316,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.137,
+              6.09,
+              19.567
+            ],
+            "largest_gap_ms": 19.567,
+            "split": 3,
+            "first_ms": 1051.453,
+            "features": [
+              1.1432548156509517,
+              1.9587557188854763,
+              3.0236777362279055,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.145,
+              2.184,
+              2.143
+            ],
+            "largest_gap_ms": 2.184,
+            "split": 0,
+            "first_ms": 1051.355,
+            "features": [
+              1.1457824111195833,
+              1.1581454915741367,
+              1.1453183778993279,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              13.665,
+              20.873,
+              21.39
+            ],
+            "largest_gap_ms": 21.39,
+            "split": 3,
+            "first_ms": 1051.621,
+            "features": [
+              2.6854444045957524,
+              3.085264794786986,
+              3.1086210406826087,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.06,
+              2.151,
+              2.213
+            ],
+            "largest_gap_ms": 2.213,
+            "split": 0,
+            "first_ms": 1051.516,
+            "features": [
+              1.1183430179548528,
+              1.1478699625854465,
+              1.167299380075764,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.059,
+              6.155,
+              19.417
+            ],
+            "largest_gap_ms": 19.417,
+            "split": 3,
+            "first_ms": 1051.446,
+            "features": [
+              1.1181406953627209,
+              1.9678253891511388,
+              3.0163517240220195,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.096,
+              17.16,
+              21.799
+            ],
+            "largest_gap_ms": 21.799,
+            "split": 3,
+            "first_ms": 1051.627,
+            "features": [
+              1.130224321394374,
+              2.899200227575131,
+              3.126704701068323,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.265,
+              1.835,
+              0.287
+            ],
+            "largest_gap_ms": 2.265,
+            "split": 0,
+            "first_ms": 1051.637,
+            "features": [
+              1.1831997302986128,
+              1.0421886636282673,
+              0.2519533352474871,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.06,
+              2.131,
+              2.753
+            ],
+            "largest_gap_ms": 2.753,
+            "split": 0,
+            "first_ms": 1051.535,
+            "features": [
+              1.1184639343707108,
+              1.14131475399434,
+              1.3226711542876763,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.088,
+              2.345,
+              15.153
+            ],
+            "largest_gap_ms": 15.153,
+            "split": 3,
+            "first_ms": 1051.464,
+            "features": [
+              1.127394413969659,
+              1.2074057051733516,
+              2.782086413538408,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.19,
+              2.167,
+              2.183
+            ],
+            "largest_gap_ms": 2.19,
+            "split": 0,
+            "first_ms": 1051.381,
+            "features": [
+              1.160028126802109,
+              1.1529404232659637,
+              1.157803098753879,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.413,
+              4.584,
+              19.259
+            ],
+            "largest_gap_ms": 19.259,
+            "split": 3,
+            "first_ms": 1051.298,
+            "features": [
+              1.2276347396094223,
+              1.7198498481597022,
+              3.0085965724970682,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              15.991,
+              21.173,
+              21.153
+            ],
+            "largest_gap_ms": 21.173,
+            "split": 2,
+            "first_ms": 1051.585,
+            "features": [
+              2.8326581899867076,
+              3.0988751520712583,
+              3.0979786152016024,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.055,
+              2.115,
+              2.15
+            ],
+            "largest_gap_ms": 2.15,
+            "split": 0,
+            "first_ms": 1051.447,
+            "features": [
+              1.1167075769372017,
+              1.1363321966893842,
+              1.1473208622075295,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.078,
+              2.177,
+              2.139
+            ],
+            "largest_gap_ms": 2.177,
+            "split": 0,
+            "first_ms": 1052.414,
+            "features": [
+              1.1241438987950925,
+              1.1559036751482865,
+              1.1439845549815808,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.12,
+              31.585,
+              19.594
+            ],
+            "largest_gap_ms": 31.585,
+            "split": 2,
+            "first_ms": 1051.517,
+            "features": [
+              1.137926587185734,
+              3.4838413799666887,
+              3.025002976046361,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.336,
+              4.405,
+              20.794
+            ],
+            "largest_gap_ms": 20.794,
+            "split": 3,
+            "first_ms": 1051.318,
+            "features": [
+              1.2047113315475602,
+              1.6873349968264995,
+              3.081626443366692,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.071,
+              5.775,
+              20.729
+            ],
+            "largest_gap_ms": 20.729,
+            "split": 3,
+            "first_ms": 1051.46,
+            "features": [
+              1.12186028106124,
+              1.9132561931924652,
+              3.0786536646090354,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.156,
+              2.179,
+              4.499
+            ],
+            "largest_gap_ms": 4.499,
+            "split": 0,
+            "first_ms": 1051.416,
+            "features": [
+              1.149410910725475,
+              1.1564386460507614,
+              1.704555164538164,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              0.228,
+              1.904,
+              17.638
+            ],
+            "largest_gap_ms": 17.638,
+            "split": 3,
+            "first_ms": 1051.197,
+            "features": [
+              0.205073262652625,
+              1.0659744209660214,
+              2.925213667296899,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.482,
+              2.11,
+              14.196
+            ],
+            "largest_gap_ms": 14.196,
+            "split": 3,
+            "first_ms": 1051.124,
+            "features": [
+              1.2475896097213706,
+              1.134520148582973,
+              2.721054609384107,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.223,
+              28.02,
+              19.838
+            ],
+            "largest_gap_ms": 28.02,
+            "split": 2,
+            "first_ms": 1051.358,
+            "features": [
+              1.1703324599119775,
+              3.367999168792634,
+              3.036790816094557,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.084,
+              2.161,
+              2.204
+            ],
+            "largest_gap_ms": 2.204,
+            "split": 0,
+            "first_ms": 1051.648,
+            "features": [
+              1.1261502802198897,
+              1.1509523350196207,
+              1.1643042068874607,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.174,
+              2.11,
+              14.078
+            ],
+            "largest_gap_ms": 14.078,
+            "split": 3,
+            "first_ms": 1051.438,
+            "features": [
+              1.1551416343157759,
+              1.1347680532512328,
+              2.713205423413076,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.324,
+              1.766,
+              0.426
+            ],
+            "largest_gap_ms": 2.324,
+            "split": 0,
+            "first_ms": 1051.378,
+            "features": [
+              1.201143605915768,
+              1.0172774966129512,
+              0.3551033095681794,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.096,
+              3.128,
+              20.356
+            ],
+            "largest_gap_ms": 20.356,
+            "split": 3,
+            "first_ms": 1051.624,
+            "features": [
+              1.130188795075181,
+              1.4176844951579834,
+              3.0613094582187967,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.099,
+              2.175,
+              2.14
+            ],
+            "largest_gap_ms": 2.175,
+            "split": 0,
+            "first_ms": 1051.257,
+            "features": [
+              1.1309507193063948,
+              1.155214399652166,
+              1.144376291324467,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.28,
+              2.149,
+              18.161
+            ],
+            "largest_gap_ms": 18.161,
+            "split": 3,
+            "first_ms": 1051.747,
+            "features": [
+              1.1877781763651374,
+              1.147209418334565,
+              2.9528618282235763,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.071,
+              2.19,
+              2.19
+            ],
+            "largest_gap_ms": 2.19,
+            "split": 0,
+            "first_ms": 1051.687,
+            "features": [
+              1.1221370651317066,
+              1.1600124528110904,
+              1.1601632264194748,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "train": "slot16_dev",
+      "test": "slot16_test",
+      "train_n": 16,
+      "threshold_ms": 10,
+      "boundary_four_class": {
+        "n": 64,
+        "hits": 14,
+        "accuracy": 0.2188,
+        "balanced_accuracy": 0.2188,
+        "wilson95": [
+          0.135,
+          0.3343
+        ],
+        "chance_p_one_sided": 0.76101045,
+        "confusion_actual_predicted": [
+          [
+            5,
+            2,
+            4,
+            5
+          ],
+          [
+            6,
+            6,
+            1,
+            3
+          ],
+          [
+            6,
+            5,
+            1,
+            4
+          ],
+          [
+            4,
+            5,
+            5,
+            2
+          ]
+        ]
+      },
+      "boundary_early_vs_late": {
+        "n": 64,
+        "hits": 32,
+        "accuracy": 0.5,
+        "wilson95": [
+          0.381,
+          0.619
+        ],
+        "chance_p_one_sided": 0.5496733768739833
+      },
+      "binary_T1": {
+        "n": 64,
+        "hits": 33,
+        "accuracy": 0.5156,
+        "wilson95": [
+          0.3958,
+          0.6337
+        ],
+        "chance_p_one_sided": 0.4503266231260167
+      },
+      "binary_T2": {
+        "n": 64,
+        "hits": 38,
+        "accuracy": 0.5938,
+        "wilson95": [
+          0.4715,
+          0.7054
+        ],
+        "chance_p_one_sided": 0.08432145571985168
+      },
+      "binary_RT": {
+        "n": 64,
+        "hits": 35,
+        "accuracy": 0.5469,
+        "wilson95": [
+          0.4257,
+          0.6627
+        ],
+        "chance_p_one_sided": 0.2661543880139211
+      },
+      "boundary_detected": 0,
+      "R1": {
+        "n": 64,
+        "hits": 8,
+        "accuracy": 0.125,
+        "balanced_accuracy": 0.125,
+        "wilson95": [
+          0.0647,
+          0.2277
+        ],
+        "chance_p_one_sided": 0.99568214,
+        "confusion_actual_predicted": [
+          [
+            2,
+            8,
+            1,
+            5
+          ],
+          [
+            9,
+            2,
+            1,
+            4
+          ],
+          [
+            3,
+            7,
+            1,
+            5
+          ],
+          [
+            5,
+            6,
+            2,
+            3
+          ]
+        ]
+      },
+      "T1": {
+        "n": 64,
+        "hits": 18,
+        "accuracy": 0.2812,
+        "balanced_accuracy": 0.2812,
+        "wilson95": [
+          0.1859,
+          0.4013
+        ],
+        "chance_p_one_sided": 0.32557157,
+        "confusion_actual_predicted": [
+          [
+            1,
+            9,
+            1,
+            5
+          ],
+          [
+            0,
+            9,
+            1,
+            6
+          ],
+          [
+            1,
+            9,
+            3,
+            3
+          ],
+          [
+            1,
+            8,
+            2,
+            5
+          ]
+        ]
+      },
+      "T2": {
+        "n": 64,
+        "hits": 17,
+        "accuracy": 0.2656,
+        "balanced_accuracy": 0.2656,
+        "wilson95": [
+          0.173,
+          0.3848
+        ],
+        "chance_p_one_sided": 0.43335211,
+        "confusion_actual_predicted": [
+          [
+            4,
+            7,
+            2,
+            3
+          ],
+          [
+            4,
+            9,
+            1,
+            2
+          ],
+          [
+            4,
+            7,
+            2,
+            3
+          ],
+          [
+            5,
+            8,
+            1,
+            2
+          ]
+        ]
+      },
+      "RT": {
+        "n": 64,
+        "hits": 15,
+        "accuracy": 0.2344,
+        "balanced_accuracy": 0.2344,
+        "wilson95": [
+          0.1475,
+          0.3513
+        ],
+        "chance_p_one_sided": 0.66004868,
+        "confusion_actual_predicted": [
+          [
+            6,
+            5,
+            1,
+            4
+          ],
+          [
+            2,
+            4,
+            3,
+            7
+          ],
+          [
+            6,
+            3,
+            1,
+            6
+          ],
+          [
+            5,
+            2,
+            5,
+            4
+          ]
+        ]
+      },
+      "cases": [
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.05,
+              2.188,
+              2.142
+            ],
+            "largest_gap_ms": 2.188,
+            "split": 0,
+            "first_ms": 1052.198,
+            "features": [
+              1.1151389676650607,
+              1.1593263182522568,
+              1.1449527881909494,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.077,
+              2.257,
+              2.135
+            ],
+            "largest_gap_ms": 2.257,
+            "split": 0,
+            "first_ms": 1051.441,
+            "features": [
+              1.124062987821977,
+              1.1806794073766345,
+              1.1425251814370068,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.088,
+              2.136,
+              2.199
+            ],
+            "largest_gap_ms": 2.199,
+            "split": 0,
+            "first_ms": 1051.279,
+            "features": [
+              1.1275760919263886,
+              1.142946189221025,
+              1.162930473033317,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.139,
+              2.152,
+              2.207
+            ],
+            "largest_gap_ms": 2.207,
+            "split": 0,
+            "first_ms": 1051.503,
+            "features": [
+              1.1439848735287508,
+              1.1478797992070937,
+              1.1653655429726173,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.138,
+              2.182,
+              2.154
+            ],
+            "largest_gap_ms": 2.182,
+            "split": 0,
+            "first_ms": 1051.353,
+            "features": [
+              1.1435802368328138,
+              1.1574992447548007,
+              1.148824932696669,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.352,
+              2.129,
+              2.144
+            ],
+            "largest_gap_ms": 2.352,
+            "split": 0,
+            "first_ms": 1051.285,
+            "features": [
+              1.20968784234124,
+              1.1406987633961951,
+              1.145379455576792,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.341,
+              2.302,
+              2.056
+            ],
+            "largest_gap_ms": 2.341,
+            "split": 0,
+            "first_ms": 1051.413,
+            "features": [
+              1.2061228912315975,
+              1.1945095688225642,
+              1.1169959358317905,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.069,
+              2.254,
+              2.159
+            ],
+            "largest_gap_ms": 2.254,
+            "split": 0,
+            "first_ms": 1051.502,
+            "features": [
+              1.1215084919330425,
+              1.1798410619184734,
+              1.1502219663345254,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.187,
+              2.156,
+              2.175
+            ],
+            "largest_gap_ms": 2.187,
+            "split": 0,
+            "first_ms": 1051.187,
+            "features": [
+              1.1590062956596956,
+              1.1493858813674627,
+              1.1552962936976956,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.004,
+              2.169,
+              2.221
+            ],
+            "largest_gap_ms": 2.221,
+            "split": 0,
+            "first_ms": 1051.451,
+            "features": [
+              1.100044595759735,
+              1.1535596488182935,
+              1.1698300166586408,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.128,
+              2.132,
+              2.158
+            ],
+            "largest_gap_ms": 2.158,
+            "split": 0,
+            "first_ms": 1051.445,
+            "features": [
+              1.1404590379478075,
+              1.1415673665475892,
+              1.1499021830498803,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.209,
+              2.141,
+              2.207
+            ],
+            "largest_gap_ms": 2.209,
+            "split": 0,
+            "first_ms": 1051.235,
+            "features": [
+              1.1658580793422009,
+              1.144555228736013,
+              1.1654871409573586,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.049,
+              2.157,
+              2.207
+            ],
+            "largest_gap_ms": 2.207,
+            "split": 0,
+            "first_ms": 1051.314,
+            "features": [
+              1.1147946451948145,
+              1.1495696266286188,
+              1.165243930200008,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.29,
+              2.181,
+              2.114
+            ],
+            "largest_gap_ms": 2.29,
+            "split": 0,
+            "first_ms": 1051.453,
+            "features": [
+              1.1909079293115634,
+              1.1570619980566148,
+              1.1360503240515722,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.097,
+              2.332,
+              2.126
+            ],
+            "largest_gap_ms": 2.332,
+            "split": 0,
+            "first_ms": 1051.323,
+            "features": [
+              1.1305866177761479,
+              1.2034670764671573,
+              1.1396656164287673,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.18,
+              2.198,
+              2.166
+            ],
+            "largest_gap_ms": 2.198,
+            "split": 0,
+            "first_ms": 1051.31,
+            "features": [
+              1.1568827691178933,
+              1.162680386674068,
+              1.1524512733680852,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.109,
+              2.171,
+              2.233
+            ],
+            "largest_gap_ms": 2.233,
+            "split": 0,
+            "first_ms": 1051.503,
+            "features": [
+              1.134215247684659,
+              1.1540261817161412,
+              1.1732979034779936,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.153,
+              2.176,
+              2.176
+            ],
+            "largest_gap_ms": 2.176,
+            "split": 0,
+            "first_ms": 1051.233,
+            "features": [
+              1.1484095645778412,
+              1.1555072974496212,
+              1.1556115231730335,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.172,
+              2.17,
+              2.16
+            ],
+            "largest_gap_ms": 2.172,
+            "split": 0,
+            "first_ms": 1051.204,
+            "features": [
+              1.1543071320110714,
+              1.153764710369025,
+              1.1506492398077548,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.125,
+              2.2,
+              2.192
+            ],
+            "largest_gap_ms": 2.2,
+            "split": 0,
+            "first_ms": 1051.268,
+            "features": [
+              1.1392979538959491,
+              1.1631679971579774,
+              1.1607526239553962,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.078,
+              2.185,
+              2.252
+            ],
+            "largest_gap_ms": 2.252,
+            "split": 0,
+            "first_ms": 1051.321,
+            "features": [
+              1.1241799654325957,
+              1.158444125725501,
+              1.1792508188041841,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.116,
+              2.132,
+              2.184
+            ],
+            "largest_gap_ms": 2.184,
+            "split": 0,
+            "first_ms": 1051.493,
+            "features": [
+              1.1364708565739219,
+              1.1418036340584254,
+              1.158183807146218,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.229,
+              2.133,
+              2.187
+            ],
+            "largest_gap_ms": 2.229,
+            "split": 0,
+            "first_ms": 1051.498,
+            "features": [
+              1.1722300930902072,
+              1.1421355913679339,
+              1.159119256504763,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.06,
+              2.216,
+              2.216
+            ],
+            "largest_gap_ms": 2.216,
+            "split": 0,
+            "first_ms": 1051.32,
+            "features": [
+              1.1184057655956274,
+              1.1680124105506937,
+              1.1680749164689517,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.113,
+              2.214,
+              2.213
+            ],
+            "largest_gap_ms": 2.214,
+            "split": 0,
+            "first_ms": 1051.233,
+            "features": [
+              1.1356871113007707,
+              1.1674776853638285,
+              1.167191074433401,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.136,
+              2.184,
+              2.164
+            ],
+            "largest_gap_ms": 2.184,
+            "split": 0,
+            "first_ms": 1051.293,
+            "features": [
+              1.1428218190045338,
+              1.1579950416453324,
+              1.1517469699949838,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.111,
+              2.189,
+              2.188
+            ],
+            "largest_gap_ms": 2.189,
+            "split": 0,
+            "first_ms": 1051.329,
+            "features": [
+              1.1350094681170997,
+              1.159746584500243,
+              1.1593667844035032,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.146,
+              2.181,
+              2.186
+            ],
+            "largest_gap_ms": 2.186,
+            "split": 0,
+            "first_ms": 1051.397,
+            "features": [
+              1.1460310366856765,
+              1.1571468847643505,
+              1.1588368304632048,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.216,
+              2.09,
+              2.14
+            ],
+            "largest_gap_ms": 2.216,
+            "split": 0,
+            "first_ms": 1051.582,
+            "features": [
+              1.1682210593391034,
+              1.1281264297181832,
+              1.1443005039074985,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.236,
+              2.141,
+              2.158
+            ],
+            "largest_gap_ms": 2.236,
+            "split": 0,
+            "first_ms": 1051.366,
+            "features": [
+              1.1742347800250779,
+              1.1444565305648102,
+              1.1497881761637407,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.091,
+              2.186,
+              2.183
+            ],
+            "largest_gap_ms": 2.186,
+            "split": 0,
+            "first_ms": 1051.307,
+            "features": [
+              1.1283464800588225,
+              1.1587928903535671,
+              1.1578665602186538,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.081,
+              2.177,
+              2.187
+            ],
+            "largest_gap_ms": 2.187,
+            "split": 0,
+            "first_ms": 1051.666,
+            "features": [
+              1.1253587256758153,
+              1.1559512047350697,
+              1.1592353418558634,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.117,
+              2.18,
+              2.183
+            ],
+            "largest_gap_ms": 2.183,
+            "split": 0,
+            "first_ms": 1051.49,
+            "features": [
+              1.13696210988456,
+              1.1570270980976578,
+              1.1577094700312833,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.167,
+              2.211,
+              2.121
+            ],
+            "largest_gap_ms": 2.211,
+            "split": 0,
+            "first_ms": 1051.434,
+            "features": [
+              1.152666036163404,
+              1.1667088474757263,
+              1.1380006159784815,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.119,
+              2.234,
+              2.169
+            ],
+            "largest_gap_ms": 2.234,
+            "split": 0,
+            "first_ms": 1051.342,
+            "features": [
+              1.137660871623223,
+              1.1738112844866262,
+              1.1533258273460747,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.12,
+              2.187,
+              2.145
+            ],
+            "largest_gap_ms": 2.187,
+            "split": 0,
+            "first_ms": 1051.353,
+            "features": [
+              1.137971774243335,
+              1.1589564005570778,
+              1.1459232641390549,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.138,
+              2.108,
+              2.176
+            ],
+            "largest_gap_ms": 2.176,
+            "split": 0,
+            "first_ms": 1051.201,
+            "features": [
+              1.143653529636322,
+              1.1338774324515777,
+              1.155542250488957,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.089,
+              2.192,
+              2.212
+            ],
+            "largest_gap_ms": 2.212,
+            "split": 0,
+            "first_ms": 1051.351,
+            "features": [
+              1.1279357881472243,
+              1.1607808160879136,
+              1.1668019487782622,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.126,
+              2.179,
+              2.157
+            ],
+            "largest_gap_ms": 2.179,
+            "split": 0,
+            "first_ms": 1051.518,
+            "features": [
+              1.1396691356083761,
+              1.1567220646343799,
+              1.1496393142759416,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.04,
+              2.176,
+              2.148
+            ],
+            "largest_gap_ms": 2.176,
+            "split": 0,
+            "first_ms": 1051.392,
+            "features": [
+              1.1118808704085583,
+              1.1555041484671678,
+              1.146714597271516,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.089,
+              2.219,
+              2.18
+            ],
+            "largest_gap_ms": 2.219,
+            "split": 0,
+            "first_ms": 1051.588,
+            "features": [
+              1.1278642477215928,
+              1.1692245149587095,
+              1.1567664103301578,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.299,
+              2.142,
+              2.136
+            ],
+            "largest_gap_ms": 2.299,
+            "split": 0,
+            "first_ms": 1051.478,
+            "features": [
+              1.1936945637162397,
+              1.1448032047011232,
+              1.1429139820081051,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.151,
+              2.138,
+              2.231
+            ],
+            "largest_gap_ms": 2.231,
+            "split": 0,
+            "first_ms": 1051.425,
+            "features": [
+              1.1477306529422489,
+              1.143542313664829,
+              1.172675926505747,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.041,
+              2.185,
+              2.134
+            ],
+            "largest_gap_ms": 2.185,
+            "split": 0,
+            "first_ms": 1051.479,
+            "features": [
+              1.1122031793536786,
+              1.1585166511600613,
+              1.1424294731252411,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.073,
+              2.244,
+              2.143
+            ],
+            "largest_gap_ms": 2.244,
+            "split": 0,
+            "first_ms": 1051.56,
+            "features": [
+              1.1226093748832342,
+              1.176858306337297,
+              1.145096303654987,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.162,
+              2.213,
+              2.145
+            ],
+            "largest_gap_ms": 2.213,
+            "split": 0,
+            "first_ms": 1051.257,
+            "features": [
+              1.151177540441444,
+              1.1672972016295908,
+              1.1456971901794748,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.268,
+              2.061,
+              2.182
+            ],
+            "largest_gap_ms": 2.268,
+            "split": 0,
+            "first_ms": 1051.501,
+            "features": [
+              1.18428741215745,
+              1.1188465221553408,
+              1.1574172166297934,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.202,
+              2.13,
+              2.139
+            ],
+            "largest_gap_ms": 2.202,
+            "split": 0,
+            "first_ms": 1051.619,
+            "features": [
+              1.1638521263257502,
+              1.1409221357865391,
+              1.143953336866662,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.292,
+              2.167,
+              2.201
+            ],
+            "largest_gap_ms": 2.292,
+            "split": 0,
+            "first_ms": 1051.435,
+            "features": [
+              1.1914427297935974,
+              1.1528554944522025,
+              1.1633304811638157,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.084,
+              2.171,
+              2.499
+            ],
+            "largest_gap_ms": 2.499,
+            "split": 0,
+            "first_ms": 1051.537,
+            "features": [
+              1.1262054061713531,
+              1.1539126440527379,
+              1.252412049787743,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.119,
+              2.138,
+              2.466
+            ],
+            "largest_gap_ms": 2.466,
+            "split": 0,
+            "first_ms": 1051.46,
+            "features": [
+              1.137465306024448,
+              1.1435611160875376,
+              1.2430248494094043,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.155,
+              2.193,
+              2.165
+            ],
+            "largest_gap_ms": 2.193,
+            "split": 0,
+            "first_ms": 1051.265,
+            "features": [
+              1.1491102001558626,
+              1.1610125879377544,
+              1.1522933301173983,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.061,
+              2.232,
+              2.151
+            ],
+            "largest_gap_ms": 2.232,
+            "split": 0,
+            "first_ms": 1051.252,
+            "features": [
+              1.1187782486437872,
+              1.1729544714876103,
+              1.147679557297697,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.199,
+              2.175,
+              2.182
+            ],
+            "largest_gap_ms": 2.199,
+            "split": 0,
+            "first_ms": 1051.158,
+            "features": [
+              1.1627179036153164,
+              1.1551608499190984,
+              1.1576120617207064,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.122,
+              2.163,
+              2.151
+            ],
+            "largest_gap_ms": 2.163,
+            "split": 0,
+            "first_ms": 1051.355,
+            "features": [
+              1.1385068132210323,
+              1.151566469686205,
+              1.1475973544779037,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.074,
+              2.18,
+              2.19
+            ],
+            "largest_gap_ms": 2.19,
+            "split": 0,
+            "first_ms": 1051.179,
+            "features": [
+              1.1228400777976382,
+              1.1567443949823144,
+              1.1600412927647104,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              2.099,
+              2.173,
+              2.205
+            ],
+            "largest_gap_ms": 2.205,
+            "split": 0,
+            "first_ms": 1051.189,
+            "features": [
+              1.1309445874881154,
+              1.1545845363280636,
+              1.1646730880519902,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.224,
+              2.179,
+              2.165
+            ],
+            "largest_gap_ms": 2.224,
+            "split": 0,
+            "first_ms": 1051.171,
+            "features": [
+              1.1705037108508636,
+              1.1565899594180449,
+              1.1520882825663425,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.163,
+              2.219,
+              2.157
+            ],
+            "largest_gap_ms": 2.219,
+            "split": 0,
+            "first_ms": 1051.185,
+            "features": [
+              1.1516486630087392,
+              1.16918444576013,
+              1.14976600664866,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.133,
+              2.428,
+              2.071
+            ],
+            "largest_gap_ms": 2.428,
+            "split": 0,
+            "first_ms": 1051.529,
+            "features": [
+              1.1418898258742147,
+              1.2320035464742074,
+              1.121928995784927,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.178,
+              2.161,
+              2.175
+            ],
+            "largest_gap_ms": 2.178,
+            "split": 0,
+            "first_ms": 1051.216,
+            "features": [
+              1.1563543284615907,
+              1.1510288852487867,
+              1.1554632107928817,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.153,
+              2.161,
+              2.312
+            ],
+            "largest_gap_ms": 2.312,
+            "split": 0,
+            "first_ms": 1051.177,
+            "features": [
+              1.1484095645778412,
+              1.1508991892654794,
+              1.1975486133280437,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.166,
+              2.147,
+              2.377
+            ],
+            "largest_gap_ms": 2.377,
+            "split": 0,
+            "first_ms": 1051.04,
+            "features": [
+              1.1524133692629397,
+              1.1464635995542776,
+              1.2170348235050006,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.073,
+              2.423,
+              2.124
+            ],
+            "largest_gap_ms": 2.423,
+            "split": 0,
+            "first_ms": 1051.279,
+            "features": [
+              1.1225312687486735,
+              1.2304913586257444,
+              1.1391215943062916,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "train": "slot24_dev",
+      "test": "new_c0",
+      "train_n": 16,
+      "threshold_ms": 10,
+      "boundary_four_class": {
+        "n": 32,
+        "hits": 13,
+        "accuracy": 0.4062,
+        "balanced_accuracy": 0.4062,
+        "wilson95": [
+          0.2552,
+          0.5774
+        ],
+        "chance_p_one_sided": 0.03775129,
+        "confusion_actual_predicted": [
+          [
+            0,
+            7,
+            1,
+            0
+          ],
+          [
+            3,
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            0,
+            8
+          ]
+        ]
+      },
+      "boundary_early_vs_late": {
+        "n": 32,
+        "hits": 31,
+        "accuracy": 0.9688,
+        "wilson95": [
+          0.8426,
+          0.9945
+        ],
+        "chance_p_one_sided": 7.683411240577698e-09
+      },
+      "binary_T1": {
+        "n": 32,
+        "hits": 21,
+        "accuracy": 0.6562,
+        "wilson95": [
+          0.4831,
+          0.7959
+        ],
+        "chance_p_one_sided": 0.055092082591727376
+      },
+      "binary_T2": {
+        "n": 32,
+        "hits": 29,
+        "accuracy": 0.9062,
+        "wilson95": [
+          0.7578,
+          0.9676
+        ],
+        "chance_p_one_sided": 1.2780074030160904e-06
+      },
+      "binary_RT": {
+        "n": 32,
+        "hits": 28,
+        "accuracy": 0.875,
+        "wilson95": [
+          0.7193,
+          0.9503
+        ],
+        "chance_p_one_sided": 9.650597348809242e-06
+      },
+      "boundary_detected": 17,
+      "R1": {
+        "n": 32,
+        "hits": 11,
+        "accuracy": 0.3438,
+        "balanced_accuracy": 0.3438,
+        "wilson95": [
+          0.2041,
+          0.5169
+        ],
+        "chance_p_one_sided": 0.15359463,
+        "confusion_actual_predicted": [
+          [
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            6,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            4,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            1,
+            2
+          ]
+        ]
+      },
+      "T1": {
+        "n": 32,
+        "hits": 8,
+        "accuracy": 0.25,
+        "balanced_accuracy": 0.25,
+        "wilson95": [
+          0.1325,
+          0.4211
+        ],
+        "chance_p_one_sided": 0.56752916,
+        "confusion_actual_predicted": [
+          [
+            2,
+            0,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            1,
+            6
+          ],
+          [
+            0,
+            0,
+            2,
+            6
+          ],
+          [
+            0,
+            0,
+            5,
+            3
+          ]
+        ]
+      },
+      "T2": {
+        "n": 32,
+        "hits": 13,
+        "accuracy": 0.4062,
+        "balanced_accuracy": 0.4062,
+        "wilson95": [
+          0.2552,
+          0.5774
+        ],
+        "chance_p_one_sided": 0.03775129,
+        "confusion_actual_predicted": [
+          [
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            6,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            6
+          ],
+          [
+            0,
+            0,
+            2,
+            6
+          ]
+        ]
+      },
+      "RT": {
+        "n": 32,
+        "hits": 16,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "wilson95": [
+          0.3363,
+          0.6637
+        ],
+        "chance_p_one_sided": 0.00200296,
+        "confusion_actual_predicted": [
+          [
+            5,
+            3,
+            0,
+            0
+          ],
+          [
+            6,
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            3,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            7
+          ]
+        ]
+      },
+      "cases": [
+        {
+          "truth_position": 3,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.126,
+              22.979,
+              29.745
+            ],
+            "largest_gap_ms": 29.745,
+            "split": 3,
+            "first_ms": 1051.942,
+            "features": [
+              1.1396521794472507,
+              3.1771979224966347,
+              3.4257181746143295,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              1.562,
+              0.483,
+              19.002
+            ],
+            "largest_gap_ms": 19.002,
+            "split": 3,
+            "first_ms": 1051.481,
+            "features": [
+              0.9406777367956499,
+              0.39383170167758264,
+              2.9958113704257507,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.067,
+              9.778,
+              21.121
+            ],
+            "largest_gap_ms": 21.121,
+            "split": 3,
+            "first_ms": 1051.432,
+            "features": [
+              1.1206278251507895,
+              2.377463689569051,
+              3.0965442000470995,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.053,
+              2.129,
+              0.808
+            ],
+            "largest_gap_ms": 2.129,
+            "split": 0,
+            "first_ms": 1051.621,
+            "features": [
+              1.1161309371202082,
+              1.1408380973799792,
+              0.5924419234631546,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.088,
+              2.145,
+              0.028
+            ],
+            "largest_gap_ms": 2.145,
+            "split": 0,
+            "first_ms": 1051.444,
+            "features": [
+              1.1274909243737499,
+              1.145756972793373,
+              0.027781495612059667,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.127,
+              4.286,
+              0.048
+            ],
+            "largest_gap_ms": 4.286,
+            "split": 0,
+            "first_ms": 1051.414,
+            "features": [
+              1.1400612865806488,
+              1.6650678698905992,
+              0.04674140021842655,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.049,
+              16.684,
+              20.255
+            ],
+            "largest_gap_ms": 20.255,
+            "split": 3,
+            "first_ms": 1051.405,
+            "features": [
+              1.114803500686474,
+              2.8726470435760647,
+              3.05659978351777,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.136,
+              2.554,
+              0.047
+            ],
+            "largest_gap_ms": 2.554,
+            "split": 0,
+            "first_ms": 1051.622,
+            "features": [
+              1.143091905923462,
+              1.2679361288196305,
+              0.04553821564515732,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.111,
+              2.319,
+              2.082
+            ],
+            "largest_gap_ms": 2.319,
+            "split": 0,
+            "first_ms": 1051.629,
+            "features": [
+              1.1349892185101582,
+              1.1997222836483052,
+              1.1254359622674355,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.078,
+              16.693,
+              20.839
+            ],
+            "largest_gap_ms": 20.839,
+            "split": 3,
+            "first_ms": 1051.467,
+            "features": [
+              1.1242049838674468,
+              2.8731452296058166,
+              3.0837136174735646,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.093,
+              4.726,
+              21.937
+            ],
+            "largest_gap_ms": 21.937,
+            "split": 3,
+            "first_ms": 1051.335,
+            "features": [
+              1.1290412623624486,
+              1.7450804250757819,
+              3.132741430489609,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.154,
+              2.211,
+              2.204
+            ],
+            "largest_gap_ms": 2.211,
+            "split": 0,
+            "first_ms": 1051.409,
+            "features": [
+              1.1486686350174349,
+              1.1666425191871075,
+              1.1643073282803011,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.054,
+              2.226,
+              3.689
+            ],
+            "largest_gap_ms": 3.689,
+            "split": 0,
+            "first_ms": 1051.508,
+            "features": [
+              1.1163012458280783,
+              1.1711571111683108,
+              1.5452892886100253,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.027,
+              19.111,
+              21.35
+            ],
+            "largest_gap_ms": 21.35,
+            "split": 3,
+            "first_ms": 1051.546,
+            "features": [
+              1.107657589643212,
+              3.0012457961157266,
+              3.1068320033700556,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              30.432,
+              0.035,
+              19.911
+            ],
+            "largest_gap_ms": 30.432,
+            "split": 1,
+            "first_ms": 1051.34,
+            "features": [
+              3.4478301091266497,
+              0.03451832809666027,
+              3.040268832529508,
+              1
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.154,
+              2.119,
+              5.75
+            ],
+            "largest_gap_ms": 5.75,
+            "split": 0,
+            "first_ms": 1051.255,
+            "features": [
+              1.1487542371779589,
+              1.1373809765964578,
+              1.9096146504300342,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.079,
+              2.144,
+              6.917
+            ],
+            "largest_gap_ms": 6.917,
+            "split": 0,
+            "first_ms": 1051.37,
+            "features": [
+              1.1246535848716699,
+              1.1454293965303723,
+              2.0690393762648047,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.123,
+              5.148,
+              22.055
+            ],
+            "largest_gap_ms": 22.055,
+            "split": 3,
+            "first_ms": 1051.495,
+            "features": [
+              1.1387140238638815,
+              1.8161582175063273,
+              3.1378876537182303,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.104,
+              18.223,
+              21.197
+            ],
+            "largest_gap_ms": 21.197,
+            "split": 3,
+            "first_ms": 1051.184,
+            "features": [
+              1.132752811787841,
+              2.9561050858011018,
+              3.099947864035054,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.06,
+              2.217,
+              2.181
+            ],
+            "largest_gap_ms": 2.217,
+            "split": 0,
+            "first_ms": 1051.637,
+            "features": [
+              1.1185158912582698,
+              1.1683814809622923,
+              1.1573502691503803,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.068,
+              14.404,
+              20.544
+            ],
+            "largest_gap_ms": 20.544,
+            "split": 3,
+            "first_ms": 1051.38,
+            "features": [
+              1.1210353358723308,
+              2.7346332533273223,
+              3.0701038074008498,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.065,
+              2.231,
+              2.118
+            ],
+            "largest_gap_ms": 2.231,
+            "split": 0,
+            "first_ms": 1051.73,
+            "features": [
+              1.11995262197706,
+              1.172907433780071,
+              1.1371244175014736,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.116,
+              2.136,
+              2.179
+            ],
+            "largest_gap_ms": 2.179,
+            "split": 0,
+            "first_ms": 1051.472,
+            "features": [
+              1.1365661740928563,
+              1.142903777526233,
+              1.1564855210384812,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              0.913,
+              21.285,
+              18.416
+            ],
+            "largest_gap_ms": 21.285,
+            "split": 2,
+            "first_ms": 1051.57,
+            "features": [
+              0.6487939585883726,
+              3.103901107192913,
+              2.9661158551526676,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.034,
+              5.567,
+              20.786
+            ],
+            "largest_gap_ms": 20.786,
+            "split": 3,
+            "first_ms": 1051.518,
+            "features": [
+              1.10973289158144,
+              1.882127608758871,
+              3.0812682042745703,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.267,
+              3.525,
+              21.439
+            ],
+            "largest_gap_ms": 21.439,
+            "split": 3,
+            "first_ms": 1051.39,
+            "features": [
+              1.1839253910721181,
+              1.509702435429777,
+              3.11080229899071,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              2.104,
+              2.131,
+              10.79
+            ],
+            "largest_gap_ms": 10.79,
+            "split": 3,
+            "first_ms": 1051.398,
+            "features": [
+              1.132765697514,
+              1.1414677343245296,
+              2.467270119808231,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.072,
+              6.333,
+              21.114
+            ],
+            "largest_gap_ms": 21.114,
+            "split": 3,
+            "first_ms": 1051.622,
+            "features": [
+              1.1224619444441792,
+              1.9924121190728394,
+              3.0962014862696985,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.063,
+              2.14,
+              3.947
+            ],
+            "largest_gap_ms": 3.947,
+            "split": 0,
+            "first_ms": 1051.463,
+            "features": [
+              1.1194467363956289,
+              1.1441275724562348,
+              1.598697237341188,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.105,
+              2.166,
+              4.77
+            ],
+            "largest_gap_ms": 4.77,
+            "split": 0,
+            "first_ms": 1051.281,
+            "features": [
+              1.1331167696564886,
+              1.1525832947835402,
+              1.752603273993448,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 2,
+          "boundary": {
+            "gaps_ms": [
+              2.128,
+              7.593,
+              20.939
+            ],
+            "largest_gap_ms": 20.939,
+            "split": 3,
+            "first_ms": 1051.481,
+            "features": [
+              1.1403138962153723,
+              2.1509189408368794,
+              3.088270843265836,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.071,
+              2.242,
+              2.117
+            ],
+            "largest_gap_ms": 2.242,
+            "split": 0,
+            "first_ms": 1051.606,
+            "features": [
+              1.1220260350771245,
+              1.1762129400248178,
+              1.1369512028945585,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "train": "slot24_dev",
+      "test": "new_c1",
+      "train_n": 16,
+      "threshold_ms": 10,
+      "boundary_four_class": {
+        "n": 16,
+        "hits": 4,
+        "accuracy": 0.25,
+        "balanced_accuracy": 0.25,
+        "wilson95": [
+          0.1018,
+          0.495
+        ],
+        "chance_p_one_sided": 0.59501289,
+        "confusion_actual_predicted": [
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ]
+        ]
+      },
+      "boundary_early_vs_late": {
+        "n": 16,
+        "hits": 8,
+        "accuracy": 0.5,
+        "wilson95": [
+          0.28,
+          0.72
+        ],
+        "chance_p_one_sided": 0.5981903076171875
+      },
+      "binary_T1": {
+        "n": 16,
+        "hits": 9,
+        "accuracy": 0.5625,
+        "wilson95": [
+          0.3318,
+          0.769
+        ],
+        "chance_p_one_sided": 0.4018096923828125
+      },
+      "binary_T2": {
+        "n": 16,
+        "hits": 8,
+        "accuracy": 0.5,
+        "wilson95": [
+          0.28,
+          0.72
+        ],
+        "chance_p_one_sided": 0.5981903076171875
+      },
+      "binary_RT": {
+        "n": 16,
+        "hits": 8,
+        "accuracy": 0.5,
+        "wilson95": [
+          0.28,
+          0.72
+        ],
+        "chance_p_one_sided": 0.5981903076171875
+      },
+      "boundary_detected": 0,
+      "R1": {
+        "n": 16,
+        "hits": 6,
+        "accuracy": 0.375,
+        "balanced_accuracy": 0.375,
+        "wilson95": [
+          0.1848,
+          0.6136
+        ],
+        "chance_p_one_sided": 0.18965457,
+        "confusion_actual_predicted": [
+          [
+            1,
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      "T1": {
+        "n": 16,
+        "hits": 2,
+        "accuracy": 0.125,
+        "balanced_accuracy": 0.125,
+        "wilson95": [
+          0.035,
+          0.3602
+        ],
+        "chance_p_one_sided": 0.93652356,
+        "confusion_actual_predicted": [
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            1,
+            0,
+            3
+          ],
+          [
+            0,
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      "T2": {
+        "n": 16,
+        "hits": 2,
+        "accuracy": 0.125,
+        "balanced_accuracy": 0.125,
+        "wilson95": [
+          0.035,
+          0.3602
+        ],
+        "chance_p_one_sided": 0.93652356,
+        "confusion_actual_predicted": [
+          [
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            2,
+            2
+          ]
+        ]
+      },
+      "RT": {
+        "n": 16,
+        "hits": 4,
+        "accuracy": 0.25,
+        "balanced_accuracy": 0.25,
+        "wilson95": [
+          0.1018,
+          0.495
+        ],
+        "chance_p_one_sided": 0.59501289,
+        "confusion_actual_predicted": [
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            4
+          ]
+        ]
+      },
+      "cases": [
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.08,
+              2.124,
+              2.133
+            ],
+            "largest_gap_ms": 2.133,
+            "split": 0,
+            "first_ms": 1051.993,
+            "features": [
+              1.1249357657976247,
+              1.1389801000628224,
+              1.1419179164164182,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.081,
+              2.188,
+              2.145
+            ],
+            "largest_gap_ms": 2.188,
+            "split": 0,
+            "first_ms": 1051.431,
+            "features": [
+              1.1252704479800912,
+              1.1594194820526356,
+              1.1458555427030483,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.107,
+              2.192,
+              2.141
+            ],
+            "largest_gap_ms": 2.192,
+            "split": 0,
+            "first_ms": 1051.336,
+            "features": [
+              1.1335031286145196,
+              1.160742286640996,
+              1.144433287320275,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.122,
+              2.122,
+              2.149
+            ],
+            "largest_gap_ms": 2.149,
+            "split": 0,
+            "first_ms": 1051.351,
+            "features": [
+              1.1384292983602415,
+              1.138403351961336,
+              1.1470569963489228,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.076,
+              2.184,
+              2.133
+            ],
+            "largest_gap_ms": 2.184,
+            "split": 0,
+            "first_ms": 1051.351,
+            "features": [
+              1.1235845369535236,
+              1.158085502770982,
+              1.1420009065907484,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.085,
+              2.164,
+              2.167
+            ],
+            "largest_gap_ms": 2.167,
+            "split": 0,
+            "first_ms": 1051.519,
+            "features": [
+              1.1265775889498117,
+              1.1518977307444398,
+              1.152911377791799,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.052,
+              2.229,
+              2.182
+            ],
+            "largest_gap_ms": 2.229,
+            "split": 0,
+            "first_ms": 1051.455,
+            "features": [
+              1.1158852484634987,
+              1.1721362569914533,
+              1.1575419847129598,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.119,
+              2.235,
+              2.086
+            ],
+            "largest_gap_ms": 2.235,
+            "split": 0,
+            "first_ms": 1051.454,
+            "features": [
+              1.1373553236487723,
+              1.1740854951318909,
+              1.1269340801725602,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.109,
+              2.117,
+              2.115
+            ],
+            "largest_gap_ms": 2.117,
+            "split": 0,
+            "first_ms": 1051.366,
+            "features": [
+              1.1344394296505929,
+              1.1368649051618736,
+              1.136075047267942,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.14,
+              2.199,
+              2.127
+            ],
+            "largest_gap_ms": 2.199,
+            "split": 0,
+            "first_ms": 1051.309,
+            "features": [
+              1.1442294877958872,
+              1.1629545405461297,
+              1.1400839920818249,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.125,
+              2.173,
+              2.136
+            ],
+            "largest_gap_ms": 2.173,
+            "split": 0,
+            "first_ms": 1051.302,
+            "features": [
+              1.1395846718794187,
+              1.1547789887002153,
+              1.1431046591100849,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.177,
+              2.147,
+              2.159
+            ],
+            "largest_gap_ms": 2.177,
+            "split": 0,
+            "first_ms": 1051.422,
+            "features": [
+              1.1559694605321513,
+              1.1465007766084134,
+              1.1501675154150512,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.257,
+              2.138,
+              2.128
+            ],
+            "largest_gap_ms": 2.257,
+            "split": 0,
+            "first_ms": 1051.5,
+            "features": [
+              1.180847667603139,
+              1.1436656383650585,
+              1.1404321851185726,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.088,
+              2.103,
+              2.178
+            ],
+            "largest_gap_ms": 2.178,
+            "split": 0,
+            "first_ms": 1051.527,
+            "features": [
+              1.1273843737618656,
+              1.132282369111948,
+              1.1562873097842783,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.095,
+              2.159,
+              2.151
+            ],
+            "largest_gap_ms": 2.159,
+            "split": 0,
+            "first_ms": 1051.418,
+            "features": [
+              1.1298202157923027,
+              1.1501038800601762,
+              1.147758579892964,
+              0
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 4,
+          "boundary": {
+            "gaps_ms": [
+              2.174,
+              2.156,
+              2.337
+            ],
+            "largest_gap_ms": 2.337,
+            "split": 0,
+            "first_ms": 1051.384,
+            "features": [
+              1.1549519785561624,
+              1.1492014685585514,
+              1.2051429194741134,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "train": "slot24_dev",
+      "test": "new_cacheoff",
+      "train_n": 16,
+      "threshold_ms": 10,
+      "boundary_four_class": {
+        "n": 16,
+        "hits": 5,
+        "accuracy": 0.3125,
+        "balanced_accuracy": 0.3125,
+        "wilson95": [
+          0.1416,
+          0.556
+        ],
+        "chance_p_one_sided": 0.36981382,
+        "confusion_actual_predicted": [
+          [
+            1,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            2,
+            0,
+            2,
+            0
+          ]
+        ]
+      },
+      "boundary_early_vs_late": {
+        "n": 16,
+        "hits": 8,
+        "accuracy": 0.5,
+        "wilson95": [
+          0.28,
+          0.72
+        ],
+        "chance_p_one_sided": 0.5981903076171875
+      },
+      "binary_T1": {
+        "n": 16,
+        "hits": 8,
+        "accuracy": 0.5,
+        "wilson95": [
+          0.28,
+          0.72
+        ],
+        "chance_p_one_sided": 0.5981903076171875
+      },
+      "binary_T2": {
+        "n": 16,
+        "hits": 11,
+        "accuracy": 0.6875,
+        "wilson95": [
+          0.444,
+          0.8584
+        ],
+        "chance_p_one_sided": 0.1050567626953125
+      },
+      "binary_RT": {
+        "n": 16,
+        "hits": 8,
+        "accuracy": 0.5,
+        "wilson95": [
+          0.28,
+          0.72
+        ],
+        "chance_p_one_sided": 0.5981903076171875
+      },
+      "boundary_detected": 16,
+      "R1": {
+        "n": 16,
+        "hits": 4,
+        "accuracy": 0.25,
+        "balanced_accuracy": 0.25,
+        "wilson95": [
+          0.1018,
+          0.495
+        ],
+        "chance_p_one_sided": 0.59501289,
+        "confusion_actual_predicted": [
+          [
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "T1": {
+        "n": 16,
+        "hits": 4,
+        "accuracy": 0.25,
+        "balanced_accuracy": 0.25,
+        "wilson95": [
+          0.1018,
+          0.495
+        ],
+        "chance_p_one_sided": 0.59501289,
+        "confusion_actual_predicted": [
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            0
+          ]
+        ]
+      },
+      "T2": {
+        "n": 16,
+        "hits": 5,
+        "accuracy": 0.3125,
+        "balanced_accuracy": 0.3125,
+        "wilson95": [
+          0.1416,
+          0.556
+        ],
+        "chance_p_one_sided": 0.36981382,
+        "confusion_actual_predicted": [
+          [
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            1,
+            0
+          ]
+        ]
+      },
+      "RT": {
+        "n": 16,
+        "hits": 4,
+        "accuracy": 0.25,
+        "balanced_accuracy": 0.25,
+        "wilson95": [
+          0.1018,
+          0.495
+        ],
+        "chance_p_one_sided": 0.59501289,
+        "confusion_actual_predicted": [
+          [
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "cases": [
+        {
+          "truth_position": 4,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              20.51,
+              32.095,
+              8.129
+            ],
+            "largest_gap_ms": 32.095,
+            "split": 2,
+            "first_ms": 1104.452,
+            "features": [
+              3.068502043571649,
+              3.499376593370775,
+              2.21150260389819,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              22.239,
+              20.936,
+              20.396
+            ],
+            "largest_gap_ms": 22.239,
+            "split": 1,
+            "first_ms": 1061.011,
+            "features": [
+              3.1458473928781787,
+              3.088146856068996,
+              3.0631934726294143,
+              1
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              41.183,
+              0.069,
+              20.954
+            ],
+            "largest_gap_ms": 41.183,
+            "split": 1,
+            "first_ms": 1080.274,
+            "features": [
+              3.7420251430089166,
+              0.06680033630405458,
+              3.088960697097499,
+              1
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              20.502,
+              19.794,
+              20.513
+            ],
+            "largest_gap_ms": 20.513,
+            "split": 3,
+            "first_ms": 1061.64,
+            "features": [
+              3.068123072208839,
+              3.0346751596553725,
+              3.068638252174265,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              20.573,
+              21.358,
+              20.546
+            ],
+            "largest_gap_ms": 21.358,
+            "split": 2,
+            "first_ms": 1064.136,
+            "features": [
+              3.071442532788467,
+              3.1071846013885307,
+              3.0701701805589376,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              19.248,
+              20.966,
+              20.798
+            ],
+            "largest_gap_ms": 20.966,
+            "split": 2,
+            "first_ms": 1063.768,
+            "features": [
+              3.008066789680321,
+              3.0894935271184574,
+              3.0818312969756474,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              19.513,
+              20.256,
+              20.201
+            ],
+            "largest_gap_ms": 20.256,
+            "split": 2,
+            "first_ms": 1065.49,
+            "features": [
+              3.021078087396113,
+              3.0566449479969315,
+              3.054068254900206,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              21.215,
+              21.352,
+              20.297
+            ],
+            "largest_gap_ms": 21.352,
+            "split": 2,
+            "first_ms": 1064.534,
+            "features": [
+              3.1007594086466916,
+              3.106935890000754,
+              3.058554197180745,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              41.244,
+              0.035,
+              18.6
+            ],
+            "largest_gap_ms": 41.244,
+            "split": 1,
+            "first_ms": 1080.828,
+            "features": [
+              3.7434526736612783,
+              0.03458595075452698,
+              2.9755542087899842,
+              1
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              19.182,
+              21.647,
+              20.12
+            ],
+            "largest_gap_ms": 21.647,
+            "split": 2,
+            "first_ms": 1068.712,
+            "features": [
+              3.0047761045513774,
+              3.120009112091543,
+              3.0502331954993736,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              22.67,
+              20.928,
+              20.995
+            ],
+            "largest_gap_ms": 22.67,
+            "split": 1,
+            "first_ms": 1060.257,
+            "features": [
+              3.1642253224114114,
+              3.0877424233348725,
+              3.0908192466313658,
+              1
+            ]
+          }
+        },
+        {
+          "truth_position": 3,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              42.435,
+              0.064,
+              19.928
+            ],
+            "largest_gap_ms": 42.435,
+            "split": 1,
+            "first_ms": 1080.735,
+            "features": [
+              3.7712568419917614,
+              0.06248735643682201,
+              3.041077224070205,
+              1
+            ]
+          }
+        },
+        {
+          "truth_position": 2,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              20.896,
+              20.787,
+              19.262
+            ],
+            "largest_gap_ms": 20.896,
+            "split": 1,
+            "first_ms": 1062.186,
+            "features": [
+              3.086313471145213,
+              3.0812971673910994,
+              3.008726975504242,
+              1
+            ]
+          }
+        },
+        {
+          "truth_position": 1,
+          "boundary_prediction": 3,
+          "boundary": {
+            "gaps_ms": [
+              19.818,
+              22.021,
+              20.768
+            ],
+            "largest_gap_ms": 22.021,
+            "split": 2,
+            "first_ms": 1064.462,
+            "features": [
+              3.0358416302081905,
+              3.1364248696930837,
+              3.0804232688724187,
+              2
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              20.404,
+              19.604,
+              20.724
+            ],
+            "largest_gap_ms": 20.724,
+            "split": 3,
+            "first_ms": 1068.275,
+            "features": [
+              3.0635972558796993,
+              3.0254792619709017,
+              3.078397570002496,
+              3
+            ]
+          }
+        },
+        {
+          "truth_position": 4,
+          "boundary_prediction": 1,
+          "boundary": {
+            "gaps_ms": [
+              21.048,
+              18.969,
+              21.389
+            ],
+            "largest_gap_ms": 21.389,
+            "split": 3,
+            "first_ms": 1065.925,
+            "features": [
+              3.0931993074934274,
+              2.994198698228245,
+              3.1085866946297767,
+              3
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "audit": {
+    "new_c0": {
+      "groups": 36,
+      "marked_or_positive": 32,
+      "unwarmed": 4,
+      "responses": 144,
+      "positions_1_to_4": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "case_seed": [
+        17581173094638711317
+      ],
+      "cache_hits": 32,
+      "fallback_groups": 30,
+      "client_gap_detected": 21,
+      "client_gap_false_alarms": 0,
+      "client_gap_missed_fallback": 9
+    },
+    "new_c1": {
+      "groups": 20,
+      "marked_or_positive": 16,
+      "unwarmed": 4,
+      "responses": 80,
+      "positions_1_to_4": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "case_seed": [
+        5366446699370444483
+      ],
+      "cache_hits": 16,
+      "fallback_groups": 4,
+      "client_gap_detected": 4,
+      "client_gap_false_alarms": 0,
+      "client_gap_missed_fallback": 0
+    },
+    "new_cacheoff": {
+      "groups": 16,
+      "marked_or_positive": 16,
+      "unwarmed": 0,
+      "responses": 64,
+      "positions_1_to_4": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "case_seed": [
+        9765752471764860039
+      ],
+      "cache_hits": 0,
+      "fallback_groups": 16,
+      "client_gap_detected": 16,
+      "client_gap_false_alarms": 0,
+      "client_gap_missed_fallback": 0
+    }
+  }
+}

@@ -8,6 +8,13 @@ Mechanismus, seine Konfigurationsabhängigkeit, stärkere Clientbeobachter
 und der Fallback eines festen Freigabeslots wurden in begrenzten,
 getrennten Messsitzungen geprüft. Entscheidung und alle Grenzen stehen
 in `docs/entscheidungsvalidierung-20261102.md`.
+Der anschließende Release-Boundary-Test ist in
+`docs/release-boundary-20261102.md` dokumentiert: neue Fallfolge,
+32 C0-Positive (binäre Früh-/Spätposition 31/32), 16 C1-Positive
+(8/16) und 16 markierte Cache-aus-Kontrollen (8/16). Die
+Vierklassenregel verbessert T2/RT nicht. Empfehlung: als
+Schutzgrenzen-Befund weiterführen, nicht als eigenständigen
+Angriffsclaim.
 
 ## Bisher umgesetzt
 - Privates GitHub-Repository erstellt.

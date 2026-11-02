@@ -62,8 +62,9 @@ def post(label: str, salt: str, group: str, mode: str, delay: float, start: Even
     }
 
 
-def plan(repeats: int, modes: tuple[str, ...], controls: int = 4) -> list[tuple[str, str | None, list[str]]]:
-    rng = random.Random(20261106 + repeats)
+def plan(repeats: int, modes: tuple[str, ...], controls: int = 4,
+         seed: int | None = None) -> list[tuple[str, str | None, list[str]]]:
+    rng = random.Random(20261106 + repeats if seed is None else seed)
     cases = []
     for mode in modes:
         for warm in LABELS:
@@ -81,8 +82,8 @@ def plan(repeats: int, modes: tuple[str, ...], controls: int = 4) -> list[tuple[
 
 
 def main(output: Path, tag: str, repeats: int, modes: tuple[str, ...],
-         tokens: int = 16, controls: int = 4) -> None:
-    cases = plan(repeats, modes, controls)
+         tokens: int = 16, controls: int = 4, seed: int | None = None) -> None:
+    cases = plan(repeats, modes, controls, seed)
     with output.open("x", encoding="utf-8") as out, ThreadPoolExecutor(
         max_workers=4
     ) as pool:
@@ -105,6 +106,7 @@ def main(output: Path, tag: str, repeats: int, modes: tuple[str, ...],
                 "group": group,
                 "send_order": order,
                 "output_tokens": tokens,
+                "case_seed": 20261106 + repeats if seed is None else seed,
                 "warmup": warmup,
                 "probes": probes,
             }, ensure_ascii=False) + "\n")
@@ -122,4 +124,5 @@ if __name__ == "__main__":
         raise SystemExit("unknown policy mode")
     main(Path(sys.argv[1]), sys.argv[2], int(sys.argv[3]), selected,
          int(sys.argv[5]) if len(sys.argv) > 5 else 16,
-         int(sys.argv[6]) if len(sys.argv) > 6 else 4)
+         int(sys.argv[6]) if len(sys.argv) > 6 else 4,
+         int(sys.argv[7]) if len(sys.argv) > 7 else None)
