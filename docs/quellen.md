@@ -212,3 +212,17 @@ Abgrenzung stehen in `docs/release-boundary-20261102.md`.
 | [Accumulate-and-Serve, 2013](https://arxiv.org/pdf/1302.6123), §§V–VI | Sammelintervalle und formale Verzögerungs-/Privatsphäre-Grenze; nicht direkt auf den LLM-Proxy übertragbar. |
 | [SafeKV v2](https://arxiv.org/html/2508.08438v2), §§4.1–4.2, 7.2 | Der dortige Safeguard-Fallback isoliert verdächtige Cacheblöcke; keine späte Einzelfreigabe von HTTP-Antworten. |
 | [CacheSolidarity v1](https://arxiv.org/html/2603.10726v1) und [PrefixWall v2](https://arxiv.org/html/2603.10726v2), §§2.4, 4–5 | Versionswechsel desselben arXiv-Eintrags; selektive Cacheisolation und benannte Schutzgrenzen, keine BOS-/Slot-Evaluation. |
+
+## Später einheitlicher Antwortslot (02.11.2026)
+
+Vor der lokalen 1.200-ms-Messung nochmals gezielt geprüft,
+jeweils **RDNA L2**; die übrige Quellenkarte bleibt unverändert:
+
+| Originalstelle | Relevanz für die neue Regel |
+| --- | --- |
+| [Pacer, USENIX Security 2022](https://www.usenix.org/system/files/sec22-mehta.pdf), §§2.2–4 | Ein geheimer Verarbeitungsschritt darf den tatsächlichen Sendeplan nicht verschieben. Ein späterer öffentlicher Slot ist eine bekannte Art der Entkopplung, aber keine Garantie bei dessen Überschreiten. |
+| [Carlini/Nasr 2024](https://arxiv.org/html/2410.17175), §VII | Feste Token-Ausgaberate mit Leernachrichten bei nicht bereiten Tokens und gemessene Latenz-/Bandbreitenkosten; hier werden stattdessen vollständige HTTP-Antworten in Gruppen freigegeben. |
+| [Accumulate-and-Serve, 2013](https://arxiv.org/pdf/1302.6123), §§V–VI | Allgemeine Pufferungs-/Verzögerungsgrenze; formale Resultate gelten nicht für unseren LLM-Proxy. |
+
+Die konkrete Live-/Replay-Entscheidung und die individuellen
+Kosten stehen in `docs/late-release-20261102.md`.

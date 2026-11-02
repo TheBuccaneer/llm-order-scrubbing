@@ -15,6 +15,15 @@ Der anschließende Release-Boundary-Test ist in
 Vierklassenregel verbessert T2/RT nicht. Empfehlung: als
 Schutzgrenzen-Befund weiterführen, nicht als eigenständigen
 Angriffsclaim.
+Der nachfolgende Test einer **einheitlich späteren Freigabe nach
+1.200 ms** steht in `docs/late-release-20261102.md`: 56/56
+Vierergruppen einschließlich Kontrollen vollständig, 0 späte
+Einzelfreigaben, im neuen 32er-Holdout höchstens 10/32 für die
+geprüften Clientbeobachter. Die gepaarte Nachrechnung auf 108
+alten 24-Token-Traces ergibt median 150 ms zusätzliche
+individuelle Wartezeit. Das gilt nur, solange alle Antworten
+vor dem neuen Slot bereit sind; der bisherige Fallback bleibt
+danach bestehen.
 
 ## Bisher umgesetzt
 - Privates GitHub-Repository erstellt.

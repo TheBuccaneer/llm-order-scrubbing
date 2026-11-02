@@ -14,10 +14,10 @@ from urllib.request import Request, urlopen
 
 BACKEND = "http://127.0.0.1:8765/v1/completions"
 MODES = {"direct": None, "bos4": None, "d100": 100, "d250": 250,
-         "slot1050": None}
+         "slot1050": None, "slot1200": None}
 RELEASE_GAP_S = 0.002
 DEADLINE_ADVANCE_MS = 10
-SLOT_MS = 1050
+SLOT_MS_BY_MODE = {"slot1050": 1050, "slot1200": 1200}
 
 
 @dataclass
@@ -57,7 +57,7 @@ class Gate:
         self.log = output.open("x", encoding="utf-8")
 
     def note_arrival(self, group: str, mode: str, arrival_ns: int) -> None:
-        if mode != "slot1050":
+        if mode not in SLOT_MS_BY_MODE:
             return
         key = (group, mode)
         with self.lock:
@@ -65,7 +65,8 @@ class Gate:
             if state.first_arrival_ns is None:
                 state.first_arrival_ns = arrival_ns
                 state.timer = threading.Timer(
-                    SLOT_MS / 1000, self.flush, args=(key, state.batch, "slot")
+                    SLOT_MS_BY_MODE[mode] / 1000, self.flush,
+                    args=(key, state.batch, "slot")
                 )
                 state.timer.daemon = True
                 state.timer.start()
@@ -81,7 +82,7 @@ class Gate:
         key = (job.group, job.mode)
         with self.lock:
             state = self.pending.setdefault(key, Pending())
-            if job.mode == "slot1050":
+            if job.mode in SLOT_MS_BY_MODE:
                 job.slot_anchor_ns = state.first_arrival_ns
                 if state.slot_expired:
                     job.batch_size = 1
@@ -99,7 +100,7 @@ class Gate:
                 )
                 state.timer.daemon = True
                 state.timer.start()
-            if len(state.jobs) == 4 and job.mode != "slot1050":
+            if len(state.jobs) == 4 and job.mode not in SLOT_MS_BY_MODE:
                 self._flush_locked(key, state, "full")
         job.release.wait()
 
@@ -109,7 +110,7 @@ class Gate:
             if state is not None and state.batch == batch:
                 if state.jobs:
                     self._flush_locked(key, state, reason)
-                elif key[1] == "slot1050":
+                elif key[1] in SLOT_MS_BY_MODE:
                     state.slot_expired = True
 
     def _flush_locked(self, key: tuple[str, str], state: Pending, reason: str) -> None:
@@ -119,7 +120,7 @@ class Gate:
         jobs = state.jobs
         state.jobs = []
         state.batch += 1
-        if key[1] == "slot1050":
+        if key[1] in SLOT_MS_BY_MODE:
             state.slot_expired = True
         seed = secrets.randbits(64)
         random.Random(seed).shuffle(jobs)

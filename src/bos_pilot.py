@@ -14,7 +14,7 @@ from cache_order_pilot import MODEL, PROMPTS, post as warmup_post
 
 URL = "http://127.0.0.1:8766/v1/completions"
 LABELS = ("A", "B", "C", "D")
-MODES = ("direct", "bos4", "d100", "d250", "slot1050")
+MODES = ("direct", "bos4", "d100", "d250", "slot1050", "slot1200")
 
 
 def post(label: str, salt: str, group: str, mode: str, delay: float, start: Event,

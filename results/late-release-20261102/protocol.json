@@ -1,0 +1,23 @@
+{
+  "fixed_before_live": true,
+  "candidate": "slot1200",
+  "slot_anchor": "first proxy arrival in each four-request group",
+  "slot_ms": 1200,
+  "fallback_if_still_late": "existing late_fallback, unchanged",
+  "pilot_basis": "max last-backend offset 1154.100 ms across 108 prior 24-token C0 groups; 45.900 ms margin",
+  "dev": {
+    "positive": 16,
+    "unwarmed": 4,
+    "tokens": 24,
+    "case_seed": 11754559208117565385
+  },
+  "holdout": {
+    "positive": 32,
+    "unwarmed": 4,
+    "tokens": 24,
+    "case_seed": 13090073082808988447,
+    "new_backend_and_proxy": true
+  },
+  "analysis": "R1,T1,T2,RT trained on dev then frozen; client gap >10 ms; full-group/fallback; proxy wait and end-to-end median,p95,max; paired offline 1050 vs 1200 on existing traces",
+  "boundary": "any late response at 1200 is reported as protection failure, not silently discarded"
+}
