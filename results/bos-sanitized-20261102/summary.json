@@ -1,0 +1,129 @@
+{
+  "trials": 204,
+  "requests": 816,
+  "modes": {
+    "bos4": {
+      "trials": 68,
+      "warm_trials": 64,
+      "warm_send_position": {
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "warm_received_rank": {
+        "1": 14,
+        "2": 14,
+        "3": 14,
+        "4": 22
+      },
+      "later_warm_rank1": 8,
+      "later_warm_trials": 48,
+      "warm_backend_rank1": 64,
+      "warm_full_block": 64,
+      "no_warm_exact_send_receive": 0,
+      "no_warm_trials": 4,
+      "send_order_agreement": 68,
+      "release_client_order_agreement": 68,
+      "batch_patterns": {
+        "(4,)": 68
+      },
+      "all_wait_ms": {
+        "median": 42.8474155,
+        "p95": 226.227026,
+        "max": 237.514247
+      },
+      "warm_wait_ms": {
+        "median": 190.6229535,
+        "p95": 233.027648,
+        "max": 237.514247
+      },
+      "target_ms": null,
+      "target_exceedances": null,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    },
+    "d250": {
+      "trials": 68,
+      "warm_trials": 64,
+      "warm_send_position": {
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "warm_received_rank": {
+        "1": 16,
+        "2": 13,
+        "3": 17,
+        "4": 18
+      },
+      "later_warm_rank1": 14,
+      "later_warm_trials": 48,
+      "warm_backend_rank1": 64,
+      "warm_full_block": 64,
+      "no_warm_exact_send_receive": 0,
+      "no_warm_trials": 4,
+      "send_order_agreement": 68,
+      "release_client_order_agreement": 68,
+      "batch_patterns": {
+        "(4,)": 68
+      },
+      "all_wait_ms": {
+        "median": 41.355124,
+        "p95": 229.314902,
+        "max": 237.698452
+      },
+      "warm_wait_ms": {
+        "median": 193.3154425,
+        "p95": 234.486212,
+        "max": 237.698452
+      },
+      "target_ms": 250,
+      "target_exceedances": 0,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    },
+    "slot1050": {
+      "trials": 68,
+      "warm_trials": 64,
+      "warm_send_position": {
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "warm_received_rank": {
+        "1": 14,
+        "2": 19,
+        "3": 16,
+        "4": 15
+      },
+      "later_warm_rank1": 10,
+      "later_warm_trials": 48,
+      "warm_backend_rank1": 64,
+      "warm_full_block": 64,
+      "no_warm_exact_send_receive": 1,
+      "no_warm_trials": 4,
+      "send_order_agreement": 68,
+      "release_client_order_agreement": 68,
+      "batch_patterns": {
+        "(4,)": 68
+      },
+      "all_wait_ms": {
+        "median": 210.47900099999998,
+        "p95": 373.252638,
+        "max": 385.679426
+      },
+      "warm_wait_ms": {
+        "median": 363.24386549999997,
+        "p95": 381.332448,
+        "max": 385.679426
+      },
+      "target_ms": null,
+      "target_exceedances": null,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    }
+  }
+}

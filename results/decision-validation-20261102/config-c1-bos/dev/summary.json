@@ -1,0 +1,47 @@
+{
+  "trials": 16,
+  "requests": 64,
+  "modes": {
+    "bos4": {
+      "trials": 16,
+      "warm_trials": 16,
+      "warm_send_position": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 4
+      },
+      "warm_received_rank": {
+        "1": 3,
+        "2": 5,
+        "3": 3,
+        "4": 5
+      },
+      "later_warm_rank1": 1,
+      "later_warm_trials": 12,
+      "warm_backend_rank1": 5,
+      "warm_full_block": 16,
+      "no_warm_exact_send_receive": 0,
+      "no_warm_trials": 0,
+      "send_order_agreement": 16,
+      "release_client_order_agreement": 16,
+      "batch_patterns": {
+        "(4,)": 16
+      },
+      "all_wait_ms": {
+        "median": 46.009181,
+        "p95": 145.02207,
+        "max": 155.517462
+      },
+      "warm_wait_ms": {
+        "median": 66.347032,
+        "p95": 155.517462,
+        "max": 155.517462
+      },
+      "target_ms": null,
+      "target_exceedances": null,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    }
+  }
+}

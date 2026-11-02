@@ -1,0 +1,191 @@
+{
+  "train_session": "slot_followup",
+  "test_session": "sanitized",
+  "mode": "slot1050",
+  "train_n": 64,
+  "R1": {
+    "n": 64,
+    "hits": 14,
+    "accuracy": 0.2188,
+    "balanced_accuracy": 0.2188,
+    "wilson95": [
+      0.135,
+      0.3343
+    ],
+    "chance_p_one_sided": 0.76101045,
+    "confusion_actual_predicted": [
+      [
+        4,
+        3,
+        4,
+        5
+      ],
+      [
+        5,
+        2,
+        4,
+        5
+      ],
+      [
+        7,
+        3,
+        2,
+        4
+      ],
+      [
+        2,
+        6,
+        2,
+        6
+      ]
+    ]
+  },
+  "R2": {
+    "n": 64,
+    "hits": 14,
+    "accuracy": 0.2188,
+    "balanced_accuracy": 0.2188,
+    "wilson95": [
+      0.135,
+      0.3343
+    ],
+    "chance_p_one_sided": 0.76101045,
+    "confusion_actual_predicted": [
+      [
+        4,
+        4,
+        5,
+        3
+      ],
+      [
+        2,
+        3,
+        3,
+        8
+      ],
+      [
+        3,
+        5,
+        3,
+        5
+      ],
+      [
+        5,
+        2,
+        5,
+        4
+      ]
+    ]
+  },
+  "T1": {
+    "n": 64,
+    "hits": 19,
+    "accuracy": 0.2969,
+    "balanced_accuracy": 0.2969,
+    "wilson95": [
+      0.1991,
+      0.4177
+    ],
+    "chance_p_one_sided": 0.23176258,
+    "confusion_actual_predicted": [
+      [
+        1,
+        7,
+        5,
+        3
+      ],
+      [
+        0,
+        10,
+        5,
+        1
+      ],
+      [
+        3,
+        8,
+        5,
+        0
+      ],
+      [
+        1,
+        7,
+        5,
+        3
+      ]
+    ]
+  },
+  "T2": {
+    "n": 64,
+    "hits": 17,
+    "accuracy": 0.2656,
+    "balanced_accuracy": 0.2656,
+    "wilson95": [
+      0.173,
+      0.3848
+    ],
+    "chance_p_one_sided": 0.43335211,
+    "confusion_actual_predicted": [
+      [
+        6,
+        7,
+        2,
+        1
+      ],
+      [
+        5,
+        7,
+        1,
+        3
+      ],
+      [
+        4,
+        8,
+        2,
+        2
+      ],
+      [
+        8,
+        3,
+        3,
+        2
+      ]
+    ]
+  },
+  "RT": {
+    "n": 64,
+    "hits": 15,
+    "accuracy": 0.2344,
+    "balanced_accuracy": 0.2344,
+    "wilson95": [
+      0.1475,
+      0.3513
+    ],
+    "chance_p_one_sided": 0.66004868,
+    "confusion_actual_predicted": [
+      [
+        5,
+        4,
+        4,
+        3
+      ],
+      [
+        2,
+        3,
+        3,
+        8
+      ],
+      [
+        3,
+        5,
+        3,
+        5
+      ],
+      [
+        7,
+        2,
+        3,
+        4
+      ]
+    ]
+  }
+}

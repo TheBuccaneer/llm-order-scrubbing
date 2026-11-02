@@ -1,0 +1,125 @@
+{
+  "source": {
+    "trials": "results/bos-pilot-20261102/trials-extended.jsonl",
+    "proxy": "results/bos-pilot-20261102/proxy-extended.jsonl",
+    "groups": 272,
+    "responses": 1088
+  },
+  "method": "Ideal release readiness; 10 ms early deadline timer; excludes serial sends and timer jitter",
+  "live_validation": {
+    "batch_pattern_agreement": {
+      "match": 272
+    },
+    "actual_minus_ideal_release_ms": {
+      "n": 1088,
+      "median": 2.425,
+      "p95": 6.888,
+      "max": 7.122
+    },
+    "min_ms": 0.016
+  },
+  "modes": {
+    "direct": {
+      "all_wait_ms": {
+        "n": 1088,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "warm_wait_ms": {
+        "n": 256,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "full_groups": 0,
+      "late_fallback_responses": 0
+    },
+    "bos4": {
+      "all_wait_ms": {
+        "n": 1088,
+        "median": 40.301,
+        "p95": 225.778,
+        "max": 246.444
+      },
+      "warm_wait_ms": {
+        "n": 256,
+        "median": 187.66,
+        "p95": 228.808,
+        "max": 246.444
+      },
+      "full_groups": 272,
+      "late_fallback_responses": 0
+    },
+    "d100": {
+      "all_wait_ms": {
+        "n": 1088,
+        "median": 70.333,
+        "p95": 90.0,
+        "max": 90.0
+      },
+      "warm_wait_ms": {
+        "n": 256,
+        "median": 90.0,
+        "p95": 90.0,
+        "max": 90.0
+      },
+      "full_groups": 16,
+      "late_fallback_responses": 0
+    },
+    "d250": {
+      "all_wait_ms": {
+        "n": 1088,
+        "median": 40.301,
+        "p95": 225.934,
+        "max": 240.0
+      },
+      "warm_wait_ms": {
+        "n": 256,
+        "median": 187.66,
+        "p95": 228.808,
+        "max": 240.0
+      },
+      "full_groups": 271,
+      "late_fallback_responses": 0
+    },
+    "slot1050": {
+      "all_wait_ms": {
+        "n": 1088,
+        "median": 200.748,
+        "p95": 357.631,
+        "max": 373.539
+      },
+      "warm_wait_ms": {
+        "n": 256,
+        "median": 352.211,
+        "p95": 366.543,
+        "max": 373.539
+      },
+      "full_groups": 272,
+      "late_fallback_responses": 0
+    }
+  },
+  "paired_vs_bos4": {
+    "direct": {
+      "all_individual_median_ms": -40.301,
+      "warm_individual_median_ms": -187.66,
+      "difference_of_warm_medians_ms": -187.66
+    },
+    "d100": {
+      "all_individual_median_ms": 28.364,
+      "warm_individual_median_ms": -97.66,
+      "difference_of_warm_medians_ms": -97.66
+    },
+    "d250": {
+      "all_individual_median_ms": 0.0,
+      "warm_individual_median_ms": 0.0,
+      "difference_of_warm_medians_ms": 0.0
+    },
+    "slot1050": {
+      "all_individual_median_ms": 154.983,
+      "warm_individual_median_ms": 158.262,
+      "difference_of_warm_medians_ms": 164.55
+    }
+  }
+}

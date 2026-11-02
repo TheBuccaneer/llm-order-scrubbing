@@ -1,0 +1,125 @@
+{
+  "source": {
+    "trials": "results/decision-validation-20261102/slot-fallback/holdout/trials-24.jsonl",
+    "proxy": "results/decision-validation-20261102/slot-fallback/holdout/proxy.jsonl",
+    "groups": 36,
+    "responses": 144
+  },
+  "method": "Ideal release readiness; 10 ms early deadline timer; excludes serial sends and timer jitter",
+  "live_validation": {
+    "batch_pattern_agreement": {
+      "match": 36
+    },
+    "actual_minus_ideal_release_ms": {
+      "n": 144,
+      "median": 0.577,
+      "p95": 7.087,
+      "max": 7.302
+    },
+    "min_ms": 0.031
+  },
+  "modes": {
+    "direct": {
+      "all_wait_ms": {
+        "n": 144,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "warm_wait_ms": {
+        "n": 32,
+        "median": 0.0,
+        "p95": 0.0,
+        "max": 0.0
+      },
+      "full_groups": 0,
+      "late_fallback_responses": 0
+    },
+    "bos4": {
+      "all_wait_ms": {
+        "n": 144,
+        "median": 40.536,
+        "p95": 225.505,
+        "max": 236.089
+      },
+      "warm_wait_ms": {
+        "n": 32,
+        "median": 191.485,
+        "p95": 230.658,
+        "max": 236.089
+      },
+      "full_groups": 36,
+      "late_fallback_responses": 0
+    },
+    "d100": {
+      "all_wait_ms": {
+        "n": 144,
+        "median": 69.276,
+        "p95": 90.0,
+        "max": 90.0
+      },
+      "warm_wait_ms": {
+        "n": 32,
+        "median": 90.0,
+        "p95": 90.0,
+        "max": 90.0
+      },
+      "full_groups": 4,
+      "late_fallback_responses": 0
+    },
+    "d250": {
+      "all_wait_ms": {
+        "n": 144,
+        "median": 40.536,
+        "p95": 225.505,
+        "max": 236.089
+      },
+      "warm_wait_ms": {
+        "n": 32,
+        "median": 191.485,
+        "p95": 230.658,
+        "max": 236.089
+      },
+      "full_groups": 36,
+      "late_fallback_responses": 0
+    },
+    "slot1050": {
+      "all_wait_ms": {
+        "n": 144,
+        "median": 14.97,
+        "p95": 189.327,
+        "max": 202.496
+      },
+      "warm_wait_ms": {
+        "n": 32,
+        "median": 181.368,
+        "p95": 201.974,
+        "max": 202.496
+      },
+      "full_groups": 8,
+      "late_fallback_responses": 54
+    }
+  },
+  "paired_vs_bos4": {
+    "direct": {
+      "all_individual_median_ms": -40.536,
+      "warm_individual_median_ms": -191.485,
+      "difference_of_warm_medians_ms": -191.485
+    },
+    "d100": {
+      "all_individual_median_ms": 28.116,
+      "warm_individual_median_ms": -101.485,
+      "difference_of_warm_medians_ms": -101.485
+    },
+    "d250": {
+      "all_individual_median_ms": 0.0,
+      "warm_individual_median_ms": 0.0,
+      "difference_of_warm_medians_ms": 0.0
+    },
+    "slot1050": {
+      "all_individual_median_ms": -5.142,
+      "warm_individual_median_ms": -14.33,
+      "difference_of_warm_medians_ms": -10.118
+    }
+  }
+}

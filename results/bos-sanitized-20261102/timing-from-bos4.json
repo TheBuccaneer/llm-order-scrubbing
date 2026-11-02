@@ -1,0 +1,93 @@
+{
+  "feature": "first_client_reply_ns minus first_client_send_ns, in ms",
+  "rule": "nearest training median for warm send position; map position to known send order",
+  "training_file": "results/bos-pilot-20261102/trials-extended.jsonl",
+  "training_mode": "bos4",
+  "training_warm_trials": 64,
+  "centers_ms": {
+    "1": 914.7874185000001,
+    "2": 903.0286485,
+    "3": 884.4467784999999,
+    "4": 860.8721155000001
+  },
+  "holdout_file": "results/bos-sanitized-20261102/trials.jsonl",
+  "holdout": {
+    "bos4": {
+      "trials": 64,
+      "timing_correct": 41,
+      "rank_first_correct": 14,
+      "confusion_actual_predicted": {
+        "1->1": 9,
+        "1->2": 7,
+        "2->1": 2,
+        "2->2": 7,
+        "2->3": 7,
+        "3->2": 4,
+        "3->3": 10,
+        "3->4": 2,
+        "4->3": 1,
+        "4->4": 15
+      },
+      "first_reply_ms_by_position": {
+        "1": {
+          "median": 911.3076450000001,
+          "min": 901.856912,
+          "max": 929.08269
+        },
+        "2": {
+          "median": 893.808979,
+          "min": 879.704709,
+          "max": 913.578539
+        },
+        "3": {
+          "median": 877.2371375,
+          "min": 866.284913,
+          "max": 902.013431
+        },
+        "4": {
+          "median": 850.595677,
+          "min": 843.844142,
+          "max": 872.871502
+        }
+      }
+    },
+    "d250": {
+      "trials": 64,
+      "timing_correct": 43,
+      "rank_first_correct": 16,
+      "confusion_actual_predicted": {
+        "1->1": 12,
+        "1->2": 4,
+        "2->1": 7,
+        "2->2": 3,
+        "2->3": 6,
+        "3->3": 15,
+        "3->4": 1,
+        "4->3": 3,
+        "4->4": 13
+      },
+      "first_reply_ms_by_position": {
+        "1": {
+          "median": 914.0981975,
+          "min": 901.685817,
+          "max": 938.685661
+        },
+        "2": {
+          "median": 905.826221,
+          "min": 889.121666,
+          "max": 983.74749
+        },
+        "3": {
+          "median": 875.3867345,
+          "min": 867.507572,
+          "max": 881.904153
+        },
+        "4": {
+          "median": 850.899576,
+          "min": 846.131015,
+          "max": 888.462362
+        }
+      }
+    }
+  }
+}

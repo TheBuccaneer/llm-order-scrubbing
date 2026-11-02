@@ -1,0 +1,300 @@
+{
+  "c1_primary": {
+    "trials": 36,
+    "warm_trials": 32,
+    "cold_controls": 4,
+    "warm_rank1": 14,
+    "rank1_accuracy": 0.4375,
+    "wilson95": [
+      0.2817,
+      0.6067
+    ],
+    "later_warm_rank1": 6,
+    "later_warm_trials": 24,
+    "by_position": {
+      "1": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 634.648
+      },
+      "2": {
+        "n": 8,
+        "rank1": 6,
+        "median_first_reply_ms": 673.896
+      },
+      "3": {
+        "n": 8,
+        "rank1": 0,
+        "median_first_reply_ms": 674.69
+      },
+      "4": {
+        "n": 8,
+        "rank1": 0,
+        "median_first_reply_ms": 674.901
+      }
+    },
+    "prompt_set_sha256": null
+  },
+  "c1_holdout": {
+    "trials": 32,
+    "warm_trials": 32,
+    "cold_controls": 0,
+    "warm_rank1": 12,
+    "rank1_accuracy": 0.375,
+    "wilson95": [
+      0.2293,
+      0.5475
+    ],
+    "later_warm_rank1": 4,
+    "later_warm_trials": 24,
+    "by_position": {
+      "1": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 631.188
+      },
+      "2": {
+        "n": 8,
+        "rank1": 4,
+        "median_first_reply_ms": 676.662
+      },
+      "3": {
+        "n": 8,
+        "rank1": 0,
+        "median_first_reply_ms": 675.799
+      },
+      "4": {
+        "n": 8,
+        "rank1": 0,
+        "median_first_reply_ms": 673.148
+      }
+    },
+    "prompt_set_sha256": null
+  },
+  "c1_cacheoff": {
+    "trials": 4,
+    "warm_trials": 4,
+    "cold_controls": 0,
+    "warm_rank1": 1,
+    "rank1_accuracy": 0.25,
+    "wilson95": [
+      0.0456,
+      0.6994
+    ],
+    "later_warm_rank1": 0,
+    "later_warm_trials": 3,
+    "by_position": {
+      "1": {
+        "n": 1,
+        "rank1": 1,
+        "median_first_reply_ms": 786.404
+      },
+      "2": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 785.936
+      },
+      "3": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 793.934
+      },
+      "4": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 868.808
+      }
+    },
+    "prompt_set_sha256": null
+  },
+  "c2_primary": {
+    "trials": 36,
+    "warm_trials": 32,
+    "cold_controls": 4,
+    "warm_rank1": 8,
+    "rank1_accuracy": 0.25,
+    "wilson95": [
+      0.1325,
+      0.4211
+    ],
+    "later_warm_rank1": 0,
+    "later_warm_trials": 24,
+    "by_position": {
+      "1": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 691.07
+      },
+      "2": {
+        "n": 8,
+        "rank1": 0,
+        "median_first_reply_ms": 683.578
+      },
+      "3": {
+        "n": 8,
+        "rank1": 0,
+        "median_first_reply_ms": 678.533
+      },
+      "4": {
+        "n": 8,
+        "rank1": 0,
+        "median_first_reply_ms": 690.893
+      }
+    },
+    "prompt_set_sha256": null
+  },
+  "c2_cacheoff": {
+    "trials": 4,
+    "warm_trials": 4,
+    "cold_controls": 0,
+    "warm_rank1": 1,
+    "rank1_accuracy": 0.25,
+    "wilson95": [
+      0.0456,
+      0.6994
+    ],
+    "later_warm_rank1": 0,
+    "later_warm_trials": 3,
+    "by_position": {
+      "1": {
+        "n": 1,
+        "rank1": 1,
+        "median_first_reply_ms": 793.871
+      },
+      "2": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 805.975
+      },
+      "3": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 857.773
+      },
+      "4": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 793.733
+      }
+    },
+    "prompt_set_sha256": null
+  },
+  "prompt_primary": {
+    "trials": 36,
+    "warm_trials": 32,
+    "cold_controls": 4,
+    "warm_rank1": 32,
+    "rank1_accuracy": 1.0,
+    "wilson95": [
+      0.8928,
+      1.0
+    ],
+    "later_warm_rank1": 24,
+    "later_warm_trials": 24,
+    "by_position": {
+      "1": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 692.352
+      },
+      "2": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 700.134
+      },
+      "3": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 698.034
+      },
+      "4": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 716.211
+      }
+    },
+    "prompt_set_sha256": "d146d94da758c04142f4c2afc46cb32e3d229f72e356779dba97092ab6e4291d"
+  },
+  "prompt_holdout": {
+    "trials": 32,
+    "warm_trials": 32,
+    "cold_controls": 0,
+    "warm_rank1": 32,
+    "rank1_accuracy": 1.0,
+    "wilson95": [
+      0.8928,
+      1.0
+    ],
+    "later_warm_rank1": 24,
+    "later_warm_trials": 24,
+    "by_position": {
+      "1": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 698.084
+      },
+      "2": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 695.239
+      },
+      "3": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 697.327
+      },
+      "4": {
+        "n": 8,
+        "rank1": 8,
+        "median_first_reply_ms": 727.383
+      }
+    },
+    "prompt_set_sha256": "d146d94da758c04142f4c2afc46cb32e3d229f72e356779dba97092ab6e4291d"
+  },
+  "prompt_cacheoff": {
+    "trials": 4,
+    "warm_trials": 4,
+    "cold_controls": 0,
+    "warm_rank1": 1,
+    "rank1_accuracy": 0.25,
+    "wilson95": [
+      0.0456,
+      0.6994
+    ],
+    "later_warm_rank1": 0,
+    "later_warm_trials": 3,
+    "by_position": {
+      "1": {
+        "n": 1,
+        "rank1": 1,
+        "median_first_reply_ms": 916.879
+      },
+      "2": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 886.198
+      },
+      "3": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 885.129
+      },
+      "4": {
+        "n": 1,
+        "rank1": 0,
+        "median_first_reply_ms": 937.178
+      }
+    },
+    "prompt_set_sha256": "d146d94da758c04142f4c2afc46cb32e3d229f72e356779dba97092ab6e4291d"
+  },
+  "c1_t1_train_primary_test_holdout": {
+    "centers_ms": {
+      "1": 634.648,
+      "2": 673.896,
+      "3": 674.69,
+      "4": 674.901
+    },
+    "hits": 14,
+    "n": 32
+  }
+}

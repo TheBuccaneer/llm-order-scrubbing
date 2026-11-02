@@ -15,5 +15,11 @@ __pycache__/
 data/raw/
 data/models/
 
+# Rebuildable local runtime caches and handoff archives
+results/**/*cache/
+results/**/tmp/
+results/*.zip
+docs/*.zip
+
 # Betriebssystem
 .DS_Store

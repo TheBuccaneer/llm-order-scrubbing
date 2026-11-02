@@ -1,0 +1,47 @@
+{
+  "trials": 68,
+  "requests": 272,
+  "modes": {
+    "slot1050": {
+      "trials": 68,
+      "warm_trials": 64,
+      "warm_send_position": {
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "warm_received_rank": {
+        "1": 8,
+        "2": 21,
+        "3": 20,
+        "4": 15
+      },
+      "later_warm_rank1": 6,
+      "later_warm_trials": 48,
+      "warm_backend_rank1": 64,
+      "warm_full_block": 64,
+      "no_warm_exact_send_receive": 0,
+      "no_warm_trials": 4,
+      "send_order_agreement": 68,
+      "release_client_order_agreement": 68,
+      "batch_patterns": {
+        "(4,)": 68
+      },
+      "all_wait_ms": {
+        "median": 209.0915215,
+        "p95": 369.024228,
+        "max": 380.782188
+      },
+      "warm_wait_ms": {
+        "median": 362.5023115,
+        "p95": 376.672532,
+        "max": 380.782188
+      },
+      "target_ms": null,
+      "target_exceedances": null,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    }
+  }
+}

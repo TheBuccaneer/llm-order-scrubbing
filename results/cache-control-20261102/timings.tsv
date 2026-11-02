@@ -1,0 +1,4 @@
+request	http_status	curl_time_total_s	prompt_tokens	cached_tokens_reported
+miss_a	200	0.170396	258	
+hit_a	200	0.074264	258	256
+miss_b	200	0.114287	258	

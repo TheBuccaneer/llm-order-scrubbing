@@ -1,0 +1,298 @@
+{
+  "main16": {
+    "d100": {
+      "groups": 68,
+      "positive_groups": 64,
+      "warm_rank1": 64,
+      "full_groups": 4,
+      "fallback_groups": 0,
+      "fallback_responses": 0,
+      "all_proxy_wait_ms": {
+        "n": 272,
+        "median": 74.281,
+        "p95": 94.858,
+        "max": 95.033
+      },
+      "warm_proxy_wait_ms": {
+        "n": 64,
+        "median": 90.564,
+        "p95": 90.679,
+        "max": 90.751
+      },
+      "all_client_e2e_ms": {
+        "n": 272,
+        "median": 906.962,
+        "p95": 958.432,
+        "max": 991.48
+      },
+      "warm_client_e2e_ms": {
+        "n": 64,
+        "median": 775.281,
+        "p95": 792.35,
+        "max": 796.232
+      }
+    },
+    "bos4": {
+      "groups": 68,
+      "positive_groups": 64,
+      "warm_rank1": 19,
+      "full_groups": 68,
+      "fallback_groups": 0,
+      "fallback_responses": 0,
+      "all_proxy_wait_ms": {
+        "n": 272,
+        "median": 42.472,
+        "p95": 228.223,
+        "max": 246.716
+      },
+      "warm_proxy_wait_ms": {
+        "n": 64,
+        "median": 193.786,
+        "p95": 232.829,
+        "max": 246.716
+      },
+      "all_client_e2e_ms": {
+        "n": 272,
+        "median": 883.469,
+        "p95": 938.284,
+        "max": 975.148
+      },
+      "warm_client_e2e_ms": {
+        "n": 64,
+        "median": 877.173,
+        "p95": 929.692,
+        "max": 963.491
+      }
+    },
+    "d250": {
+      "groups": 68,
+      "positive_groups": 64,
+      "warm_rank1": 18,
+      "full_groups": 68,
+      "fallback_groups": 0,
+      "fallback_responses": 0,
+      "all_proxy_wait_ms": {
+        "n": 272,
+        "median": 41.549,
+        "p95": 228.276,
+        "max": 235.571
+      },
+      "warm_proxy_wait_ms": {
+        "n": 64,
+        "median": 194.309,
+        "p95": 233.33,
+        "max": 235.571
+      },
+      "all_client_e2e_ms": {
+        "n": 272,
+        "median": 885.475,
+        "p95": 941.39,
+        "max": 981.709
+      },
+      "warm_client_e2e_ms": {
+        "n": 64,
+        "median": 883.668,
+        "p95": 932.54,
+        "max": 954.493
+      }
+    },
+    "direct": {
+      "groups": 68,
+      "positive_groups": 64,
+      "warm_rank1": 64,
+      "full_groups": 0,
+      "fallback_groups": 0,
+      "fallback_responses": 0,
+      "all_proxy_wait_ms": {
+        "n": 272,
+        "median": 0.027,
+        "p95": 0.053,
+        "max": 0.076
+      },
+      "warm_proxy_wait_ms": {
+        "n": 64,
+        "median": 0.044,
+        "p95": 0.06,
+        "max": 0.075
+      },
+      "all_client_e2e_ms": {
+        "n": 272,
+        "median": 840.616,
+        "p95": 905.44,
+        "max": 950.377
+      },
+      "warm_client_e2e_ms": {
+        "n": 64,
+        "median": 685.394,
+        "p95": 703.96,
+        "max": 715.362
+      }
+    }
+  },
+  "sanitized16": {
+    "d250": {
+      "groups": 68,
+      "positive_groups": 64,
+      "warm_rank1": 16,
+      "full_groups": 68,
+      "fallback_groups": 0,
+      "fallback_responses": 0,
+      "all_proxy_wait_ms": {
+        "n": 272,
+        "median": 41.355,
+        "p95": 229.315,
+        "max": 237.698
+      },
+      "warm_proxy_wait_ms": {
+        "n": 64,
+        "median": 193.315,
+        "p95": 234.486,
+        "max": 237.698
+      },
+      "all_client_e2e_ms": {
+        "n": 272,
+        "median": 878.598,
+        "p95": 952.0,
+        "max": 988.077
+      },
+      "warm_client_e2e_ms": {
+        "n": 64,
+        "median": 871.467,
+        "p95": 931.432,
+        "max": 979.935
+      }
+    },
+    "bos4": {
+      "groups": 68,
+      "positive_groups": 64,
+      "warm_rank1": 14,
+      "full_groups": 68,
+      "fallback_groups": 0,
+      "fallback_responses": 0,
+      "all_proxy_wait_ms": {
+        "n": 272,
+        "median": 42.847,
+        "p95": 226.227,
+        "max": 237.514
+      },
+      "warm_proxy_wait_ms": {
+        "n": 64,
+        "median": 190.623,
+        "p95": 233.028,
+        "max": 237.514
+      },
+      "all_client_e2e_ms": {
+        "n": 272,
+        "median": 876.401,
+        "p95": 927.397,
+        "max": 967.127
+      },
+      "warm_client_e2e_ms": {
+        "n": 64,
+        "median": 876.224,
+        "p95": 921.88,
+        "max": 933.34
+      }
+    },
+    "slot1050": {
+      "groups": 68,
+      "positive_groups": 64,
+      "warm_rank1": 14,
+      "full_groups": 68,
+      "fallback_groups": 0,
+      "fallback_responses": 0,
+      "all_proxy_wait_ms": {
+        "n": 272,
+        "median": 210.479,
+        "p95": 373.253,
+        "max": 385.679
+      },
+      "warm_proxy_wait_ms": {
+        "n": 64,
+        "median": 363.244,
+        "p95": 381.332,
+        "max": 385.679
+      },
+      "all_client_e2e_ms": {
+        "n": 272,
+        "median": 1039.57,
+        "p95": 1057.745,
+        "max": 1058.229
+      },
+      "warm_client_e2e_ms": {
+        "n": 64,
+        "median": 1039.352,
+        "p95": 1057.795,
+        "max": 1058.229
+      }
+    }
+  },
+  "fallback24_holdout": {
+    "slot1050": {
+      "groups": 36,
+      "positive_groups": 32,
+      "warm_rank1": 8,
+      "full_groups": 8,
+      "fallback_groups": 28,
+      "fallback_responses": 54,
+      "all_proxy_wait_ms": {
+        "n": 144,
+        "median": 16.645,
+        "p95": 192.669,
+        "max": 205.33
+      },
+      "warm_proxy_wait_ms": {
+        "n": 32,
+        "median": 185.151,
+        "p95": 204.843,
+        "max": 205.33
+      },
+      "all_client_e2e_ms": {
+        "n": 144,
+        "median": 1044.448,
+        "p95": 1094.743,
+        "max": 1123.363
+      },
+      "warm_client_e2e_ms": {
+        "n": 32,
+        "median": 1039.421,
+        "p95": 1053.781,
+        "max": 1053.876
+      }
+    }
+  },
+  "fallback24_confirm": {
+    "slot1050": {
+      "groups": 36,
+      "positive_groups": 32,
+      "warm_rank1": 14,
+      "full_groups": 9,
+      "fallback_groups": 27,
+      "fallback_responses": 55,
+      "all_proxy_wait_ms": {
+        "n": 144,
+        "median": 17.728,
+        "p95": 191.77,
+        "max": 203.021
+      },
+      "warm_proxy_wait_ms": {
+        "n": 32,
+        "median": 181.59,
+        "p95": 202.584,
+        "max": 203.021
+      },
+      "all_client_e2e_ms": {
+        "n": 144,
+        "median": 1046.034,
+        "p95": 1091.804,
+        "max": 1124.994
+      },
+      "warm_client_e2e_ms": {
+        "n": 32,
+        "median": 1038.658,
+        "p95": 1053.53,
+        "max": 1053.711
+      }
+    }
+  }
+}

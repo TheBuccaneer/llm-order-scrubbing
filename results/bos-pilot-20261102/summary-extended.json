@@ -1,0 +1,163 @@
+{
+  "trials": 272,
+  "requests": 1088,
+  "modes": {
+    "direct": {
+      "trials": 68,
+      "warm_trials": 64,
+      "warm_send_position": {
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "warm_received_rank": {
+        "1": 64
+      },
+      "later_warm_rank1": 48,
+      "later_warm_trials": 48,
+      "warm_backend_rank1": 64,
+      "warm_full_block": 0,
+      "no_warm_exact_send_receive": 3,
+      "no_warm_trials": 4,
+      "send_order_agreement": 68,
+      "release_client_order_agreement": 68,
+      "batch_patterns": {},
+      "all_wait_ms": {
+        "median": 0.026971000000000002,
+        "p95": 0.052621,
+        "max": 0.075792
+      },
+      "warm_wait_ms": {
+        "median": 0.0441815,
+        "p95": 0.059601,
+        "max": 0.075462
+      },
+      "target_ms": null,
+      "target_exceedances": null,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    },
+    "bos4": {
+      "trials": 68,
+      "warm_trials": 64,
+      "warm_send_position": {
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "warm_received_rank": {
+        "1": 19,
+        "2": 19,
+        "3": 16,
+        "4": 10
+      },
+      "later_warm_rank1": 14,
+      "later_warm_trials": 48,
+      "warm_backend_rank1": 64,
+      "warm_full_block": 64,
+      "no_warm_exact_send_receive": 0,
+      "no_warm_trials": 4,
+      "send_order_agreement": 68,
+      "release_client_order_agreement": 68,
+      "batch_patterns": {
+        "(4,)": 68
+      },
+      "all_wait_ms": {
+        "median": 42.471677,
+        "p95": 228.223208,
+        "max": 246.716146
+      },
+      "warm_wait_ms": {
+        "median": 193.78567700000002,
+        "p95": 232.82886,
+        "max": 246.716146
+      },
+      "target_ms": null,
+      "target_exceedances": null,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    },
+    "d100": {
+      "trials": 68,
+      "warm_trials": 64,
+      "warm_send_position": {
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "warm_received_rank": {
+        "1": 64
+      },
+      "later_warm_rank1": 48,
+      "later_warm_trials": 48,
+      "warm_backend_rank1": 64,
+      "warm_full_block": 0,
+      "no_warm_exact_send_receive": 0,
+      "no_warm_trials": 4,
+      "send_order_agreement": 68,
+      "release_client_order_agreement": 68,
+      "batch_patterns": {
+        "(1, 3)": 64,
+        "(4,)": 4
+      },
+      "all_wait_ms": {
+        "median": 74.28087350000001,
+        "p95": 94.858372,
+        "max": 95.03329
+      },
+      "warm_wait_ms": {
+        "median": 90.5642795,
+        "p95": 90.679118,
+        "max": 90.750571
+      },
+      "target_ms": 100,
+      "target_exceedances": 0,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    },
+    "d250": {
+      "trials": 68,
+      "warm_trials": 64,
+      "warm_send_position": {
+        "1": 16,
+        "2": 16,
+        "3": 16,
+        "4": 16
+      },
+      "warm_received_rank": {
+        "1": 18,
+        "2": 15,
+        "3": 12,
+        "4": 19
+      },
+      "later_warm_rank1": 13,
+      "later_warm_trials": 48,
+      "warm_backend_rank1": 64,
+      "warm_full_block": 64,
+      "no_warm_exact_send_receive": 0,
+      "no_warm_trials": 4,
+      "send_order_agreement": 68,
+      "release_client_order_agreement": 68,
+      "batch_patterns": {
+        "(4,)": 68
+      },
+      "all_wait_ms": {
+        "median": 41.548617500000006,
+        "p95": 228.276334,
+        "max": 235.570652
+      },
+      "warm_wait_ms": {
+        "median": 194.3094345,
+        "p95": 233.329796,
+        "max": 235.570652
+      },
+      "target_ms": 250,
+      "target_exceedances": 0,
+      "timestamp_errors": 0,
+      "cache_control_errors": 0
+    }
+  }
+}

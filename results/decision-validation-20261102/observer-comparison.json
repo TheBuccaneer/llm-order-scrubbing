@@ -1,0 +1,1148 @@
+[
+  {
+    "train_session": "bos_dev",
+    "test_session": "bos_holdout",
+    "mode": "bos4",
+    "train_n": 64,
+    "R1": {
+      "n": 64,
+      "hits": 21,
+      "accuracy": 0.3281,
+      "balanced_accuracy": 0.3281,
+      "wilson95": [
+        0.2257,
+        0.45
+      ],
+      "chance_p_one_sided": 0.09927796,
+      "confusion_actual_predicted": [
+        [
+          4,
+          8,
+          1,
+          3
+        ],
+        [
+          5,
+          6,
+          2,
+          3
+        ],
+        [
+          3,
+          3,
+          6,
+          4
+        ],
+        [
+          5,
+          3,
+          3,
+          5
+        ]
+      ]
+    },
+    "R2": {
+      "n": 64,
+      "hits": 14,
+      "accuracy": 0.2188,
+      "balanced_accuracy": 0.2188,
+      "wilson95": [
+        0.135,
+        0.3343
+      ],
+      "chance_p_one_sided": 0.76101045,
+      "confusion_actual_predicted": [
+        [
+          8,
+          1,
+          1,
+          6
+        ],
+        [
+          9,
+          3,
+          2,
+          2
+        ],
+        [
+          5,
+          6,
+          1,
+          4
+        ],
+        [
+          6,
+          5,
+          3,
+          2
+        ]
+      ]
+    },
+    "T1": {
+      "n": 64,
+      "hits": 53,
+      "accuracy": 0.8281,
+      "balanced_accuracy": 0.8281,
+      "wilson95": [
+        0.7179,
+        0.9012
+      ],
+      "chance_p_one_sided": 0.0,
+      "confusion_actual_predicted": [
+        [
+          15,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          8,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          15,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          15
+        ]
+      ]
+    },
+    "T2": {
+      "n": 64,
+      "hits": 54,
+      "accuracy": 0.8438,
+      "balanced_accuracy": 0.8438,
+      "wilson95": [
+        0.7357,
+        0.9129
+      ],
+      "chance_p_one_sided": 0.0,
+      "confusion_actual_predicted": [
+        [
+          15,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          8,
+          7,
+          0
+        ],
+        [
+          0,
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          15
+        ]
+      ]
+    },
+    "RT": {
+      "n": 64,
+      "hits": 49,
+      "accuracy": 0.7656,
+      "balanced_accuracy": 0.7656,
+      "wilson95": [
+        0.6487,
+        0.8525
+      ],
+      "chance_p_one_sided": 0.0,
+      "confusion_actual_predicted": [
+        [
+          13,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          8,
+          5,
+          1
+        ],
+        [
+          0,
+          1,
+          12,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          16
+        ]
+      ]
+    }
+  },
+  {
+    "train_session": "bos_dev",
+    "test_session": "sanitized",
+    "mode": "bos4",
+    "train_n": 64,
+    "R1": {
+      "n": 64,
+      "hits": 14,
+      "accuracy": 0.2188,
+      "balanced_accuracy": 0.2188,
+      "wilson95": [
+        0.135,
+        0.3343
+      ],
+      "chance_p_one_sided": 0.76101045,
+      "confusion_actual_predicted": [
+        [
+          6,
+          4,
+          4,
+          2
+        ],
+        [
+          3,
+          1,
+          6,
+          6
+        ],
+        [
+          3,
+          3,
+          4,
+          6
+        ],
+        [
+          3,
+          6,
+          4,
+          3
+        ]
+      ]
+    },
+    "R2": {
+      "n": 64,
+      "hits": 15,
+      "accuracy": 0.2344,
+      "balanced_accuracy": 0.2344,
+      "wilson95": [
+        0.1475,
+        0.3513
+      ],
+      "chance_p_one_sided": 0.66004868,
+      "confusion_actual_predicted": [
+        [
+          5,
+          5,
+          2,
+          4
+        ],
+        [
+          4,
+          3,
+          5,
+          4
+        ],
+        [
+          4,
+          3,
+          4,
+          5
+        ],
+        [
+          8,
+          3,
+          2,
+          3
+        ]
+      ]
+    },
+    "T1": {
+      "n": 64,
+      "hits": 35,
+      "accuracy": 0.5469,
+      "balanced_accuracy": 0.5469,
+      "wilson95": [
+        0.4257,
+        0.6627
+      ],
+      "chance_p_one_sided": 3.8e-07,
+      "confusion_actual_predicted": [
+        [
+          9,
+          7,
+          0,
+          0
+        ],
+        [
+          1,
+          5,
+          10,
+          0
+        ],
+        [
+          0,
+          3,
+          5,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          16
+        ]
+      ]
+    },
+    "T2": {
+      "n": 64,
+      "hits": 37,
+      "accuracy": 0.5781,
+      "balanced_accuracy": 0.5781,
+      "wilson95": [
+        0.4561,
+        0.6913
+      ],
+      "chance_p_one_sided": 2e-08,
+      "confusion_actual_predicted": [
+        [
+          9,
+          7,
+          0,
+          0
+        ],
+        [
+          1,
+          7,
+          8,
+          0
+        ],
+        [
+          0,
+          3,
+          5,
+          8
+        ],
+        [
+          0,
+          0,
+          0,
+          16
+        ]
+      ]
+    },
+    "RT": {
+      "n": 64,
+      "hits": 35,
+      "accuracy": 0.5469,
+      "balanced_accuracy": 0.5469,
+      "wilson95": [
+        0.4257,
+        0.6627
+      ],
+      "chance_p_one_sided": 3.8e-07,
+      "confusion_actual_predicted": [
+        [
+          7,
+          9,
+          0,
+          0
+        ],
+        [
+          2,
+          6,
+          8,
+          0
+        ],
+        [
+          1,
+          2,
+          6,
+          7
+        ],
+        [
+          0,
+          0,
+          0,
+          16
+        ]
+      ]
+    }
+  },
+  {
+    "train_session": "bos_dev",
+    "test_session": "bos_holdout",
+    "mode": "d250",
+    "train_n": 64,
+    "R1": {
+      "n": 64,
+      "hits": 15,
+      "accuracy": 0.2344,
+      "balanced_accuracy": 0.2344,
+      "wilson95": [
+        0.1475,
+        0.3513
+      ],
+      "chance_p_one_sided": 0.66004868,
+      "confusion_actual_predicted": [
+        [
+          3,
+          5,
+          2,
+          6
+        ],
+        [
+          5,
+          7,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          3,
+          6
+        ],
+        [
+          10,
+          3,
+          1,
+          2
+        ]
+      ]
+    },
+    "R2": {
+      "n": 64,
+      "hits": 11,
+      "accuracy": 0.1719,
+      "balanced_accuracy": 0.1719,
+      "wilson95": [
+        0.0988,
+        0.2821
+      ],
+      "chance_p_one_sided": 0.94887107,
+      "confusion_actual_predicted": [
+        [
+          1,
+          5,
+          6,
+          4
+        ],
+        [
+          6,
+          2,
+          3,
+          5
+        ],
+        [
+          6,
+          2,
+          5,
+          3
+        ],
+        [
+          4,
+          2,
+          7,
+          3
+        ]
+      ]
+    },
+    "T1": {
+      "n": 64,
+      "hits": 53,
+      "accuracy": 0.8281,
+      "balanced_accuracy": 0.8281,
+      "wilson95": [
+        0.7179,
+        0.9012
+      ],
+      "chance_p_one_sided": 0.0,
+      "confusion_actual_predicted": [
+        [
+          15,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          11,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          14,
+          2
+        ],
+        [
+          0,
+          0,
+          3,
+          13
+        ]
+      ]
+    },
+    "T2": {
+      "n": 64,
+      "hits": 54,
+      "accuracy": 0.8438,
+      "balanced_accuracy": 0.8438,
+      "wilson95": [
+        0.7357,
+        0.9129
+      ],
+      "chance_p_one_sided": 0.0,
+      "confusion_actual_predicted": [
+        [
+          14,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          11,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          13
+        ]
+      ]
+    },
+    "RT": {
+      "n": 64,
+      "hits": 44,
+      "accuracy": 0.6875,
+      "balanced_accuracy": 0.6875,
+      "wilson95": [
+        0.5661,
+        0.7877
+      ],
+      "chance_p_one_sided": 0.0,
+      "confusion_actual_predicted": [
+        [
+          11,
+          5,
+          0,
+          0
+        ],
+        [
+          1,
+          10,
+          4,
+          1
+        ],
+        [
+          0,
+          3,
+          10,
+          3
+        ],
+        [
+          0,
+          1,
+          2,
+          13
+        ]
+      ]
+    }
+  },
+  {
+    "train_session": "bos_dev",
+    "test_session": "sanitized",
+    "mode": "d250",
+    "train_n": 64,
+    "R1": {
+      "n": 64,
+      "hits": 16,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "wilson95": [
+        0.1601,
+        0.3682
+      ],
+      "chance_p_one_sided": 0.54786894,
+      "confusion_actual_predicted": [
+        [
+          2,
+          6,
+          5,
+          3
+        ],
+        [
+          2,
+          5,
+          6,
+          3
+        ],
+        [
+          5,
+          6,
+          4,
+          1
+        ],
+        [
+          6,
+          4,
+          1,
+          5
+        ]
+      ]
+    },
+    "R2": {
+      "n": 64,
+      "hits": 25,
+      "accuracy": 0.3906,
+      "balanced_accuracy": 0.3906,
+      "wilson95": [
+        0.2806,
+        0.5131
+      ],
+      "chance_p_one_sided": 0.00910519,
+      "confusion_actual_predicted": [
+        [
+          6,
+          3,
+          3,
+          4
+        ],
+        [
+          3,
+          7,
+          2,
+          4
+        ],
+        [
+          6,
+          3,
+          5,
+          2
+        ],
+        [
+          4,
+          1,
+          4,
+          7
+        ]
+      ]
+    },
+    "T1": {
+      "n": 64,
+      "hits": 31,
+      "accuracy": 0.4844,
+      "balanced_accuracy": 0.4844,
+      "wilson95": [
+        0.3663,
+        0.6042
+      ],
+      "chance_p_one_sided": 4.36e-05,
+      "confusion_actual_predicted": [
+        [
+          11,
+          5,
+          0,
+          0
+        ],
+        [
+          7,
+          3,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          14
+        ],
+        [
+          0,
+          0,
+          1,
+          15
+        ]
+      ]
+    },
+    "T2": {
+      "n": 64,
+      "hits": 30,
+      "accuracy": 0.4688,
+      "balanced_accuracy": 0.4688,
+      "wilson95": [
+        0.3518,
+        0.5893
+      ],
+      "chance_p_one_sided": 0.00012301,
+      "confusion_actual_predicted": [
+        [
+          9,
+          7,
+          0,
+          0
+        ],
+        [
+          7,
+          3,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          13
+        ],
+        [
+          0,
+          0,
+          1,
+          15
+        ]
+      ]
+    },
+    "RT": {
+      "n": 64,
+      "hits": 37,
+      "accuracy": 0.5781,
+      "balanced_accuracy": 0.5781,
+      "wilson95": [
+        0.4561,
+        0.6913
+      ],
+      "chance_p_one_sided": 2e-08,
+      "confusion_actual_predicted": [
+        [
+          10,
+          6,
+          0,
+          0
+        ],
+        [
+          5,
+          10,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          3,
+          11
+        ],
+        [
+          0,
+          1,
+          1,
+          14
+        ]
+      ]
+    }
+  },
+  {
+    "train_session": "slot_pilot",
+    "test_session": "slot_followup",
+    "mode": "slot1050",
+    "train_n": 16,
+    "R1": {
+      "n": 64,
+      "hits": 8,
+      "accuracy": 0.125,
+      "balanced_accuracy": 0.125,
+      "wilson95": [
+        0.0647,
+        0.2277
+      ],
+      "chance_p_one_sided": 0.99568214,
+      "confusion_actual_predicted": [
+        [
+          2,
+          8,
+          1,
+          5
+        ],
+        [
+          9,
+          2,
+          1,
+          4
+        ],
+        [
+          3,
+          7,
+          1,
+          5
+        ],
+        [
+          5,
+          6,
+          2,
+          3
+        ]
+      ]
+    },
+    "R2": {
+      "n": 64,
+      "hits": 15,
+      "accuracy": 0.2344,
+      "balanced_accuracy": 0.2344,
+      "wilson95": [
+        0.1475,
+        0.3513
+      ],
+      "chance_p_one_sided": 0.66004868,
+      "confusion_actual_predicted": [
+        [
+          6,
+          5,
+          1,
+          4
+        ],
+        [
+          2,
+          4,
+          3,
+          7
+        ],
+        [
+          6,
+          3,
+          1,
+          6
+        ],
+        [
+          5,
+          2,
+          5,
+          4
+        ]
+      ]
+    },
+    "T1": {
+      "n": 64,
+      "hits": 18,
+      "accuracy": 0.2812,
+      "balanced_accuracy": 0.2812,
+      "wilson95": [
+        0.1859,
+        0.4013
+      ],
+      "chance_p_one_sided": 0.32557157,
+      "confusion_actual_predicted": [
+        [
+          1,
+          9,
+          1,
+          5
+        ],
+        [
+          0,
+          9,
+          1,
+          6
+        ],
+        [
+          1,
+          9,
+          3,
+          3
+        ],
+        [
+          1,
+          8,
+          2,
+          5
+        ]
+      ]
+    },
+    "T2": {
+      "n": 64,
+      "hits": 17,
+      "accuracy": 0.2656,
+      "balanced_accuracy": 0.2656,
+      "wilson95": [
+        0.173,
+        0.3848
+      ],
+      "chance_p_one_sided": 0.43335211,
+      "confusion_actual_predicted": [
+        [
+          4,
+          7,
+          2,
+          3
+        ],
+        [
+          4,
+          9,
+          1,
+          2
+        ],
+        [
+          4,
+          7,
+          2,
+          3
+        ],
+        [
+          5,
+          8,
+          1,
+          2
+        ]
+      ]
+    },
+    "RT": {
+      "n": 64,
+      "hits": 15,
+      "accuracy": 0.2344,
+      "balanced_accuracy": 0.2344,
+      "wilson95": [
+        0.1475,
+        0.3513
+      ],
+      "chance_p_one_sided": 0.66004868,
+      "confusion_actual_predicted": [
+        [
+          6,
+          5,
+          1,
+          4
+        ],
+        [
+          2,
+          4,
+          3,
+          7
+        ],
+        [
+          6,
+          3,
+          1,
+          6
+        ],
+        [
+          5,
+          2,
+          5,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "train_session": "slot_pilot",
+    "test_session": "sanitized",
+    "mode": "slot1050",
+    "train_n": 16,
+    "R1": {
+      "n": 64,
+      "hits": 14,
+      "accuracy": 0.2188,
+      "balanced_accuracy": 0.2188,
+      "wilson95": [
+        0.135,
+        0.3343
+      ],
+      "chance_p_one_sided": 0.76101045,
+      "confusion_actual_predicted": [
+        [
+          4,
+          3,
+          4,
+          5
+        ],
+        [
+          5,
+          2,
+          4,
+          5
+        ],
+        [
+          7,
+          3,
+          2,
+          4
+        ],
+        [
+          2,
+          6,
+          2,
+          6
+        ]
+      ]
+    },
+    "R2": {
+      "n": 64,
+      "hits": 9,
+      "accuracy": 0.1406,
+      "balanced_accuracy": 0.1406,
+      "wilson95": [
+        0.0758,
+        0.2462
+      ],
+      "chance_p_one_sided": 0.98887479,
+      "confusion_actual_predicted": [
+        [
+          2,
+          5,
+          2,
+          7
+        ],
+        [
+          5,
+          3,
+          6,
+          2
+        ],
+        [
+          8,
+          4,
+          1,
+          3
+        ],
+        [
+          6,
+          4,
+          3,
+          3
+        ]
+      ]
+    },
+    "T1": {
+      "n": 64,
+      "hits": 20,
+      "accuracy": 0.3125,
+      "balanced_accuracy": 0.3125,
+      "wilson95": [
+        0.2123,
+        0.4339
+      ],
+      "chance_p_one_sided": 0.15605708,
+      "confusion_actual_predicted": [
+        [
+          4,
+          9,
+          2,
+          1
+        ],
+        [
+          1,
+          10,
+          1,
+          4
+        ],
+        [
+          1,
+          11,
+          2,
+          2
+        ],
+        [
+          2,
+          9,
+          1,
+          4
+        ]
+      ]
+    },
+    "T2": {
+      "n": 64,
+      "hits": 14,
+      "accuracy": 0.2188,
+      "balanced_accuracy": 0.2188,
+      "wilson95": [
+        0.135,
+        0.3343
+      ],
+      "chance_p_one_sided": 0.76101045,
+      "confusion_actual_predicted": [
+        [
+          2,
+          9,
+          0,
+          5
+        ],
+        [
+          7,
+          8,
+          0,
+          1
+        ],
+        [
+          6,
+          9,
+          1,
+          0
+        ],
+        [
+          6,
+          7,
+          0,
+          3
+        ]
+      ]
+    },
+    "RT": {
+      "n": 64,
+      "hits": 9,
+      "accuracy": 0.1406,
+      "balanced_accuracy": 0.1406,
+      "wilson95": [
+        0.0758,
+        0.2462
+      ],
+      "chance_p_one_sided": 0.98887479,
+      "confusion_actual_predicted": [
+        [
+          2,
+          5,
+          2,
+          7
+        ],
+        [
+          5,
+          3,
+          6,
+          2
+        ],
+        [
+          8,
+          4,
+          1,
+          3
+        ],
+        [
+          6,
+          4,
+          3,
+          3
+        ]
+      ]
+    }
+  }
+]

@@ -28,11 +28,22 @@ https://github.com/TheBuccaneer/ordleak
 
 ## Project Status
 
-Initial repository setup (October 2026).
+Local feasibility pilots (November 2026): Qwen2.5-7B-Instruct runs on the
+RTX 3090 with vLLM 0.17.1. A cache-dependent completion-order signal is
+visible in a deliberately tuned chunked-prefill configuration, including
+small checks with 16-token responses and overlapping background work.
+Four-response BOS shuffles response ranks but can leave a client-visible
+batch-completion timing signal. A fixed, request-anchored release time
+suppresses the tested first-response timing feature when all four responses
+are ready; a separate 24-token test shows that late-response fallback
+reintroduces observable order and timing patterns. The strong baseline
+rank channel is reproducible with different prompt text, but depends
+substantially on the serving configuration. Evidence, limits, and the
+provisional paper decision are in `docs/entscheidungsvalidierung-20261102.md`.
 
-No experimental results have been established yet.
-Research hypotheses and implementation choices remain subject
-to experimental validation.
+The full ICCAI 2026 paper is archived in `references/` and has been
+compared with the new results. Transfer to real multi-tenant workloads
+and a broader novelty assessment remain open.
 
 ## Getting Started
 
