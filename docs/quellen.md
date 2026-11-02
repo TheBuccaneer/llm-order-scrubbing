@@ -244,3 +244,16 @@ in `docs/causal-release-pilot-20261102.md`.
 Die heutige Recherche war gezielt und begrenzt, kein vollständiger
 systematischer Literaturreview. Die Offline-Ergebnisse beweisen keine
 formale Schutzgarantie.
+
+## Zufallsslot-Pilot (02.11.2026)
+
+Vor dem Anschluss-Pilot erneut gezielt online abgeglichen. Der
+Versuchsbefund steht in `docs/randomized-release-pilot-20261102.md`.
+
+| Quelle / Lesestatus | Konsequenz für die Münzregel |
+| --- | --- |
+| [One-Sided Bounded Noise, CCS 2025](https://people.csail.mit.edu/devadas/pubs/one_sided_noise.pdf), **L2 aus vorheriger Volltextprüfung, heute Abstract/Verlagsseite bestätigt** | Positive begrenzte Zufallsverzögerung und ihre Privacy-/Kostenoptimierung sind bekannt. Unser `q(D)` ist keine Neuerfindung; der spezifische Unterschied ist der Completion-/Fallback-Zwang mehrerer echter Antworten. Der heutige PDF-Direktzugriff lief in einen Timeout. |
+| [Pacer, USENIX Security 2022](https://www.usenix.org/system/files/sec22-mehta.pdf), **L2 heute**, §§2.2–4 | Der echte sichtbare Sendeplan und seine Abweichungen müssen vom Geheimnis entkoppelt werden. Ein unabhängig gezogener Termin genügt nicht, wenn sein Fallback wieder geheimnisabhängig ist. |
+| [Mitigating Timing Side Channel in Shared Schedulers, 2013](https://arxiv.org/pdf/1302.6123), **L2 heute**, §V-A/B und §VI | Allgemeine periodische Pufferung und deren Delay-/Privacy-Konflikt sind Vorarbeit; formale Resultate gelten nicht automatisch für LLM-HTTP-Antworten. |
+| [Threshold Pool Mixes, Computer Networks 2014](https://www.sciencedirect.com/science/article/pii/S1389128614001522), **L1/Teilauszug heute** | Verlagstext beschreibt bereits Mehrzieloptimierung von Anonymität und Wartezeit. Originalvolltext ließ sich weiterhin nicht verlässlich öffnen (403), daher keine abschließende Novelty-Aussage. |
+| [Eigene ICCAI-2026-Arbeit](../references/iccai2026-completion-order.pdf), **zuvor L3, heute nicht erneut gelesen** | BOS/ODS-Rangmodell ist der Ausgangspunkt; die hier geprüfte gemeinsame Completion- und Fallback-Frage ist ein enger Anschluss, aber die getestete Münzregel liefert keinen belegten Methodenbeitrag. |

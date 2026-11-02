@@ -33,6 +33,14 @@ preis. Ein explorativ auf 1.160 ms kalibrierter fester Slot deckte alle
 108 Spuren ab und spart modelliert 40 ms je Antwort gegenüber 1.200 ms.
 Das ist weder live bestätigt noch ein neuer Schutzalgorithmus. Die
 abgeleiteten Rohzeilen stehen unter `results/causal-release-20261102/`.
+Der folgende **Zufallsslot-Pilot** in
+`docs/randomized-release-pilot-20261102.md` prüfte drei einfache
+zustandsunabhängige 50:50-Mischungen auf denselben 108 Gruppen. Jeder
+feste Mitteltermin hatte in den Entwicklungsdaten geringere oder
+gleiche mittlere Wartezeit und geringeres oder gleiches Fallback-Risiko;
+die breite Mischung zeigte zusätzlich ein clientseitiges Zeitsignal.
+Keine der Mischungen begründet derzeit einen Methodenbeitrag. Keine
+neue GPU-Messung oder Änderung der produktiven Regel.
 
 ## Bisher umgesetzt
 - Privates GitHub-Repository erstellt.
@@ -419,9 +427,9 @@ ausdrückliche Mechanismusänderung. Er beweist keine allgemeine Sicherheit.
   nach Auswahl von T2 getrennt gefahren.
 
 ## Nächster Schritt
-Für die konstruktive Richtung zunächst Latenz-/Verfügbarkeitsbudget
-und Leakage-Maß für die vollständige Clientfolge festlegen. Danach
-einen wirklich prospektiven kleinen Live-Test eines kalibrierten
-festen Slots und höchstens einer begründeten Gegenregel planen; C1
-und längere Completion-Tails als Geltungsgrenzen aufnehmen. Der
-Offline-Pilot ist keine Live-Evidenz für eine neue Schutzmethode.
+Die empirische BOS-/Fallback-Richtung mit einem expliziten
+Latenz-/Verfügbarkeitsbudget und vollständiger Client-Trace-Auswertung
+prospektiv stärken. Dafür einen kleinen, frisch randomisierten Live-Test
+eines vorab fixierten Slots nach neuem Backend-Start planen; C1 und
+längere Completion-Tails als Geltungsgrenzen behandeln. Auf den
+bereits explorierten Spuren keine weitere Slot-/Münzoptimierung.

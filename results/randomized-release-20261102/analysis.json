@@ -1,0 +1,405 @@
+{
+  "protocol": {
+    "slots_ms": [
+      1050,
+      1100,
+      1105,
+      1130,
+      1150,
+      1155,
+      1160,
+      1200
+    ],
+    "policies": {
+      "fixed_1105": {
+        "1105": 1.0
+      },
+      "coin_1050_1160": {
+        "1050": 0.5,
+        "1160": 0.5
+      },
+      "fixed_1130": {
+        "1130": 1.0
+      },
+      "coin_1100_1160": {
+        "1100": 0.5,
+        "1160": 0.5
+      },
+      "fixed_1155": {
+        "1155": 1.0
+      },
+      "coin_1150_1160": {
+        "1150": 0.5,
+        "1160": 0.5
+      },
+      "fixed_1160": {
+        "1160": 1.0
+      },
+      "fixed_1200": {
+        "1200": 1.0
+      }
+    },
+    "client_model": "ideal slot/fallback, fixed label-independent shuffle, 2ms serialization; no jitter/network/backend feedback",
+    "training": "64 older positive groups; 32 already-inspected separate C0 positive groups for cross-session check",
+    "MMD": "mean of six pairwise biased Gaussian-kernel MMD squared values; four complete client times/ID ranks; fixed 50ms and 0.25 scales; 999 balanced-label permutations; old two sessions permuted as paired case sequences",
+    "risk": "fraction of groups with any late response; internal availability metric, not attacker feature"
+  },
+  "sessions": {
+    "development": {
+      "fixed_1105": {
+        "mean_individual_wait_ms": 95.6293,
+        "group_fallback_risk": 0.1528,
+        "expected_fallback_groups": 11.0,
+        "mmd2_full_trace": 0.019847,
+        "permutation_p": 0.623,
+        "permutation_null_median": 0.021233,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.1875,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "coin_1050_1160": {
+        "mean_individual_wait_ms": 100.4068,
+        "group_fallback_risk": 0.3819,
+        "expected_fallback_groups": 27.5,
+        "mmd2_full_trace": 0.115123,
+        "permutation_p": 0.002,
+        "permutation_null_median": 0.079511,
+        "observable_gap_rate_by_position": [
+          0.5,
+          0.4062,
+          0.125,
+          0.0625
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.4375,
+        "internal_fallback_rate_by_position": [
+          0.5,
+          0.5,
+          0.3125,
+          0.1562
+        ]
+      },
+      "fixed_1130": {
+        "mean_individual_wait_ms": 119.5486,
+        "group_fallback_risk": 0.0833,
+        "expected_fallback_groups": 6.0,
+        "mmd2_full_trace": 0.022172,
+        "permutation_p": 0.394,
+        "permutation_null_median": 0.020871,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "coin_1100_1160": {
+        "mean_individual_wait_ms": 120.1561,
+        "group_fallback_risk": 0.0972,
+        "expected_fallback_groups": 7.0,
+        "mmd2_full_trace": 0.069821,
+        "permutation_p": 0.55,
+        "permutation_null_median": 0.070063,
+        "observable_gap_rate_by_position": [
+          0.0312,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0312,
+        "internal_fallback_rate_by_position": [
+          0.0938,
+          0.0938,
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_1155": {
+        "mean_individual_wait_ms": 144.2887,
+        "group_fallback_risk": 0.0,
+        "expected_fallback_groups": 0.0,
+        "mmd2_full_trace": 0.022172,
+        "permutation_p": 0.394,
+        "permutation_null_median": 0.020871,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "coin_1150_1160": {
+        "mean_individual_wait_ms": 144.3007,
+        "group_fallback_risk": 0.0139,
+        "expected_fallback_groups": 1.0,
+        "mmd2_full_trace": 0.026125,
+        "permutation_p": 0.394,
+        "permutation_null_median": 0.024874,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_1160": {
+        "mean_individual_wait_ms": 149.2887,
+        "group_fallback_risk": 0.0,
+        "expected_fallback_groups": 0.0,
+        "mmd2_full_trace": 0.022172,
+        "permutation_p": 0.394,
+        "permutation_null_median": 0.020871,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_1200": {
+        "mean_individual_wait_ms": 189.2887,
+        "group_fallback_risk": 0.0,
+        "expected_fallback_groups": 0.0,
+        "mmd2_full_trace": 0.022172,
+        "permutation_p": 0.394,
+        "permutation_null_median": 0.020871,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "separate_c0": {
+      "fixed_1105": {
+        "mean_individual_wait_ms": 93.8693,
+        "group_fallback_risk": 0.1389,
+        "expected_fallback_groups": 5.0,
+        "mmd2_full_trace": 0.019819,
+        "permutation_p": 0.997,
+        "permutation_null_median": 0.042414,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.125,
+          0.0
+        ],
+        "expected_T2_hits_of_32": 8.0,
+        "expected_RT_hits_of_32": 8.0
+      },
+      "coin_1050_1160": {
+        "mean_individual_wait_ms": 99.0985,
+        "group_fallback_risk": 0.4167,
+        "expected_fallback_groups": 15.0,
+        "mmd2_full_trace": 0.203302,
+        "permutation_p": 0.001,
+        "permutation_null_median": 0.151136,
+        "observable_gap_rate_by_position": [
+          0.5,
+          0.5,
+          0.0625,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.5,
+        "internal_fallback_rate_by_position": [
+          0.5,
+          0.5,
+          0.5,
+          0.125
+        ],
+        "expected_T2_hits_of_32": 13.0,
+        "expected_RT_hits_of_32": 12.5
+      },
+      "fixed_1130": {
+        "mean_individual_wait_ms": 118.0504,
+        "group_fallback_risk": 0.0556,
+        "expected_fallback_groups": 2.0,
+        "mmd2_full_trace": 0.022877,
+        "permutation_p": 0.988,
+        "permutation_null_median": 0.042272,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "expected_T2_hits_of_32": 6.0,
+        "expected_RT_hits_of_32": 9.0
+      },
+      "coin_1100_1160": {
+        "mean_individual_wait_ms": 118.5929,
+        "group_fallback_risk": 0.0833,
+        "expected_fallback_groups": 3.0,
+        "mmd2_full_trace": 0.130084,
+        "permutation_p": 0.988,
+        "permutation_null_median": 0.140302,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0625,
+          0.0,
+          0.0625,
+          0.0
+        ],
+        "expected_T2_hits_of_32": 6.5,
+        "expected_RT_hits_of_32": 9.0
+      },
+      "fixed_1155": {
+        "mean_individual_wait_ms": 142.9975,
+        "group_fallback_risk": 0.0,
+        "expected_fallback_groups": 0.0,
+        "mmd2_full_trace": 0.022877,
+        "permutation_p": 0.988,
+        "permutation_null_median": 0.042272,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "expected_T2_hits_of_32": 6.0,
+        "expected_RT_hits_of_32": 9.0
+      },
+      "coin_1150_1160": {
+        "mean_individual_wait_ms": 142.9975,
+        "group_fallback_risk": 0.0,
+        "expected_fallback_groups": 0.0,
+        "mmd2_full_trace": 0.031608,
+        "permutation_p": 0.988,
+        "permutation_null_median": 0.050257,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "expected_T2_hits_of_32": 5.0,
+        "expected_RT_hits_of_32": 9.0
+      },
+      "fixed_1160": {
+        "mean_individual_wait_ms": 147.9975,
+        "group_fallback_risk": 0.0,
+        "expected_fallback_groups": 0.0,
+        "mmd2_full_trace": 0.022877,
+        "permutation_p": 0.988,
+        "permutation_null_median": 0.042272,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "expected_T2_hits_of_32": 6.0,
+        "expected_RT_hits_of_32": 9.0
+      },
+      "fixed_1200": {
+        "mean_individual_wait_ms": 187.9975,
+        "group_fallback_risk": 0.0,
+        "expected_fallback_groups": 0.0,
+        "mmd2_full_trace": 0.022877,
+        "permutation_p": 0.988,
+        "permutation_null_median": 0.042272,
+        "observable_gap_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gap_event_tv_lower_bound_max_pair": 0.0,
+        "internal_fallback_rate_by_position": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "expected_T2_hits_of_32": 6.0,
+        "expected_RT_hits_of_32": 9.0
+      }
+    }
+  }
+}
