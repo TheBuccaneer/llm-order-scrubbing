@@ -5,10 +5,13 @@ zusammen. Die detaillierten Berichte und die Quellenkarte sind ebenfalls als
 Markdown-Dateien im Übergabe-ZIP enthalten. Messrohdaten, Logs, Grafiken und
 Programme liegen **nur im Repository**, nicht im Markdown-ZIP.
 
-**Spätere Entscheidungsvalidierung am selben Tag:**
+**Aktueller Nachtrag am selben Tag:**
 `docs/entscheidungsvalidierung-20261102.md` prüft die hier noch offenen
-Konfigurations-, Prompt- und Slot-Fallback-Fragen. Für den aktuellen
-Forschungsstand ist dieser neuere Bericht maßgeblich.
+Konfigurations-, Prompt- und Slot-Fallback-Fragen. Danach folgten
+`docs/release-boundary-20261102.md`, `docs/late-release-20261102.md`
+und zuletzt `docs/causal-release-pilot-20261102.md`. Der letzte Bericht
+ist für die **aktuelle konstruktive Forschungsentscheidung** maßgeblich;
+die folgenden Abschnitte dokumentieren den früheren Zwischenstand.
 
 ## Forschungsfrage und heutige Antwort
 
@@ -166,6 +169,7 @@ im Repository verbliebenen JSONL-Dateien und Logs.
 | 16 Tokens und Zusatzanfrage | `results/two-extensions-20261102/auswertung.md` und dort genannte Rohdaten |
 | BOS, Zeitregel, Slot, bereinigter Lauf | `results/bos-sanitized-20261102/auswertung.md`; Rohdaten in `results/bos-pilot-20261102/`, `results/bos-holdout-20261102/`, `results/bos-slot-20261102/` und `results/bos-sanitized-20261102/` |
 | Mess- und Auswerteprogramme | `src/` |
+| Spätere Angriffs-/Schutzentscheidung und kausaler Offline-Pilot | `docs/entscheidungsvalidierung-20261102.md`, `docs/release-boundary-20261102.md`, `docs/late-release-20261102.md`, `docs/causal-release-pilot-20261102.md`; abgeleitete Pilotdaten unter `results/causal-release-20261102/` |
 
 Alle genannten Rohdateien bleiben im Repository. Das neue Übergabe-ZIP
 enthält ausschließlich Markdown-Dateien; damit kann ein anderer Chat die

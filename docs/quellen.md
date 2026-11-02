@@ -226,3 +226,21 @@ jeweils **RDNA L2**; die übrige Quellenkarte bleibt unverändert:
 
 Die konkrete Live-/Replay-Entscheidung und die individuellen
 Kosten stehen in `docs/late-release-20261102.md`.
+
+## Kausaler Gruppenfreigabe-Pilot (02.11.2026)
+
+Vor dem Offline-Replay gezielt online nachgeprüft; die bisherige
+Quellenkarte bleibt bestehen. Der kleine Pilot und seine Daten stehen
+in `docs/causal-release-pilot-20261102.md`.
+
+| Originaltext / Lesestatus heute | Für den Claim relevante Stelle |
+| --- | --- |
+| [Pacer, USENIX Security 2022](https://www.usenix.org/system/files/sec22-mehta.pdf), **L2** | §§2.2–4: Auch Abweichungen des tatsächlichen vom geplanten Sendezeitpunkt dürfen keine Geheimnisse offenlegen. Der hier beobachtete completion-abhängige Gruppen-Tick verletzt die angestrebte Unabhängigkeit des sichtbaren Zeitplans. |
+| [Mitigating Timing Side Channel in Shared Schedulers, 2013](https://arxiv.org/pdf/1302.6123), **L2** | §§V–VI: Accumulate-and-Serve puffert und bündelt Arbeit; Privatsphäre und Verzögerung sind gekoppelt. Eine periodische Gruppenregel als solche ist daher kein neuer Grundgedanke. |
+| [One-Sided Bounded Noise, CCS 2025](https://people.csail.mit.edu/devadas/pubs/one_sided_noise.pdf), **L2** | §§1–2 und 5: Nur positive, begrenzte Zusatzverzögerung wird bereits mit DP, Maximal Leakage und PAC-Privacy untersucht. Ein allgemeiner Delay-Optimierungsclaim wäre unhaltbar. Die dortigen Garantien gelten nicht automatisch für Completion-gebundene Vierer-LLM-Antworten. |
+| [Optimizing the Design Parameters of Threshold Pool Mixes for Anonymity and Delay, 2014](https://www.sciencedirect.com/science/article/pii/S1389128614001522), **L1/Teilauszug** | Verlagstext beschreibt Mehrzieloptimierung von Anonymität und Verzögerung. Direktzugriff auf den Volltext lieferte 403; ein abschließender Novelty-Vergleich ist damit nicht möglich. |
+| [Eigene ICCAI-2026-Arbeit](../references/iccai2026-completion-order.pdf), **vorher L3** | Rangbasierter ODS/BOS-Ausgangspunkt; der jetzige Pilot untersucht zusätzlich die vollständige Client-Zeitfolge und individuelle Proxy-Wartezeit. Heute keine erneute Volltextlektüre. |
+
+Die heutige Recherche war gezielt und begrenzt, kein vollständiger
+systematischer Literaturreview. Die Offline-Ergebnisse beweisen keine
+formale Schutzgarantie.

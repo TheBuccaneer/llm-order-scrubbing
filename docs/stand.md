@@ -24,6 +24,15 @@ alten 24-Token-Traces ergibt median 150 ms zusätzliche
 individuelle Wartezeit. Das gilt nur, solange alle Antworten
 vor dem neuen Slot bereit sind; der bisherige Fallback bleibt
 danach bestehen.
+Der anschließende **kausale Offline-Pilot** in
+`docs/causal-release-pilot-20261102.md` verglich auf 108 vorhandenen
+24-Token-Gruppen BOS, feste Slots und zwei periodische Gruppenregeln.
+Beide periodischen Regeln verhindern im idealen Replay Einzel-Fallbacks,
+geben über den gewählten Freigabetick aber erneut Completion-Information
+preis. Ein explorativ auf 1.160 ms kalibrierter fester Slot deckte alle
+108 Spuren ab und spart modelliert 40 ms je Antwort gegenüber 1.200 ms.
+Das ist weder live bestätigt noch ein neuer Schutzalgorithmus. Die
+abgeleiteten Rohzeilen stehen unter `results/causal-release-20261102/`.
 
 ## Bisher umgesetzt
 - Privates GitHub-Repository erstellt.
@@ -410,8 +419,9 @@ ausdrückliche Mechanismusänderung. Er beweist keine allgemeine Sicherheit.
   nach Auswahl von T2 getrennt gefahren.
 
 ## Nächster Schritt
-Für Richtung 1 einen prospektiv festgelegten C0-Test unter
-kontrollierter Mehrnutzerlast und mit neu randomisierter Fallfolge
-planen, ohne den C1/C2-Grenzbefund zu übergehen. Der Bericht in
-`docs/entscheidungsvalidierung-20261102.md` enthält die
-Paper-Rangfolge und die kleinsten Entscheidungstests.
+Für die konstruktive Richtung zunächst Latenz-/Verfügbarkeitsbudget
+und Leakage-Maß für die vollständige Clientfolge festlegen. Danach
+einen wirklich prospektiven kleinen Live-Test eines kalibrierten
+festen Slots und höchstens einer begründeten Gegenregel planen; C1
+und längere Completion-Tails als Geltungsgrenzen aufnehmen. Der
+Offline-Pilot ist keine Live-Evidenz für eine neue Schutzmethode.
