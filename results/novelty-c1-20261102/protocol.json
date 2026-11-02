@@ -1,0 +1,16 @@
+{
+  "status": "frozen_before_new_live_run",
+  "hypothesis": "A warm cache hit under C1 co-completes with the preceding sent request, leaving a near-zero adjacent full-response gap even when the first response ID is uninformative.",
+  "local_only": true,
+  "backend": "Qwen2.5-7B-Instruct / vLLM 0.17.1 / RTX 3090",
+  "scheduler": {"max_num_batched_tokens": 256, "long_prefill_token_threshold": 0, "prefix_caching": true},
+  "case_seed": 202611020327,
+  "cases": {"positive": 32, "no_warm_controls": 4, "warm_positions": "8 each", "output_tokens": 16, "send_stagger_ms": 10},
+  "proxy_mode": "direct",
+  "attacker_inputs": "own send order, request IDs, own complete client receive times; no proxy/backend times, cached-token details, or secret warm label",
+  "primary_observer": "For adjacent complete client receive times in send order, if the smallest absolute gap exceeds 10 ms predict warm send position 1; otherwise predict the position immediately after the smallest absolute gap.",
+  "secondary_observers": "R1 and logistic T2/RT trained on prior C1 primary only, C=1 with StandardScaler",
+  "decision_rule": "A prospective 32-positive run with at least 24 correct primary predictions and cache-hit integrity on all positives merits a new research direction; otherwise treat historical 32/32 as unexplained or unstable. Stop after this run and its four controls.",
+  "prior_data": ["results/decision-validation-20261102/config-c1/primary.jsonl", "results/decision-validation-20261102/config-c1/holdout.jsonl"],
+  "limitation": "The old C1 observer and 10 ms threshold were selected after exploring old data; the new seed and backend start are the first frozen confirmation."
+}
