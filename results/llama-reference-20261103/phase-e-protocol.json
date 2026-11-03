@@ -1,0 +1,10 @@
+{
+  "status": "frozen_before_live_document_transfer",
+  "question": "Do Llama BOS client signals and completion costs transfer from four artificial prompts to document prompts with distinct P0 versus shared public P1 prefixes?",
+  "model": "local Llama-3.1-8B-Instruct, vLLM 0.17.1",
+  "prompts": "data/llama-reference-20261103/p0.json and p1.json; each 549 tokens including BOS; P0 no shared first full block, P1 shares 304 full-block tokens",
+  "runs": "One independent fresh C0 start followed by one independent fresh C1 start, each with paired mixed P0/P1 cases from seed 202611032301, 16 positives plus 2 controls per structure. Fresh distinct salts per structure/group.",
+  "frozen_attacker": "Fit R2/T2 models on Phase D artificial-prompt development groups (16 per configuration), unchanged StandardScaler + LogisticRegression(C=1), apply without fitting to P0 and P1. R1 model-free. Within-run first-complete-time AUC (direction from Phase D development) is descriptive and threshold-free.",
+  "mechanism": "Check full BOS groups, warm hit544, cold P0 misses, P1 cold reuse304 where expected, no-warm P1 shared reuse may occur among simultaneous probes. Compare matched-case P1 minus P0 medians for backend last completion and first complete client reception; report individual BOS waits.",
+  "limits": "One start per configuration and 16 positives per structure; exploratory transfer, no independently trained document attacker or population claim. No automatic extra starts."
+}

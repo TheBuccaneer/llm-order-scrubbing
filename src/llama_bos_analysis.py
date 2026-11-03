@@ -50,7 +50,8 @@ def integrity(trials, proxy):
             failures.append(f"{r['group']} cache detail exposed")
         for label, p in zip(r["send_order"], group):
             q = r["probes"][label]
-            expected = 544 if label == r["warm"] else 0
+            # vLLM omits the cache detail for a miss; the proxy records None.
+            expected = 544 if label == r["warm"] else None
             if p.get("cached_tokens_reported") != expected:
                 failures.append(f"{r['group']} {label} cache")
             if (q["http_status"], q["prompt_tokens"], q["completion_tokens"],
