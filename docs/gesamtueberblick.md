@@ -5,13 +5,24 @@ zusammen. Die detaillierten Berichte und die Quellenkarte sind ebenfalls als
 Markdown-Dateien im Übergabe-ZIP enthalten. Messrohdaten, Logs, Grafiken und
 Programme liegen **nur im Repository**, nicht im Markdown-ZIP.
 
-**Aktueller Nachtrag am selben Tag:**
+**Aktueller Nachtrag:**
 `docs/entscheidungsvalidierung-20261102.md` prüft die hier noch offenen
 Konfigurations-, Prompt- und Slot-Fallback-Fragen. Danach folgten
 `docs/release-boundary-20261102.md`, `docs/late-release-20261102.md`,
 `docs/causal-release-pilot-20261102.md` und zuletzt
-`docs/randomized-release-pilot-20261102.md` und nun
-`docs/c1-cocompletion-20261103.md`. Der letzte Bericht bestätigt
+`docs/randomized-release-pilot-20261102.md`,
+`docs/c1-cocompletion-20261103.md` und nun
+`docs/scheduler-bos-entscheidung-20261103.md`. Dieser letzte Bericht
+entscheidet den geplanten C0/C1-BOS-Vergleich: In einer gepaarten,
+frisch randomisierten Fallfolge traf der vierklassige T2-Beobachter
+unter C0 21/32, unter C1 11/32. C1-BOS ließ dennoch einen
+binären Blockschluss-Zeitkanal erkennen (AUC 0,813). Der feste
+780-ms-Angriffsschwellwert scheiterte zuvor in einer neuen
+C1-Sitzung; eine stabile Schwelle ist nicht belegt. Kurze
+Scheduler-Spuren erklären qualitativ den Wechsel der
+Abschlussmuster. Der neu empfohlene Paper-Zuschnitt ist ein
+enger empirischer Beitrag zu BOS-Restinformation und Kosten.
+Der vorangegangene C1-Direktbericht bestätigt
 prospektiv eine neue **lokale C1-Beobachtung**: Die vorab fixierte
 Regel für fast gleichzeitig vollständig empfangene Antwortpaare
 bestimmte in einer frischen balancierten Direktserie die Cacheposition

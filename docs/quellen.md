@@ -273,3 +273,28 @@ besonderer „Deep-Research“-Lauf. Versuch und Abgrenzung stehen in
 | [PrefixWall v2](https://arxiv.org/html/2603.10726v2), §§2.2–2.4, 5 | TTFT-basierte Cachetreffer und Lastgrenzen sind untersucht; vier relative 16-Token-Vollantwortzeiten sind dort nicht der gewählte Beobachter. |
 | [Contention-Induced Reliability Collapse](https://arxiv.org/html/2609.06853), §§IV-B, XIV–XV | Nicht gestreamte Endzeiten sind bereits untersucht, aber mit einem Ausgabetoken. Konkurrenzlast kann Timing-Kanäle verändern; unser Leerlaufbefund ist nicht auf Last übertragbar. |
 | [Eigene ICCAI-2026-Arbeit](../references/iccai2026-completion-order.pdf), zuvor L3 | Die frühere BOS-/ODS-Auswertung war rangbezogen. Der neue C1-Test fragt nach relativen Abschlusszeiten, prüft aber noch kein BOS. |
+
+## Scheduler-/BOS-Forschungsentscheidung (03.11.2026)
+
+Für den Bericht `docs/scheduler-bos-entscheidung-20261103.md`
+wurden die folgenden Primärstellen gezielt online nachgeprüft
+(RDNA **L2**, nicht systematisch vollständig). Die Quellen der
+vorangegangenen Abschnitte bleiben erhalten.
+
+| Quelle / Fundstelle | Konsequenz für den Claim |
+| --- | --- |
+| [PROMPTPEEK, NDSS 2025](https://www.ndss-symposium.org/wp-content/uploads/2025-1772-paper.pdf), §IV-A, §VIII | LPM-/Ein-Token-Reihenfolge ist Vorarbeit; damalige FCFS-Einordnung nicht auf aktuelles vLLM übertragen. |
+| [OptiLeak v1](https://arxiv.org/html/2602.20595v1), §4.2 und §6 | FCFS-Timing als Validator wird ausdrücklich genannt. Timing-Inferenz als solche ist nicht neu. |
+| [Pacer, USENIX Security 2022](https://www.usenix.org/system/files/sec22-mehta.pdf), §3.2 | Geheimnisunabhängige Sendepläne einschließlich sichtbarer Abweichungen sind bekannt; Slot kein neuer allgemeiner Algorithmus. |
+| [SafeKV v2](https://arxiv.org/html/2508.08438v2), §7.2 | TTFT-Kanal und selektive Cachefreigabe; andere Schutzfläche als BOS-Vollantworten. |
+| [PrefixWall v2](https://arxiv.org/html/2603.10726v2), §§2.2, 5.2 | TTFT-basierte Angreiferprüfung und Lastgrenzen; keine identische BOS-Clienttrace-Evaluation. Vorabfassung, kein gesicherter Konferenzstatus. |
+| [Contention-Induced Reliability Collapse](https://arxiv.org/html/2609.06853), §§IV-B, XIV–XV | Nicht gestreamte Endzeiten sind bereits für Ein-Token-Probes untersucht; eine Behauptung, vollständige Clientzeitmessung sei generell neu, wäre falsch. |
+| [Sarathi-Serve](https://arxiv.org/html/2403.02310), §§4.1–4.2 | Chunked Prefill und Batching sind bekannte Schedulingmechanismen; deren Wirkung auf die hier geprüfte BOS-Restinformation bleibt unsere enge Frage. Keine Gleichsetzung mit vLLM 0.17.1. |
+| [vLLM 0.17.1 Scheduler](https://docs.vllm.ai/en/v0.17.1/api/vllm/config/scheduler/) und lokal installierter `vllm/v1/core/sched/scheduler.py`, `schedule()` | Tokenbudget und Prefill-Schwelle sind explizit konfigurierbar; lokale Scheduler-Schritte wurden zusätzlich instrumentiert. |
+| [One-Sided Bounded Noise, CCS 2025](https://people.csail.mit.edu/devadas/pubs/one_sided_noise.pdf), früher L2 | Positive Verzögerung als allgemeine Schutz-/Kostenidee bereits bekannt; am 03.11. nicht neu im Volltext gelesen. |
+| [Eigene ICCAI-2026-Arbeit](../references/iccai2026-completion-order.pdf), früher L3 | Rangbasierter Ausgangspunkt; am 03.11. nicht erneut vollständig gelesen. |
+
+Die [offizielle ICCAI-2027-Startseite](https://www.iccai.net/)
+nennt aktuell den **10.12.2026** als reguläre Einreichungsfrist.
+Die [Sondersitzungsseite](https://www.iccai.net/special.html)
+nennt den **10.11.2026** für Beiträge zu Sondersitzungen.

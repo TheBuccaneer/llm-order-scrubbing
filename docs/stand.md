@@ -3,6 +3,22 @@
 Stand: 03.11.2026
 
 ## Aktuelle Etappe
+Der **Scheduler-/BOS-Entscheidungstest** vom 03.11. steht in
+`docs/scheduler-bos-entscheidung-20261103.md`. Auf gepaarter neuer
+Fallfolge mit je 32 positiven BOS-Gruppen traf der vollständige
+Clientzeit-Beobachter T2 unter C0 21/32 und unter C1 11/32.
+C1 behielt einen binären Blockschluss-Rangkanal (AUC 0,813),
+obwohl die vorher fixierte absolute 780-ms-Regel in einer getrennten
+ersten C1-Sitzung scheiterte. Vier kurze instrumentierte Gruppen
+zeigen, wie die unterschiedlichen Prefill-Schritte und gemeinsame
+Decode-Schritte zu den Abschlussmustern passen. Ein fester Slot
+glättete sie im **idealisierten Replay** gegen zusätzliche
+individuelle Wartezeit; keine neue Freigaberegel wurde gebaut.
+Empfehlung: ein eng begrenztes empirisches Nachfolgepaper zu
+Information nach BOS, Schedulerabhängigkeit und Schutzkosten
+entwerfen; noch keine allgemeine Sicherheits- oder Neuheitsgarantie.
+Alle neuen Backend- und Proxyprozesse sind beendet.
+
 Die prospektive C1-Direktprüfung vom 03.11. ist in
 `docs/c1-cocompletion-20261103.md` dokumentiert. Die zuvor fixierte
 Paarabstandsregel bestimmte in einer frischen, balancierten Serie mit

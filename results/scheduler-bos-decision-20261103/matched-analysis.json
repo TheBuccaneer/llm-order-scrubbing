@@ -1,0 +1,467 @@
+{
+  "source": {
+    "c0": "results/scheduler-bos-decision-20261103/matched-c0",
+    "c1": "results/scheduler-bos-decision-20261103/matched-c1"
+  },
+  "paired_case_sequence": true,
+  "training": "32 balanced old BOS groups per configuration; separate model per configuration",
+  "c0": {
+    "n_positive": 32,
+    "n_controls": 4,
+    "R1": {
+      "n": 32,
+      "hits": 6,
+      "accuracy": 0.1875,
+      "balanced_accuracy": 0.1875,
+      "wilson95": [
+        0.0889,
+        0.3531
+      ],
+      "chance_p_one_sided": 0.8469969,
+      "confusion_actual_predicted": [
+        [
+          1,
+          1,
+          3,
+          3
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          4,
+          0,
+          3,
+          1
+        ],
+        [
+          2,
+          6,
+          0,
+          0
+        ]
+      ]
+    },
+    "binary_tblock_auc": 0.8958,
+    "binary_tblock_auc_bootstrap95": [
+      0.7604,
+      1.0
+    ],
+    "binary_tblock_exact_one_sided_p": 0.00019956,
+    "tblock_ms_by_position": {
+      "1": {
+        "median": 921.328,
+        "min": 911.617,
+        "max": 946.307
+      },
+      "2": {
+        "median": 903.369,
+        "min": 888.289,
+        "max": 965.169
+      },
+      "3": {
+        "median": 895.661,
+        "min": 881.546,
+        "max": 906.355
+      },
+      "4": {
+        "median": 857.599,
+        "min": 855.2,
+        "max": 880.512
+      }
+    },
+    "backend_last_ms_by_position": {
+      "1": 920.184,
+      "2": 902.233,
+      "3": 894.595,
+      "4": 856.293
+    },
+    "individual_proxy_wait_median_ms": 43.299,
+    "gap_rule_hits_four_class": 5,
+    "old_780ms_binary": {
+      "tp": 8,
+      "fp": 24
+    },
+    "R2": {
+      "n": 32,
+      "hits": 9,
+      "accuracy": 0.2812,
+      "balanced_accuracy": 0.2812,
+      "wilson95": [
+        0.1556,
+        0.4537
+      ],
+      "chance_p_one_sided": 0.40648835,
+      "confusion_actual_predicted": [
+        [
+          1,
+          5,
+          1,
+          1
+        ],
+        [
+          0,
+          6,
+          2,
+          0
+        ],
+        [
+          0,
+          7,
+          1,
+          0
+        ],
+        [
+          1,
+          6,
+          0,
+          1
+        ]
+      ]
+    },
+    "T1": {
+      "n": 32,
+      "hits": 23,
+      "accuracy": 0.7188,
+      "balanced_accuracy": 0.7188,
+      "wilson95": [
+        0.5463,
+        0.8444
+      ],
+      "chance_p_one_sided": 3e-08,
+      "confusion_actual_predicted": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          7
+        ]
+      ]
+    },
+    "T2": {
+      "n": 32,
+      "hits": 21,
+      "accuracy": 0.6562,
+      "balanced_accuracy": 0.6562,
+      "wilson95": [
+        0.4831,
+        0.7959
+      ],
+      "chance_p_one_sided": 1.48e-06,
+      "confusion_actual_predicted": [
+        [
+          6,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          7
+        ]
+      ]
+    },
+    "RT": {
+      "n": 32,
+      "hits": 14,
+      "accuracy": 0.4375,
+      "balanced_accuracy": 0.4375,
+      "wilson95": [
+        0.2817,
+        0.6067
+      ],
+      "chance_p_one_sided": 0.01586455,
+      "confusion_actual_predicted": [
+        [
+          2,
+          6,
+          0,
+          0
+        ],
+        [
+          1,
+          6,
+          1,
+          0
+        ],
+        [
+          0,
+          7,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          5
+        ]
+      ]
+    }
+  },
+  "c1": {
+    "n_positive": 32,
+    "n_controls": 4,
+    "R1": {
+      "n": 32,
+      "hits": 8,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "wilson95": [
+        0.1325,
+        0.4211
+      ],
+      "chance_p_one_sided": 0.56752916,
+      "confusion_actual_predicted": [
+        [
+          2,
+          3,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          3,
+          3
+        ],
+        [
+          3,
+          0,
+          3,
+          2
+        ],
+        [
+          1,
+          4,
+          0,
+          3
+        ]
+      ]
+    },
+    "binary_tblock_auc": 0.8125,
+    "binary_tblock_auc_bootstrap95": [
+      0.6458,
+      0.9479
+    ],
+    "binary_tblock_exact_one_sided_p": 0.00379643,
+    "tblock_ms_by_position": {
+      "1": {
+        "median": 784.567,
+        "min": 779.933,
+        "max": 803.385
+      },
+      "2": {
+        "median": 771.404,
+        "min": 759.772,
+        "max": 826.109
+      },
+      "3": {
+        "median": 764.794,
+        "min": 757.506,
+        "max": 786.494
+      },
+      "4": {
+        "median": 760.199,
+        "min": 757.959,
+        "max": 795.295
+      }
+    },
+    "backend_last_ms_by_position": {
+      "1": 783.39,
+      "2": 770.284,
+      "3": 763.723,
+      "4": 759.1
+    },
+    "individual_proxy_wait_median_ms": 45.529,
+    "gap_rule_hits_four_class": 7,
+    "old_780ms_binary": {
+      "tp": 7,
+      "fp": 6
+    },
+    "R2": {
+      "n": 32,
+      "hits": 7,
+      "accuracy": 0.2188,
+      "balanced_accuracy": 0.2188,
+      "wilson95": [
+        0.1102,
+        0.3875
+      ],
+      "chance_p_one_sided": 0.72212833,
+      "confusion_actual_predicted": [
+        [
+          1,
+          5,
+          1,
+          1
+        ],
+        [
+          5,
+          2,
+          0,
+          1
+        ],
+        [
+          4,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          3
+        ]
+      ]
+    },
+    "T1": {
+      "n": 32,
+      "hits": 10,
+      "accuracy": 0.3125,
+      "balanced_accuracy": 0.3125,
+      "wilson95": [
+        0.1795,
+        0.4857
+      ],
+      "chance_p_one_sided": 0.26334096,
+      "confusion_actual_predicted": [
+        [
+          4,
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          2,
+          5,
+          0
+        ],
+        [
+          1,
+          1,
+          6,
+          0
+        ]
+      ]
+    },
+    "T2": {
+      "n": 32,
+      "hits": 11,
+      "accuracy": 0.3438,
+      "balanced_accuracy": 0.3438,
+      "wilson95": [
+        0.2041,
+        0.5169
+      ],
+      "chance_p_one_sided": 0.15359463,
+      "confusion_actual_predicted": [
+        [
+          4,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          4,
+          0
+        ],
+        [
+          1,
+          2,
+          5,
+          0
+        ],
+        [
+          1,
+          1,
+          6,
+          0
+        ]
+      ]
+    },
+    "RT": {
+      "n": 32,
+      "hits": 9,
+      "accuracy": 0.2812,
+      "balanced_accuracy": 0.2812,
+      "wilson95": [
+        0.1556,
+        0.4537
+      ],
+      "chance_p_one_sided": 0.40648835,
+      "confusion_actual_predicted": [
+        [
+          2,
+          5,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          2,
+          4,
+          1
+        ],
+        [
+          1,
+          2,
+          3,
+          2
+        ]
+      ]
+    }
+  },
+  "four_class_T2_accuracy_difference_c0_minus_c1": 0.3124
+}
