@@ -1,0 +1,14 @@
+{
+  "status": "frozen_before_live_direct_pilot",
+  "question": "Do cache hits change complete client response order or timing under Llama direct release with the two Qwen scheduler settings?",
+  "model": "local meta-llama/Llama-3.1-8B-Instruct on vLLM 0.17.1, RTX 3090",
+  "prompts": "data/llama-reference-20261103/artificial.json; four 549-token prompts including BOS, different first cache blocks",
+  "server_order": ["C0: token budget 256, long prefill threshold 64", "C1: token budget 256, long prefill threshold 0"],
+  "shared": "prefix caching on; direct proxy mode; four requests per group; 16 completion tokens; 10 ms intended send stagger; no streaming; one fresh salt per group",
+  "cases": "Same shuffled seed 202611031801 in each fresh engine start; 16 positive groups balanced 4 per warm position plus 4 unwarmed controls per configuration; different salt tags",
+  "attacker_inputs": "Own send order, response IDs, complete client send and receive times. Proxy/cache fields for integrity and mechanism only.",
+  "frozen_observers": "R1 first received ID; previous Qwen C1 direct pair-gap rule (closest adjacent send-order completion gap <=10 ms, else position 1). No Llama fitting in this exploratory pilot.",
+  "decision_guide": "Proceed to BOS if cache integrity holds (544 tokens only on warm probe), all groups complete, and either R1 or the frozen gap rule reaches at least 12/16 in at least one configuration. Otherwise inspect only a few obvious causes and treat absence as a possible model/configuration boundary.",
+  "controls": "Four unwarmed groups per condition, expected zero cache reuse. Direct responses must not expose cached-token diagnostics to the client.",
+  "limits": "Local loopback, one prompt family, one output length, sequential C0 then C1 starts; no general multi-tenant claim."
+}

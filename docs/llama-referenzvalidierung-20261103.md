@@ -46,6 +46,19 @@ verschiedenem Salt ist in
 `results/llama-reference-20261103/phase-b/protocol.json`
 vor der Ausführung festgelegt.
 
-**Nächster Mini-Schritt:** Den Cachetest durchführen. Erst bei
-belegter Wiederverwendung folgt ein kleiner direkter
-C0/C1-Basiskanal-Pilot.
+### Cacheprüfung abgeschlossen
+
+Die sieben vorab festgelegten direkten Anfragen erhielten HTTP 200
+und je 549 Prompttokens. Bei wiederholtem P0- oder P1-Prompt mit
+demselben Salt meldete vLLM jeweils **544 gecachte Tokens**.
+P0-Dokument B mit demselben Salt hatte keinen Treffer;
+P1-Dokument B nutzte **304 gemeinsame Tokens**. P1-Dokument A
+mit einem neuen Salt hatte keinen Treffer. Die tatsächlichen
+Cacheblöcke entsprechen damit der Tokenprüfung. Rohantworten,
+Anfrageparameter und Zeitpunkte stehen in
+`results/llama-reference-20261103/phase-b/cache-check.jsonl`;
+das Serverlog liegt daneben. Der Server wurde beendet.
+
+Die Cachemechanik rechtfertigt einen kleinen direkten C0/C1-Pilot.
+Sein Protokoll steht in
+`results/llama-reference-20261103/phase-c-protocol.json`.
