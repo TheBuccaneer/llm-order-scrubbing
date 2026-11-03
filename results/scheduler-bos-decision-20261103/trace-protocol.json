@@ -1,0 +1,9 @@
+{
+  "status": "fixed_before_explanatory_runs",
+  "purpose": "Observe actual per-request token scheduling under C0 versus C1 for warm send position 1 and 4; explanatory only, not an attacker feature or accuracy test.",
+  "cases_per_config": ["warm A, send ABCD", "warm A, send BCDA"],
+  "configurations": ["C0: token budget 256, prefill threshold 64", "C1: token budget 256, prefill threshold 0"],
+  "model_and_gate": "Qwen2.5-7B-Instruct, vLLM 0.17.1, BOS W=4, 16 output tokens, fresh engine per config",
+  "instrumentation": "sitecustomize wraps Scheduler.schedule to log request ID, scheduled token count, computed tokens before schedule, and prompt length to a repo-local JSONL; no scheduling decision is altered",
+  "limitation": "Python logging adds overhead and can perturb timing. Use only the qualitative sequence of prefill/decode steps, not attack accuracy or latency."
+}
