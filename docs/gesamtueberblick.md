@@ -12,7 +12,7 @@ Konfigurations-, Prompt- und Slot-Fallback-Fragen. Danach folgten
 `docs/causal-release-pilot-20261102.md` und zuletzt
 `docs/randomized-release-pilot-20261102.md`,
 `docs/c1-cocompletion-20261103.md` und nun
-`docs/scheduler-bos-entscheidung-20261103.md`. Dieser letzte Bericht
+`docs/scheduler-bos-entscheidung-20261103.md`. Dieser Bericht
 entscheidet den geplanten C0/C1-BOS-Vergleich: In einer gepaarten,
 frisch randomisierten Fallfolge traf der vierklassige T2-Beobachter
 unter C0 21/32, unter C1 11/32. C1-BOS ließ dennoch einen
@@ -21,7 +21,8 @@ binären Blockschluss-Zeitkanal erkennen (AUC 0,813). Der feste
 C1-Sitzung; eine stabile Schwelle ist nicht belegt. Kurze
 Scheduler-Spuren erklären qualitativ den Wechsel der
 Abschlussmuster. Der neu empfohlene Paper-Zuschnitt ist ein
-enger empirischer Beitrag zu BOS-Restinformation und Kosten.
+enger empirischer Beitrag zu BOS-Restinformation und Kosten. Der
+anschließende gegenbalancierte Dokumenten-Pilot ist unten ergänzt.
 Der vorangegangene C1-Direktbericht bestätigt
 prospektiv eine neue **lokale C1-Beobachtung**: Die vorab fixierte
 Regel für fast gleichzeitig vollständig empfangene Antwortpaare
@@ -199,3 +200,18 @@ Rohdaten neu berechnen. Zum Zeitpunkt dieser Zwischenbilanz war der
 Git-Stand Branch `main`, letzter vorhandener Commit `7690f03`;
 die hier beschriebenen Änderungen waren damals noch nicht committet
 oder gepusht.
+## Ergänzung 03.11.2026: Dokumentenanalyse
+
+Der [gegenbalancierte Dokumentenanalyse-Pilot](dokument-workload-20261103.md)
+prüft die bisherige BOS-/Schedulerbeobachtung mit vier synthetischen,
+inhaltlich plausiblen technischen Dokumenten gleicher 548-Token-Länge.
+Über vier neue Engine-Starts in Reihenfolge C0 → C1 → C1 → C0
+erreichte der **zuvor auf alten Prompts trainierte** T2-Beobachter
+21/32 unter C0 und 13/32 unter C1. Die vorab definierte
+Entscheidungshilfe wurde erfüllt; der gepaarte Unterschied ist
+statistisch noch unsicher (p=0,134). Unter C1 blieb eine binäre
+Blockschluss-AUC von 0,932. 92 Vierergruppen und 368 Antworten
+waren vollständig. Die Rohdaten stehen ausschließlich im Repository
+unter `results/document-bos-20261103/`. Dies stützt einen engen
+empirischen Manuskriptentwurf, keinen allgemeinen Schutz- oder
+Angriffsclaim.

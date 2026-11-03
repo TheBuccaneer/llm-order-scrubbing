@@ -298,3 +298,8 @@ Die [offizielle ICCAI-2027-Startseite](https://www.iccai.net/)
 nennt aktuell den **10.12.2026** als reguläre Einreichungsfrist.
 Die [Sondersitzungsseite](https://www.iccai.net/special.html)
 nennt den **10.11.2026** für Beiträge zu Sondersitzungen.
+## Nachprüfung 03.11.2026 für den Dokumenten-Pilot
+
+- [PROMPTPEEK, NDSS 2025](https://www.ndss-symposium.org/wp-content/uploads/2025-1772-paper.pdf), §II-B und §IV-A: Originaltext heute gezielt geprüft (L2). LPM-Reihenfolge und Ein-Token-Kandidaten sind bekannte Angriffsbausteine; kein identischer Test der vollständigen BOS-Clientzeitfolge.
+- [OptiLeak v1](https://arxiv.org/html/2602.20595v1), §6: Originaltext heute gezielt geprüft (L2). FCFS-/Timing-/TTFT-Adaptionen werden ausdrücklich diskutiert; der Dokumenten-Pilot beansprucht Timing nicht als neues Primitive.
+- [vLLM 0.17.1 Prefix Caching](https://docs.vllm.ai/en/v0.17.1/design/prefix_caching/), Abschnitt „Cache Isolation for Security“: Originaldokumentation heute geprüft (L2). Cache-Salt im ersten Block isoliert Wiederverwendung; die gemeinsame Salt-Domäne ist explizite Bedingung des lokalen Piloten.

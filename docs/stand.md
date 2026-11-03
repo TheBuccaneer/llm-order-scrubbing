@@ -3,6 +3,21 @@
 Stand: 03.11.2026
 
 ## Aktuelle Etappe
+Der gegenbalancierte **Dokumentenanalyse-Pilot** vom 03.11. steht in
+`docs/dokument-workload-20261103.md`. Vier synthetische technische
+Dokumente ersetzen die alten künstlichen Prompts bei gleicher
+548-Token-Länge. Über C0 → C1 → C1 → C0 und je 32 positive
+BOS-Gruppen traf der zuvor trainierte T2-Beobachter unter C0
+21/32, unter C1 13/32. Die vorab festgelegte Entscheidungshilfe
+wurde erfüllt; ein gepaarter Unterschied ist bei dieser Größe
+statistisch unsicher (exakter McNemar-p-Wert 0,134). Der binäre
+Blockschluss bleibt unter C1 klar sichtbar (AUC 0,932). Alle 92
+Gruppen/368 Antworten waren vollständig, Cachetreffer und volle
+BOS-Blöcke wurden geprüft. Die vier Backend-Starts sind beendet.
+Empfehlung: den engen Manuskriptentwurf beginnen und die
+Schedulerwirkung nicht als allgemeine Informationsreduktion
+formulieren.
+
 Der **Scheduler-/BOS-Entscheidungstest** vom 03.11. steht in
 `docs/scheduler-bos-entscheidung-20261103.md`. Auf gepaarter neuer
 Fallfolge mit je 32 positiven BOS-Gruppen traf der vollständige
