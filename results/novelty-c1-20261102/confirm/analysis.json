@@ -1,0 +1,536 @@
+{
+  "source": {
+    "trials": "results/novelty-c1-20261102/confirm/trials.jsonl",
+    "proxy": "results/novelty-c1-20261102/confirm/proxy.jsonl",
+    "old_training": "/home/rock/projects/llm-order-scrubbing/results/decision-validation-20261102/config-c1/primary.jsonl"
+  },
+  "groups": 36,
+  "positive": 32,
+  "controls": 4,
+  "primary_gap_rule": {
+    "n": 32,
+    "hits": 32,
+    "accuracy": 1.0,
+    "balanced_accuracy": 1.0,
+    "wilson95": [
+      0.8928,
+      1.0
+    ],
+    "chance_p_one_sided": 0.0,
+    "confusion_actual_predicted": [
+      [
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        8
+      ]
+    ]
+  },
+  "controls_with_gap_at_most_10ms": 0,
+  "R1": {
+    "n": 32,
+    "hits": 11,
+    "accuracy": 0.3438,
+    "balanced_accuracy": 0.3438,
+    "wilson95": [
+      0.2041,
+      0.5169
+    ],
+    "chance_p_one_sided": 0.15359463,
+    "confusion_actual_predicted": [
+      [
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        3,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "gaps": [
+    {
+      "group": "bos-novelty-c1-20261102-0000",
+      "actual_position": 3,
+      "predicted_position": 3,
+      "adjacent_client_gaps_ms": [
+        53.172,
+        0.0677,
+        30.6523
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0002",
+      "actual_position": 1,
+      "predicted_position": 1,
+      "adjacent_client_gaps_ms": [
+        61.6588,
+        40.4258,
+        40.4731
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0003",
+      "actual_position": 2,
+      "predicted_position": 2,
+      "adjacent_client_gaps_ms": [
+        0.0562,
+        40.0079,
+        41.6821
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0004",
+      "actual_position": 2,
+      "predicted_position": 2,
+      "adjacent_client_gaps_ms": [
+        -0.0607,
+        40.834,
+        42.1456
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0005",
+      "actual_position": 3,
+      "predicted_position": 3,
+      "adjacent_client_gaps_ms": [
+        42.7409,
+        0.044,
+        40.4455
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0006",
+      "actual_position": 4,
+      "predicted_position": 4,
+      "adjacent_client_gaps_ms": [
+        41.0282,
+        40.7059,
+        -0.0478
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0007",
+      "actual_position": 3,
+      "predicted_position": 3,
+      "adjacent_client_gaps_ms": [
+        40.7542,
+        -0.0394,
+        40.3529
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0008",
+      "actual_position": 4,
+      "predicted_position": 4,
+      "adjacent_client_gaps_ms": [
+        41.2399,
+        41.736,
+        -0.0585
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0009",
+      "actual_position": 4,
+      "predicted_position": 4,
+      "adjacent_client_gaps_ms": [
+        41.514,
+        41.475,
+        0.0387
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0010",
+      "actual_position": 1,
+      "predicted_position": 1,
+      "adjacent_client_gaps_ms": [
+        61.6683,
+        40.3002,
+        42.0597
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0011",
+      "actual_position": 1,
+      "predicted_position": 1,
+      "adjacent_client_gaps_ms": [
+        60.9395,
+        42.6045,
+        40.2992
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0012",
+      "actual_position": 2,
+      "predicted_position": 2,
+      "adjacent_client_gaps_ms": [
+        0.1068,
+        40.658,
+        40.1052
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0013",
+      "actual_position": 3,
+      "predicted_position": 3,
+      "adjacent_client_gaps_ms": [
+        41.9978,
+        -0.0354,
+        41.5145
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0015",
+      "actual_position": 3,
+      "predicted_position": 3,
+      "adjacent_client_gaps_ms": [
+        42.8664,
+        -0.0625,
+        40.0236
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0016",
+      "actual_position": 2,
+      "predicted_position": 2,
+      "adjacent_client_gaps_ms": [
+        -0.0529,
+        40.6017,
+        40.1906
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0017",
+      "actual_position": 4,
+      "predicted_position": 4,
+      "adjacent_client_gaps_ms": [
+        41.874,
+        43.0507,
+        0.0379
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0018",
+      "actual_position": 4,
+      "predicted_position": 4,
+      "adjacent_client_gaps_ms": [
+        40.4209,
+        41.6823,
+        -0.0532
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0020",
+      "actual_position": 3,
+      "predicted_position": 3,
+      "adjacent_client_gaps_ms": [
+        43.0424,
+        -0.073,
+        39.8466
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0021",
+      "actual_position": 1,
+      "predicted_position": 1,
+      "adjacent_client_gaps_ms": [
+        61.6415,
+        40.5067,
+        40.4184
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0022",
+      "actual_position": 4,
+      "predicted_position": 4,
+      "adjacent_client_gaps_ms": [
+        44.3687,
+        42.3332,
+        -0.0376
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0023",
+      "actual_position": 2,
+      "predicted_position": 2,
+      "adjacent_client_gaps_ms": [
+        0.0665,
+        40.0525,
+        40.7469
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0024",
+      "actual_position": 1,
+      "predicted_position": 1,
+      "adjacent_client_gaps_ms": [
+        61.6671,
+        42.3485,
+        40.3721
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0025",
+      "actual_position": 1,
+      "predicted_position": 1,
+      "adjacent_client_gaps_ms": [
+        61.7131,
+        40.613,
+        41.5496
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0026",
+      "actual_position": 1,
+      "predicted_position": 1,
+      "adjacent_client_gaps_ms": [
+        64.1888,
+        41.8076,
+        41.7282
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0027",
+      "actual_position": 3,
+      "predicted_position": 3,
+      "adjacent_client_gaps_ms": [
+        42.8335,
+        0.102,
+        39.8294
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0028",
+      "actual_position": 2,
+      "predicted_position": 2,
+      "adjacent_client_gaps_ms": [
+        0.0971,
+        39.8136,
+        41.1938
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0029",
+      "actual_position": 4,
+      "predicted_position": 4,
+      "adjacent_client_gaps_ms": [
+        40.8432,
+        41.5312,
+        0.0612
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0030",
+      "actual_position": 3,
+      "predicted_position": 3,
+      "adjacent_client_gaps_ms": [
+        42.5306,
+        0.085,
+        41.3906
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0031",
+      "actual_position": 2,
+      "predicted_position": 2,
+      "adjacent_client_gaps_ms": [
+        -0.063,
+        39.8058,
+        42.3232
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0032",
+      "actual_position": 2,
+      "predicted_position": 2,
+      "adjacent_client_gaps_ms": [
+        0.0646,
+        34.983,
+        40.9778
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0034",
+      "actual_position": 4,
+      "predicted_position": 4,
+      "adjacent_client_gaps_ms": [
+        43.4269,
+        42.883,
+        0.3319
+      ]
+    },
+    {
+      "group": "bos-novelty-c1-20261102-0035",
+      "actual_position": 1,
+      "predicted_position": 1,
+      "adjacent_client_gaps_ms": [
+        61.7833,
+        40.3949,
+        41.1043
+      ]
+    }
+  ],
+  "closest_gap_ms_by_position": {
+    "1": {
+      "median": 40.4066,
+      "max": 41.7282
+    },
+    "2": {
+      "median": 0.0638,
+      "max": 0.1068
+    },
+    "3": {
+      "median": 0.0651,
+      "max": 0.102
+    },
+    "4": {
+      "median": 0.0505,
+      "max": 0.3319
+    }
+  },
+  "R2": {
+    "n": 32,
+    "hits": 19,
+    "accuracy": 0.5938,
+    "balanced_accuracy": 0.5938,
+    "wilson95": [
+      0.4226,
+      0.7448
+    ],
+    "chance_p_one_sided": 3.801e-05,
+    "confusion_actual_predicted": [
+      [
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        5,
+        3,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        4,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        4
+      ]
+    ]
+  },
+  "T2": {
+    "n": 32,
+    "hits": 31,
+    "accuracy": 0.9688,
+    "balanced_accuracy": 0.9688,
+    "wilson95": [
+      0.8426,
+      0.9945
+    ],
+    "chance_p_one_sided": 0.0,
+    "confusion_actual_predicted": [
+      [
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        8
+      ]
+    ]
+  },
+  "RT": {
+    "n": 32,
+    "hits": 31,
+    "accuracy": 0.9688,
+    "balanced_accuracy": 0.9688,
+    "wilson95": [
+      0.8426,
+      0.9945
+    ],
+    "chance_p_one_sided": 0.0,
+    "confusion_actual_predicted": [
+      [
+        8,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        8,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        7,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        8
+      ]
+    ]
+  }
+}

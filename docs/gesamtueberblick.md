@@ -1,6 +1,6 @@
 # ICCAI 2027 – Gesamtüberblick für die externe Validierung
 
-Stand: 02.11.2026. Dieser Überblick fasst die bisherigen lokalen Arbeiten
+Stand: 03.11.2026. Dieser Überblick fasst die bisherigen lokalen Arbeiten
 zusammen. Die detaillierten Berichte und die Quellenkarte sind ebenfalls als
 Markdown-Dateien im Übergabe-ZIP enthalten. Messrohdaten, Logs, Grafiken und
 Programme liegen **nur im Repository**, nicht im Markdown-ZIP.
@@ -10,9 +10,17 @@ Programme liegen **nur im Repository**, nicht im Markdown-ZIP.
 Konfigurations-, Prompt- und Slot-Fallback-Fragen. Danach folgten
 `docs/release-boundary-20261102.md`, `docs/late-release-20261102.md`,
 `docs/causal-release-pilot-20261102.md` und zuletzt
-`docs/randomized-release-pilot-20261102.md`. Dieser letzte Bericht ist
-für die **aktuelle konstruktive Forschungsentscheidung** maßgeblich;
-die folgenden Abschnitte dokumentieren den früheren Zwischenstand.
+`docs/randomized-release-pilot-20261102.md` und nun
+`docs/c1-cocompletion-20261103.md`. Der letzte Bericht bestätigt
+prospektiv eine neue **lokale C1-Beobachtung**: Die vorab fixierte
+Regel für fast gleichzeitig vollständig empfangene Antwortpaare
+bestimmte in einer frischen balancierten Direktserie die Cacheposition
+32/32 Mal. R1 traf 11/32, T2 und RT je 31/32. Vier unvorgewärmte
+Kontrollen zeigten keinen engen Paarabstand. Diese Messung prüft noch
+weder C1-BOS noch Übertragbarkeit unter anderer Last oder anderen
+Modellen. Ein überlegener neuer Angreifer gegenüber T2 ist nicht
+belegt. Die folgenden Abschnitte dokumentieren den früheren
+Zwischenstand.
 
 ## Forschungsfrage und heutige Antwort
 

@@ -20,6 +20,9 @@ results/**/*cache/
 results/**/tmp/
 results/*.zip
 docs/*.zip
+.tmp/
+# Abgebrochene Modellstarts vor dem C1-Bestätigungslauf
+results/novelty-c1-20261102/server*.log
 
 # Betriebssystem
 .DS_Store

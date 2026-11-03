@@ -1,8 +1,19 @@
 # Projektstand
 
-Stand: 02.11.2026
+Stand: 03.11.2026
 
 ## Aktuelle Etappe
+Die prospektive C1-Direktprüfung vom 03.11. ist in
+`docs/c1-cocompletion-20261103.md` dokumentiert. Die zuvor fixierte
+Paarabstandsregel bestimmte in einer frischen, balancierten Serie mit
+neuem Backend-Start die Cacheposition 32/32 Mal (95-%-Wilson-Intervall
+89,3–100 %); R1 erreichte 11/32, T2 und RT je 31/32. Vier
+unvorgewärmte Kontrollen zeigten keinen engen Antwortabstand.
+Der Befund ist ein lokaler Mechanismuskandidat unter C1-Direktfreigabe,
+kein Beleg für BOS-Leakage, allgemeine Übertragbarkeit oder höhere
+Genauigkeit als T2. Alle 36 Gruppen und 144 Antworten sind vollständig;
+Backend und Proxy sind beendet.
+
 3 – Technische Optionen und Paper-Richtung bewertet. Der lokale BOS-
 Mechanismus, seine Konfigurationsabhängigkeit, stärkere Clientbeobachter
 und der Fallback eines festen Freigabeslots wurden in begrenzten,

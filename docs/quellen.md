@@ -1,6 +1,6 @@
 # Literatur und Quellen
 
-Stand: 02.11.2026
+Stand: 03.11.2026
 
 ## Ausgangsbasis
 
@@ -257,3 +257,19 @@ Versuchsbefund steht in `docs/randomized-release-pilot-20261102.md`.
 | [Mitigating Timing Side Channel in Shared Schedulers, 2013](https://arxiv.org/pdf/1302.6123), **L2 heute**, §V-A/B und §VI | Allgemeine periodische Pufferung und deren Delay-/Privacy-Konflikt sind Vorarbeit; formale Resultate gelten nicht automatisch für LLM-HTTP-Antworten. |
 | [Threshold Pool Mixes, Computer Networks 2014](https://www.sciencedirect.com/science/article/pii/S1389128614001522), **L1/Teilauszug heute** | Verlagstext beschreibt bereits Mehrzieloptimierung von Anonymität und Wartezeit. Originalvolltext ließ sich weiterhin nicht verlässlich öffnen (403), daher keine abschließende Novelty-Aussage. |
 | [Eigene ICCAI-2026-Arbeit](../references/iccai2026-completion-order.pdf), **zuvor L3, heute nicht erneut gelesen** | BOS/ODS-Rangmodell ist der Ausgangspunkt; die hier geprüfte gemeinsame Completion- und Fallback-Frage ist ein enger Anschluss, aber die getestete Münzregel liefert keinen belegten Methodenbeitrag. |
+
+## C1-Abschlussstruktur (03.11.2026)
+
+Gezielte Nachprüfung für den prospektiven C1-Test; die engsten Stellen
+wurden am 02./03.11. gelesen (**L2**), die übrige Quellenkarte nicht
+neu geprüft. Keine systematische Vollständigkeitsbehauptung und kein
+besonderer „Deep-Research“-Lauf. Versuch und Abgrenzung stehen in
+`docs/c1-cocompletion-20261103.md`.
+
+| Originaltext / Fundstelle | Grenze für den möglichen Claim |
+| --- | --- |
+| [PROMPTPEEK, NDSS 2025](https://www.ndss-symposium.org/wp-content/uploads/2025-1772-paper.pdf), §IV-A und §VIII | Ein-Token-Reihenfolge unter LPM ist Vorarbeit; dessen damalige FCFS-Einordnung gilt nicht automatisch für vLLM 0.17.1. |
+| [OptiLeak v1](https://arxiv.org/html/2602.20595v1), §4.2 und §6 | FCFS-Timing/TTFT als Validator wird ausdrücklich vorgeschlagen. Allgemeine Timing-Positionsinferenz ist daher kein Neuheitsclaim. |
+| [PrefixWall v2](https://arxiv.org/html/2603.10726v2), §§2.2–2.4, 5 | TTFT-basierte Cachetreffer und Lastgrenzen sind untersucht; vier relative 16-Token-Vollantwortzeiten sind dort nicht der gewählte Beobachter. |
+| [Contention-Induced Reliability Collapse](https://arxiv.org/html/2609.06853), §§IV-B, XIV–XV | Nicht gestreamte Endzeiten sind bereits untersucht, aber mit einem Ausgabetoken. Konkurrenzlast kann Timing-Kanäle verändern; unser Leerlaufbefund ist nicht auf Last übertragbar. |
+| [Eigene ICCAI-2026-Arbeit](../references/iccai2026-completion-order.pdf), zuvor L3 | Die frühere BOS-/ODS-Auswertung war rangbezogen. Der neue C1-Test fragt nach relativen Abschlusszeiten, prüft aber noch kein BOS. |
