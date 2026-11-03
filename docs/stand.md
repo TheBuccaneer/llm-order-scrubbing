@@ -3,6 +3,22 @@
 Stand: 03.11.2026
 
 ## Aktuelle Etappe
+Die **Llama-3.1-8B-Instruct-Referenzvalidierung** ist abgeschlossen;
+Bericht und Geltungsgrenzen stehen in
+`docs/llama-referenzvalidierung-20261103.md`, Rohdaten unter
+`results/llama-reference-20261103/`. Der lokale Cache-/Completion-
+Kanal trat auch beim zweiten Modell auf. In der unabhängigen
+BOS-Prüfung erreichte T2 21/32 (C0) und 14/32 (C1); die binäre
+Blockschluss-AUC betrug 0,911/0,953. Bei synthetischen Dokumenten
+verkürzte ein gemeinsamer öffentlicher Präfix den gepaarten
+Client-Blockschluss median um 321,5/231,0 ms. Die eingefrorene
+T2-Kalibrierung übertrug sich auf P1 schlecht; das ist kein
+Schutzbeweis. Entscheidung: Llama als zweite Modellkontrolle in
+das eng begrenzte empirische ICCAI-2027-Paper aufnehmen, ohne
+eine allgemeine C1-Sicherheits- oder Neuheitsbehauptung. Alle
+neuen Server und Proxies wurden beendet. Die folgenden Abschnitte
+halten die vorherigen Etappen fest.
+
 Der abschließende **Präfixstruktur-×-BOS-Pilot** vom 03.11. steht in
 `docs/prefix-struktur-bos-20261103.md`. P0 beginnt mit vier
 unterschiedlichen Dokumenten; P1 verschiebt 304 identische,

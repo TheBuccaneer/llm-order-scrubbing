@@ -2,6 +2,18 @@
 
 Stand: 03.11.2026
 
+## Llama-Referenzvalidierung vom 03.11.2026
+
+Gezielte aktuelle technische Nachprüfung (RDNA L2 für die
+genannten Dokumentationsabschnitte), kein neuer vollständiger
+Novelty-Audit. Die im weiteren Dokument aufgeführten
+Originalarbeiten bilden weiterhin die wissenschaftliche
+Abgrenzung des BOS-Claims.
+
+- [Meta, Llama-3.1-8B-Instruct-Modellkarte](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct), Modellidentität und vLLM-/Chat-Anwendungsbeispiel: offizieller Primärtext. Die tatsächliche lokale Ladefähigkeit und Tokenisierung wurden eigenständig geprüft.
+- [vLLM 0.17.1, Automatic Prefix Caching](https://docs.vllm.ai/en/v0.17.1/design/prefix_caching/), Einleitung, „Note 1“ und „Cache Isolation for Security“: nur volle KV-Blöcke werden wiederverwendet; der erste Block trägt den optionalen Salt. Die gemessenen 304/544-Token-Treffer sind lokale Beobachtungen, nicht aus der Dokumentation abgeleitet.
+- [vLLM 0.17.1, Scheduler-Konfiguration](https://docs.vllm.ai/en/v0.17.1/api/vllm/config/scheduler/), `max_num_batched_tokens` und `long_prefill_token_threshold`: C0/C1 sind bewusste lokale Konfigurationsvarianten. Ein modellübergreifend gleicher Schedulerablauf wird daraus nicht behauptet.
+
 ## Ausgangsbasis
 
 Die vollständige bisherige Quellenkarte befindet sich

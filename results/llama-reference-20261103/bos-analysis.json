@@ -1,0 +1,1170 @@
+{
+  "c0": {
+    "development_integrity": {
+      "groups": 18,
+      "positive": 16,
+      "controls": 2,
+      "responses": 72,
+      "failures": [],
+      "failure_count": 0
+    },
+    "holdout_integrity": {
+      "groups": 36,
+      "positive": 32,
+      "controls": 4,
+      "responses": 144,
+      "failures": [],
+      "failure_count": 0
+    },
+    "binary_direction": "later",
+    "development_binary_auc": 0.9375,
+    "holdout_binary_auc": 0.9115,
+    "holdout_first_time_median_ms_by_warm_position": {
+      "1": 953.898,
+      "2": 950.823,
+      "3": 940.869,
+      "4": 892.622
+    },
+    "R1": {
+      "n": 32,
+      "hits": 6,
+      "accuracy": 0.1875,
+      "balanced_accuracy": 0.1875,
+      "wilson95": [
+        0.0889,
+        0.3531
+      ],
+      "chance_p_one_sided": 0.8469969,
+      "confusion_actual_predicted": [
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          2,
+          4
+        ],
+        [
+          5,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          1,
+          3
+        ]
+      ]
+    },
+    "R2": {
+      "n": 32,
+      "hits": 5,
+      "accuracy": 0.1562,
+      "balanced_accuracy": 0.1562,
+      "wilson95": [
+        0.0686,
+        0.3175
+      ],
+      "chance_p_one_sided": 0.93024261,
+      "confusion_actual_predicted": [
+        [
+          2,
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          5,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          3,
+          1
+        ]
+      ],
+      "errors": [
+        {
+          "trial": 0,
+          "actual": 0,
+          "predicted": 3
+        },
+        {
+          "trial": 1,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 3,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 4,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 6,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 8,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 9,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 10,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 11,
+          "actual": 0,
+          "predicted": 2
+        },
+        {
+          "trial": 13,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 14,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 16,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 17,
+          "actual": 0,
+          "predicted": 3
+        },
+        {
+          "trial": 18,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 19,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 20,
+          "actual": 2,
+          "predicted": 3
+        },
+        {
+          "trial": 22,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 25,
+          "actual": 0,
+          "predicted": 3
+        },
+        {
+          "trial": 26,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 27,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 28,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 29,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 30,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 31,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 32,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 33,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 35,
+          "actual": 2,
+          "predicted": 1
+        }
+      ]
+    },
+    "T1": {
+      "n": 32,
+      "hits": 22,
+      "accuracy": 0.6875,
+      "balanced_accuracy": 0.6875,
+      "wilson95": [
+        0.5143,
+        0.8205
+      ],
+      "chance_p_one_sided": 2.4e-07,
+      "confusion_actual_predicted": [
+        [
+          5,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8
+        ]
+      ],
+      "errors": [
+        {
+          "trial": 1,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 2,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 3,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 4,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 8,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 10,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 12,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 22,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 28,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 35,
+          "actual": 2,
+          "predicted": 1
+        }
+      ]
+    },
+    "T2": {
+      "n": 32,
+      "hits": 21,
+      "accuracy": 0.6562,
+      "balanced_accuracy": 0.6562,
+      "wilson95": [
+        0.4831,
+        0.7959
+      ],
+      "chance_p_one_sided": 1.48e-06,
+      "confusion_actual_predicted": [
+        [
+          3,
+          5,
+          0,
+          0
+        ],
+        [
+          2,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          3,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          8
+        ]
+      ],
+      "errors": [
+        {
+          "trial": 0,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 1,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 2,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 3,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 4,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 8,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 10,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 12,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 28,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 33,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 35,
+          "actual": 2,
+          "predicted": 1
+        }
+      ]
+    },
+    "RT": {
+      "n": 32,
+      "hits": 11,
+      "accuracy": 0.3438,
+      "balanced_accuracy": 0.3438,
+      "wilson95": [
+        0.2041,
+        0.5169
+      ],
+      "chance_p_one_sided": 0.15359463,
+      "confusion_actual_predicted": [
+        [
+          3,
+          4,
+          1,
+          0
+        ],
+        [
+          3,
+          3,
+          2,
+          0
+        ],
+        [
+          5,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          3,
+          5
+        ]
+      ],
+      "errors": [
+        {
+          "trial": 1,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 3,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 4,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 6,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 8,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 9,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 10,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 11,
+          "actual": 0,
+          "predicted": 2
+        },
+        {
+          "trial": 13,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 14,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 16,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 17,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 18,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 20,
+          "actual": 2,
+          "predicted": 3
+        },
+        {
+          "trial": 22,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 25,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 26,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 29,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 31,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 33,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 35,
+          "actual": 2,
+          "predicted": 1
+        }
+      ]
+    },
+    "holdout_proxy_wait_ms": {
+      "median": 44.3,
+      "p95": 230.332
+    }
+  },
+  "c1": {
+    "development_integrity": {
+      "groups": 18,
+      "positive": 16,
+      "controls": 2,
+      "responses": 72,
+      "failures": [],
+      "failure_count": 0
+    },
+    "holdout_integrity": {
+      "groups": 36,
+      "positive": 32,
+      "controls": 4,
+      "responses": 144,
+      "failures": [],
+      "failure_count": 0
+    },
+    "binary_direction": "later",
+    "development_binary_auc": 0.9167,
+    "holdout_binary_auc": 0.9531,
+    "holdout_first_time_median_ms_by_warm_position": {
+      "1": 784.551,
+      "2": 760.866,
+      "3": 772.794,
+      "4": 765.284
+    },
+    "R1": {
+      "n": 32,
+      "hits": 8,
+      "accuracy": 0.25,
+      "balanced_accuracy": 0.25,
+      "wilson95": [
+        0.1325,
+        0.4211
+      ],
+      "chance_p_one_sided": 0.56752916,
+      "confusion_actual_predicted": [
+        [
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          5
+        ],
+        [
+          4,
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          3,
+          3
+        ]
+      ]
+    },
+    "R2": {
+      "n": 32,
+      "hits": 10,
+      "accuracy": 0.3125,
+      "balanced_accuracy": 0.3125,
+      "wilson95": [
+        0.1795,
+        0.4857
+      ],
+      "chance_p_one_sided": 0.26334096,
+      "confusion_actual_predicted": [
+        [
+          3,
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          3,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          2,
+          2,
+          1
+        ]
+      ],
+      "errors": [
+        {
+          "trial": 1,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 2,
+          "actual": 0,
+          "predicted": 2
+        },
+        {
+          "trial": 3,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 4,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 6,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 8,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 9,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 10,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 12,
+          "actual": 0,
+          "predicted": 2
+        },
+        {
+          "trial": 19,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 20,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 22,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 24,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 25,
+          "actual": 0,
+          "predicted": 3
+        },
+        {
+          "trial": 26,
+          "actual": 3,
+          "predicted": 0
+        },
+        {
+          "trial": 27,
+          "actual": 3,
+          "predicted": 0
+        },
+        {
+          "trial": 28,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 29,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 30,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 31,
+          "actual": 2,
+          "predicted": 3
+        },
+        {
+          "trial": 32,
+          "actual": 3,
+          "predicted": 0
+        },
+        {
+          "trial": 33,
+          "actual": 0,
+          "predicted": 2
+        }
+      ]
+    },
+    "T1": {
+      "n": 32,
+      "hits": 15,
+      "accuracy": 0.4688,
+      "balanced_accuracy": 0.4688,
+      "wilson95": [
+        0.3087,
+        0.6355
+      ],
+      "chance_p_one_sided": 0.00596341,
+      "confusion_actual_predicted": [
+        [
+          8,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          6
+        ],
+        [
+          2,
+          2,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          1,
+          5
+        ]
+      ],
+      "errors": [
+        {
+          "trial": 1,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 3,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 4,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 8,
+          "actual": 2,
+          "predicted": 3
+        },
+        {
+          "trial": 9,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 13,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 14,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 16,
+          "actual": 2,
+          "predicted": 3
+        },
+        {
+          "trial": 18,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 19,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 20,
+          "actual": 2,
+          "predicted": 3
+        },
+        {
+          "trial": 23,
+          "actual": 1,
+          "predicted": 0
+        },
+        {
+          "trial": 27,
+          "actual": 3,
+          "predicted": 0
+        },
+        {
+          "trial": 28,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 31,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 34,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 35,
+          "actual": 2,
+          "predicted": 1
+        }
+      ]
+    },
+    "T2": {
+      "n": 32,
+      "hits": 14,
+      "accuracy": 0.4375,
+      "balanced_accuracy": 0.4375,
+      "wilson95": [
+        0.2817,
+        0.6067
+      ],
+      "chance_p_one_sided": 0.01586455,
+      "confusion_actual_predicted": [
+        [
+          6,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          6
+        ],
+        [
+          3,
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          2,
+          4
+        ]
+      ],
+      "errors": [
+        {
+          "trial": 1,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 3,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 4,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 8,
+          "actual": 2,
+          "predicted": 3
+        },
+        {
+          "trial": 9,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 13,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 14,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 18,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 19,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 20,
+          "actual": 2,
+          "predicted": 3
+        },
+        {
+          "trial": 25,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 27,
+          "actual": 3,
+          "predicted": 0
+        },
+        {
+          "trial": 28,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 31,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 32,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 33,
+          "actual": 0,
+          "predicted": 1
+        },
+        {
+          "trial": 34,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 35,
+          "actual": 2,
+          "predicted": 0
+        }
+      ]
+    },
+    "RT": {
+      "n": 32,
+      "hits": 14,
+      "accuracy": 0.4375,
+      "balanced_accuracy": 0.4375,
+      "wilson95": [
+        0.2817,
+        0.6067
+      ],
+      "chance_p_one_sided": 0.01586455,
+      "confusion_actual_predicted": [
+        [
+          6,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          3,
+          3,
+          2
+        ],
+        [
+          1,
+          2,
+          5,
+          0
+        ],
+        [
+          2,
+          2,
+          4,
+          0
+        ]
+      ],
+      "errors": [
+        {
+          "trial": 1,
+          "actual": 2,
+          "predicted": 0
+        },
+        {
+          "trial": 3,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 4,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 9,
+          "actual": 1,
+          "predicted": 3
+        },
+        {
+          "trial": 18,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 19,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 20,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 24,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 25,
+          "actual": 0,
+          "predicted": 3
+        },
+        {
+          "trial": 26,
+          "actual": 3,
+          "predicted": 0
+        },
+        {
+          "trial": 27,
+          "actual": 3,
+          "predicted": 0
+        },
+        {
+          "trial": 28,
+          "actual": 1,
+          "predicted": 2
+        },
+        {
+          "trial": 29,
+          "actual": 3,
+          "predicted": 1
+        },
+        {
+          "trial": 30,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 31,
+          "actual": 2,
+          "predicted": 1
+        },
+        {
+          "trial": 32,
+          "actual": 3,
+          "predicted": 2
+        },
+        {
+          "trial": 33,
+          "actual": 0,
+          "predicted": 2
+        },
+        {
+          "trial": 34,
+          "actual": 1,
+          "predicted": 2
+        }
+      ]
+    },
+    "holdout_proxy_wait_ms": {
+      "median": 47.279,
+      "p95": 139.023
+    }
+  }
+}

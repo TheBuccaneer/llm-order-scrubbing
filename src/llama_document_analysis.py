@@ -10,7 +10,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-from llama_bos_analysis import binary_auc, first_time, integrity
+from llama_bos_analysis import binary_auc, first_time
 from observer_compare import data, rank1, score
 
 

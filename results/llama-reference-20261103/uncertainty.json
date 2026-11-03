@@ -1,0 +1,54 @@
+{
+  "c0": {
+    "bos_binary_auc_bootstrap95": [
+      0.7969,
+      0.9896
+    ],
+    "document_binary_auc_bootstrap95": {
+      "p0": [
+        0.6875,
+        1.0
+      ],
+      "p1": [
+        0.6667,
+        1.0
+      ]
+    },
+    "document_paired_p1_minus_p0_median_bootstrap95_ms": {
+      "backend_last_ms": [
+        -326.175,
+        -318.453
+      ],
+      "client_block_ms": [
+        -326.201,
+        -318.428
+      ]
+    }
+  },
+  "c1": {
+    "bos_binary_auc_bootstrap95": [
+      0.8646,
+      1.0
+    ],
+    "document_binary_auc_bootstrap95": {
+      "p0": [
+        0.75,
+        1.0
+      ],
+      "p1": [
+        0.5208,
+        0.9792
+      ]
+    },
+    "document_paired_p1_minus_p0_median_bootstrap95_ms": {
+      "backend_last_ms": [
+        -231.889,
+        -224.168
+      ],
+      "client_block_ms": [
+        -231.558,
+        -223.975
+      ]
+    }
+  }
+}
