@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd /home/rock/projects/llm-order-scrubbing
+py=/home/rock/projects/porto/.venv-py313-repair/bin/python
+model=/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28
+base=results/prefix-structure-20261103
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+export TMPDIR=/home/rock/projects/llm-order-scrubbing/results/tmp
+export XDG_CACHE_HOME=/home/rock/projects/llm-order-scrubbing/results/tmp
+export TRITON_CACHE_DIR=/home/rock/projects/llm-order-scrubbing/results/tmp/triton
+
+server= proxy=
+cleanup() {
+    if [[ -n $proxy ]]; then kill -TERM "$proxy" 2>/dev/null || true; wait "$proxy" 2>/dev/null || true; proxy=; fi
+    if [[ -n $server ]]; then kill -TERM "$server" 2>/dev/null || true; wait "$server" 2>/dev/null || true; server=; fi
+}
+trap cleanup EXIT INT TERM
+
+for spec in 'run1-c0 64 202611031501 r1c0' \
+            'run2-c1 0 202611031501 r2c1' \
+            'run3-c1 0 202611031502 r3c1' \
+            'run4-c0 64 202611031502 r4c0'; do
+    read -r name threshold seed tag <<< "$spec"
+    folder=$base/$name
+    mkdir "$folder"
+    "$py" -m vllm.entrypoints.openai.api_server \
+        --host 127.0.0.1 --port 8765 --model "$model" \
+        --served-model-name Qwen/Qwen2.5-7B-Instruct \
+        --max-model-len 2048 --gpu-memory-utilization 0.8 --enforce-eager \
+        --enable-prefix-caching --enable-prompt-tokens-details \
+        --max-num-batched-tokens 256 --long-prefill-token-threshold "$threshold" \
+        > "$folder/server.log" 2>&1 &
+    server=$!
+    ready=0
+    for n in $(seq 1 90); do
+        if curl -fsS http://127.0.0.1:8765/health >/dev/null 2>&1; then ready=1; break; fi
+        if ! kill -0 "$server" 2>/dev/null; then break; fi
+        sleep 1
+    done
+    if [[ $ready -ne 1 ]]; then echo "$name server failed"; exit 1; fi
+    "$py" src/order_release_proxy.py "$folder/proxy.jsonl" > "$folder/proxy.log" 2>&1 &
+    proxy=$!
+    sleep 1
+    "$py" src/prefix_structure_run.py "$folder/trials.jsonl" "$tag" "$seed" \
+        data/document-workload-20261103/prompts.json \
+        data/prefix-structure-20261103/prompts-p1.json > "$folder/client.log" 2>&1
+    echo "$name: $(wc -l < "$folder/trials.jsonl") groups, $(wc -l < "$folder/proxy.jsonl") responses"
+    cleanup
+done
