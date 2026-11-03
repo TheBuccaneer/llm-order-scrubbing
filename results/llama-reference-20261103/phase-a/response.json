@@ -1,0 +1,31 @@
+{
+  "http_status": 200,
+  "client_elapsed_ms": 425.648,
+  "response": {
+    "id": "cmpl-b77727dc1ad3ccf7",
+    "object": "text_completion",
+    "created": 1793697438,
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "choices": [
+      {
+        "index": 0,
+        "text": " This is a placeholder for the actual code that will be written to create the local",
+        "logprobs": null,
+        "finish_reason": "length",
+        "stop_reason": null,
+        "token_ids": null,
+        "prompt_logprobs": null,
+        "prompt_token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 14,
+      "total_tokens": 30,
+      "completion_tokens": 16,
+      "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null
+  }
+}

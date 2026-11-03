@@ -1,0 +1,17 @@
+{
+  "status": "frozen_before_cache_check",
+  "model": "meta-llama/Llama-3.1-8B-Instruct, local snapshot 0e9e39f249a16976918f6564b8830bc894c89659, vLLM 0.17.1",
+  "server": "127.0.0.1:8765, C0: max_num_batched_tokens=256, long_prefill_token_threshold=64, prefix caching on, eager, 2048 max model length, 0.8 GPU memory fraction",
+  "prompts": "data/llama-reference-20261103/{artificial,p0,p1}.json; all four prompts in each set have 549 Llama prompt tokens including BOS. P0 and P1 B/C add only 'Reviewed.' before the final question to equalize lengths.",
+  "request": "One direct nonstreaming completion token per request, temperature 0; response usage is integrity information only.",
+  "sequence": [
+    "P0 A, salt llama-b-p0",
+    "P0 A again, salt llama-b-p0: expected 544 cached tokens",
+    "P0 B, salt llama-b-p0: expected 0",
+    "P1 A, salt llama-b-p1",
+    "P1 A again, salt llama-b-p1: expected 544",
+    "P1 B, salt llama-b-p1: expected 304 shared-prefix tokens",
+    "P1 A, salt llama-b-isolated: expected 0"
+  ],
+  "stop": "No larger campaign from this check alone; inspect actual token counts and responses before the direct-release pilot."
+}

@@ -1,0 +1,7 @@
+{
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "prompt": "In one short sentence, say that the local model is ready.",
+  "max_tokens": 16,
+  "temperature": 0,
+  "stream": false
+}

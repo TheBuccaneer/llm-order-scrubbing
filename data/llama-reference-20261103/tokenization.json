@@ -1,0 +1,41 @@
+{
+  "model_snapshot": "/home/rock/.cache/huggingface/hub/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
+  "tokenizer_class": "PreTrainedTokenizerFast",
+  "bos_token_id": 128000,
+  "add_special_tokens_for_vllm_completion": true,
+  "sets": {
+    "artificial": {
+      "prompt_tokens": {
+        "A": 549,
+        "B": 549,
+        "C": 549,
+        "D": 549
+      },
+      "common_initial_tokens": 1,
+      "common_full_16_token_blocks": 0,
+      "distinct_first_16_token_blocks": true
+    },
+    "p0": {
+      "prompt_tokens": {
+        "A": 549,
+        "B": 549,
+        "C": 549,
+        "D": 549
+      },
+      "common_initial_tokens": 2,
+      "common_full_16_token_blocks": 0,
+      "distinct_first_16_token_blocks": true
+    },
+    "p1": {
+      "prompt_tokens": {
+        "A": 549,
+        "B": 549,
+        "C": 549,
+        "D": 549
+      },
+      "common_initial_tokens": 305,
+      "common_full_16_token_blocks": 19,
+      "distinct_first_16_token_blocks": false
+    }
+  }
+}
