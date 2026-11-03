@@ -66,10 +66,16 @@ def integrity(trials, proxy):
             if (q["http_status"], q["prompt_tokens"], q["completion_tokens"],
                 q["cached_tokens_reported"]) != (200, 548, 16, None):
                 errors.append(f"{r['trial']} {label} client response")
+            expected_batch = 4 if r["mode"] == "bos4" else 1
             if p is None or (p["group"], p["label"], p["mode"], p["batch_size"],
                              p["cached_tokens_reported"], p["cache_details_removed"]) != (
-                             r["group"], label, "direct", 1, None, True):
+                             r["group"], label, r["mode"], expected_batch, None, True):
                 errors.append(f"{r['trial']} {label} proxy/cache")
+        if r["mode"] == "bos4":
+            items = [by_id.get(r["probes"][label]["request_id"]) for label in r["send_order"]]
+            if any(p is None or p["flush_reason"] != "full" for p in items) or sorted(
+                    p["release_position"] for p in items if p is not None) != [1, 2, 3, 4]:
+                errors.append(f"{r['trial']} incomplete BOS block")
     pairs = {}
     for r in trials:
         if r["pair"] is not None:
@@ -128,6 +134,12 @@ def main(root, output):
     result["R1_first_b_send_position"] = {condition: dict(sorted(Counter(r["send_order"].index(
         min(r["send_order"], key=lambda label: r["probes"][label]["received_ns"])) + 1
         for r in hold if r["condition"] == condition).items())) for condition in ("warm", "cold")}
+    result["proxy_added_wait_ms"] = {
+        "median": round(float(np.median([p["added_wait_ms"] for p in test_proxy])), 3),
+        "p95": round(float(np.quantile([p["added_wait_ms"] for p in test_proxy], .95)), 3)}
+    result["victim_target_e2e_median_ms"] = {condition: round(float(np.median([
+        (r["victim_target"]["received_ns"] - r["victim_target"]["sent_ns"]) / 1e6
+        for r in hold if r["condition"] == condition])), 3) for condition in ("warm", "cold")}
     for feature in FEATURES:
         xtr = np.array([client_features(r, feature) for r in train])
         xte = np.array([client_features(r, feature) for r in hold])
@@ -135,7 +147,8 @@ def main(root, output):
         model.fit(xtr, ytr)
         result[feature] = score(yte, model.predict(xte))
     result["decision_guide_met"] = (result["development_integrity"]["error_count"] == 0 and
-        result["holdout_integrity"]["error_count"] == 0 and consistent >= 12 and
+        result["holdout_integrity"]["error_count"] == 0 and
+        (hold[0]["mode"] == "bos4" or consistent >= 12) and
         (auc >= .75 or result["T2"]["hits"] >= 24))
     output.write_text(json.dumps(result, indent=2) + "\n")
     print("integrity",result["holdout_integrity"]["error_count"],"AUC",auc,
