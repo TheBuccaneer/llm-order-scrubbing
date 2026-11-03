@@ -2,6 +2,20 @@
 
 Stand: 03.11.2026
 
+## Zwei-Benutzer-Scheduler-Pilot vom 03.11.2026
+
+Gezielte aktuelle Originaltextprüfung für den neuen
+getrennte-Salts-Claim. Dies ist **kein** vollständiger
+systematischer Neuheitsnachweis; frühere Quellen bleiben erhalten.
+
+| Originaltext und Lesestatus | Bedeutung für den Pilot |
+| --- | --- |
+| [vLLM 0.17.1, Automatic Prefix Caching](https://docs.vllm.ai/en/v0.17.1/design/prefix_caching/), „Note 1“ und „Cache Isolation for Security“, heute L2 | Salt im ersten Block trennt direkte KV-Wiederverwendung. Der Pilot misst zusätzlich, ob der gemeinsame Scheduler den fremden Cachezustand indirekt sichtbar macht. |
+| [KVGov v1](https://arxiv.org/html/2608.09225), §§4.1–4.3 und Evaluation, heute L2 | Per-Principal-Salt verhindert das dortige direkte Cache-Fingerprint-Orakel. Dessen ORIGAMI ist ein **Audit**-Scheduler, keine gemessene Antwortfreigabe-Isolation. Der hiesige indirekte B-only-Kanal ist eine andere Angriffsfläche; keine pauschale Widerlegung von KVGov. |
+| [FairInference v1](https://arxiv.org/html/2609.18112), §§2.1–2.2, 5 und 7.1.1, heute L2 | Mehrbenutzer-Interferenz durch Scheduler und unterschiedliche Präfixtreffer sowie Latenzisolation sind bereits erforscht. Vertraulichkeitsinferenz aus vollständigen Antworten bei getrennten Salts ist hier die engere zu prüfende Frage; Interferenz allein ist nicht neu. |
+| [Pacer, USENIX Security 2022](https://www.usenix.org/system/files/sec22-mehta.pdf), §3.2 und §4, heute L2 | Geheimnisunabhängiger tatsächlicher Sendeplan einschließlich Abweichungen ist bekannt. Ein neuer öffentlicher Slot wäre ohne bessere Kosten-/Leckagewerte keine eigenständige Methode. |
+| [Abu Bakar, „Contention-Induced Reliability Collapse“, v1](https://arxiv.org/html/2609.06853), §§IV und XV, heute L2 | Konkurrenzstruktur und Überlappung beeinflussen Cache-Timing-Zuverlässigkeit. Der vorliegende ruhige, synchronisierte Pilot ist eine günstige Bedingung und nicht auf Mehrnutzerlast extrapolierbar. |
+
 ## Llama-Referenzvalidierung vom 03.11.2026
 
 Gezielte aktuelle technische Nachprüfung (RDNA L2 für die

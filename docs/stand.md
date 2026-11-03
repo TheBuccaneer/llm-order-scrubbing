@@ -3,6 +3,26 @@
 Stand: 03.11.2026
 
 ## Aktuelle Etappe
+Der lokale **Zwei-Benutzer-Pilot mit getrennten Cache-Salts** steht in
+`docs/getrennte-salts-scheduler-20261103.md`; alle neuen Rohdaten
+unter `results/tenant-scheduler-20261103/`. A hatte bei derselben
+Zielanfrage 544 gecachte Tokens oder keinen Treffer; B hatte mit
+eigenem Salt durchgehend **keinen** Cachetreffer. Dennoch trennten
+Bs vollständige Antwortzeiten warm/kalt in der unabhängigen
+Prüfung unter direkter Freigabe und BOS jeweils 32/32 Fälle,
+auch bei einem festen Salt je Benutzer und Serverstart. Alle
+16 gepaarten Prüfvergleiche pro Bedingung hatten die zuvor
+festgelegte Richtung. BOS mischte die Ränge, behielt den
+Zeitkanal und verursachte median etwa 47 ms individuelle
+Proxy-Wartezeit (p95 etwa 193 ms). Das ist ein synchronisierter
+Qwen/C0-/Loopback-Befund, keine Behauptung allgemeiner
+Angreifbarkeit oder einer neuen Verteidigung. Die nächste
+Forschungsentscheidung ist ein vorab budgetierter Vergleich
+einer tenantbewussten Zulassungs-/Freigaberegel mit direkter
+Freigabe, BOS und festem Slot; kein automatischer Ausbau.
+Alle Messprozesse sind beendet. Die folgenden Abschnitte
+halten frühere Etappen fest.
+
 Die **Llama-3.1-8B-Instruct-Referenzvalidierung** ist abgeschlossen;
 Bericht und Geltungsgrenzen stehen in
 `docs/llama-referenzvalidierung-20261103.md`, Rohdaten unter
