@@ -1,0 +1,287 @@
+{
+  "assumption": "Ideal backend readiness; direct client time = backend HTTP completion; BOS/slot client time = ideal release + 2 ms per serial answer; no network/timer jitter or backend feedback.",
+  "sources": {
+    "c0_direct": [
+      "results/bos-pilot-20261102/trials-extended.jsonl",
+      "results/bos-pilot-20261102/proxy-extended.jsonl",
+      "direct"
+    ],
+    "c1_direct": [
+      "results/novelty-c1-20261102/confirm/trials.jsonl",
+      "results/novelty-c1-20261102/confirm/proxy.jsonl",
+      "direct"
+    ]
+  },
+  "results": {
+    "c0_direct_direct": {
+      "groups": 68,
+      "positive": 64,
+      "full_groups": 0,
+      "late_fallback_responses": 0,
+      "mean_individual_wait_ms": {
+        "n": 68,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "smallest_gap_ms": {
+        "n": 64,
+        "min": 0.052,
+        "median": 20.218,
+        "max": 41.603
+      },
+      "gap_rule_hits": 12,
+      "first_client_by_warm_position_ms": {
+        "1": {
+          "n": 16,
+          "min": 676.992,
+          "median": 686.129,
+          "max": 715.116
+        },
+        "2": {
+          "n": 16,
+          "min": 686.499,
+          "median": 695.699,
+          "max": 713.636
+        },
+        "3": {
+          "n": 16,
+          "min": 693.542,
+          "median": 698.147,
+          "max": 707.83
+        },
+        "4": {
+          "n": 16,
+          "min": 710.858,
+          "median": 716.049,
+          "max": 740.413
+        }
+      }
+    },
+    "c0_direct_bos4": {
+      "groups": 68,
+      "positive": 64,
+      "full_groups": 68,
+      "late_fallback_responses": 0,
+      "mean_individual_wait_ms": {
+        "n": 68,
+        "min": 25.162,
+        "median": 71.721,
+        "max": 74.386
+      },
+      "smallest_gap_ms": {
+        "n": 64,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 4.0
+      },
+      "gap_rule_hits": 21,
+      "first_client_by_warm_position_ms": {
+        "1": {
+          "n": 16,
+          "min": 903.388,
+          "median": 913.428,
+          "max": 945.158
+        },
+        "2": {
+          "n": 16,
+          "min": 898.539,
+          "median": 902.138,
+          "max": 909.155
+        },
+        "3": {
+          "n": 16,
+          "min": 879.433,
+          "median": 884.211,
+          "max": 896.24
+        },
+        "4": {
+          "n": 16,
+          "min": 855.806,
+          "median": 860.491,
+          "max": 884.628
+        }
+      }
+    },
+    "c0_direct_slot1050": {
+      "groups": 68,
+      "positive": 64,
+      "full_groups": 68,
+      "late_fallback_responses": 0,
+      "mean_individual_wait_ms": {
+        "n": 68,
+        "min": 96.075,
+        "median": 222.104,
+        "max": 246.08
+      },
+      "smallest_gap_ms": {
+        "n": 64,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 4.0
+      },
+      "gap_rule_hits": 21,
+      "first_client_by_warm_position_ms": {
+        "1": {
+          "n": 16,
+          "min": 1050.435,
+          "median": 1050.512,
+          "max": 1050.717
+        },
+        "2": {
+          "n": 16,
+          "min": 1050.439,
+          "median": 1050.596,
+          "max": 1050.89
+        },
+        "3": {
+          "n": 16,
+          "min": 1050.403,
+          "median": 1050.535,
+          "max": 1050.689
+        },
+        "4": {
+          "n": 16,
+          "min": 1050.435,
+          "median": 1050.536,
+          "max": 1050.758
+        }
+      }
+    },
+    "c1_direct_direct": {
+      "groups": 36,
+      "positive": 32,
+      "full_groups": 0,
+      "late_fallback_responses": 0,
+      "mean_individual_wait_ms": {
+        "n": 36,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 0.0
+      },
+      "smallest_gap_ms": {
+        "n": 32,
+        "min": 0.056,
+        "median": 0.123,
+        "max": 41.715
+      },
+      "gap_rule_hits": 32,
+      "first_client_by_warm_position_ms": {
+        "1": {
+          "n": 8,
+          "min": 634.845,
+          "median": 635.678,
+          "max": 667.916
+        },
+        "2": {
+          "n": 8,
+          "min": 672.081,
+          "median": 677.871,
+          "max": 692.599
+        },
+        "3": {
+          "n": 8,
+          "min": 673.101,
+          "median": 682.464,
+          "max": 750.113
+        },
+        "4": {
+          "n": 8,
+          "min": 673.807,
+          "median": 676.784,
+          "max": 704.078
+        }
+      }
+    },
+    "c1_direct_bos4": {
+      "groups": 36,
+      "positive": 32,
+      "full_groups": 36,
+      "late_fallback_responses": 0,
+      "mean_individual_wait_ms": {
+        "n": 36,
+        "min": 30.62,
+        "median": 50.531,
+        "max": 68.286
+      },
+      "smallest_gap_ms": {
+        "n": 32,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 4.0
+      },
+      "gap_rule_hits": 8,
+      "first_client_by_warm_position_ms": {
+        "1": {
+          "n": 8,
+          "min": 778.166,
+          "median": 779.559,
+          "max": 811.408
+        },
+        "2": {
+          "n": 8,
+          "min": 754.049,
+          "median": 759.112,
+          "max": 774.97
+        },
+        "3": {
+          "n": 8,
+          "min": 755.464,
+          "median": 765.978,
+          "max": 834.312
+        },
+        "4": {
+          "n": 8,
+          "min": 756.132,
+          "median": 762.563,
+          "max": 790.981
+        }
+      }
+    },
+    "c1_direct_slot1050": {
+      "groups": 36,
+      "positive": 32,
+      "full_groups": 36,
+      "late_fallback_responses": 0,
+      "mean_individual_wait_ms": {
+        "n": 36,
+        "min": 174.819,
+        "median": 326.3,
+        "max": 347.849
+      },
+      "smallest_gap_ms": {
+        "n": 32,
+        "min": 2.0,
+        "median": 2.0,
+        "max": 4.0
+      },
+      "gap_rule_hits": 8,
+      "first_client_by_warm_position_ms": {
+        "1": {
+          "n": 8,
+          "min": 1050.413,
+          "median": 1050.519,
+          "max": 1050.725
+        },
+        "2": {
+          "n": 8,
+          "min": 1050.423,
+          "median": 1050.554,
+          "max": 1050.808
+        },
+        "3": {
+          "n": 8,
+          "min": 1050.402,
+          "median": 1050.588,
+          "max": 1050.942
+        },
+        "4": {
+          "n": 8,
+          "min": 1050.47,
+          "median": 1050.507,
+          "max": 1050.593
+        }
+      }
+    }
+  }
+}

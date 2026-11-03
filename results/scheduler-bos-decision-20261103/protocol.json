@@ -1,0 +1,17 @@
+{
+  "status": "frozen_before_new_live_run",
+  "question": "Does C1 BOS hide the direct co-completion pair while retaining a binary block-closure signal for warm send position 1?",
+  "local_only": true,
+  "backend": "Qwen2.5-7B-Instruct, vLLM 0.17.1, RTX 3090, fresh start",
+  "scheduler": {"max_num_batched_tokens": 256, "long_prefill_token_threshold": 0, "prefix_caching": true},
+  "gate": "existing bos4 policy, W=4, unchanged",
+  "case_seed": 202611030531,
+  "cases": {"positive": 32, "no_warm_controls": 4, "warm_positions": "8 each", "output_tokens": 16, "send_stagger_ms": 10},
+  "attacker_inputs": "own request parameters, IDs, send order and complete client receive times only; no cache counters, backend times, proxy diagnostics or secret label",
+  "primary_binary_observer": "Tblock = earliest complete client receive time minus earliest own send time; predict warm send position 1 iff Tblock >= 780 ms, otherwise positions 2-4",
+  "primary_metrics": "sensitivity among 8 position-1 cases, specificity among 24 later-position cases, balanced accuracy, and unthresholded one-sided Mann-Whitney AUC",
+  "decision_rule": "A useful prospective binary C1-BOS signal requires at least 6/8 true positives and at most 6/24 false positives; report exact uncertainty and no-hit controls regardless. Four-class leakage is assessed separately. Stop after this series.",
+  "secondary_observers": "R1 and logistic R2/T1/T2/RT trained on both old C1-BOS 16-case sessions only, C=1 with StandardScaler; no retuning on new data. Frozen direct co-completion gap rule reported diagnostically, not assumed meaningful after BOS serialization.",
+  "old_data": ["results/decision-validation-20261102/config-c1-bos/dev/trials.jsonl", "results/decision-validation-20261102/config-c1-bos/holdout/trials.jsonl"],
+  "limitations": "The 780 ms threshold and binary hypothesis were selected exploratorily after inspecting both old C1-BOS sessions and the C1 direct replay. This is their first prospective live test. The C0 comparison uses earlier sessions, not paired engine configurations."
+}
