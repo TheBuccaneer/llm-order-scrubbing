@@ -2,6 +2,20 @@
 
 Stand: 03.11.2026
 
+## Audit-Folgetest: verborgene A-Startzeit (03.11.2026)
+
+Gezielte Online-Nachprüfung der engsten Originalstellen vor
+dem Test (RDNA L2); kein neuer vollständiger Neuheits-Audit.
+Die bisherigen Quellen bleiben erhalten.
+
+| Originalstelle | Grenze des neuen Befunds |
+| --- | --- |
+| [vLLM, aktuelle Security-Dokumentation, „Multi-Tenant Deployments“](https://docs.vllm.ai/en/latest/usage/security/), heute L2, Seitenstand 30.10.2026 | vLLM weist selbst darauf hin, dass `cache_salt` einzelne Risiken senkt, aber keine vollständige Isolation gemeinsam geplanter Benutzer liefert. Diese aktuelle Aussage beschreibt nicht rückwirkend alle Details der lokal gemessenen Version 0.17.1. |
+| [vLLM 0.17.1, Prefix-Caching-Design](https://docs.vllm.ai/en/v0.17.1/design/prefix_caching/), Hash-/Salt-Abschnitte, heute L2 | Nur gleiche Saltbereiche teilen KV-Blöcke. Der neue Test prüft das mit internen Cachezählern und identischen A-Zielprompts. |
+| [FairInference v1](https://arxiv.org/html/2609.18112), §§2.1–2.2 und 7.1.1, heute L2 | Scheduler-/Cache-Interferenz durch unterschiedliche Präfixtreffer ist bereits als Leistungsproblem untersucht. Der hier trainierte B-only-Angreifer prüft die engere konditionale Geheimnisinferenz; allgemeine Interferenz ist kein Neuheitsclaim. |
+| [Abu Bakar v1, „Contention-Induced Reliability Collapse“](https://arxiv.org/html/2609.06853), §§IV und XV, heute L2 | Überlappung, Konkurrenz und Messumgebung bestimmen Timing-Zuverlässigkeit. Der neue 0–450-ms-Test variiert nur eine Startlage unter weiterhin erzwungener Überlappung; fremde Last ist offen. |
+| [Pacer, USENIX Security 2022](https://www.usenix.org/system/files/sec22-mehta.pdf), §3.2, heute L2 | Auch Fallback-Abweichungen vom öffentlichen Freigabeplan können lecken. Eine künftige Schutzregel benötigt einen echten Kosten-/Leckagevergleich. |
+
 ## Zwei-Benutzer-Scheduler-Pilot vom 03.11.2026
 
 Gezielte aktuelle Originaltextprüfung für den neuen

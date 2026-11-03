@@ -1,0 +1,210 @@
+{
+  "training": "results/tenant-scheduler-20261103/dev/trials.jsonl (16 groups, frozen before this pilot)",
+  "integrity": {
+    "cases": 24,
+    "errors": [],
+    "error_count": 0,
+    "victim_B_request_interval_overlap": {
+      "warm": 8,
+      "cold": 8,
+      "other_cold": 4
+    },
+    "actual_victim_start_offset_ms_by_case": {
+      "0": 300.344,
+      "1": 300.298,
+      "3": 450.347,
+      "4": 449.975,
+      "5": 450.355,
+      "6": 150.011,
+      "7": 150.363,
+      "9": -0.33,
+      "10": 0.273,
+      "11": 0.26,
+      "12": 150.312,
+      "13": 150.333,
+      "15": 299.99,
+      "16": 300.311,
+      "17": 300.322,
+      "18": 450.36,
+      "19": 449.958,
+      "21": -0.257,
+      "22": -0.287,
+      "23": 0.216
+    }
+  },
+  "condition_counts": {
+    "warm": 8,
+    "cold": 8,
+    "absent": 4,
+    "other_cold": 4
+  },
+  "attacker": {
+    "R2": {
+      "hits": 8,
+      "n": 16,
+      "accuracy": 0.5,
+      "wilson95": [
+        0.28,
+        0.72
+      ],
+      "one_sided_p_vs_half": 0.59819,
+      "confusion_cold_warm": [
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "control_predictions_warm": {
+        "absent": 0,
+        "other_cold": 0
+      }
+    },
+    "T1": {
+      "hits": 14,
+      "n": 16,
+      "accuracy": 0.875,
+      "wilson95": [
+        0.6398,
+        0.965
+      ],
+      "one_sided_p_vs_half": 0.00209,
+      "confusion_cold_warm": [
+        [
+          8,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "control_predictions_warm": {
+        "absent": 4,
+        "other_cold": 0
+      }
+    },
+    "T2": {
+      "hits": 16,
+      "n": 16,
+      "accuracy": 1.0,
+      "wilson95": [
+        0.8064,
+        1.0
+      ],
+      "one_sided_p_vs_half": 1.5e-05,
+      "confusion_cold_warm": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "control_predictions_warm": {
+        "absent": 4,
+        "other_cold": 0
+      }
+    },
+    "RT": {
+      "hits": 16,
+      "n": 16,
+      "accuracy": 1.0,
+      "wilson95": [
+        0.8064,
+        1.0
+      ],
+      "one_sided_p_vs_half": 1.5e-05,
+      "confusion_cold_warm": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "control_predictions_warm": {
+        "absent": 4,
+        "other_cold": 0
+      }
+    }
+  },
+  "T1_rank": {
+    "direction_from_prior_development": "warm_earlier",
+    "auc": 1.0,
+    "one_sided_exact_p": 7.77e-05,
+    "median_ms_by_condition": {
+      "warm": 934.55,
+      "cold": 1065.623,
+      "absent": 931.284,
+      "other_cold": 1063.876
+    }
+  },
+  "pairs": {
+    "rows": [
+      {
+        "pair": 0,
+        "offset_ms": 300,
+        "signed_warm_minus_cold_ms": 118.027,
+        "T1_both_correct": true
+      },
+      {
+        "pair": 1,
+        "offset_ms": 450,
+        "signed_warm_minus_cold_ms": 135.851,
+        "T1_both_correct": true
+      },
+      {
+        "pair": 2,
+        "offset_ms": 150,
+        "signed_warm_minus_cold_ms": 121.229,
+        "T1_both_correct": true
+      },
+      {
+        "pair": 3,
+        "offset_ms": 0,
+        "signed_warm_minus_cold_ms": 71.222,
+        "T1_both_correct": false
+      },
+      {
+        "pair": 4,
+        "offset_ms": 150,
+        "signed_warm_minus_cold_ms": 146.03,
+        "T1_both_correct": true
+      },
+      {
+        "pair": 5,
+        "offset_ms": 300,
+        "signed_warm_minus_cold_ms": 122.945,
+        "T1_both_correct": true
+      },
+      {
+        "pair": 6,
+        "offset_ms": 450,
+        "signed_warm_minus_cold_ms": 114.19,
+        "T1_both_correct": true
+      },
+      {
+        "pair": 7,
+        "offset_ms": 0,
+        "signed_warm_minus_cold_ms": 101.739,
+        "T1_both_correct": false
+      }
+    ],
+    "consistent": 8,
+    "n": 8,
+    "wilson95_consistent_fraction": [
+      0.6756,
+      1.0
+    ],
+    "one_sided_sign_p": 0.003906
+  },
+  "decision_guide_met": true
+}

@@ -1,0 +1,74 @@
+{
+  "index": 1,
+  "pair": 0,
+  "condition": "cold",
+  "victim_offset_ms": 300,
+  "send_order": [
+    "A",
+    "C",
+    "B",
+    "D"
+  ],
+  "group": "offset-01",
+  "a_salt": "5670ba780820077c891a71453f2d632f47d87a2e42209847f206dc10d0c0477e",
+  "b_salt": "e068621e09f2ec060a8a2ef9b5e2ddf4bc443989c8b8cbeb77f02f0192d5cd40",
+  "preparation": {
+    "sent_ns": 15248436510015,
+    "received_ns": 15248678896851,
+    "http_status": 200,
+    "request_id": "cmpl-9bd5f569625ea969",
+    "prompt_tokens": 548,
+    "cached_tokens_reported": null,
+    "completion_tokens": 1,
+    "finish_reason": "length"
+  },
+  "victim_target": {
+    "sent_ns": 15249230610755,
+    "received_ns": 15250163545218,
+    "http_status": 200,
+    "request_id": "cmpl-92b91ce003f8305b",
+    "prompt_tokens": 548,
+    "cached_tokens_reported": null,
+    "completion_tokens": 16,
+    "finish_reason": "length"
+  },
+  "probes": {
+    "A": {
+      "sent_ns": 15248930313099,
+      "received_ns": 15249978024159,
+      "http_status": 200,
+      "request_id": "cmpl-a5043d549f357070",
+      "prompt_tokens": 548,
+      "cached_tokens_reported": null,
+      "completion_tokens": 16
+    },
+    "C": {
+      "sent_ns": 15248940611333,
+      "received_ns": 15249999137138,
+      "http_status": 200,
+      "request_id": "cmpl-b8400a3a8f7faedb",
+      "prompt_tokens": 548,
+      "cached_tokens_reported": null,
+      "completion_tokens": 16
+    },
+    "B": {
+      "sent_ns": 15248950795104,
+      "received_ns": 15250018521367,
+      "http_status": 200,
+      "request_id": "cmpl-a4f41af2c40272aa",
+      "prompt_tokens": 548,
+      "cached_tokens_reported": null,
+      "completion_tokens": 16
+    },
+    "D": {
+      "sent_ns": 15248960680988,
+      "received_ns": 15250049759216,
+      "http_status": 200,
+      "request_id": "cmpl-b4648ca939216294",
+      "prompt_tokens": 548,
+      "cached_tokens_reported": null,
+      "completion_tokens": 16
+    }
+  },
+  "mode": "direct"
+}

@@ -3,6 +3,24 @@
 Stand: 03.11.2026
 
 ## Aktuelle Etappe
+Der **Audit-Entscheidungstest mit verborgener A-Startzeit** ist in
+`docs/tenant-zeitfenster-20261103.md` dokumentiert; Rohdaten
+unter `results/tenant-offset-20261103/`. Mit festen, getrennten
+Benutzersalts und exakt gleichen A-Zielprompts über 24
+frische Backend-Starts wurde As Zeitpunkt zwischen 0 und
+450 ms vorab randomisiert und B verborgen. Der alte
+T1-Angreifer traf 14/16 Warm/Kalt-Fälle, T2 16/16;
+alle 8 gepaarten T1-Unterschiede hatten die festgelegte
+Richtung. Bs Probes hatten weiterhin keine Cachetreffer.
+Kontrollen ohne A-Zielanfrage sahen wie „warm“, andere
+kalte A-Arbeit wie „kalt“ aus: Der Angriff erkennt daher
+den Cachezustand **bei bekannter Zielanfrage**, nicht
+selbstständig einen beliebigen fremden Dokumentzugriff.
+Die Audit-Lücken Zeitlage und Prompt-Fallcode sind für
+diesen engen Test adressiert; Anwendungswissen, Last und
+Schutzkosten bleiben offen. Alle Prozesse beendet. Die
+folgenden Abschnitte halten frühere Etappen fest.
+
 Der lokale **Zwei-Benutzer-Pilot mit getrennten Cache-Salts** steht in
 `docs/getrennte-salts-scheduler-20261103.md`; alle neuen Rohdaten
 unter `results/tenant-scheduler-20261103/`. A hatte bei derselben

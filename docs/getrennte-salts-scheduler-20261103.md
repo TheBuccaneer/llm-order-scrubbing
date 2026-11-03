@@ -5,6 +5,17 @@ Mehrbenutzer-Assistenten zur Dokumentenanalyse. Alle Anfragen gingen
 an den eigenen Qwen2.5-7B-Instruct/vLLM-0.17.1-Server auf der RTX 3090.
 Es wurde kein fremder Dienst verwendet und keine neue Schutzregel gebaut.
 
+**Audit-Fortsetzung:** Der anschließend vorab festgelegte
+[Test mit verborgener A-Startzeit](tenant-zeitfenster-20261103.md)
+verwendet feste Benutzersalts, identische Zielprompts und
+frische Backends je Fall. Er bestätigt den konditionalen
+Warm/Kalt-Zeitkanal bis 450 ms Startversatz, zeigt mit
+Kontrollen aber auch, dass der Beobachter andere kalte
+Arbeit und Abwesenheit nicht dokumentenspezifisch trennt.
+Die untenstehende Empfehlung für einen Schutzvergleich ist
+deshalb an ein ausdrücklich definiertes Anwendungswissen
+über As Zielanfrage zu binden.
+
 ## Frage und Literaturgrenze
 
 Kann Benutzer B aus **eigenen vollständigen Antwortzeiten** erkennen,
