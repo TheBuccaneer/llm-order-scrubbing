@@ -40,20 +40,25 @@ def victim_target(salt, prompt, start):
     return a_post("A", salt, max_tokens=16, prompt=prompt)
 
 
-def main(output, tag, pairs, controls, seed, prompts, mode):
+def main(output, tag, pairs, controls, seed, prompts, mode, salt_scope="fresh_group"):
     cases = plan(pairs, controls, seed)
+    fixed_salts = (secrets.token_hex(32), secrets.token_hex(32))
     with output.open("x") as out, ThreadPoolExecutor(max_workers=5) as pool:
         for index, (pair, condition, order) in enumerate(cases):
-            a_salt, b_salt = secrets.token_hex(32), secrets.token_hex(32)
+            a_salt, b_salt = (fixed_salts if salt_scope == "fixed_user" else
+                              (secrets.token_hex(32), secrets.token_hex(32)))
+            case_prompts = ({label: f"Case {index:03d}\n{prompt}" for label, prompt in prompts.items()}
+                            if salt_scope == "fixed_user" else prompts)
+            expected_tokens = 554 if salt_scope == "fixed_user" else 548
             prep_label = "A" if condition == "warm" else "D"
-            preparation = a_post(prep_label, a_salt, prompt=prompts[prep_label])
+            preparation = a_post(prep_label, a_salt, prompt=case_prompts[prep_label])
             time.sleep(.250)
             group = f"tenant-{tag}-{index:03d}"
             start = Event()
-            victim = (pool.submit(victim_target, a_salt, prompts["A"], start)
+            victim = (pool.submit(victim_target, a_salt, case_prompts["A"], start)
                       if condition != "absent" else None)
             probes = {label: pool.submit(b_post, label, b_salt, group, mode,
-                                        position * .010, start, 16, prompts[label])
+                                        position * .010, start, 16, case_prompts[label])
                       for position, label in enumerate(order)}
             start.set()
             b = {label: future.result() for label, future in probes.items()}
@@ -61,7 +66,9 @@ def main(output, tag, pairs, controls, seed, prompts, mode):
             out.write(json.dumps({"trial": index, "pair": pair,
                                   "condition": condition, "mode": mode,
                                   "group": group, "a_salt": a_salt,
-                                  "b_salt": b_salt, "send_order": order,
+                                  "b_salt": b_salt, "salt_scope": salt_scope,
+                                  "prompt_tokens_expected": expected_tokens,
+                                  "send_order": order,
                                   "case_seed": seed, "preparation": preparation,
                                   "victim_target": a, "probes": b}) + "\n")
             out.flush()
@@ -70,4 +77,5 @@ def main(output, tag, pairs, controls, seed, prompts, mode):
 
 if __name__ == "__main__":
     main(Path(sys.argv[1]), sys.argv[2], int(sys.argv[3]), int(sys.argv[4]),
-         int(sys.argv[5]), json.loads(Path(sys.argv[6]).read_text()), sys.argv[7])
+         int(sys.argv[5]), json.loads(Path(sys.argv[6]).read_text()), sys.argv[7],
+         sys.argv[8] if len(sys.argv) > 8 else "fresh_group")

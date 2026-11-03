@@ -44,13 +44,20 @@ def integrity(trials, proxy):
     by_id = {p["request_id"]: p for p in proxy if "request_id" in p}
     if len(proxy) != len(by_id) or len(proxy) != 4 * len(trials):
         errors.append("proxy response count/IDs")
-    if len({r["a_salt"] for r in trials}) != len(trials) or len({r["b_salt"] for r in trials}) != len(trials):
-        errors.append("reused salt")
+    scopes = {r.get("salt_scope", "fresh_group") for r in trials}
+    if len(scopes) != 1:
+        errors.append("mixed salt scope")
+    scope = next(iter(scopes))
+    expected_unique = 1 if scope == "fixed_user" else len(trials)
+    if (len({r["a_salt"] for r in trials}) != expected_unique or
+            len({r["b_salt"] for r in trials}) != expected_unique):
+        errors.append("unexpected salt scope")
     for r in trials:
         if r["a_salt"] == r["b_salt"] or len(r["a_salt"]) != 64 or len(r["b_salt"]) != 64:
             errors.append(f"{r['trial']} salt separation")
         prep = r["preparation"]
-        if prep["http_status"] != 200 or prep["prompt_tokens"] != 548 or prep["completion_tokens"] != 1:
+        token_count = r.get("prompt_tokens_expected", 548)
+        if prep["http_status"] != 200 or prep["prompt_tokens"] != token_count or prep["completion_tokens"] != 1:
             errors.append(f"{r['trial']} preparation")
         victim = r["victim_target"]
         if r["condition"] == "absent":
@@ -58,13 +65,13 @@ def integrity(trials, proxy):
                 errors.append(f"{r['trial']} absent victim")
         elif victim is None or (victim["http_status"], victim["prompt_tokens"],
                victim["completion_tokens"], victim["cached_tokens_reported"]) != (
-               200, 548, 16, 544 if r["condition"] == "warm" else None):
+               200, token_count, 16, 544 if r["condition"] == "warm" else None):
             errors.append(f"{r['trial']} victim target/cache")
         for label in r["send_order"]:
             q = r["probes"][label]
             p = by_id.get(q["request_id"])
             if (q["http_status"], q["prompt_tokens"], q["completion_tokens"],
-                q["cached_tokens_reported"]) != (200, 548, 16, None):
+                q["cached_tokens_reported"]) != (200, token_count, 16, None):
                 errors.append(f"{r['trial']} {label} client response")
             expected_batch = 4 if r["mode"] == "bos4" else 1
             if p is None or (p["group"], p["label"], p["mode"], p["batch_size"],
@@ -84,6 +91,8 @@ def integrity(trials, proxy):
            or rows[0]["send_order"] != rows[1]["send_order"] for rows in pairs.values()):
         errors.append("unmatched or unbalanced pair")
     return {"groups": len(trials), "responses": len(proxy),
+            "salt_scope": scope, "unique_A_salts": len({r["a_salt"] for r in trials}),
+            "unique_B_salts": len({r["b_salt"] for r in trials}),
             "conditions": dict(Counter(r["condition"] for r in trials)),
             "pairs": len(pairs), "error_count": len(errors), "errors": errors[:20]}
 
@@ -127,8 +136,12 @@ def main(root, output):
         rows = {r["condition"]: r for r in hold if r["pair"] == pair}
         pair_delta.append(direction * (first_time(rows["warm"]) - first_time(rows["cold"])))
     consistent = sum(x > 0 for x in pair_delta)
+    pair_ci = binomtest(consistent, len(pair_delta)).proportion_ci(
+        confidence_level=.95, method="wilson")
     result["matched_test_pairs"] = {"n": len(pair_delta), "direction_consistent": consistent,
                                     "median_signed_warm_minus_cold_ms": round(float(np.median(pair_delta)), 3),
+                                    "wilson95_consistent_fraction": [round(pair_ci.low, 4),
+                                                                          round(pair_ci.high, 4)],
                                     "one_sided_sign_p": round(float(binomtest(consistent, len(pair_delta), .5,
                                                                            alternative="greater").pvalue), 6)}
     result["R1_first_b_send_position"] = {condition: dict(sorted(Counter(r["send_order"].index(
@@ -140,6 +153,24 @@ def main(root, output):
     result["victim_target_e2e_median_ms"] = {condition: round(float(np.median([
         (r["victim_target"]["received_ns"] - r["victim_target"]["sent_ns"]) / 1e6
         for r in hold if r["condition"] == condition])), 3) for condition in ("warm", "cold")}
+    by_id = {p["request_id"]: p for p in test_proxy}
+    result["internal_mechanism_only"] = {}
+    for condition in ("warm", "cold"):
+        rows = [r for r in hold if r["condition"] == condition]
+        first_backend, last_backend, overlap = [], [], 0
+        for r in rows:
+            t0 = min(q["sent_ns"] for q in r["probes"].values())
+            backend = [by_id[q["request_id"]]["backend_received_ns"] for q in r["probes"].values()]
+            first_backend.append((min(backend) - t0) / 1e6)
+            last_backend.append((max(backend) - t0) / 1e6)
+            victim = r["victim_target"]
+            if victim["sent_ns"] < max(q["received_ns"] for q in r["probes"].values()) and (
+                    victim["received_ns"] > t0):
+                overlap += 1
+        result["internal_mechanism_only"][condition] = {
+            "first_B_backend_completion_median_ms": round(float(np.median(first_backend)), 3),
+            "last_B_backend_completion_median_ms": round(float(np.median(last_backend)), 3),
+            "victim_target_overlapped_B_group_count": overlap}
     for feature in FEATURES:
         xtr = np.array([client_features(r, feature) for r in train])
         xte = np.array([client_features(r, feature) for r in hold])
