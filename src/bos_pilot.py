@@ -18,13 +18,13 @@ MODES = ("direct", "bos4", "d100", "d250", "slot1050", "slot1200")
 
 
 def post(label: str, salt: str, group: str, mode: str, delay: float, start: Event,
-         tokens: int = 16) -> dict:
+         tokens: int = 16, prompt: str | None = None) -> dict:
     start.wait()
     if delay:
         time.sleep(delay)
     payload = {
         "model": MODEL,
-        "prompt": PROMPTS[label],
+        "prompt": PROMPTS[label] if prompt is None else prompt,
         "cache_salt": salt,
         "max_tokens": tokens,
         "min_tokens": tokens,
@@ -82,7 +82,8 @@ def plan(repeats: int, modes: tuple[str, ...], controls: int = 4,
 
 
 def main(output: Path, tag: str, repeats: int, modes: tuple[str, ...],
-         tokens: int = 16, controls: int = 4, seed: int | None = None) -> None:
+         tokens: int = 16, controls: int = 4, seed: int | None = None,
+         prompts: dict[str, str] | None = None) -> None:
     cases = plan(repeats, modes, controls, seed)
     with output.open("x", encoding="utf-8") as out, ThreadPoolExecutor(
         max_workers=4
@@ -90,10 +91,11 @@ def main(output: Path, tag: str, repeats: int, modes: tuple[str, ...],
         for index, (mode, warm, order) in enumerate(cases):
             salt = f"bos-{tag}-{index:04d}"
             group = salt
-            warmup = warmup_post(warm, salt) if warm else None
+            warmup = warmup_post(warm, salt, prompt=prompts[warm] if prompts else None) if warm else None
             start = Event()
             futures = {
-                label: pool.submit(post, label, salt, group, mode, pos * 0.010, start, tokens)
+                label: pool.submit(post, label, salt, group, mode, pos * 0.010, start,
+                                   tokens, prompts[label] if prompts else None)
                 for pos, label in enumerate(order)
             }
             start.set()
@@ -125,4 +127,5 @@ if __name__ == "__main__":
     main(Path(sys.argv[1]), sys.argv[2], int(sys.argv[3]), selected,
          int(sys.argv[5]) if len(sys.argv) > 5 else 16,
          int(sys.argv[6]) if len(sys.argv) > 6 else 4,
-         int(sys.argv[7]) if len(sys.argv) > 7 else None)
+         int(sys.argv[7]) if len(sys.argv) > 7 else None,
+         json.loads(Path(sys.argv[8]).read_text()) if len(sys.argv) > 8 else None)

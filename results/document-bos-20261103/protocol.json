@@ -1,0 +1,19 @@
+{
+  "status": "frozen_before_live_measurement",
+  "question": "Does the C0/C1 BOS residual-timing contrast survive a changed, plausible document-analysis workload and counterbalanced server order?",
+  "model": "local Qwen2.5-7B-Instruct, vLLM 0.17.1, RTX 3090, no external service",
+  "prompt_file": "data/document-workload-20261103/prompts.json",
+  "prompt_definition": "Four synthetic but coherent software-operation documents, 548 Qwen tokenizer tokens each, distinct in the first cache block, same final analysis question. Warmup uses the same full prompt and salt as one candidate in a group.",
+  "common": "prefix caching enabled; max_num_batched_tokens=256; BOS W=4 unchanged; 16 completion tokens; 10 ms intended send stagger; same salt within group, fresh across groups; no streaming",
+  "c0": "long_prefill_token_threshold=64",
+  "c1": "long_prefill_token_threshold=0",
+  "server_order": ["c0", "c1", "c1", "c0"],
+  "case_seeds": [202611031101, 202611031101, 202611031102, 202611031102],
+  "per_start": "16 positive BOS groups (4 per warm position), 2 unwarmed BOS controls, 4 positive direct groups (1 per warm position), 1 unwarmed direct control; mixed order",
+  "totals_per_configuration": "32 positive BOS groups, 4 unwarmed BOS controls, 8 positive direct groups, 2 unwarmed direct controls, two fresh engine starts",
+  "primary": "T2 four-class accuracy on BOS, using the unchanged StandardScaler+LogisticRegression(C=1) model trained on the previous 32 balanced artificial-prompt BOS groups separately for C0 and C1; compare across configurations, report per start and combined with uncertainty",
+  "secondary": "R1, R2, T1, RT; within-start AUC of first complete client reception time for warm position 1 versus positions 2-4; direct-freigabe rank and timing diagnostic; actual proxy wait; completion and cache integrity",
+  "decision_guide": "Transfer is supported if aggregate C0 T2 >=18/32, C1 T2 <=14/32, C0 minus C1 >=6/32, and each C0 start exceeds its paired C1 start. Otherwise the previous contrast does not replicate on this workload. Binary AUC is descriptive, not a claim of a calibrated attack.",
+  "attacker_inputs": "Own request parameters, send order, response IDs and full client send/receive times only. Proxy, backend and cache diagnostics are for integrity and mechanism, never classifier features.",
+  "scope_limits": "Synthetic documents and local loopback; same salt domain, one model, one GPU, no foreign tenants or production workload. Order counterbalancing reduces monotone drift but does not eliminate all session effects. Direct mode is a small diagnostic, not a powered comparison. No automatic expansion."
+}

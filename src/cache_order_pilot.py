@@ -20,10 +20,10 @@ PROMPTS = {label: f"{label}\n{BASE}" for label in ("A", "B", "C", "D")}
 STAGGER_S = 0.010
 
 
-def post(label: str, salt: str, max_tokens: int = 1) -> dict:
+def post(label: str, salt: str, max_tokens: int = 1, prompt: str | None = None) -> dict:
     payload = {
         "model": MODEL,
-        "prompt": PROMPTS[label],
+        "prompt": PROMPTS[label] if prompt is None else prompt,
         "cache_salt": salt,
         "max_tokens": max_tokens,
         "temperature": 0,
