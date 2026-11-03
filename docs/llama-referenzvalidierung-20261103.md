@@ -62,3 +62,27 @@ das Serverlog liegt daneben. Der Server wurde beendet.
 Die Cachemechanik rechtfertigt einen kleinen direkten C0/C1-Pilot.
 Sein Protokoll steht in
 `results/llama-reference-20261103/phase-c-protocol.json`.
+
+## Phase C: direkter Basiskanal
+
+Je Konfiguration liefen 16 balancierte positive Vierergruppen und
+vier unvorgewärmte Kontrollen mit neuer Engine und identischer
+Fallfolge bei frischen Salts. Alle 160 Antworten waren vollständig
+und hatten je 549 Prompt- und 16 Ausgabetokens. Nur die warme
+Probe hatte 544 gecachte Tokens; das Cache-Diagnosefeld wurde
+aus allen Clientantworten entfernt.
+
+| Direkte Freigabe | C0 | C1 |
+| --- | ---: | ---: |
+| R1, warme Antwort zuerst | **16/16** | 7/16 |
+| Alte Qwen-Paarabstandsregel | 4/16 | **16/16** |
+| Warme Backend-Antwort zuerst (Mechanismus) | 16/16 | 7/16 |
+| Unvorgewärmte Kontrollen mit engem Paarabstand | 0/4 | 0/4 |
+
+Die Wilson-95-%-Intervalle für 16/16 reichen von 80,6 bis 100 %.
+Der C0/C1-Formunterschied der direkten Clientbeobachtung zeigt
+sich damit auch unter Llama in diesem kleinen lokalen Pilot.
+Die bereits vorab festgelegte Entscheidungshilfe wurde erfüllt;
+ein gezielter BOS-Vergleich ist gerechtfertigt. Rohdaten und
+Auswertung liegen unter `results/llama-reference-20261103/direct-c0/`,
+`direct-c1/` und `direct-analysis.json`. Beide Server wurden beendet.
