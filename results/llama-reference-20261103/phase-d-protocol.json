@@ -1,0 +1,15 @@
+{
+  "status": "frozen_before_live_bos_measurement",
+  "question": "Does a second model reproduce cache-position information in complete client responses after BOS W=4?",
+  "model": "local meta-llama/Llama-3.1-8B-Instruct, vLLM 0.17.1, RTX 3090",
+  "prompts": "data/llama-reference-20261103/artificial.json; 549 tokens including BOS, no shared first cache block",
+  "server_order": ["development C0", "development C1", "holdout C1", "holdout C0"],
+  "conditions": "C0 long prefill threshold 64; C1 threshold 0; both token budget 256, same BOS W4 proxy and prefix cache",
+  "groups": "Each development start: 16 positive balanced four per warm send position plus 2 unwarmed. Each holdout start: 32 positive balanced eight per position plus 4 unwarmed. Seeds 202611032101 (development) and 202611032102 (holdout); distinct salt tags and new engine for each start.",
+  "requests": "Four probes per group, intended 10 ms send stagger, 16 output tokens, nonstreamed complete responses. A single prior warmup only in positive groups.",
+  "attacker_inputs": "Own send order, received response IDs, own send and complete receive timestamps only. Backend, proxy, cache and true labels used solely for evaluation and integrity.",
+  "observers": "R1 first received ID. R2 rank permutation, T1 first complete client time relative to first send, T2 four send-order client times, RT ranks plus times. For R2/T1/T2/RT, fit StandardScaler + LogisticRegression(C=1) independently per configuration on its 16 development positives, then predict untouched 32-positive holdout. Also report signed within-session binary AUC for position 1 vs 2-4 from first complete time, direction learned on development.",
+  "primary_interpretation": "Treat holdout T2 at least 16/32 or binary AUC at least 0.8 in either condition with valid integrity as evidence that BOS retains a usable model-specific client signal. Report all observers and uncertainty; no threshold tuning on holdout. Do not infer safety from poor accuracy.",
+  "integrity": "All responses HTTP 200 with 549 prompt and 16 completion tokens, full BOS blocks of four, warm probe 544 cached tokens and cold/control zero, cache diagnostics removed from client body.",
+  "limits": "Local loopback, single synthetic prompt family, one length, intentionally shared salt, no background load; development size 16 per condition is small."
+}
