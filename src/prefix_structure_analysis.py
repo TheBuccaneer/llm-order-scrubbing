@@ -51,8 +51,21 @@ def binary_auc(rows):
     pos1 = [r["tblock_ms"] for r in rows if r["position"] == 1]
     later = [r["tblock_ms"] for r in rows if r["position"] != 1]
     test = mannwhitneyu(pos1, later, alternative="greater", method="exact")
+    rng = np.random.default_rng(202611031505)
+    boot = []
+    for _ in range(2000):
+        a, b = [], []
+        for run in sorted({r["run"] for r in rows}):
+            ra = [r["tblock_ms"] for r in rows if r["run"] == run and r["position"] == 1]
+            rb = [r["tblock_ms"] for r in rows if r["run"] == run and r["position"] != 1]
+            a.extend(rng.choice(ra, len(ra)))
+            b.extend(rng.choice(rb, len(rb)))
+        aa, bb = np.asarray(a)[:, None], np.asarray(b)[None, :]
+        boot.append(float(np.mean((aa > bb) + .5 * (aa == bb))))
+    boot.sort()
     return {"n_pos1": len(pos1), "n_later": len(later),
             "auc_position1_later": round(float(test.statistic / (len(pos1) * len(later))), 4),
+            "bootstrap95_stratified_by_start": [round(boot[49], 4), round(boot[1949], 4)],
             "one_sided_exact_p": round(float(test.pvalue), 8)}
 
 
@@ -110,6 +123,9 @@ def assess_run(name, config, seed, models):
                    "cache_by_label": cache,
                    "tblock_ms": (first_client - first_sent) / 1e6,
                    "backend_last_ms": (max(p["backend_received_ns"] for p in items) - first_arrival) / 1e6,
+                   "backend_completion_span_ms": (max(p["backend_received_ns"] for p in items) - min(p["backend_received_ns"] for p in items)) / 1e6,
+                   "individual_proxy_wait_ms": waits,
+                   "individual_client_e2e_ms": client_e2e,
                    "proxy_wait_median_ms": statistics.median(waits),
                    "backend_duration_median_ms": statistics.median(backend_durations),
                    "client_e2e_median_ms": statistics.median(client_e2e)}
@@ -121,6 +137,7 @@ def assess_run(name, config, seed, models):
 
 def paired(rows, config, metric):
     pairs = []
+    strata = []
     for name, c, _ in RUNS:
         if c != config:
             continue
@@ -128,25 +145,41 @@ def paired(rows, config, metric):
         by_structure = {s: {(r["warm"], tuple(r["order"])): r for r in subset if r["structure"] == s}
                         for s in ("p0", "p1")}
         assert by_structure["p0"].keys() == by_structure["p1"].keys()
-        pairs.extend(by_structure["p1"][key][metric] - by_structure["p0"][key][metric]
-                     for key in by_structure["p0"])
+        for pos in range(1, 5):
+            cell = [by_structure["p1"][key][metric] - by_structure["p0"][key][metric]
+                    for key in by_structure["p0"] if key[1].index(key[0]) + 1 == pos]
+            assert len(cell) == 4
+            pairs.extend(cell)
+            strata.append(cell)
     assert len(pairs) == 32
+    rng = np.random.default_rng(202611031503 if config == "c0" else 202611031504)
+    boot = sorted(statistics.median(v for cell in strata for v in rng.choice(cell, 4))
+                  for _ in range(2000))
     return {"median_p1_minus_p0_ms": med(pairs),
+            "bootstrap95_stratified_by_start_and_position_ms": [round(boot[49], 3), round(boot[1949], 3)],
             "positive": sum(x > 0 for x in pairs), "negative": sum(x < 0 for x in pairs)}
 
 
-def cross_start_p1(config, run_trials):
+def cross_start_recalibrated(config, structure, run_trials):
     starts = [name for name, c, _ in RUNS if c == config]
     correct = []
+    directions = []
     for train, test in ((starts[0], starts[1]), (starts[1], starts[0])):
-        a = [r for r in run_trials[train] if r["structure"] == "p1" and r["warm"]]
-        b = [r for r in run_trials[test] if r["structure"] == "p1" and r["warm"]]
+        a = [r for r in run_trials[train] if r["structure"] == structure and r["warm"]]
+        b = [r for r in run_trials[test] if r["structure"] == structure and r["warm"]]
         for feature in ("R2", "T2"):
             predictor = fitted(a, feature)
             x, y = data(b, feature)
-            correct.append((feature, int(np.sum(predictor.predict(x) == y))))
-    return {name: {"hits": sum(h for f, h in correct if f == name), "n": 32}
-            for name in ("R2", "T2")}
+            hits = int(np.sum(predictor.predict(x) == y))
+            correct.append((feature, hits))
+            directions.append({"train": train, "test": test, "observer": feature, "hits": hits, "n": 16})
+    combined = {}
+    for feature in ("R2", "T2"):
+        hits = sum(v for f, v in correct if f == feature)
+        ci = binomtest(hits, 32).proportion_ci(confidence_level=.95, method="wilson")
+        combined[feature] = {"hits": hits, "n": 32, "wilson95": [round(ci.low, 4), round(ci.high, 4)]}
+    return {"combined": combined,
+            "directions": directions}
 
 
 def main():
@@ -160,7 +193,9 @@ def main():
             (r["structure"], r["warm"], r["send_order"]) for r in run_trials[right]]
     aggregate = {}
     for config in ("c0", "c1"):
-        aggregate[config] = {"p1_cross_start_calibrated": cross_start_p1(config, run_trials)}
+        aggregate[config] = {"cross_start_recalibrated": {
+            structure: cross_start_recalibrated(config, structure, run_trials)
+            for structure in ("p0", "p1")}}
         for structure in ("p0", "p1"):
             positive = [r for name, c, _ in RUNS if c == config
                         for r in run_trials[name] if r["structure"] == structure and r["warm"]]
@@ -176,16 +211,18 @@ def main():
                     "control_cached_tokens": dict(sorted(Counter(control_cache).items())),
                     "first_client_block_ms": med([r["tblock_ms"] for r in pos_grp]),
                     "backend_last_ms": med([r["backend_last_ms"] for r in pos_grp]),
-                    "proxy_wait_median_ms": med([r["proxy_wait_median_ms"] for r in grp]),
+                    "backend_completion_span_ms": med([r["backend_completion_span_ms"] for r in pos_grp]),
+                    "individual_proxy_wait_median_ms": med([v for r in grp for v in r["individual_proxy_wait_ms"]]),
                     "backend_duration_median_ms": med([r["backend_duration_median_ms"] for r in grp]),
-                    "client_e2e_median_ms": med([r["client_e2e_median_ms"] for r in grp])}
+                    "individual_client_e2e_median_ms": med([v for r in grp for v in r["individual_client_e2e_ms"]])}
             for feature in ("R2", "T2"):
                 x, y = data(positive, feature)
                 item[feature] = score(y, models[config][feature].predict(x))
             aggregate[config][structure] = item
         aggregate[config]["paired_p1_minus_p0"] = {metric: paired(rows, config, metric)
                                                      for metric in ("tblock_ms", "backend_last_ms",
-                                                                    "proxy_wait_median_ms", "client_e2e_median_ms")}
+                                                                    "backend_completion_span_ms", "proxy_wait_median_ms",
+                                                                    "client_e2e_median_ms")}
         correctness = []
         for name, c, _ in RUNS:
             if c != config:

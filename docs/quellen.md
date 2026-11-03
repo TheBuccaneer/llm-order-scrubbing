@@ -298,8 +298,15 @@ Die [offizielle ICCAI-2027-Startseite](https://www.iccai.net/)
 nennt aktuell den **10.12.2026** als reguläre Einreichungsfrist.
 Die [Sondersitzungsseite](https://www.iccai.net/special.html)
 nennt den **10.11.2026** für Beiträge zu Sondersitzungen.
+
 ## Nachprüfung 03.11.2026 für den Dokumenten-Pilot
 
 - [PROMPTPEEK, NDSS 2025](https://www.ndss-symposium.org/wp-content/uploads/2025-1772-paper.pdf), §II-B und §IV-A: Originaltext heute gezielt geprüft (L2). LPM-Reihenfolge und Ein-Token-Kandidaten sind bekannte Angriffsbausteine; kein identischer Test der vollständigen BOS-Clientzeitfolge.
 - [OptiLeak v1](https://arxiv.org/html/2602.20595v1), §6: Originaltext heute gezielt geprüft (L2). FCFS-/Timing-/TTFT-Adaptionen werden ausdrücklich diskutiert; der Dokumenten-Pilot beansprucht Timing nicht als neues Primitive.
 - [vLLM 0.17.1 Prefix Caching](https://docs.vllm.ai/en/v0.17.1/design/prefix_caching/), Abschnitt „Cache Isolation for Security“: Originaldokumentation heute geprüft (L2). Cache-Salt im ersten Block isoliert Wiederverwendung; die gemeinsame Salt-Domäne ist explizite Bedingung des lokalen Piloten.
+
+## Nachprüfung 03.11.2026 für die Präfixstruktur-Ablation
+
+- [NVIDIA, „Structuring Applications to Secure the KV Cache“, 2025](https://developer.nvidia.com/blog/structuring-applications-to-secure-the-kv-cache/), Abschnitte „How application prompts are assembled“ und „Prompt structure matters“: heute L2. Öffentliche Promptanordnung, gemeinsame Präfixe und Sicherheitseinfluss sind bereits beschrieben; keine Neuheit für die allgemeine Strukturidee beanspruchen.
+- [Gu et al., „Auditing Prompt Caching in Language Model APIs“, ICML 2025, arXiv v2](https://arxiv.org/pdf/2502.07776), §§2.1, 4.3 und Fig. 5: heute L2 am Originalvolltext. Präfixlänge und Präfixfraktion beeinflussen bekannte Cache-Timing-Audits; vollständige Antworten nach BOS und C0/C1-Prefill-Regime sind nicht ihr Testgegenstand. Die bei ihnen untersuchte Promptstruktur begrenzt unseren Novelty-Claim deutlich.
+- [vLLM 0.17.1 Prefix Caching](https://docs.vllm.ai/en/v0.17.1/design/prefix_caching/), Hash-/Salt-Abschnitte: heute L2. Volle gemeinsame Blöcke und gleiche Salt-Domäne sind die technische Voraussetzung; die tatsächlichen 304/544-Token-Treffer wurden zusätzlich lokal gemessen.

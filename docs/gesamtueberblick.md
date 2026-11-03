@@ -11,7 +11,7 @@ Konfigurations-, Prompt- und Slot-Fallback-Fragen. Danach folgten
 `docs/release-boundary-20261102.md`, `docs/late-release-20261102.md`,
 `docs/causal-release-pilot-20261102.md` und zuletzt
 `docs/randomized-release-pilot-20261102.md`,
-`docs/c1-cocompletion-20261103.md` und nun
+`docs/c1-cocompletion-20261103.md` und
 `docs/scheduler-bos-entscheidung-20261103.md`. Dieser Bericht
 entscheidet den geplanten C0/C1-BOS-Vergleich: In einer gepaarten,
 frisch randomisierten Fallfolge traf der vierklassige T2-Beobachter
@@ -22,7 +22,8 @@ C1-Sitzung; eine stabile Schwelle ist nicht belegt. Kurze
 Scheduler-Spuren erklären qualitativ den Wechsel der
 Abschlussmuster. Der neu empfohlene Paper-Zuschnitt ist ein
 enger empirischer Beitrag zu BOS-Restinformation und Kosten. Der
-anschließende gegenbalancierte Dokumenten-Pilot ist unten ergänzt.
+anschließende gegenbalancierte Dokumenten-Pilot und die
+abschließende Präfixstruktur-Ablation sind unten ergänzt.
 Der vorangegangene C1-Direktbericht bestätigt
 prospektiv eine neue **lokale C1-Beobachtung**: Die vorab fixierte
 Regel für fast gleichzeitig vollständig empfangene Antwortpaare
@@ -200,6 +201,7 @@ Rohdaten neu berechnen. Zum Zeitpunkt dieser Zwischenbilanz war der
 Git-Stand Branch `main`, letzter vorhandener Commit `7690f03`;
 die hier beschriebenen Änderungen waren damals noch nicht committet
 oder gepusht.
+
 ## Ergänzung 03.11.2026: Dokumentenanalyse
 
 Der [gegenbalancierte Dokumentenanalyse-Pilot](dokument-workload-20261103.md)
@@ -215,3 +217,21 @@ waren vollständig. Die Rohdaten stehen ausschließlich im Repository
 unter `results/document-bos-20261103/`. Dies stützt einen engen
 empirischen Manuskriptentwurf, keinen allgemeinen Schutz- oder
 Angriffsclaim.
+
+## Abschließende Ablation: öffentlicher gemeinsamer Präfix
+
+Der [Präfixstruktur-Pilot](prefix-struktur-bos-20261103.md) vergleicht
+dieselben 548-Token-Dokumentinhalte in anderer Reihenfolge.
+P1 besitzt einen gemeinsamen öffentlichen Anfang aus 304 Tokens;
+P0 unterscheidet die Dokumente sofort. In vier gegenbalancierten
+Starts wurden 128 positive Gruppen und 16 Kontrollen vollständig
+gemessen. Bei P1 nutzten die drei anderen Kandidaten je 304
+gemeinsame Tokens; der BOS-Blockschluss lag gepaart median
+310 ms (C0) beziehungsweise 230 ms (C1) früher. Der auf P0
+trainierte T2-Beobachter übertrug sich nicht (unter P1 je 8/32),
+doch nach Kreuzstart-Kalibrierung traf P1-T2 22/32 (C0) und
+14/32 (C1). Binäre Blockschluss-AUC blieb 0,875/0,818.
+Folge: wesentliche Anwendungsablation und Warnung vor einem
+scheinbaren Sicherheitsgewinn durch Modelltransferfehler; kein
+eigenständiger neuer Angriff oder Schutz. Exploration damit
+beenden und Manuskript aus den belegten Befunden entwickeln.

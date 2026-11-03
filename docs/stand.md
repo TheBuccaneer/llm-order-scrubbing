@@ -3,6 +3,22 @@
 Stand: 03.11.2026
 
 ## Aktuelle Etappe
+Der abschließende **Präfixstruktur-×-BOS-Pilot** vom 03.11. steht in
+`docs/prefix-struktur-bos-20261103.md`. P0 beginnt mit vier
+unterschiedlichen Dokumenten; P1 verschiebt 304 identische,
+öffentliche Tokens an den Anfang. Über C0 → C1 → C1 → C0
+liefen 128 positive und 16 Kontrollgruppen, alle 576 Antworten
+vollständig. Unter P1 nutzten die drei nicht gezielt vorgewärmten
+Kandidaten jeweils 304 Tokens statt 0; die erste BOS-Clientantwort
+kam gepaart median 310 ms (C0) beziehungsweise 230 ms (C1)
+früher. Ein zuvor auf P0 trainierter T2-Beobachter fiel unter P1
+auf 8/32, aber P1-spezifische Kreuzstart-Kalibrierung erreichte
+22/32 (C0) und 14/32 (C1). Der binäre Blockschlusskanal blieb
+sichtbar (AUC 0,875/0,818). Entscheidung: als wichtige Ablation
+im empirischen Paper verwenden, **nicht** als neuen Schutz-
+oder Angriffsbeitrag. Weitere Exploration beenden und den
+Manuskriptentwurf strukturieren. Alle neuen Prozesse beendet.
+
 Der gegenbalancierte **Dokumentenanalyse-Pilot** vom 03.11. steht in
 `docs/dokument-workload-20261103.md`. Vier synthetische technische
 Dokumente ersetzen die alten künstlichen Prompts bei gleicher
