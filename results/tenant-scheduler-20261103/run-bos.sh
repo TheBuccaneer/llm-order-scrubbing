@@ -4,6 +4,7 @@ cd /home/rock/projects/llm-order-scrubbing
 py=/home/rock/projects/porto/.venv-py313-repair/bin/python
 model=/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28
 base=results/tenant-scheduler-20261103/bos
+mkdir -p "$base"
 export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
 export TMPDIR=/home/rock/projects/llm-order-scrubbing/results/tmp
 export XDG_CACHE_HOME=/home/rock/projects/llm-order-scrubbing/results/tmp
