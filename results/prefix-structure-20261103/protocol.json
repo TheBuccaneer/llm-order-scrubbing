@@ -1,0 +1,26 @@
+{
+  "status": "frozen_before_live_measurement",
+  "question": "Does moving a 304-token public context to the front of otherwise matched 548-token document prompts change cache reuse, backend completion, BOS block close, and client-only leakage?",
+  "sources": [
+    "NVIDIA Structuring Applications to Secure the KV Cache, 2025: prompt architecture and shared prefix reuse are known",
+    "Gu et al., Auditing Prompt Caching in Language Model APIs, ICML 2025: API cache timing is known",
+    "vLLM 0.17.1 prefix caching design: 16-token full blocks and salt isolation"
+  ],
+  "p0_file": "data/document-workload-20261103/prompts.json",
+  "p0_sha256": "f3191e538815546b35e357a472732ca59400b2644fef722b4482f0f9c11588a1",
+  "p1_file": "data/prefix-structure-20261103/prompts-p1.json",
+  "p1_sha256": "efba57684223fc84c4e8c2906243c141b050e6aea7869f282dfe37e81cbf23ca",
+  "prompt_validation": "All P0 and P1 prompts have 548 Qwen2.5-7B-Instruct tokenizer tokens. P0 first 16-token blocks differ by document. P1 first 304 tokens (19 full 16-token blocks) are identical; the same public operational text is moved ahead of the unique document. Final analysis question and all substantive text are retained. Reordering may change generated content; that is a limitation.",
+  "model": "local Qwen2.5-7B-Instruct via vLLM 0.17.1, RTX 3090; no external services",
+  "server_order": ["c0", "c1", "c1", "c0"],
+  "configurations": {"c0": {"max_num_batched_tokens": 256, "long_prefill_token_threshold": 64}, "c1": {"max_num_batched_tokens": 256, "long_prefill_token_threshold": 0}},
+  "shared": "Prefix caching on, BOS W=4 unchanged, max/min completion tokens=16, 10 ms intended send stagger, no streaming, fresh salt for every group, same salt for warmup and all four probes of its group. P0 and P1 use separate salts even when interleaved.",
+  "case_seeds": [202611031501, 202611031501, 202611031502, 202611031502],
+  "per_start": "16 positive and 2 unwarmed BOS groups per prompt structure, four positive groups per warm send position; P0/P1 cases mixed in one preshuffled sequence. Matched C0/C1 starts use the same structure/warm/order sequence but different salts.",
+  "maximum": "128 positive groups across four starts, plus 16 unwarmed controls; no automatic expansion",
+  "attacker_inputs": "Own request parameters, response IDs, complete client send and receive timestamps only. Cache counts, backend and proxy timestamps are integrity and mechanism evidence, never attacker features.",
+  "primary": "Four-class R2 and T2 accuracy, each using StandardScaler plus LogisticRegression(C=1) trained on the previous 32 P0 document BOS groups per configuration and then frozen. Compare P0 and P1 within each configuration and each independent start. Report Wilson intervals and paired discordance. A loss of frozen-model accuracy alone is not evidence of lower total leakage.",
+  "secondary": "First complete client time AUC for warm position 1 versus 2-4, same orientation as prior work; P1-specific R2/T2 trained on one start and tested on the other in both directions, no test-set fitting; warm and cold cached-token distributions; backend-last and client block close times; individual BOS wait and client end-to-end latency; unwarmed controls.",
+  "decision_guide": "A new prompt-structure contribution needs verified P1 shared reuse of at least 256 cold tokens, a consistent paired backend/client timing change in both starts of at least one configuration, and a meaningful change in client observability that is not explained solely by failure of the P0-trained model to transfer. A four-class difference of at least 8/32 with the same sign in both starts is a useful threshold, not a significance guarantee. Otherwise classify this as a robustness or validity control and stop exploration.",
+  "scope_limits": "One model, GPU, application template, output length and loopback environment; synthetic documents and same salt domain. Shared prefix reuse and prompt-structure security considerations already exist in prior work. Do not claim general multitenant exploitability or a novel caching principle."
+}
