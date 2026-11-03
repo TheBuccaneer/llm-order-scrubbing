@@ -1,0 +1,15 @@
+{
+  "status": "frozen_before_matched_live_runs",
+  "reason": "First new C1 BOS run failed the absolute 780 ms threshold, but the prelisted continuous binary AUC was 0.9062 and four-class T2 was 8/32. A fresh matched C0/C1 BOS comparison is needed before a scheduler-dependence claim.",
+  "conditions": ["C0: max_num_batched_tokens=256, long_prefill_token_threshold=64", "C1: max_num_batched_tokens=256, long_prefill_token_threshold=0"],
+  "shared": "Qwen2.5-7B-Instruct, vLLM 0.17.1, prefix caching on, existing BOS W=4, 16 output tokens, 10 ms send stagger",
+  "case_seed": 202611030901,
+  "cases_per_condition": "32 positive groups, 8 per warm send position, and 4 no-warm controls",
+  "randomization": "same independently shuffled case sequence in both conditions; distinct salt tags and fresh engine start per condition",
+  "attacker_inputs": "own request parameters, IDs, send order, and complete client receive times; no backend/proxy/cache fields",
+  "primary_comparisons": "Four-class T2 and RT accuracy under C0 versus C1, each StandardScaler plus LogisticRegression(C=1) trained on 32 balanced old groups of its own configuration; continuous AUC of Tblock for C1 position 1 versus positions 2-4",
+  "secondary": "R1, R2, T1, binary AUC under C0, old 780 ms threshold under C1, and frozen direct pair-gap rule applied diagnostically to BOS",
+  "decision_guide": "A clear contrast requires C0 T2 at least 20/32, C1 T2 at most 12/32, and C1 binary AUC at least 0.8. Failure does not prove BOS security; report all metrics and uncertainty. Stop after these two conditions.",
+  "integrity": "Require 36 complete groups and 144 HTTP-200 responses per condition, 544 cached tokens on exactly one warm probe per positive group, full BOS W=4 groups, no client-visible cache diagnostic",
+  "causal_limit": "Case sequence is paired, but engine configurations run in successive sessions rather than simultaneous or randomized crossover. Backend/Proxy times explain mechanisms only."
+}
