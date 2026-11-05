@@ -40,10 +40,12 @@ def main(folder):
     assert hashlib.sha256(committed).hexdigest()==digest(folder/"protocol.json")
     write(folder/"run-start.json",dict(utc=datetime.now(timezone.utc).isoformat(),
           protocol_sha256=digest(folder/"protocol.json"),commit=commit["commit"]))
+    # Unix-domain socket names must fit107 bytes including the generated UUID.
+    runtime=Path("/tmp")/folder.name; runtime.mkdir(exist_ok=False)
     env=dict(os.environ,HF_HUB_OFFLINE="1",TRANSFORMERS_OFFLINE="1",
-             TMPDIR=str(folder/"runtime"),XDG_CACHE_HOME=str(folder/"runtime"),
-             TRITON_CACHE_DIR=str(folder/"runtime/triton"))
-    (folder/"runtime").mkdir()
+             TMPDIR=str(runtime),XDG_CACHE_HOME=str(runtime),
+             TRITON_CACHE_DIR=str(runtime/"triton"))
+    write(folder/"runtime.json",dict(temp_directory=str(runtime),reason="short IPC socket path"))
     for case in plan["cases"]:
         index=case["index"]; run=folder/f"case-{index:02d}"; run.mkdir()
         write(run/"start.json",dict(utc=datetime.now(timezone.utc).isoformat(),case=case))

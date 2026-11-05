@@ -83,6 +83,7 @@ def main(folder):
     installed=["vllm/v1/core/sched/scheduler.py","vllm/entrypoints/openai/completion/serving.py"]
     plan=dict(frozen_utc=datetime.now(timezone.utc).isoformat(),seed=seed,cases=cases,
         scope="single final C2 background-load test; no C1 GPU test; no profile search",
+        startup_revision="20261105-01 aborted before any backend became ready or any inference request: too-long TMPDIR caused ZMQ107-byte IPC error. All7 start attempts/status/logs preserved. This pre-acquisition revision only shortens TMPDIR, keeps exact cases, observers, load and statistics; no measured cohort repeated. Earlier protocol commit b39ac44 retained",
         main_pairs=24,main_cases=48,controls={"absent":8,"other_cold":8},offsets_ms=[0,150,300,450],
         server_command=server,backend="fresh API backend per case; same native C2 config256/64, model and version",
         background=dict(tenant="C",request_count=1,prompt_label="B",prompt_tokens=548,
