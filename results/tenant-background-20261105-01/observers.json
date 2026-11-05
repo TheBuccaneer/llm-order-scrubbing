@@ -1,0 +1,52 @@
+{
+  "status": "old models reconstructed deterministically from old16 development groups only; no new-data fitting",
+  "old_training_sha256": "52e9d68d2456daef0538e3f70c824284d41e8df933e8e4c578cdc0d5e02cd90d",
+  "recipe": "unmodified C2 StandardScaler+LogisticRegression(C=1,max_iter=1000,default lbfgs)",
+  "old_hidden_offset_hits_reproduced": {
+    "T1": 14,
+    "T2": 16
+  },
+  "models": {
+    "T1": {
+      "mean": [
+        969.5397648125002
+      ],
+      "scale": [
+        65.56367294751767
+      ],
+      "coefficient": [
+        -1.9711954334311728
+      ],
+      "intercept": -0.0377563584023688,
+      "classes": [
+        0,
+        1
+      ]
+    },
+    "T2": {
+      "mean": [
+        969.5397648124999,
+        990.5815228125002,
+        1012.0976178125,
+        1096.1387941875003
+      ],
+      "scale": [
+        65.56367294751767,
+        65.01213781159842,
+        66.51803185022695,
+        128.86816740939452
+      ],
+      "coefficient": [
+        -0.7603800625050984,
+        -0.7597846930206811,
+        -0.747745575432757,
+        -0.7877666807395003
+      ],
+      "intercept": -0.07647249361243462,
+      "classes": [
+        0,
+        1
+      ]
+    }
+  }
+}
