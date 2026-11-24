@@ -1,0 +1,113 @@
+{
+  "status": "small functional and cost pilot; no physical timing privacy guarantee",
+  "groups": 16,
+  "responses": 80,
+  "protected_groups": 8,
+  "new_protected_groups": 4,
+  "actual_all_layer_KV_hash": "878c99dbc44abe2a316f897035eab553c18138f75782b330536e7b10c6b0284c",
+  "active_layers": 28,
+  "all_five_output_sequences_equal_in_new_mode": true,
+  "public_join_and_limits_checked": true,
+  "boundaries": [
+    {
+      "trial": 0,
+      "condition": "cold",
+      "normalization_end_ms": 689.189067,
+      "join_ms": 700.112069,
+      "reserve_ms": 10.810932999999977
+    },
+    {
+      "trial": 1,
+      "condition": "warm",
+      "normalization_end_ms": 677.485478,
+      "join_ms": 700.10286,
+      "reserve_ms": 22.514522000000056
+    },
+    {
+      "trial": 12,
+      "condition": "warm",
+      "normalization_end_ms": 675.708118,
+      "join_ms": 700.129983,
+      "reserve_ms": 24.291881999999987
+    },
+    {
+      "trial": 13,
+      "condition": "cold",
+      "normalization_end_ms": 676.404205,
+      "join_ms": 700.089841,
+      "reserve_ms": 23.595794999999953
+    }
+  ],
+  "paired_B_comparisons": [
+    {
+      "pair": 0,
+      "condition": "cold",
+      "B_median_ms": {
+        "protected_block512": 1030.6010175000001,
+        "ignore_hits": 1041.668316,
+        "protected": 1257.595356,
+        "release1240": 1240.073245
+      },
+      "old_minus_new_ms": 226.9943384999999,
+      "release_minus_new_ms": 209.47222749999992,
+      "ignore_minus_new_ms": 11.067298499999879
+    },
+    {
+      "pair": 0,
+      "condition": "warm",
+      "B_median_ms": {
+        "protected_block512": 1023.776951,
+        "ignore_hits": 1048.1063615,
+        "protected": 1260.1467480000001,
+        "release1240": 1240.0732785
+      },
+      "old_minus_new_ms": 236.36979700000006,
+      "release_minus_new_ms": 216.29632749999996,
+      "ignore_minus_new_ms": 24.329410499999994
+    },
+    {
+      "pair": 1,
+      "condition": "cold",
+      "B_median_ms": {
+        "release1240": 1240.0672045000001,
+        "protected": 1275.4837994999998,
+        "protected_block512": 1017.626528,
+        "ignore_hits": 1032.7132575
+      },
+      "old_minus_new_ms": 257.8572714999998,
+      "release_minus_new_ms": 222.4406765000001,
+      "ignore_minus_new_ms": 15.086729500000047
+    },
+    {
+      "pair": 1,
+      "condition": "warm",
+      "B_median_ms": {
+        "release1240": 1240.0727069999998,
+        "protected": 1260.8311429999999,
+        "protected_block512": 1016.7288655,
+        "ignore_hits": 1035.9169235
+      },
+      "old_minus_new_ms": 244.1022774999999,
+      "release_minus_new_ms": 223.34384149999983,
+      "ignore_minus_new_ms": 19.188057999999955
+    }
+  ],
+  "old_input_files_unchanged": 64,
+  "source_sha256": {
+    "src/protected_prefill_scheduler.py": "fb7adbc53764c6853af8931124cb847632a70b8d97af1bb636d5d3d3eb23b655",
+    "src/protected_prefill_pilot.py": "11bb664c39fe701c02afad0ef8f9ee2bfe207d762ddce351febf4de5c91d8b22",
+    "src/protected_prefill_analysis.py": "80af2071af757686495c1a14095fd8b3dc4e005eae49163a31eeda00f8f8cb02",
+    "src/tenant_kv_partition.py": "0aaee4c65f01ec27615cccab466c1433b8429d00f7f9530bcf74576caff95f50",
+    "src/protected_prefill_server.py": "58d00790311719d6ffeb55067943a568b0905f8e6b85a6bde81b788c3b4179b7",
+    "src/protected_prefill_checks.py": "c06ec03d1ad9f0a22a6ff46c3127b77f4a0e5cb58dd0bb685f68c73953e4bb74"
+  },
+  "limitations": [
+    "two pairs per policy",
+    "minimum observed reserve is not a worst-case bound",
+    "3.70ms existing B timing diagnostic remains potentially observable",
+    "CUDA intervals include dispatch gaps and are not energy measurements",
+    "new policy executable in real EngineCore harness; HTTP adapter remains original policy",
+    "development phase failure repaired before final comparison; not a blind confirmation"
+  ],
+  "no_git_push": true
+}

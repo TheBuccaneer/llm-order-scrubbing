@@ -2,6 +2,78 @@
 
 Stand: 03.11.2026
 
+## Gezielte Nachprüfung für den logischen Wiedereintrittsvertrag
+
+03.11.2026, jeweils L2 der genannten Originalabschnitte; bestehende
+Lesestände und Quellen bleiben erhalten. Keine neue systematische
+Literaturrecherche. Ergebnis im
+[Nichtinterferenzbericht](protected-prefill-nichtinterferenz-20261103.md).
+
+- [Time Protection, EuroSys 2019](https://yuval.yarom.org/pdfs/GeYCH19.pdf),
+  §3.2 Anforderungen 1–5 und §4.3: Partitionierung, kontrollierter Restzustand
+  und sichere Paddingdauer sind bekannte Prinzipien; keine Neuheit für
+  Normalisierung plus öffentlichen Übergang beanspruchen.
+- [Packet scheduling with optional client privacy, CCS 2021](https://www.cis.upenn.edu/~sga001/papers/ifs-ccs21.pdf),
+  §§3.1–3.3 und 4.1–4.2: IFS behandelt adaptive Zeitprobes im Slotmodell.
+  Unser erfolgreicher logischer Vertrag ist keine gleich starke Aussage
+  über reale Zeitbeobachtungen.
+- [Predictive Mitigation of Timing Channels in Interactive Systems, CCS 2011](https://www.cs.cornell.edu/andru/papers/ccs11.pdf),
+  §2.2, §3 und §4: öffentliche Eingabetypen und Fehlvorhersagen sind Teil
+  des Modells. Ein öffentlicher Release-Termin allein ist keine neue Methode.
+- [SafeKV v2](https://arxiv.org/html/2508.08438v2), §§4.3 und 6:
+  kontrollierte Cache-Sichtbarkeit adressiert das Cross-Tenant-Hit-Orakel;
+  in diesen Abschnitten kein entsprechender KV-/Worker-Wiedereintrittsvertrag.
+
+SIDE weiterhin L1 mangels Originalvolltext. Keine abschließende globale
+Novelty-Aussage aus dieser gezielten Abgrenzung.
+
+## Technische Implementierung des Phasenübergangs
+
+Auf ausdrücklichen Folgeauftrag wurde die Literaturarbeit beendet und am
+installierten vLLM-0.17.1-Code implementiert. Der aktuelle technische
+Stand einschließlich GPU-Prüfung steht in
+[Protected Prefill Prototyp](protected-prefill-prototyp-20261103.md).
+Die folgenden Neuheitsbewertungen dokumentieren die frühere Auditphase;
+die damals fehlende Normalisierung ist inzwischen ausführbar. Eine neue
+Literaturmatrix oder eine vorweggenommene Neuheitsbehauptung wurde für
+diesen Implementierungsschritt nicht erstellt.
+
+## Security Systems Methodenabgrenzung vom 03.11.2026
+
+Die neue [Novelty-Matrix](security-novelty-matrix-20261103.md) hält für
+die engen Vorarbeiten Geheimnis, Beobachter, Ressourcen, tatsächliche
+Garantie, Evaluation und Abgrenzung fest. Heute L2 an benannten
+Originalabschnitten: Pacer, Accumulate-and-Serve, informations- und
+work-conserving-Scheduleranalysen, FairInference, KVGov, PrefixWall
+(CacheSolidarity als frühere Fassung), SafeKV, One-Sided Bounded Noise,
+finales NetShaper, Sarathi-Serve und zusätzlich **IFS / Packet scheduling
+with optional client privacy (CCS 2021)**, Predictive Mitigation 2011 und
+Time Protection. Jüngere Scheduler P-PAS, Cascade und EdgePace wurden
+gezielt im Design nachgeprüft. Fassungen und Fundstellen stehen in der
+Matrix, Downloadhashes in
+`results/tenant-release-feasibility-20261103/literature-sources.json`.
+
+**Offene tragende Volltextlücke:** SIDE, DOI
+[10.1109/TMC.2026.3729753](https://doi.org/10.1109/TMC.2026.3729753),
+nur L1. Verlagszugriff und Suche nach einer offenen Fassung erfolglos;
+der Nutzer hat ebenfalls keinen Volltext. Allgemeine Claims zu gemeinsamer
+Ressourcenoptimierung als Timingabwehr sind deshalb nicht neu zu beanspruchen;
+die engere Abgrenzung bleibt vorläufig. Die Formulierung „Privacy in Shared
+Schedulers“ wurde mangels eindeutigem exaktem Titel durch die identifizierten
+Kadloor-/Gong-Originalarbeiten konkretisiert, nicht als erfundene zusätzliche
+Publikation behandelt. Keine vollständige systematische Suchabdeckung bis
+zum noch zukünftigen Monatsende; Stichtag ist 03.11.2026.
+
+Der daraus abgeleitete [Entwurf](cache-state-oblivious-kandidatin-20261103.md)
+hat nach erneuter Prüfung **noch keinen eigenständigen neuen Mechanismus**:
+Die zentrale Zustandsnormalisierung ist vorausgesetzt statt konstruiert.
+Das ist eine zusätzliche inhaltliche Neuheitslücke unabhängig von SIDE.
+Die frühere Bezeichnung als begründbare Contribution-Kandidatin wurde
+korrigiert. Lesend geprüft wurde außerdem der vorhandene interne
+vLLM-Pfad `skip_reading_prefix_cache`, der gezielte Neuberechnung als
+weitere einfache Baseline ermöglicht. Keine Leistungszahlen dafür gemessen.
+Frühere Quellen und Lesestände bleiben unten unverändert.
+
 ## Audit-Folgetest: verborgene A-Startzeit (03.11.2026)
 
 Gezielte Online-Nachprüfung der engsten Originalstellen vor

@@ -1,0 +1,106 @@
+INFO 11-04 08:00:37 [utils.py:238] non-default args: {'max_model_len': 2048, 'enable_prefix_caching': True, 'gpu_memory_utilization': 0.8, 'max_num_batched_tokens': 2048, 'long_prefill_token_threshold': 512, 'max_num_seqs': 8, 'disable_log_stats': True, 'enforce_eager': True, 'num_gpu_blocks_override': 512, 'scheduler_cls': 'protected_prefill_scheduler.ProtectedPrefillScheduler', 'async_scheduling': False, 'model': '/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28'}
+WARNING 11-04 08:00:37 [arg_utils.py:1321] The global random seed is set to 0. Since VLLM_ENABLE_V1_MULTIPROCESSING is set to False, this may affect the random state of the Python process that launched vLLM.
+INFO 11-04 08:00:37 [model.py:531] Resolved architecture: Qwen2ForCausalLM
+INFO 11-04 08:00:37 [model.py:1554] Using max model len 2048
+INFO 11-04 08:00:37 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 11-04 08:00:37 [vllm.py:747] Asynchronous scheduling is disabled.
+WARNING 11-04 08:00:37 [vllm.py:781] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 11-04 08:00:37 [vllm.py:792] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 11-04 08:00:37 [vllm.py:957] Cudagraph is disabled under eager mode
+INFO 11-04 08:00:37 [core.py:101] Initializing a V1 LLM engine (v0.17.1) with config: model='/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28', speculative_config=None, tokenizer='/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'level': None, 'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'splitting_ops': [], 'compile_mm_encoder': False, 'compile_sizes': [], 'compile_ranges_split_points': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+INFO 11-04 08:00:38 [parallel_state.py:1393] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://192.168.178.147:34415 backend=nccl
+INFO 11-04 08:00:38 [parallel_state.py:1715] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+INFO 11-04 08:00:38 [base.py:106] Offloader set to NoopOffloader
+INFO 11-04 08:00:38 [gpu_model_runner.py:4281] Starting to load model /home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28...
+INFO 11-04 08:00:40 [cuda.py:405] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+INFO 11-04 08:00:40 [flash_attn.py:587] Using FlashAttention version 2
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:04<00:12,  4.22s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:08<00:08,  4.06s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:12<00:04,  4.03s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:15<00:00,  3.81s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:15<00:00,  3.91s/it]
+
+INFO 11-04 08:00:55 [default_loader.py:293] Loading weights took 15.65 seconds
+INFO 11-04 08:00:56 [gpu_model_runner.py:4364] Model loading took 14.25 GiB memory and 16.545504 seconds
+INFO 11-04 08:00:59 [gpu_worker.py:424] Available KV cache memory: 4.46 GiB
+INFO 11-04 08:00:59 [kv_cache_utils.py:826] Overriding num_gpu_blocks=5220 with num_gpu_blocks_override=512
+INFO 11-04 08:00:59 [kv_cache_utils.py:1314] GPU KV cache size: 8,192 tokens
+INFO 11-04 08:00:59 [kv_cache_utils.py:1319] Maximum concurrency for 2,048 tokens per request: 4.00x
+INFO 11-04 08:00:59 [core.py:282] init engine (profile, create kv cache, warmup model) took 2.49 seconds
+WARNING 11-04 08:00:59 [scheduler.py:173] Using custom scheduler class protected_prefill_scheduler.ProtectedPrefillScheduler. This scheduler interface is not public and compatibility may not be maintained.
+INFO 11-04 08:00:59 [llm.py:388] Supported tasks: ('generate',)
+WARNING 11-04 08:00:59 [input_processor.py:254] Passing raw prompts to InputProcessor is deprecated and will be removed in v0.18. You should instead pass the outputs of Renderer.render_cmpl() or Renderer.render_chat().
+CASE 0 train warm complete
+CASE 1 train cold complete
+CASE 2 train cold complete
+CASE 3 train warm complete
+CASE 4 train cold complete
+CASE 5 train warm complete
+CASE 6 train warm complete
+CASE 7 train cold complete
+CASE 8 train cold complete
+CASE 9 train warm complete
+CASE 10 train cold complete
+CASE 11 train warm complete
+CASE 12 train cold complete
+CASE 13 train warm complete
+CASE 14 train cold complete
+CASE 15 train warm complete
+CASE 16 train cold complete
+CASE 17 train warm complete
+CASE 18 train cold complete
+CASE 19 train warm complete
+CASE 20 train cold complete
+CASE 21 train warm complete
+CASE 22 train warm complete
+CASE 23 train cold complete
+CASE 24 test cold complete
+CASE 25 test warm complete
+CASE 26 test cold complete
+CASE 27 test warm complete
+CASE 28 test cold complete
+CASE 29 test warm complete
+CASE 30 test warm complete
+CASE 31 test cold complete
+CASE 32 test warm complete
+CASE 33 test cold complete
+CASE 34 test warm complete
+CASE 35 test cold complete
+CASE 36 test cold complete
+CASE 37 test warm complete
+CASE 38 test warm complete
+CASE 39 test cold complete
+CASE 40 test cold complete
+CASE 41 test warm complete
+CASE 42 test cold complete
+CASE 43 test warm complete
+CASE 44 test warm complete
+CASE 45 test cold complete
+CASE 46 test warm complete
+CASE 47 test cold complete
+CASE 48 test warm complete
+CASE 49 test cold complete
+CASE 50 test warm complete
+CASE 51 test cold complete
+CASE 52 test cold complete
+CASE 53 test warm complete
+CASE 54 test cold complete
+CASE 55 test warm complete
+CASE 56 test cold complete
+CASE 57 test warm complete
+CASE 58 test warm complete
+CASE 59 test cold complete
+CASE 60 test cold complete
+CASE 61 test warm complete
+CASE 62 test warm complete
+CASE 63 test cold complete
+CASE 64 test warm complete
+CASE 65 test cold complete
+CASE 66 test warm complete
+CASE 67 test cold complete
+CASE 68 test cold complete
+CASE 69 test warm complete
+CASE 70 test cold complete
+CASE 71 test warm complete
+[rank0]:[W1104 08:02:18.675777156 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

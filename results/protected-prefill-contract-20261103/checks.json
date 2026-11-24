@@ -1,0 +1,29 @@
+{
+  "status": "CPU contract witnesses; analytical proof and explicit trusted-kernel contract required",
+  "real_KV_managers": true,
+  "real_tensor_copy_body_on_CPU": true,
+  "CUDA_plumbing_mocked": true,
+  "GPU_execution": false,
+  "different_A_payload_and_source_addresses": true,
+  "B_canonical_payload_equal": true,
+  "A_payload_stays_different": true,
+  "copied_28_layers": true,
+  "canonical_manager_metadata_equal": true,
+  "unused_tenant_blocks_and_tail_zero": true,
+  "source_B_difference_is_preserved_not_repaired": true,
+  "fixed_16_token_stop_independent_of_A_values": true,
+  "real_deadline_guard_can_distinguish_two_runtimes": true,
+  "source_sha256": {
+    "src/protected_prefill_scheduler.py": "959d177912e3855cba7370572aa3155489ac09af40d868e3ccba2f4c81bbd2b3",
+    "src/tenant_kv_partition.py": "0aaee4c65f01ec27615cccab466c1433b8429d00f7f9530bcf74576caff95f50",
+    "src/protected_prefill_pilot.py": "2736ee1c34a5cc5f0600e9f4a70a9a72038e89c3933b92f21ec667b88b9d55df",
+    "src/protected_prefill_server.py": "58d00790311719d6ffeb55067943a568b0905f8e6b85a6bde81b788c3b4179b7",
+    "src/protected_prefill_contract_checks.py": "fad969bbedb34190bc0099faabd57ff58ba095566f70c588c8598d57253af9cc"
+  },
+  "vllm_sources_sha256": {
+    "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/core/sched/scheduler.py": "8231254faa2d2aaeccff2cff309ff60ea90ce7194a81edaddcf6aa806b9f98f1",
+    "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/core/sched/utils.py": "85e82eae555a03497ad2ac1540ed562a6c36fc26185aa6233725c914816aa1b3",
+    "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py": "9e5e02842a5442d955014fc7b1227a69043b462463d05ed8f46e9f4ae48dd725",
+    "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/worker/gpu_input_batch.py": "11bf418b097930cd942b34e894868d6370cb32fd54e0ea4800de850e425aa983"
+  }
+}

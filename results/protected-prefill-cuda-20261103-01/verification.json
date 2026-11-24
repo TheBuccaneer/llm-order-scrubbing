@@ -1,0 +1,45 @@
+{
+  "no_defender_source_change": true,
+  "no_changes_after_protocol_freeze": true,
+  "shared_single_model": true,
+  "capture_forms": [
+    "A512",
+    "A36",
+    "B2048",
+    "B144"
+  ],
+  "measured_runs": 36,
+  "cold_pairs": 12,
+  "warm_pairs": 6,
+  "all_28_layers_active_KV_equal": true,
+  "active_blocks_per_layer": 175,
+  "KV_sha256": "f06a0ce7f0470bb0ef39f1709b8d9d451e66b8e8a7d453c9695be1d9a6c02e87",
+  "frontier_logits_sha256": "bcddd023f20ec68b5f171e88dd0fecc8ae397eb843257a8b326f1a2b5ebc1ba4",
+  "cold_warm_frontier_equal": true,
+  "wall_means_ms": {
+    "cold": {
+      "serial": 618.1459270833333,
+      "parallel": 571.65835275
+    },
+    "warm": {
+      "serial": 490.98294283333337,
+      "parallel": 480.83923416666664
+    }
+  },
+  "prior_raw_files_unchanged": 74,
+  "previous_gate_raw_and_analysis_unchanged": true,
+  "versions": {
+    "vllm": "0.17.1",
+    "torch": "2.10.0",
+    "numpy": "2.2.6"
+  },
+  "new_raw_sha256": "39d16e28420b205ed028f68cd324a454858eb9d3602e8a0453040ae548e12a89",
+  "analysis_sha256": "23268ed96f64d51c13305a7c2a2d5c23a98b63feb8fefc0008515742ac96446e",
+  "decision": "NO two-runner implementation; no further architecture or parameter search",
+  "measurement_limits": [
+    "eager snapshots bypass full runner/scheduler/CPU sampler",
+    "stream event spans include queue/host time, not isolated SM kernel occupancy",
+    "KV restore and verification outside timing",
+    "no confidentiality proof from hardware correctness checks"
+  ]
+}

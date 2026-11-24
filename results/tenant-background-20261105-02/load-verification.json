@@ -1,0 +1,52 @@
+{
+  "all64_C256_output_tokens": true,
+  "all64_C_progress_before_first_B": true,
+  "C_A_overlap_cases": 56,
+  "A_warm_cache_counts": {
+    "544": 24
+  },
+  "B_backend_no_hit_count": 256,
+  "first_B_medians_ms": {
+    "warm": 1044.895137,
+    "cold": 1138.3209465,
+    "absent": 1027.312897,
+    "other_cold": 1143.2053915000001
+  },
+  "C_load_timing": {
+    "C_sent_relative_B_ms": {
+      "min": -100.51256,
+      "median": -100.16506,
+      "max": -100.043983
+    },
+    "C_first_stream_event_relative_B_ms": {
+      "min": 271.795266,
+      "median": 327.4580925,
+      "max": 372.548847
+    },
+    "C_last_stream_event_relative_B_ms": {
+      "min": 5840.797037,
+      "median": 5981.249094999999,
+      "max": 6217.757051
+    },
+    "C_complete_relative_B_ms": {
+      "min": 5840.863897,
+      "median": 5981.3037745,
+      "max": 6217.837986
+    },
+    "C_B_interval_overlap_ms": {
+      "min": 1074.983239,
+      "median": 1175.918973,
+      "max": 1370.478827
+    },
+    "C_events_during_B": {
+      "min": 25,
+      "median": 25.0,
+      "max": 30
+    },
+    "C_events_before_first_B": {
+      "min": 22,
+      "median": 22.0,
+      "max": 22
+    }
+  }
+}

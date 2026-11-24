@@ -1,0 +1,848 @@
+{
+  "status": "final frozen direct positive control; no general timing guarantee",
+  "decision": "A: unprotected signal supported for frozen observers",
+  "positive_control_pass": true,
+  "reliable_frozen_observers": [
+    "stump",
+    "logistic"
+  ],
+  "train_cohorts": 24,
+  "test_cohorts": 48,
+  "bootstrap_replicates": 5000,
+  "observers": {
+    "stump": {
+      "balanced_accuracy": 1.0,
+      "auc": 1.0,
+      "confusion_cold_warm": [
+        [
+          24,
+          0
+        ],
+        [
+          0,
+          24
+        ]
+      ],
+      "n": 48,
+      "pair_bootstrap_ba95": [
+        1.0,
+        1.0
+      ],
+      "pair_bootstrap_auc95": [
+        1.0,
+        1.0
+      ]
+    },
+    "logistic": {
+      "balanced_accuracy": 1.0,
+      "auc": 1.0,
+      "confusion_cold_warm": [
+        [
+          24,
+          0
+        ],
+        [
+          0,
+          24
+        ]
+      ],
+      "n": 48,
+      "pair_bootstrap_ba95": [
+        1.0,
+        1.0
+      ],
+      "pair_bootstrap_auc95": [
+        1.0,
+        1.0
+      ]
+    },
+    "max_balanced_accuracy": 1.0,
+    "max_ba_one_sided95_upper": 1.0,
+    "max_absolute_BA_or_AUC_distance_from_chance": 0.5,
+    "max_separation_one_sided95_upper": 0.5,
+    "paired_swap_max_separation_p": 0.0001999600079984003,
+    "permutation": "Monte Carlo pair-label swaps; max absolute distance from chance across BA/AUC of two frozen observers; no prediction/score flip; +1 correction"
+  },
+  "comparison_existing_policies": {
+    "direct": {
+      "stump": {
+        "balanced_accuracy": 1.0,
+        "auc": 1.0,
+        "confusion_cold_warm": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          1.0,
+          1.0
+        ],
+        "pair_bootstrap_auc95": [
+          1.0,
+          1.0
+        ]
+      },
+      "logistic": {
+        "balanced_accuracy": 1.0,
+        "auc": 1.0,
+        "confusion_cold_warm": [
+          [
+            24,
+            0
+          ],
+          [
+            0,
+            24
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          1.0,
+          1.0
+        ],
+        "pair_bootstrap_auc95": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "protected_block512": {
+      "stump": {
+        "balanced_accuracy": 0.5416666666666666,
+        "auc": 0.5295138888888888,
+        "confusion_cold_warm": [
+          [
+            7,
+            17
+          ],
+          [
+            5,
+            19
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.4166666666666667,
+          0.6666666666666666
+        ],
+        "pair_bootstrap_auc95": [
+          0.3472222222222222,
+          0.7187934027777771
+        ]
+      },
+      "logistic": {
+        "balanced_accuracy": 0.5833333333333334,
+        "auc": 0.5277777777777778,
+        "confusion_cold_warm": [
+          [
+            11,
+            13
+          ],
+          [
+            7,
+            17
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.4375,
+          0.7291666666666666
+        ],
+        "pair_bootstrap_auc95": [
+          0.3454861111111111,
+          0.71875
+        ]
+      }
+    },
+    "ignore_hits": {
+      "stump": {
+        "balanced_accuracy": 0.3958333333333333,
+        "auc": 0.3819444444444445,
+        "confusion_cold_warm": [
+          [
+            12,
+            12
+          ],
+          [
+            17,
+            7
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.25,
+          0.5625
+        ],
+        "pair_bootstrap_auc95": [
+          0.2013888888888889,
+          0.5660156249999994
+        ]
+      },
+      "logistic": {
+        "balanced_accuracy": 0.4791666666666667,
+        "auc": 0.3871527777777778,
+        "confusion_cold_warm": [
+          [
+            6,
+            18
+          ],
+          [
+            7,
+            17
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.3541666666666667,
+          0.6041666666666666
+        ],
+        "pair_bootstrap_auc95": [
+          0.2065972222222222,
+          0.5694444444444444
+        ]
+      }
+    },
+    "release1240": {
+      "stump": {
+        "balanced_accuracy": 0.4166666666666667,
+        "auc": 0.4149305555555556,
+        "confusion_cold_warm": [
+          [
+            8,
+            16
+          ],
+          [
+            12,
+            12
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.25,
+          0.5833333333333334
+        ],
+        "pair_bootstrap_auc95": [
+          0.24479166666666666,
+          0.5850694444444444
+        ]
+      },
+      "logistic": {
+        "balanced_accuracy": 0.4583333333333333,
+        "auc": 0.4131944444444445,
+        "confusion_cold_warm": [
+          [
+            15,
+            9
+          ],
+          [
+            17,
+            7
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.3333333333333333,
+          0.5833333333333334
+        ],
+        "pair_bootstrap_auc95": [
+          0.24648437500000003,
+          0.5798611111111112
+        ]
+      }
+    }
+  },
+  "paired_test_differences": {
+    "first_full_B_ms": {
+      "cold_minus_warm": {
+        "n": 24,
+        "mean": 113.38893645833332,
+        "median": 108.05060149999997,
+        "minimum": 78.896612,
+        "maximum": 177.74189
+      },
+      "nominal_pair_bootstrap_mean95": [
+        103.96260723749998,
+        123.02835236354166
+      ],
+      "positive_pairs": 24,
+      "negative_pairs": 0
+    },
+    "median_B_ms": {
+      "cold_minus_warm": {
+        "n": 24,
+        "mean": 114.50859402083334,
+        "median": 109.13831850000008,
+        "minimum": 80.57021499999996,
+        "maximum": 178.46598649999999
+      },
+      "nominal_pair_bootstrap_mean95": [
+        105.128083953125,
+        124.11948957916665
+      ],
+      "positive_pairs": 24,
+      "negative_pairs": 0
+    },
+    "A_ms": {
+      "cold_minus_warm": {
+        "n": 24,
+        "mean": 135.65009658333335,
+        "median": 130.17198950000005,
+        "minimum": 101.38727800000004,
+        "maximum": 200.59635200000002
+      },
+      "nominal_pair_bootstrap_mean95": [
+        126.31972849791669,
+        145.34040866979166
+      ],
+      "positive_pairs": 24,
+      "negative_pairs": 0
+    }
+  },
+  "paired_test_rows": [
+    {
+      "pair": 0,
+      "first_full_B_ms": 110.04446399999995,
+      "median_B_ms": 111.20857049999995,
+      "A_ms": 133.131534
+    },
+    {
+      "pair": 1,
+      "first_full_B_ms": 111.93714599999998,
+      "median_B_ms": 113.08547150000004,
+      "A_ms": 133.221903
+    },
+    {
+      "pair": 2,
+      "first_full_B_ms": 108.62099,
+      "median_B_ms": 109.64904300000012,
+      "A_ms": 130.21368700000005
+    },
+    {
+      "pair": 3,
+      "first_full_B_ms": 97.23260500000004,
+      "median_B_ms": 98.32807449999996,
+      "A_ms": 119.54140600000005
+    },
+    {
+      "pair": 4,
+      "first_full_B_ms": 146.691775,
+      "median_B_ms": 147.7060725,
+      "A_ms": 169.432776
+    },
+    {
+      "pair": 5,
+      "first_full_B_ms": 111.10433499999999,
+      "median_B_ms": 112.30956300000003,
+      "A_ms": 133.28526399999998
+    },
+    {
+      "pair": 6,
+      "first_full_B_ms": 97.85272999999995,
+      "median_B_ms": 98.86977700000011,
+      "A_ms": 120.75123300000007
+    },
+    {
+      "pair": 7,
+      "first_full_B_ms": 81.65371299999993,
+      "median_B_ms": 82.84148550000009,
+      "A_ms": 102.85742000000005
+    },
+    {
+      "pair": 8,
+      "first_full_B_ms": 99.64035899999999,
+      "median_B_ms": 100.71055799999999,
+      "A_ms": 121.84635700000001
+    },
+    {
+      "pair": 9,
+      "first_full_B_ms": 127.9155649999999,
+      "median_B_ms": 129.100011,
+      "A_ms": 150.01363000000003
+    },
+    {
+      "pair": 10,
+      "first_full_B_ms": 131.090284,
+      "median_B_ms": 132.26689499999998,
+      "A_ms": 152.9330349999999
+    },
+    {
+      "pair": 11,
+      "first_full_B_ms": 107.48021299999994,
+      "median_B_ms": 108.62759400000004,
+      "A_ms": 130.13029200000005
+    },
+    {
+      "pair": 12,
+      "first_full_B_ms": 153.88569499999994,
+      "median_B_ms": 154.97856449999995,
+      "A_ms": 174.78887399999996
+    },
+    {
+      "pair": 13,
+      "first_full_B_ms": 113.428767,
+      "median_B_ms": 114.42570549999994,
+      "A_ms": 134.90625799999998
+    },
+    {
+      "pair": 14,
+      "first_full_B_ms": 100.6235099999999,
+      "median_B_ms": 101.75556499999993,
+      "A_ms": 122.12490400000002
+    },
+    {
+      "pair": 15,
+      "first_full_B_ms": 83.7064200000001,
+      "median_B_ms": 84.82510550000006,
+      "A_ms": 105.70377500000006
+    },
+    {
+      "pair": 16,
+      "first_full_B_ms": 89.71776399999999,
+      "median_B_ms": 90.78380400000003,
+      "A_ms": 113.62017200000003
+    },
+    {
+      "pair": 17,
+      "first_full_B_ms": 106.02634999999998,
+      "median_B_ms": 107.20690650000006,
+      "A_ms": 127.55408299999999
+    },
+    {
+      "pair": 18,
+      "first_full_B_ms": 78.896612,
+      "median_B_ms": 80.57021499999996,
+      "A_ms": 101.38727800000004
+    },
+    {
+      "pair": 19,
+      "first_full_B_ms": 105.28468299999997,
+      "median_B_ms": 106.46325999999999,
+      "A_ms": 127.94068099999993
+    },
+    {
+      "pair": 20,
+      "first_full_B_ms": 144.30887900000005,
+      "median_B_ms": 145.37214249999988,
+      "A_ms": 168.88214099999993
+    },
+    {
+      "pair": 21,
+      "first_full_B_ms": 133.23226999999997,
+      "median_B_ms": 134.33843950000005,
+      "A_ms": 154.39651600000002
+    },
+    {
+      "pair": 22,
+      "first_full_B_ms": 177.74189,
+      "median_B_ms": 178.46598649999999,
+      "A_ms": 200.59635200000002
+    },
+    {
+      "pair": 23,
+      "first_full_B_ms": 103.21745599999997,
+      "median_B_ms": 104.31744649999996,
+      "A_ms": 126.34274699999992
+    }
+  ],
+  "paired_difference_missing_pairs": 0,
+  "configuration_errors": [],
+  "completed_responses": 360,
+  "expected_responses": 360,
+  "missing_successful_responses": 0,
+  "failed_cohorts": 0,
+  "failures": [],
+  "overruns": "not applicable: direct has no public join/deadline",
+  "cache_hit_counts": {
+    "warm": [
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544,
+      544
+    ],
+    "cold": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "B": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "inputs_sha256": {
+    "protocol.json": "4ea052cd171fa89db438f19fe48080ee1a02c1779e6a94bca54585e149ab9c94",
+    "trials.jsonl": "7891d837de51a5348fc6bcc3bf09ac96d8f66578d1008507cb8c696b2e6f287a",
+    "observers.json": "a13df03087a353db4bb98e3ba37729449d9d9e2147187008cc83f3a84967ec73",
+    "test-start.json": "03d8459cda360cb3b39a5fa89aaf4f2a532cb44c09c58099178fbbfd8432a096"
+  },
+  "reference_analysis_sha256": "7bf615556eaf93d9189b7d94e48f77636a7d21d7129b7efe87df097501260993",
+  "deviations_from_old_gate": [
+    "new acquisition on 2026-11-04, one policy instead of interleaved three policies",
+    "new seed; warm/cold randomized within each pair; fixed ascending pair order",
+    "no protected functional warm/cold audit pair; only ordinary vLLM initialization warmup and per-case preparation",
+    "direct natively reuses544 A tokens, like release-only, versus protected512 and ignore0",
+    "same subclass/native scheduler branch and fixed real KV partitions; no public join or output deadline",
+    "no contemporaneous rerun of old policies; cross-session observer comparison is descriptive",
+    "fit_direct changes only per-policy cohort count24 instead of pooled72 and loops over direct alone; identical features, preprocessing, tie handling and solver",
+    "unchanged _observer_report applied to direct as primary to provide the same joint pair-swap diagnostic",
+    "requested cold-minus-warm mean intervals added via5000 whole-pair bootstraps, nominal and descriptive; no cross-policy paired inference"
+  ],
+  "interpretation": "Old policies are frozen earlier-session results, not a newly randomized four-policy comparison. A successful direct control does not prove protection; an unsuccessful control leaves C3 an implementation/normalization/cost case study."
+}

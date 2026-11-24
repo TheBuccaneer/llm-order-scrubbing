@@ -1,0 +1,9 @@
+{
+  "index": 54,
+  "backend_ready": true,
+  "client_returncode": 0,
+  "server_pid": 68770,
+  "backend_ready_ns": 2907618849633,
+  "backend_stopped_ns": 2916114596976,
+  "finished_utc": "2026-11-05T12:35:46.144183+00:00"
+}

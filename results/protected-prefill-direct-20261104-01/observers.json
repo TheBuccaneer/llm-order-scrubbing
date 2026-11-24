@@ -1,0 +1,49 @@
+{
+  "train_sha256": "1249373533151760d7eec56c4124e31151f45ddfc62d858120e5c970127daeac",
+  "train_cohorts": 24,
+  "sklearn_version": "1.8.0",
+  "features": "unchanged _features: four label-ordered own B durations plus failure bit; first full B relative first B send",
+  "threshold_tie": "direction -1 before +1; ascending train midpoints; first maximum retained",
+  "models": {
+    "direct": {
+      "stump": {
+        "direction": -1,
+        "threshold_ms": 894.9663885,
+        "train_balanced_accuracy": 0.9583333333333333
+      },
+      "logistic": {
+        "mean": [
+          879.1550399583334,
+          878.0392820000001,
+          876.8778608750002,
+          887.0381352083335,
+          0.0
+        ],
+        "scale": [
+          57.06174964412867,
+          57.05549437864384,
+          57.05367700476443,
+          67.3116407884167,
+          1.0
+        ],
+        "coefficient": [
+          -0.6904094787553299,
+          -0.6929416108479337,
+          -0.6967395396196595,
+          -1.037107990287417,
+          0.0
+        ],
+        "intercept": 0.520984156778083,
+        "classes": [
+          0,
+          1
+        ],
+        "C": 1,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      },
+      "train_sha256": "1249373533151760d7eec56c4124e31151f45ddfc62d858120e5c970127daeac",
+      "train_cohorts": 24
+    }
+  }
+}

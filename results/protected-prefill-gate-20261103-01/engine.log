@@ -1,0 +1,250 @@
+INFO 11-03 14:45:28 [utils.py:238] non-default args: {'max_model_len': 2048, 'enable_prefix_caching': True, 'gpu_memory_utilization': 0.8, 'max_num_batched_tokens': 2048, 'long_prefill_token_threshold': 512, 'max_num_seqs': 8, 'disable_log_stats': True, 'enforce_eager': True, 'num_gpu_blocks_override': 512, 'scheduler_cls': 'protected_prefill_scheduler.ProtectedPrefillScheduler', 'async_scheduling': False, 'model': '/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28'}
+WARNING 11-03 14:45:28 [arg_utils.py:1321] The global random seed is set to 0. Since VLLM_ENABLE_V1_MULTIPROCESSING is set to False, this may affect the random state of the Python process that launched vLLM.
+INFO 11-03 14:45:28 [model.py:531] Resolved architecture: Qwen2ForCausalLM
+INFO 11-03 14:45:28 [model.py:1554] Using max model len 2048
+INFO 11-03 14:45:28 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=2048.
+INFO 11-03 14:45:28 [vllm.py:747] Asynchronous scheduling is disabled.
+WARNING 11-03 14:45:28 [vllm.py:781] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 11-03 14:45:28 [vllm.py:792] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 11-03 14:45:28 [vllm.py:957] Cudagraph is disabled under eager mode
+INFO 11-03 14:45:28 [core.py:101] Initializing a V1 LLM engine (v0.17.1) with config: model='/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28', speculative_config=None, tokenizer='/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=2048, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False), seed=0, served_model_name=/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'level': None, 'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'splitting_ops': [], 'compile_mm_encoder': False, 'compile_sizes': [], 'compile_ranges_split_points': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': True, 'static_all_moe_layers': []}
+INFO 11-03 14:45:29 [parallel_state.py:1393] world_size=1 rank=0 local_rank=0 distributed_init_method=tcp://192.168.178.147:43843 backend=nccl
+INFO 11-03 14:45:29 [parallel_state.py:1715] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+INFO 11-03 14:45:29 [base.py:106] Offloader set to NoopOffloader
+INFO 11-03 14:45:29 [gpu_model_runner.py:4281] Starting to load model /home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28...
+INFO 11-03 14:45:30 [cuda.py:405] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+INFO 11-03 14:45:30 [flash_attn.py:587] Using FlashAttention version 2
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:00<00:01,  2.76it/s]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:00<00:00,  2.73it/s]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:01<00:00,  2.68it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:01<00:00,  2.78it/s]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:01<00:00,  2.75it/s]
+
+INFO 11-03 14:45:32 [default_loader.py:293] Loading weights took 1.47 seconds
+INFO 11-03 14:45:32 [gpu_model_runner.py:4364] Model loading took 14.25 GiB memory and 1.902891 seconds
+INFO 11-03 14:45:34 [gpu_worker.py:424] Available KV cache memory: 4.27 GiB
+INFO 11-03 14:45:34 [kv_cache_utils.py:826] Overriding num_gpu_blocks=4991 with num_gpu_blocks_override=512
+INFO 11-03 14:45:34 [kv_cache_utils.py:1314] GPU KV cache size: 8,192 tokens
+INFO 11-03 14:45:34 [kv_cache_utils.py:1319] Maximum concurrency for 2,048 tokens per request: 4.00x
+INFO 11-03 14:45:35 [core.py:282] init engine (profile, create kv cache, warmup model) took 2.16 seconds
+WARNING 11-03 14:45:35 [scheduler.py:173] Using custom scheduler class protected_prefill_scheduler.ProtectedPrefillScheduler. This scheduler interface is not public and compatibility may not be maintained.
+INFO 11-03 14:45:35 [llm.py:388] Supported tasks: ('generate',)
+WARNING 11-03 14:45:35 [input_processor.py:254] Passing raw prompts to InputProcessor is deprecated and will be removed in v0.18. You should instead pass the outputs of Renderer.render_cmpl() or Renderer.render_chat().
+CASE 0 train complete
+CASE 1 train complete
+CASE 2 train complete
+CASE 3 train complete
+CASE 4 train complete
+CASE 5 train complete
+CASE 6 train complete
+CASE 7 train complete
+CASE 8 train complete
+CASE 9 train complete
+CASE 10 train complete
+CASE 11 train complete
+CASE 12 train complete
+CASE 13 train complete
+CASE 14 train complete
+CASE 15 train complete
+CASE 16 train complete
+CASE 17 train complete
+CASE 18 train complete
+CASE 19 train complete
+CASE 20 train complete
+CASE 21 train complete
+CASE 22 train complete
+CASE 23 train complete
+CASE 24 train complete
+CASE 25 train complete
+CASE 26 train complete
+CASE 27 train complete
+CASE 28 train complete
+CASE 29 train complete
+CASE 30 train complete
+CASE 31 train complete
+CASE 32 train complete
+CASE 33 train complete
+CASE 34 train complete
+CASE 35 train complete
+CASE 36 train complete
+CASE 37 train complete
+CASE 38 train complete
+CASE 39 train complete
+CASE 40 train complete
+CASE 41 train complete
+CASE 42 train complete
+CASE 43 train complete
+CASE 44 train complete
+CASE 45 train complete
+CASE 46 train complete
+CASE 47 train complete
+CASE 48 train complete
+CASE 49 train complete
+CASE 50 train complete
+CASE 51 train complete
+CASE 52 train complete
+CASE 53 train complete
+CASE 54 train complete
+CASE 55 train complete
+CASE 56 train complete
+CASE 57 train complete
+CASE 58 train complete
+CASE 59 train complete
+CASE 60 train complete
+CASE 61 train complete
+CASE 62 train complete
+CASE 63 train complete
+CASE 64 train complete
+CASE 65 train complete
+CASE 66 train complete
+CASE 67 train complete
+CASE 68 train complete
+CASE 69 train complete
+CASE 70 train complete
+CASE 71 train complete
+CASE 72 test complete
+CASE 73 test complete
+CASE 74 test complete
+CASE 75 test complete
+CASE 76 test complete
+CASE 77 test complete
+CASE 78 test complete
+CASE 79 test complete
+CASE 80 test complete
+CASE 81 test complete
+CASE 82 test complete
+CASE 83 test complete
+CASE 84 test complete
+CASE 85 test complete
+CASE 86 test complete
+CASE 87 test complete
+CASE 88 test complete
+CASE 89 test complete
+CASE 90 test complete
+CASE 91 test complete
+CASE 92 test complete
+CASE 93 test complete
+CASE 94 test complete
+CASE 95 test complete
+CASE 96 test complete
+CASE 97 test complete
+CASE 98 test complete
+CASE 99 test complete
+CASE 100 test complete
+CASE 101 test complete
+CASE 102 test complete
+CASE 103 test complete
+CASE 104 test complete
+CASE 105 test complete
+CASE 106 test complete
+CASE 107 test complete
+CASE 108 test complete
+CASE 109 test complete
+CASE 110 test complete
+CASE 111 test complete
+CASE 112 test complete
+CASE 113 test complete
+CASE 114 test complete
+CASE 115 test complete
+CASE 116 test complete
+CASE 117 test complete
+CASE 118 test complete
+CASE 119 test complete
+CASE 120 test complete
+CASE 121 test complete
+CASE 122 test complete
+CASE 123 test complete
+CASE 124 test complete
+CASE 125 test complete
+CASE 126 test complete
+CASE 127 test complete
+CASE 128 test complete
+CASE 129 test complete
+CASE 130 test complete
+CASE 131 test complete
+CASE 132 test complete
+CASE 133 test complete
+CASE 134 test complete
+CASE 135 test complete
+CASE 136 test complete
+CASE 137 test complete
+CASE 138 test complete
+CASE 139 test complete
+CASE 140 test complete
+CASE 141 test complete
+CASE 142 test complete
+CASE 143 test complete
+CASE 144 test complete
+CASE 145 test complete
+CASE 146 test complete
+CASE 147 test complete
+CASE 148 test complete
+CASE 149 test complete
+CASE 150 test complete
+CASE 151 test complete
+CASE 152 test complete
+CASE 153 test complete
+CASE 154 test complete
+CASE 155 test complete
+CASE 156 test complete
+CASE 157 test complete
+CASE 158 test complete
+CASE 159 test complete
+CASE 160 test complete
+CASE 161 test complete
+CASE 162 test complete
+CASE 163 test complete
+CASE 164 test complete
+CASE 165 test complete
+CASE 166 test complete
+CASE 167 test complete
+CASE 168 test complete
+CASE 169 test complete
+CASE 170 test complete
+CASE 171 test complete
+CASE 172 test complete
+CASE 173 test complete
+CASE 174 test complete
+CASE 175 test complete
+CASE 176 test complete
+CASE 177 test complete
+CASE 178 test complete
+CASE 179 test complete
+CASE 180 test complete
+CASE 181 test complete
+CASE 182 test complete
+CASE 183 test complete
+CASE 184 test complete
+CASE 185 test complete
+CASE 186 test complete
+CASE 187 test complete
+CASE 188 test complete
+CASE 189 test complete
+CASE 190 test complete
+CASE 191 test complete
+CASE 192 test complete
+CASE 193 test complete
+CASE 194 test complete
+CASE 195 test complete
+CASE 196 test complete
+CASE 197 test complete
+CASE 198 test complete
+CASE 199 test complete
+CASE 200 test complete
+CASE 201 test complete
+CASE 202 test complete
+CASE 203 test complete
+CASE 204 test complete
+CASE 205 test complete
+CASE 206 test complete
+CASE 207 test complete
+CASE 208 test complete
+CASE 209 test complete
+CASE 210 test complete
+CASE 211 test complete
+CASE 212 test complete
+CASE 213 test complete
+CASE 214 test complete
+CASE 215 test complete
+[rank0]:[W1103 14:50:12.546797065 ProcessGroupNCCL.cpp:1553] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

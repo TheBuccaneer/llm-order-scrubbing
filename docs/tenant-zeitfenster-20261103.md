@@ -1,5 +1,11 @@
 # Getrennte Benutzersalts bei unbekannter A-Startzeit
 
+**Abschließender Lasttest vom 05.11.:** Der
+[Bericht zur festen Hintergrundlast](tenant-hintergrundlast-20261105.md)
+trennt erhaltenen Paareffekt und AUC-Ranginformation von verlorener
+Kalibrierung der alten Klassifikatoren. Die folgenden unbelasteten
+Messungen bleiben unverändert die Vergleichsbasis.
+
 Stand: 03.11.2026. Entscheidungstest nach dem Audit des
 [synchronisierten Zwei-Benutzer-Piloten](getrennte-salts-scheduler-20261103.md).
 Alle Anfragen gingen ausschließlich an den eigenen lokalen
@@ -105,7 +111,7 @@ ist der Vorzeichentest die vorsichtigere primäre
 Unsicherheitsangabe. Die acht gepaarten Unterschiede
 „kalt minus warm“ lagen bei 71,2 bis 146,0 ms;
 je Versatz gab es nur zwei Paare. Die alte absolute
-T1-Kalibrierung verfehlte zwei kalte Fälle bei 0 ms,
+T1-Kalibrierung verfehlte zwei warme Fälle bei 0 ms (als kalt klassifiziert),
 obwohl die relative AUC 1,0 war. Eine neue Schwelle wurde
 nicht angepasst. T2 traf beide Fälle; es ist ein
 sekundärer, ebenfalls vorher trainierter Beobachter.

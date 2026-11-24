@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-05T12:13:21.454470+00:00",
+  "case": {
+    "index": 10,
+    "pair": 22,
+    "condition": "warm",
+    "victim_offset_ms": 300,
+    "send_order": [
+      "D",
+      "C",
+      "B",
+      "A"
+    ]
+  }
+}

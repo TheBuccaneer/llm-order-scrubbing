@@ -1,0 +1,214 @@
+{
+  "frozen_utc": "2026-11-03T14:42:03.190169+00:00",
+  "seed": 202611038041,
+  "cases": [
+    {
+      "condition": "warm",
+      "pair": 4,
+      "mode": "serial"
+    },
+    {
+      "condition": "warm",
+      "pair": 4,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 8,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 8,
+      "mode": "serial"
+    },
+    {
+      "condition": "warm",
+      "pair": 5,
+      "mode": "parallel"
+    },
+    {
+      "condition": "warm",
+      "pair": 5,
+      "mode": "serial"
+    },
+    {
+      "condition": "warm",
+      "pair": 2,
+      "mode": "serial"
+    },
+    {
+      "condition": "warm",
+      "pair": 2,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 4,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 4,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 9,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 9,
+      "mode": "serial"
+    },
+    {
+      "condition": "warm",
+      "pair": 1,
+      "mode": "parallel"
+    },
+    {
+      "condition": "warm",
+      "pair": 1,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 10,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 10,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 2,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 2,
+      "mode": "serial"
+    },
+    {
+      "condition": "warm",
+      "pair": 3,
+      "mode": "serial"
+    },
+    {
+      "condition": "warm",
+      "pair": 3,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 1,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 1,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 7,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 7,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 6,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 6,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 3,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 3,
+      "mode": "parallel"
+    },
+    {
+      "condition": "warm",
+      "pair": 0,
+      "mode": "parallel"
+    },
+    {
+      "condition": "warm",
+      "pair": 0,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 0,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 0,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 11,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 11,
+      "mode": "serial"
+    },
+    {
+      "condition": "cold",
+      "pair": 5,
+      "mode": "parallel"
+    },
+    {
+      "condition": "cold",
+      "pair": 5,
+      "mode": "serial"
+    }
+  ],
+  "cold_pairs": 12,
+  "warm_pairs": 6,
+  "primary": "eager real model forward+logits+argmax; shared weights, cloned metadata; one host thread; no CUDA graphs",
+  "excluded": "full scheduler, CPU input preparation, full sampler/postprocessing, canonical normalization; restore/hash outside timing",
+  "measured": "first event/enqueue to complete device synchronization; eager host enqueue and inter-stage waits included",
+  "cold_success": {
+    "minimum_gain_ms": 66,
+    "reserve_ms": 20,
+    "required_lower95_gain_ms": 86,
+    "required_public_join_ms": 589.43244525,
+    "host_and_sampler_allowance_ms": 20,
+    "normalizer_allowance_ms": 7,
+    "max_parallel_wall_ms": 542.43244525
+  },
+  "warmup": "two fixed serial/parallel pairs per condition, excluded; no tuning",
+  "paired_bootstrap": {
+    "replicates": 5000,
+    "statistic": "mean serial wall minus parallel wall",
+    "lower_quantile": 0.05
+  },
+  "inference": "positive gate is hardware feasibility only; full runner integration remains separate",
+  "source_sha256": {
+    "protected_prefill_cuda_pilot.py": "b7a879b7c12c9a7c3ad17cfbf87cb736c339c88c086965a7ec66e4dc2d728ae0",
+    "protected_prefill_pilot.py": "2736ee1c34a5cc5f0600e9f4a70a9a72038e89c3933b92f21ec667b88b9d55df",
+    "protected_prefill_scheduler.py": "959d177912e3855cba7370572aa3155489ac09af40d868e3ccba2f4c81bbd2b3",
+    "tenant_kv_partition.py": "0aaee4c65f01ec27615cccab466c1433b8429d00f7f9530bcf74576caff95f50"
+  },
+  "previous_analysis_sha256": "3f2ec3c7fd3aeea7afd1d3c6d1af803736b5daa50c8735c578262a62ee099989"
+}

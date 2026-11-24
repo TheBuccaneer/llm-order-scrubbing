@@ -1,0 +1,346 @@
+{
+  "status": "offline construction analysis only; no GPU experiment, no new scheduler implementation",
+  "input_sha256": "d82c29c194ad10102a75e159b4d0ad9d58f52359d795d5ef16df04a240ad2fc9",
+  "input_path": "results/protected-prefill-gate-20261103-01/trials.jsonl",
+  "cohorts": 72,
+  "summary": {
+    "cold": {
+      "intake_ms": {
+        "n": 36,
+        "minimum": 5.919741,
+        "median": 6.356711499999999,
+        "maximum": 7.701733,
+        "mean": 6.339649361111111
+      },
+      "A_exec_ms": {
+        "n": 36,
+        "minimum": 138.11575499999998,
+        "median": 140.6367335,
+        "maximum": 153.238824,
+        "mean": 141.52361930555554
+      },
+      "A_first_ms": {
+        "n": 36,
+        "minimum": 117.504772,
+        "median": 119.3707795,
+        "maximum": 130.294907,
+        "mean": 120.03019855555556
+      },
+      "A_tail_ms": {
+        "n": 36,
+        "minimum": 20.194711999999996,
+        "median": 21.554094500000012,
+        "maximum": 23.355427000000006,
+        "mean": 21.49342075
+      },
+      "A_finish_ms": {
+        "n": 36,
+        "minimum": 144.654821,
+        "median": 147.146944,
+        "maximum": 159.78027,
+        "mean": 148.04035513888888
+      },
+      "A_internal_gaps_ms": {
+        "n": 36,
+        "minimum": 0.08438200000000506,
+        "median": 0.18611949999998956,
+        "maximum": 0.24040600000000723,
+        "mean": 0.17708647222222457
+      },
+      "A_gap_to_B_ms": {
+        "n": 36,
+        "minimum": 40.633208999999994,
+        "median": 53.333267000000006,
+        "maximum": 55.748941,
+        "mean": 52.385671111111115
+      },
+      "B_exec_ms": {
+        "n": 36,
+        "minimum": 465.0986240000001,
+        "median": 467.928804,
+        "maximum": 483.3958650000001,
+        "mean": 469.9470553888889
+      },
+      "B_span_ms": {
+        "n": 36,
+        "minimum": 465.33634000000006,
+        "median": 468.18120550000003,
+        "maximum": 483.64326100000005,
+        "mean": 470.1881934722222
+      },
+      "B_first_ms": {
+        "n": 36,
+        "minimum": 409.560913,
+        "median": 411.80347199999994,
+        "maximum": 424.72804899999994,
+        "mean": 413.6870333333333
+      },
+      "B_tail_ms": {
+        "n": 36,
+        "minimum": 55.191077000000064,
+        "median": 56.1842805,
+        "maximum": 59.12320999999997,
+        "mean": 56.26002205555556
+      },
+      "to_normalize_ms": {
+        "n": 36,
+        "minimum": 0.9970339999999851,
+        "median": 1.1020859999999857,
+        "maximum": 1.1812280000000328,
+        "mean": 1.0997786944444417
+      },
+      "normalization_ms": {
+        "n": 36,
+        "minimum": 3.3306290000000445,
+        "median": 3.80000050000001,
+        "maximum": 6.106634999999983,
+        "mean": 3.9381084722222237
+      },
+      "join_idle_ms": {
+        "n": 36,
+        "minimum": 10.913420999999971,
+        "median": 26.42860049999996,
+        "maximum": 29.23957699999994,
+        "mean": 24.456256472222215
+      },
+      "D_exec_ms": {
+        "n": 36,
+        "minimum": 317.28020800000024,
+        "median": 321.1079935000001,
+        "maximum": 333.38132299999984,
+        "mean": 322.8912647222222
+      },
+      "D_span_ms": {
+        "n": 36,
+        "minimum": 318.93090800000004,
+        "median": 322.9063905,
+        "maximum": 335.8392120000001,
+        "mean": 324.7383896388889
+      },
+      "D_gaps_ms": {
+        "n": 36,
+        "minimum": 1.2684890000001587,
+        "median": 1.8553844999999,
+        "maximum": 2.5391719999997804,
+        "mean": 1.8471249166666597
+      },
+      "postjoin_B_ms": {
+        "n": 36,
+        "minimum": 316.0400444999999,
+        "median": 319.852411,
+        "maximum": 332.718482,
+        "mean": 321.6860173333333
+      },
+      "B_e2e_ms": {
+        "n": 36,
+        "minimum": 1016.1469255,
+        "median": 1019.9473325,
+        "maximum": 1032.850175,
+        "mean": 1021.7943806944444
+      },
+      "end_epoch_ms": {
+        "n": 36,
+        "minimum": 1019.162692,
+        "median": 1023.12698,
+        "maximum": 1036.115688,
+        "mean": 1024.9850964722223
+      }
+    },
+    "warm": {
+      "intake_ms": {
+        "n": 36,
+        "minimum": 5.821719,
+        "median": 6.427562999999999,
+        "maximum": 7.874268,
+        "mean": 6.394808416666667
+      },
+      "A_exec_ms": {
+        "n": 36,
+        "minimum": 20.317084,
+        "median": 21.724503,
+        "maximum": 23.738076,
+        "mean": 21.682959472222223
+      },
+      "A_first_ms": {
+        "n": 36,
+        "minimum": 20.317084,
+        "median": 21.724503,
+        "maximum": 23.738076,
+        "mean": 21.682959472222223
+      },
+      "A_tail_ms": {
+        "n": 36,
+        "minimum": 20.317084,
+        "median": 21.724503,
+        "maximum": 23.738076,
+        "mean": 21.682959472222223
+      },
+      "A_finish_ms": {
+        "n": 36,
+        "minimum": 26.706357,
+        "median": 28.0696245,
+        "maximum": 30.375784,
+        "mean": 28.07776788888889
+      },
+      "A_internal_gaps_ms": {
+        "n": 36,
+        "minimum": 0.0,
+        "median": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0
+      },
+      "A_gap_to_B_ms": {
+        "n": 36,
+        "minimum": 170.111699,
+        "median": 172.445903,
+        "maximum": 173.839857,
+        "mean": 172.40149677777777
+      },
+      "B_exec_ms": {
+        "n": 36,
+        "minimum": 464.58210799999995,
+        "median": 468.7914035,
+        "maximum": 485.36098999999996,
+        "mean": 471.9256510555556
+      },
+      "B_span_ms": {
+        "n": 36,
+        "minimum": 464.824894,
+        "median": 469.04933500000004,
+        "maximum": 485.602646,
+        "mean": 472.17180069444447
+      },
+      "B_first_ms": {
+        "n": 36,
+        "minimum": 408.723739,
+        "median": 412.894166,
+        "maximum": 428.015832,
+        "mean": 415.46968647222224
+      },
+      "B_tail_ms": {
+        "n": 36,
+        "minimum": 54.94366000000002,
+        "median": 56.32248299999998,
+        "maximum": 59.044628999999986,
+        "mean": 56.45596458333335
+      },
+      "to_normalize_ms": {
+        "n": 36,
+        "minimum": 0.9768030000000181,
+        "median": 1.119466500000044,
+        "maximum": 1.6536189999999351,
+        "mean": 1.126027333333326
+      },
+      "normalization_ms": {
+        "n": 36,
+        "minimum": 3.405220999999983,
+        "median": 3.855741999999964,
+        "maximum": 6.4505340000000615,
+        "mean": 3.965167111111106
+      },
+      "join_idle_ms": {
+        "n": 36,
+        "minimum": 8.95437400000003,
+        "median": 25.56878999999998,
+        "maximum": 30.03600700000004,
+        "mean": 22.37644294444445
+      },
+      "D_exec_ms": {
+        "n": 36,
+        "minimum": 316.447588,
+        "median": 322.04277349999984,
+        "maximum": 333.0014930000001,
+        "mean": 322.9779744444445
+      },
+      "D_span_ms": {
+        "n": 36,
+        "minimum": 317.6838889999999,
+        "median": 323.89378500000004,
+        "maximum": 335.31189700000004,
+        "mean": 324.78806497222223
+      },
+      "D_gaps_ms": {
+        "n": 36,
+        "minimum": 1.2363009999999122,
+        "median": 1.858233499999983,
+        "maximum": 2.3210439999998016,
+        "mean": 1.8100905277777473
+      },
+      "postjoin_B_ms": {
+        "n": 36,
+        "minimum": 314.823495,
+        "median": 320.83095525000004,
+        "maximum": 332.003297,
+        "mean": 321.73424695833336
+      },
+      "B_e2e_ms": {
+        "n": 36,
+        "minimum": 1014.9171249999999,
+        "median": 1020.9237067500001,
+        "maximum": 1032.123562,
+        "mean": 1021.8529497083333
+      },
+      "end_epoch_ms": {
+        "n": 36,
+        "minimum": 1017.883661,
+        "median": 1024.0997045,
+        "maximum": 1035.581625,
+        "mean": 1025.0479371666668
+      }
+    }
+  },
+  "serial_replay": {
+    "optimistic_minimum_epoch_ms": 929.7449570000003,
+    "median_component_sum_epoch_ms": 939.8302430000001,
+    "assumption": "same measured operation spans, no overlap; delete every idle/control gap; minima from different runs are optimistic replay numbers, not physical lower bounds",
+    "cold_secret_validity": "public schedule must also serve cold A, so warm A-only timings cannot set release",
+    "median_epoch_minus_B_own_time_ms": 3.1783960000000206,
+    "optimistic_minimum_own_B_ms_using_median_offset": 926.5665610000003
+  },
+  "target": {
+    "ignore_hits_warm_B_cohort_median_ms": 910.866321,
+    "protected_postjoin_warm_B_median_ms": 321.43387575,
+    "required_public_join_ms": 589.43244525,
+    "measured_gap_ms": 110.74750875000007,
+    "formula": "requiredJ = ignoreBmedian - protectedPostJmedian; counterfactual assumes unchanged post-J execution"
+  },
+  "early_prefix_join": {
+    "frontier": 512,
+    "outputs": 0,
+    "common_suffix_tokens": 180,
+    "median_no_suffix_ownB_ms": 862.76483925,
+    "max_affordable_suffix_ms": 48.10148174999995,
+    "existing_B_only_144token_suffix_ms": 56.1842805,
+    "status": "no positive 110ms latency finding; 180-token suffix still on response path, no existing matching measurement; new worker adoption required for warm zero-forward A"
+  },
+  "concurrent_prefill": {
+    "schedule": "both private fixed recipes launched at public epoch in distinct runner/stream contexts; no outputs before fixed J; drain both then unchanged canonical copy; merge complete CachedRequestState into canonical shared runner",
+    "median_serial_prep_ms": 620.2628565,
+    "independent_observed_maximum_envelope_ms": 655.060297,
+    "required_effective_overlap_median_ms": 30.830411249999997,
+    "required_effective_overlap_envelope_ms": 65.62785174999999,
+    "perfect_overlap_counterfactual_epoch_ms": 479.44000350000005,
+    "evidence_gap": "no concurrent kernel timeline or occupancy in these traces; launch-to-drain spans include host waits; overlap, contention and second-runner overhead unknown; no affirmative GPU-latency feasibility claim"
+  },
+  "public_two_cohort_pipeline": {
+    "schedule": "C0 protected0..700; C1 protected700..1400; both ready then 15 public 10-request decode slots; separate physical quotas and canonical regions; fixed admission, no secret-dependent borrowing",
+    "existing_five_request_decode_ms": 321.8867864999999,
+    "required_per_step_ms": 28.251571533333323,
+    "formula": "saving per cohort = D5 - D10/2; public frame F=1400+15*slot10+guard; C0latency=F, C1latency=F-700 when publicly admitted at700",
+    "implementation_requirements": [
+      "max_num_seqs at least10 (currently8)",
+      "two fixed physical cohort partitions, original quotas128/256 each, num_gpu_blocks at least769 (e.g1024)",
+      "separate canonical clear ranges; C1 normalization cannot erase C0",
+      "identical wave batching for recomputation baseline before claiming comparative benefit"
+    ],
+    "evidence_gap": "no ten-request decode measurement exists; cannot infer D10 from D5 or call throughput interval response latency",
+    "measurement_unit": "D5 is schedule-to-drain ENGINE WALLTIME, not a separately stored CUDA interval. Numeric threshold is an engine-service proxy only; GPU cost saving is not established.",
+    "joint_ten_request_decode_required_for_110ms_engine_service_saving_per_cohort": 423.77357299999983,
+    "latency_at_service_threshold": {
+      "C0_ms": 1823.773573,
+      "C1_ms": 1123.773573,
+      "service_interval_per_cohort_ms": 911.8867865
+    }
+  },
+  "decision": "No supported >=110ms single-cohort latency improvement using only old serial operations. Concurrent protected prefill is a concrete conditional design, needs about31..66ms effective overlap not established by old traces. Public two-cohort batching targets GPU service cost/throughput and increases individual response latency. No implementation or new GPU runs under the requested positive-feasibility condition."
+}

@@ -1,0 +1,17 @@
+{
+  "sources_and_artifacts_match_freeze": true,
+  "prior_result_files_unchanged": 956,
+  "installed_backend_unchanged": true,
+  "all64_planned_case_slots_recorded": true,
+  "analysis_sha256": "18e93404c3a0fd0e60ebcaa67d33dff42e9db0e924bc15785d9ab6dabfa60f84",
+  "protocol_and_observers_match_pre_acquisition_git_commit": true,
+  "protocol_commit": "64086bd3ea75e793655849382b07d2b53a3f0f2c",
+  "complete_cases": 64,
+  "raw_artifact_hashes_checked": 448,
+  "C1_existing_trace_input_hashes_checked": 8,
+  "no_new_C1_GPU_test": true,
+  "no_C2_source_changes_after_active_freeze": true,
+  "full_analysis_inputs_unchanged": true,
+  "whitespace_check": "passed",
+  "backend_process_ended": true
+}

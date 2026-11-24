@@ -1,0 +1,534 @@
+{
+  "status": "existing C1 proxy/client traces only; no new measurement or observer",
+  "groups": 72,
+  "all_full_blocks_release_after_last_backend_proxy_receive": true,
+  "input_sha256": {
+    "results/document-bos-20261103/run1-c0/trials.jsonl": "9708ff81327e3c1f60e8eb0ca83c5a713d68f46e330291df2d4e005f00aed2fd",
+    "results/document-bos-20261103/run1-c0/proxy.jsonl": "3a35bc664fc03192f5b4133aaa04a1f008d62bd7dab87d84ffc2dbc6d498ec12",
+    "results/document-bos-20261103/run2-c1/trials.jsonl": "7b6033cede6604cd538e08393ff5157973b85fb7232a7e03a2a71270305e1b36",
+    "results/document-bos-20261103/run2-c1/proxy.jsonl": "ece2b3d42abda2d3f22a3ee59d250002fa02a67ddc7cf781bf704eaefe3f38ae",
+    "results/document-bos-20261103/run3-c1/trials.jsonl": "5de5c5a43939cb5bf363462b6a0afb2c2594087587c22547d9d8213bec840e02",
+    "results/document-bos-20261103/run3-c1/proxy.jsonl": "89374be04e70ff9951881a9c58405d1a9f6622d8f83ae8cdd6ef58b96ab9bca9",
+    "results/document-bos-20261103/run4-c0/trials.jsonl": "c0f8019cccc8a3e5f1bb74cbc207dfa3f795197e9ac006e120e4c61b1ce09e3f",
+    "results/document-bos-20261103/run4-c0/proxy.jsonl": "7ee68e13c4faeffd10a4fbf4693029be27c78c1b6d19711513ff2c87946be0ca"
+  },
+  "rows": [
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-001",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.326764,
+      "first_client_minus_last_backend_ms": 0.616248
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-003",
+      "warm": null,
+      "first_proxy_release_minus_last_backend_ms": 0.317935,
+      "first_client_minus_last_backend_ms": 0.572268
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-004",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.247084,
+      "first_client_minus_last_backend_ms": 0.487567
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-005",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.230463,
+      "first_client_minus_last_backend_ms": 0.506057
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-006",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.235353,
+      "first_client_minus_last_backend_ms": 0.532047
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-008",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.259224,
+      "first_client_minus_last_backend_ms": 0.545707
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-009",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.244973,
+      "first_client_minus_last_backend_ms": 0.518727
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-010",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.274433,
+      "first_client_minus_last_backend_ms": 0.533146
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-011",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.296854,
+      "first_client_minus_last_backend_ms": 0.581607
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-012",
+      "warm": null,
+      "first_proxy_release_minus_last_backend_ms": 0.289644,
+      "first_client_minus_last_backend_ms": 0.567958
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-015",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.284454,
+      "first_client_minus_last_backend_ms": 0.571647
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-016",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.273164,
+      "first_client_minus_last_backend_ms": 0.557717
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-017",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.238023,
+      "first_client_minus_last_backend_ms": 0.496246
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-018",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.298444,
+      "first_client_minus_last_backend_ms": 0.592208
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-019",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.235293,
+      "first_client_minus_last_backend_ms": 0.455496
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-020",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.319554,
+      "first_client_minus_last_backend_ms": 0.601148
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-021",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.223173,
+      "first_client_minus_last_backend_ms": 0.448876
+    },
+    {
+      "run": "run1-c0",
+      "group": "doc-r1c0-022",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.303444,
+      "first_client_minus_last_backend_ms": 0.582247
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-001",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.235013,
+      "first_client_minus_last_backend_ms": 0.513207
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-003",
+      "warm": null,
+      "first_proxy_release_minus_last_backend_ms": 0.291504,
+      "first_client_minus_last_backend_ms": 0.553938
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-004",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.267913,
+      "first_client_minus_last_backend_ms": 0.569627
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-005",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.218002,
+      "first_client_minus_last_backend_ms": 0.444055
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-006",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.289264,
+      "first_client_minus_last_backend_ms": 0.505576
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-008",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.271024,
+      "first_client_minus_last_backend_ms": 0.613678
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-009",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.327105,
+      "first_client_minus_last_backend_ms": 0.604958
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-010",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.290104,
+      "first_client_minus_last_backend_ms": 0.589177
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-011",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.274383,
+      "first_client_minus_last_backend_ms": 0.542517
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-012",
+      "warm": null,
+      "first_proxy_release_minus_last_backend_ms": 0.332834,
+      "first_client_minus_last_backend_ms": 0.699969
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-015",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.259724,
+      "first_client_minus_last_backend_ms": 0.484906
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-016",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.328094,
+      "first_client_minus_last_backend_ms": 0.610158
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-017",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.325374,
+      "first_client_minus_last_backend_ms": 0.610798
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-018",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.252323,
+      "first_client_minus_last_backend_ms": 0.523176
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-019",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.298824,
+      "first_client_minus_last_backend_ms": 0.590328
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-020",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.245593,
+      "first_client_minus_last_backend_ms": 0.501576
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-021",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.218892,
+      "first_client_minus_last_backend_ms": 0.421725
+    },
+    {
+      "run": "run2-c1",
+      "group": "doc-r2c1-022",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.271174,
+      "first_client_minus_last_backend_ms": 0.559367
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-000",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.279865,
+      "first_client_minus_last_backend_ms": 0.623755
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-003",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.263203,
+      "first_client_minus_last_backend_ms": 0.541978
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-004",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.243612,
+      "first_client_minus_last_backend_ms": 0.527757
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-005",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.239331,
+      "first_client_minus_last_backend_ms": 0.45665
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-006",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.240961,
+      "first_client_minus_last_backend_ms": 0.512145
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-007",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.243352,
+      "first_client_minus_last_backend_ms": 0.480863
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-008",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.234521,
+      "first_client_minus_last_backend_ms": 0.501154
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-009",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.321018,
+      "first_client_minus_last_backend_ms": 0.568119
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-010",
+      "warm": null,
+      "first_proxy_release_minus_last_backend_ms": 0.283484,
+      "first_client_minus_last_backend_ms": 0.544607
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-011",
+      "warm": null,
+      "first_proxy_release_minus_last_backend_ms": 0.263383,
+      "first_client_minus_last_backend_ms": 0.565479
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-012",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.264013,
+      "first_client_minus_last_backend_ms": 0.528556
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-013",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.255282,
+      "first_client_minus_last_backend_ms": 0.538617
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-015",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.243382,
+      "first_client_minus_last_backend_ms": 0.522026
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-016",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.242061,
+      "first_client_minus_last_backend_ms": 0.539627
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-018",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.232401,
+      "first_client_minus_last_backend_ms": 0.467221
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-020",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.251152,
+      "first_client_minus_last_backend_ms": 0.543617
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-021",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.243621,
+      "first_client_minus_last_backend_ms": 0.530326
+    },
+    {
+      "run": "run3-c1",
+      "group": "doc-r3c1-022",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.23078,
+      "first_client_minus_last_backend_ms": 0.547477
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-000",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.270172,
+      "first_client_minus_last_backend_ms": 0.601499
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-003",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.318955,
+      "first_client_minus_last_backend_ms": 0.63312
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-004",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.288653,
+      "first_client_minus_last_backend_ms": 0.532282
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-005",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.233209,
+      "first_client_minus_last_backend_ms": 0.551194
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-006",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.268891,
+      "first_client_minus_last_backend_ms": 0.521871
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-007",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.268921,
+      "first_client_minus_last_backend_ms": 0.555284
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-008",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.286392,
+      "first_client_minus_last_backend_ms": 0.541463
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-009",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.25228,
+      "first_client_minus_last_backend_ms": 0.528122
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-010",
+      "warm": null,
+      "first_proxy_release_minus_last_backend_ms": 0.266961,
+      "first_client_minus_last_backend_ms": 0.549864
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-011",
+      "warm": null,
+      "first_proxy_release_minus_last_backend_ms": 0.255941,
+      "first_client_minus_last_backend_ms": 0.524562
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-012",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.275711,
+      "first_client_minus_last_backend_ms": 0.534032
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-013",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.24486,
+      "first_client_minus_last_backend_ms": 0.525862
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-015",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.25013,
+      "first_client_minus_last_backend_ms": 0.581116
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-016",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.296144,
+      "first_client_minus_last_backend_ms": 0.578446
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-018",
+      "warm": "C",
+      "first_proxy_release_minus_last_backend_ms": 0.227548,
+      "first_client_minus_last_backend_ms": 0.496379
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-020",
+      "warm": "B",
+      "first_proxy_release_minus_last_backend_ms": 0.269351,
+      "first_client_minus_last_backend_ms": 0.555563
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-021",
+      "warm": "D",
+      "first_proxy_release_minus_last_backend_ms": 0.245199,
+      "first_client_minus_last_backend_ms": 0.538082
+    },
+    {
+      "run": "run4-c0",
+      "group": "doc-r4c0-022",
+      "warm": "A",
+      "first_proxy_release_minus_last_backend_ms": 0.221138,
+      "first_client_minus_last_backend_ms": 0.5155
+    }
+  ],
+  "gap_ms": {
+    "first_proxy_release_minus_last_backend_ms": {
+      "median": 0.263698,
+      "min": 0.218002,
+      "max": 0.332834
+    },
+    "first_client_minus_last_backend_ms": {
+      "median": 0.5417205,
+      "min": 0.421725,
+      "max": 0.699969
+    }
+  },
+  "scope": "All four Qwen document runs, positive and control BOS groups; backend receive is proxy full-response arrival, not exact GPU finish. Timing consistency supports mechanism without a new causal scheduler attribution."
+}

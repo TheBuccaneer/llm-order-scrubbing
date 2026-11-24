@@ -1,0 +1,9 @@
+{
+  "index": 3,
+  "backend_ready": false,
+  "client_returncode": null,
+  "server_pid": 19965,
+  "error": "RuntimeError('fresh backend not ready within90 seconds')",
+  "backend_stopped_ns": 1179407351174,
+  "finished_utc": "2026-11-05T12:06:49.436936+00:00"
+}

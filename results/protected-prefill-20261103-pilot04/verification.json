@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-03",
+  "vllm": "0.17.1",
+  "logical_KV_checks": "passed",
+  "canonical_active_KV_sha256": "7fcf3f3d6a76f8c0c3185ae9b71fb7e52cfa75e005adc811191b7f78f9b3203a",
+  "gpu_audit_groups": 2,
+  "fixed_public_pilot_groups": 16,
+  "fixed_public_pilot_responses": 80,
+  "HTTP_groups": 2,
+  "HTTP_responses": 10,
+  "old_input_hashes_unchanged": 64,
+  "source_sha256": {
+    "src/protected_prefill_scheduler.py": "5a14a3befc61326e70da4ef651a307f2df80843ab034d16db26a8009271a5c4a",
+    "src/tenant_kv_partition.py": "0aaee4c65f01ec27615cccab466c1433b8429d00f7f9530bcf74576caff95f50",
+    "src/protected_prefill_pilot.py": "33afd359348f7e71a46cecfdbd650e97dc79cda7ed8bae93518fa9488da444b9",
+    "src/protected_prefill_server.py": "58d00790311719d6ffeb55067943a568b0905f8e6b85a6bde81b788c3b4179b7",
+    "src/protected_prefill_checks.py": "c06ec03d1ad9f0a22a6ff46c3127b77f4a0e5cb58dd0bb685f68c73953e4bb74",
+    "src/protected_prefill_analysis.py": "3acf639dfeeb9df65305d6e8c35040ea421daa38e3fd1b62b4fe32fbf1cc8eb2"
+  },
+  "limits": [
+    "bounded closed cohort, one A and four B requests",
+    "standalone 64-token cache provenance",
+    "no claim of hardware timing noninterference",
+    "no confirmed privacy-latency dominance"
+  ]
+}

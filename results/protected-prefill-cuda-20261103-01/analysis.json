@@ -1,0 +1,30 @@
+{
+  "conditions": {
+    "cold": {
+      "pairs": 12,
+      "serial_median_ms": 613.994148,
+      "parallel_median_ms": 566.7997635,
+      "mean_gain_ms": 46.48757433333333,
+      "median_gain_ms": 44.4815145,
+      "minimum_gain_ms": 21.158147999999983,
+      "gain_mean_one_sided95_lower_ms": 40.096496574999975,
+      "max_parallel_ms": 589.281267,
+      "correctness": true
+    },
+    "warm": {
+      "pairs": 6,
+      "serial_median_ms": 490.580289,
+      "parallel_median_ms": 480.780028,
+      "mean_gain_ms": 10.143708666666678,
+      "median_gain_ms": 10.241686000000044,
+      "minimum_gain_ms": 5.318944999999985,
+      "gain_mean_one_sided95_lower_ms": 8.28572650000001,
+      "max_parallel_ms": 484.224709,
+      "correctness": true
+    }
+  },
+  "correctness": true,
+  "gate_pass": false,
+  "cold_warm_frontiers_equal": true,
+  "decision": "hardware gate not passed; do not implement the two-runner scheduler"
+}

@@ -1,0 +1,440 @@
+{
+  "status": "frozen configuration-controlled pilot gate; no general security or novelty guarantee",
+  "limitations": "Leakage gate applies only to two frozen observers and this workload; pair-bootstrap and binomial assumptions do not establish hardware noninterference. CUDA intervals are not energy.",
+  "train_cohorts": 72,
+  "test_cohorts": 144,
+  "seed": 202611037031,
+  "bootstrap_replicates": 5000,
+  "input_sha256": "d82c29c194ad10102a75e159b4d0ad9d58f52359d795d5ef16df04a240ad2fc9",
+  "observers_sha256": "887e6e08349321ef77f4085ac73750cce5c86cd471cd9d9ca17a0976147590d6",
+  "train_sha256": "9459b70443b0ab578c20b69ebdf70de7c09e13bec397e0ba3eafa3790c1af3db",
+  "observers": {
+    "protected_block512": {
+      "stump": {
+        "balanced_accuracy": 0.5416666666666666,
+        "auc": 0.5295138888888888,
+        "confusion_cold_warm": [
+          [
+            7,
+            17
+          ],
+          [
+            5,
+            19
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.4166666666666667,
+          0.6666666666666666
+        ],
+        "pair_bootstrap_auc95": [
+          0.3472222222222222,
+          0.7187934027777771
+        ]
+      },
+      "logistic": {
+        "balanced_accuracy": 0.5833333333333334,
+        "auc": 0.5277777777777778,
+        "confusion_cold_warm": [
+          [
+            11,
+            13
+          ],
+          [
+            7,
+            17
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.4375,
+          0.7291666666666666
+        ],
+        "pair_bootstrap_auc95": [
+          0.3454861111111111,
+          0.71875
+        ]
+      },
+      "max_balanced_accuracy": 0.5833333333333334,
+      "max_ba_one_sided95_upper": 0.7083333333333334,
+      "max_absolute_BA_or_AUC_distance_from_chance": 0.08333333333333337,
+      "max_separation_one_sided95_upper": 0.2152777777777778,
+      "paired_swap_max_separation_p": 0.594881023795241,
+      "permutation": "Monte Carlo pair-label swaps; max absolute distance from chance across BA/AUC of two frozen observers; no prediction/score flip; +1 correction"
+    },
+    "ignore_hits": {
+      "stump": {
+        "balanced_accuracy": 0.3958333333333333,
+        "auc": 0.3819444444444445,
+        "confusion_cold_warm": [
+          [
+            12,
+            12
+          ],
+          [
+            17,
+            7
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.25,
+          0.5625
+        ],
+        "pair_bootstrap_auc95": [
+          0.2013888888888889,
+          0.5660156249999994
+        ]
+      },
+      "logistic": {
+        "balanced_accuracy": 0.4791666666666667,
+        "auc": 0.3871527777777778,
+        "confusion_cold_warm": [
+          [
+            6,
+            18
+          ],
+          [
+            7,
+            17
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.3541666666666667,
+          0.6041666666666666
+        ],
+        "pair_bootstrap_auc95": [
+          0.2065972222222222,
+          0.5694444444444444
+        ]
+      },
+      "max_balanced_accuracy": 0.4791666666666667,
+      "max_ba_one_sided95_upper": 0.5833333333333334,
+      "max_absolute_BA_or_AUC_distance_from_chance": 0.11805555555555552,
+      "max_separation_one_sided95_upper": 0.27604166666666663
+    },
+    "release1240": {
+      "stump": {
+        "balanced_accuracy": 0.4166666666666667,
+        "auc": 0.4149305555555556,
+        "confusion_cold_warm": [
+          [
+            8,
+            16
+          ],
+          [
+            12,
+            12
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.25,
+          0.5833333333333334
+        ],
+        "pair_bootstrap_auc95": [
+          0.24479166666666666,
+          0.5850694444444444
+        ]
+      },
+      "logistic": {
+        "balanced_accuracy": 0.4583333333333333,
+        "auc": 0.4131944444444445,
+        "confusion_cold_warm": [
+          [
+            15,
+            9
+          ],
+          [
+            17,
+            7
+          ]
+        ],
+        "n": 48,
+        "pair_bootstrap_ba95": [
+          0.3333333333333333,
+          0.5833333333333334
+        ],
+        "pair_bootstrap_auc95": [
+          0.24648437500000003,
+          0.5798611111111112
+        ]
+      },
+      "max_balanced_accuracy": 0.4583333333333333,
+      "max_ba_one_sided95_upper": 0.5833333333333334,
+      "max_absolute_BA_or_AUC_distance_from_chance": 0.08680555555555552,
+      "max_separation_one_sided95_upper": 0.2534722222222222
+    }
+  },
+  "descriptive_test_costs": {
+    "protected_block512": {
+      "cold": {
+        "cohorts": 24,
+        "failures": 0,
+        "B_observed_own_ms": {
+          "n": 96,
+          "mean": 1022.5692356770833,
+          "median": 1021.1540975,
+          "minimum": 1014.543502,
+          "maximum": 1034.581541
+        },
+        "completed_only_A_e2e_ms": {
+          "n": 24,
+          "mean": 1025.85291175,
+          "median": 1024.6818225,
+          "minimum": 1019.227984,
+          "maximum": 1036.20245
+        },
+        "completed_only_B_cohort_median_e2e_ms": {
+          "n": 24,
+          "mean": 1022.5653107083332,
+          "median": 1021.16869925,
+          "minimum": 1016.1469255,
+          "maximum": 1032.850175
+        },
+        "completed_only_CUDA_inference_plus_copy_ms": {
+          "n": 24,
+          "mean": 936.7273314433793,
+          "median": 933.6775988340378,
+          "minimum": 926.72588314116,
+          "maximum": 962.1617994308472
+        }
+      },
+      "warm": {
+        "cohorts": 24,
+        "failures": 0,
+        "B_observed_own_ms": {
+          "n": 96,
+          "mean": 1022.5952812604168,
+          "median": 1021.9911265000001,
+          "minimum": 1013.301232,
+          "maximum": 1033.870784
+        },
+        "completed_only_A_e2e_ms": {
+          "n": 24,
+          "mean": 1025.8755508333334,
+          "median": 1024.6890875,
+          "minimum": 1017.962033,
+          "maximum": 1035.681547
+        },
+        "completed_only_B_cohort_median_e2e_ms": {
+          "n": 24,
+          "mean": 1022.5898504583334,
+          "median": 1021.61382975,
+          "minimum": 1014.9171249999999,
+          "maximum": 1032.123562
+        },
+        "completed_only_CUDA_inference_plus_copy_ms": {
+          "n": 24,
+          "mean": 818.2940082900847,
+          "median": 814.5228403322399,
+          "minimum": 805.9393191561103,
+          "maximum": 837.0390216335654
+        }
+      }
+    },
+    "ignore_hits": {
+      "cold": {
+        "cohorts": 24,
+        "failures": 0,
+        "B_observed_own_ms": {
+          "n": 96,
+          "mean": 916.21170428125,
+          "median": 909.894592,
+          "minimum": 901.417489,
+          "maximum": 954.923094
+        },
+        "completed_only_A_e2e_ms": {
+          "n": 24,
+          "mean": 913.9465389583333,
+          "median": 910.9701355,
+          "minimum": 905.054635,
+          "maximum": 937.949299
+        },
+        "completed_only_B_cohort_median_e2e_ms": {
+          "n": 24,
+          "mean": 911.8678956666666,
+          "median": 908.8379795000001,
+          "minimum": 903.0170224999999,
+          "maximum": 935.657929
+        },
+        "completed_only_CUDA_inference_plus_copy_ms": {
+          "n": 24,
+          "mean": 924.6383049335951,
+          "median": 921.5819183252752,
+          "minimum": 916.8692312911153,
+          "maximum": 947.6938996911049
+        }
+      },
+      "warm": {
+        "cohorts": 24,
+        "failures": 0,
+        "B_observed_own_ms": {
+          "n": 96,
+          "mean": 918.0769960833335,
+          "median": 912.3437094999999,
+          "minimum": 903.478605,
+          "maximum": 954.803469
+        },
+        "completed_only_A_e2e_ms": {
+          "n": 24,
+          "mean": 915.8587429583334,
+          "median": 912.942225,
+          "minimum": 907.391568,
+          "maximum": 938.383377
+        },
+        "completed_only_B_cohort_median_e2e_ms": {
+          "n": 24,
+          "mean": 913.7696908125,
+          "median": 910.866321,
+          "minimum": 905.2273554999999,
+          "maximum": 936.4422105
+        },
+        "completed_only_CUDA_inference_plus_copy_ms": {
+          "n": 24,
+          "mean": 926.288554064619,
+          "median": 922.8236629664898,
+          "minimum": 918.81055662781,
+          "maximum": 948.0838368162513
+        }
+      }
+    },
+    "release1240": {
+      "cold": {
+        "cohorts": 24,
+        "failures": 0,
+        "B_observed_own_ms": {
+          "n": 96,
+          "mean": 1240.0732335,
+          "median": 1240.0719425,
+          "minimum": 1240.022728,
+          "maximum": 1240.334295
+        },
+        "completed_only_A_e2e_ms": {
+          "n": 24,
+          "mean": 916.612795,
+          "median": 912.717389,
+          "minimum": 907.590459,
+          "maximum": 947.2273
+        },
+        "completed_only_B_cohort_median_e2e_ms": {
+          "n": 24,
+          "mean": 1240.0740206875,
+          "median": 1240.07023925,
+          "minimum": 1240.0476635,
+          "maximum": 1240.1867665
+        },
+        "completed_only_CUDA_inference_plus_copy_ms": {
+          "n": 24,
+          "mean": 926.9622539098685,
+          "median": 922.7101077735424,
+          "minimum": 918.8114871904254,
+          "maximum": 956.0299226939678
+        }
+      },
+      "warm": {
+        "cohorts": 24,
+        "failures": 0,
+        "B_observed_own_ms": {
+          "n": 96,
+          "mean": 1240.0692893125,
+          "median": 1240.0735535,
+          "minimum": 1240.017361,
+          "maximum": 1240.086751
+        },
+        "completed_only_A_e2e_ms": {
+          "n": 24,
+          "mean": 788.6953932916666,
+          "median": 784.630002,
+          "minimum": 774.745814,
+          "maximum": 833.163268
+        },
+        "completed_only_B_cohort_median_e2e_ms": {
+          "n": 24,
+          "mean": 1240.0708293333334,
+          "median": 1240.07364,
+          "minimum": 1240.0584119999999,
+          "maximum": 1240.077043
+        },
+        "completed_only_CUDA_inference_plus_copy_ms": {
+          "n": 24,
+          "mean": 799.4324724540735,
+          "median": 795.0342039391398,
+          "minimum": 785.7539233714342,
+          "maximum": 845.3952064812183
+        }
+      }
+    }
+  },
+  "cost_comparison": {
+    "comparison": "warm test matched pairs: ignore_hits minus protected_block512",
+    "unit": "whole public pair block; B endpoint is within-cohort median own duration",
+    "statistic": "mean of paired improvements; positive favors protected",
+    "missing_failure_pair_ids": [],
+    "completed_only_pairs": 24,
+    "endpoints": {
+      "A_e2e_ms": {
+        "completed_only_difference_ms": {
+          "n": 24,
+          "mean": -110.016807875,
+          "median": -111.672078,
+          "minimum": -120.75976300000013,
+          "maximum": -90.72671400000002
+        },
+        "lower_simultaneous95": -113.27924169513891
+      },
+      "B_cohort_median_e2e_ms": {
+        "completed_only_difference_ms": {
+          "n": 24,
+          "mean": -108.82015964583336,
+          "median": -110.79562699999997,
+          "minimum": -119.60754900000006,
+          "maximum": -89.42809499999998
+        },
+        "lower_simultaneous95": -112.10062092569449
+      },
+      "CUDA_inference_plus_copy_ms": {
+        "completed_only_difference_ms": {
+          "n": 24,
+          "mean": 107.99454577453434,
+          "median": 109.48893875256181,
+          "minimum": 83.54561714828014,
+          "maximum": 129.22089562565088
+        },
+        "lower_simultaneous95": 102.67304514360924
+      }
+    },
+    "latency_pass": false,
+    "compute_pass": true,
+    "status": "evaluated",
+    "multiplicity": "Bonferroni lower percentile alpha=.05/3 across the three preregistered endpoints"
+  },
+  "overruns": {
+    "failed_cohorts": 0,
+    "cohorts": 72,
+    "failure_fraction": 0.0,
+    "pairs_with_any_failure": 0,
+    "pairs": 36,
+    "pair_failure_one_sided95_upper": 0.07984650951989439,
+    "passed": true
+  },
+  "functional_checks": {
+    "verified": true,
+    "errors": [],
+    "engine_generations": 1,
+    "sha256": "c4990202e2b7948ed2cc66970bd178fdc962f27821a8a40475b429838e5b9533"
+  },
+  "phase_check_errors": [],
+  "configuration_errors": [],
+  "gates": {
+    "normalizer_verified": true,
+    "leakage_pass": false,
+    "configuration_verified": true,
+    "overrun_pass": true,
+    "latency_pass": false,
+    "compute_pass": true,
+    "combined_pass": false
+  }
+}

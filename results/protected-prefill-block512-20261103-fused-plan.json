@@ -1,0 +1,13 @@
+{
+  "status": "structural repair after failed separate-phase contract, before any fused GPU run; original plan and failures preserved",
+  "original_plan": "protected-prefill-block512-20261103-plan.json",
+  "observed_failure": "kv02: B first 512-token step 412.84ms, 36-token step 56.53ms; output drained at669.98ms, exceeding the separate650ms B deadline",
+  "repair": "fuse final tenant prefill and canonical normalization into the same protected interval, eliminating the internal B-to-normalizer deadline; no foreign work during either operation",
+  "public_windows_ms": {"A": [0, 200], "B_and_normalization": [200, 700]},
+  "public_join_ms": 700,
+  "join_unchanged": true,
+  "normalizer_start": "as soon as all five exact frontiers are drained, inside isolation; shared execution waits until fixed J700 regardless of private readiness",
+  "failure_policy": "abort if a GPU step or complete normalization exceeds J; no dynamic ready subset, no early public release, no deadline fit to subsequent comparison results",
+  "functional_hash_join_ms": 1200,
+  "comparison": "same previously specified two pairs per four policies; no changes after its start"
+}

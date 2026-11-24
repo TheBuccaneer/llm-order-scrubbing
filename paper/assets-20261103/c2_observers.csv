@@ -1,0 +1,4 @@
+observer,n,hits,accuracy,wilson95_lower,wilson95_upper
+R2,16,8,0.5,0.28,0.72
+T1,16,14,0.875,0.6398,0.965
+T2,16,16,1.0,0.8064,1.0

@@ -1,0 +1,14 @@
+{
+  "source_unchanged_after_freeze": true,
+  "source_snapshot_hashes_match": true,
+  "old_result_files_unchanged": 900,
+  "plan_completed": 72,
+  "observer_checkpoint_precedes_first_test": true,
+  "configuration_verified": true,
+  "analysis_sha256": "b63a163515552b0431ca63086254c0222a4391edafb3c754a9b4ec06fb1f9ade",
+  "installed_vllm_source_unchanged": true,
+  "prompt_unchanged": true,
+  "protocol_saved_before_GPU_initialization": true,
+  "recipe_parity_synthetic_CPU_fixture": "exact numeric threshold/direction/scaler/coefficients match original recipe; performed before freeze",
+  "experiment_finished": true
+}

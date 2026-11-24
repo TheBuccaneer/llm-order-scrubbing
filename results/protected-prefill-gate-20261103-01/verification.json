@@ -1,0 +1,44 @@
+{
+  "source_unchanged_after_freeze": true,
+  "source_snapshot_hashes_match": true,
+  "old_raw_files_unchanged": 74,
+  "KV_manager_unchanged_vs_previous_pilot": true,
+  "actual_KV_hash": "878c99dbc44abe2a316f897035eab553c18138f75782b330536e7b10c6b0284c",
+  "layers": 28,
+  "all_five_token_sequences_equal_across_all_72_protected_cohorts": {
+    "A:A": 1,
+    "B:A": 1,
+    "B:B": 1,
+    "B:C": 1,
+    "B:D": 1
+  },
+  "normalization_reserve_ms": {
+    "minimum": 8.752255999999988,
+    "median": 25.842287,
+    "maximum": 29.944119
+  },
+  "actual_join_ms": {
+    "minimum": 700.085235,
+    "maximum": 700.247641
+  },
+  "release_B_late": 0,
+  "test_first_B_medians_ms": {
+    "protected_block512": {
+      "cold": 1023.10924,
+      "warm": 1023.2517284999999,
+      "cold_minus_warm_ms": -0.14248849999989943
+    },
+    "ignore_hits": {
+      "cold": 909.405798,
+      "warm": 911.4382845,
+      "cold_minus_warm_ms": -2.0324865000000045
+    },
+    "release1240": {
+      "cold": 1240.0654075,
+      "warm": 1240.0701315,
+      "cold_minus_warm_ms": -0.004723999999896478
+    }
+  },
+  "analysis_sha256": "7bf615556eaf93d9189b7d94e48f77636a7d21d7129b7efe87df097501260993",
+  "method": "No test refit or changes after freeze; nominal bootstrap/Clopper intervals, same instrumented EngineCore only; no HTTP claim"
+}

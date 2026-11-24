@@ -1,0 +1,125 @@
+{
+  "status": "functional exploratory pilot, no privacy guarantee or confirmed cost dominance",
+  "input_sha256": "fdf99f911fabcef926735abaf41aa833e27a225211c1aaef1f62a95c22735bc3",
+  "groups": 2,
+  "responses": 10,
+  "phase_checks": {
+    "errors": [],
+    "canonical_metadata_equal": true,
+    "protected_groups": 2
+  },
+  "policies": {
+    "protected_block512": {
+      "cold": {
+        "groups": 1,
+        "A_e2e_ms": {
+          "n": 1,
+          "median": 1532.265944,
+          "mean": 1532.265944,
+          "minimum": 1532.265944,
+          "maximum": 1532.265944
+        },
+        "B_e2e_ms": {
+          "n": 4,
+          "median": 1528.7065175,
+          "mean": 1528.685097,
+          "minimum": 1526.88229,
+          "maximum": 1530.445063
+        },
+        "first_B_ms": {
+          "n": 1,
+          "median": 1530.445063,
+          "mean": 1530.445063,
+          "minimum": 1530.445063,
+          "maximum": 1530.445063
+        },
+        "scheduled_model_tokens": {
+          "n": 1,
+          "median": 2815.0,
+          "mean": 2815.0,
+          "minimum": 2815.0,
+          "maximum": 2815.0
+        },
+        "inference_cuda_ms": {
+          "n": 1,
+          "median": 938.975797124207,
+          "mean": 938.975797124207,
+          "minimum": 938.975797124207,
+          "maximum": 938.975797124207
+        },
+        "late_B": 0,
+        "normalization_wall_ms": {
+          "n": 1,
+          "median": 137.947308,
+          "mean": 137.947308,
+          "minimum": 137.947308,
+          "maximum": 137.947308
+        },
+        "normalization_cuda_ms": {
+          "n": 1,
+          "median": 12.810912132263184,
+          "mean": 12.810912132263184,
+          "minimum": 12.810912132263184,
+          "maximum": 12.810912132263184
+        }
+      },
+      "warm": {
+        "groups": 1,
+        "A_e2e_ms": {
+          "n": 1,
+          "median": 1521.882558,
+          "mean": 1521.882558,
+          "minimum": 1521.882558,
+          "maximum": 1521.882558
+        },
+        "B_e2e_ms": {
+          "n": 4,
+          "median": 1518.5268805,
+          "mean": 1518.5218905000002,
+          "minimum": 1516.722289,
+          "maximum": 1520.311512
+        },
+        "first_B_ms": {
+          "n": 1,
+          "median": 1520.311512,
+          "mean": 1520.311512,
+          "minimum": 1520.311512,
+          "maximum": 1520.311512
+        },
+        "scheduled_model_tokens": {
+          "n": 1,
+          "median": 2303.0,
+          "mean": 2303.0,
+          "minimum": 2303.0,
+          "maximum": 2303.0
+        },
+        "inference_cuda_ms": {
+          "n": 1,
+          "median": 809.3920290023088,
+          "mean": 809.3920290023088,
+          "minimum": 809.3920290023088,
+          "maximum": 809.3920290023088
+        },
+        "late_B": 0,
+        "normalization_wall_ms": {
+          "n": 1,
+          "median": 129.712799,
+          "mean": 129.712799,
+          "minimum": 129.712799,
+          "maximum": 129.712799
+        },
+        "normalization_cuda_ms": {
+          "n": 1,
+          "median": 2.6230080127716064,
+          "mean": 2.6230080127716064,
+          "minimum": 2.6230080127716064,
+          "maximum": 2.6230080127716064
+        }
+      },
+      "first_B_median_cold_minus_warm_ms": 10.133550999999898,
+      "B_tokens_identical_across_states": true,
+      "all_five_token_sequences_identical_across_states": true,
+      "active_KV_hash_equal_across_states": true
+    }
+  }
+}

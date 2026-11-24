@@ -1,0 +1,122 @@
+(APIServer pid=19965) INFO 11-05 13:06:45 [utils.py:302] 
+(APIServer pid=19965) INFO 11-05 13:06:45 [utils.py:302]        █     █     █▄   ▄█
+(APIServer pid=19965) INFO 11-05 13:06:45 [utils.py:302]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.17.1
+(APIServer pid=19965) INFO 11-05 13:06:45 [utils.py:302]   █▄█▀ █     █     █     █  model   /home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28
+(APIServer pid=19965) INFO 11-05 13:06:45 [utils.py:302]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=19965) INFO 11-05 13:06:45 [utils.py:302] 
+(APIServer pid=19965) INFO 11-05 13:06:45 [utils.py:238] non-default args: {'enable_prompt_tokens_details': True, 'host': '127.0.0.1', 'port': 8765, 'model': '/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28', 'max_model_len': 2048, 'enforce_eager': True, 'served_model_name': ['Qwen/Qwen2.5-7B-Instruct'], 'gpu_memory_utilization': 0.8, 'enable_prefix_caching': True, 'max_num_batched_tokens': 256, 'long_prefill_token_threshold': 64}
+(APIServer pid=19965) INFO 11-05 13:06:45 [model.py:531] Resolved architecture: Qwen2ForCausalLM
+(APIServer pid=19965) INFO 11-05 13:06:45 [model.py:1554] Using max model len 2048
+(APIServer pid=19965) INFO 11-05 13:06:45 [scheduler.py:231] Chunked prefill is enabled with max_num_batched_tokens=256.
+(APIServer pid=19965) INFO 11-05 13:06:45 [vllm.py:747] Asynchronous scheduling is enabled.
+(APIServer pid=19965) WARNING 11-05 13:06:45 [vllm.py:781] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(APIServer pid=19965) WARNING 11-05 13:06:45 [vllm.py:792] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(APIServer pid=19965) INFO 11-05 13:06:46 [vllm.py:957] Cudagraph is disabled under eager mode
+(APIServer pid=19965) Traceback (most recent call last):
+(APIServer pid=19965)   File "<frozen runpy>", line 198, in _run_module_as_main
+(APIServer pid=19965)   File "<frozen runpy>", line 88, in _run_code
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 545, in <module>
+(APIServer pid=19965)     uvloop.run(run_server(args))
+(APIServer pid=19965)     ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=19965)     return __asyncio.run(
+(APIServer pid=19965)            ~~~~~~~~~~~~~^
+(APIServer pid=19965)         wrapper(),
+(APIServer pid=19965)         ^^^^^^^^^^
+(APIServer pid=19965)     ...<2 lines>...
+(APIServer pid=19965)         **run_kwargs
+(APIServer pid=19965)         ^^^^^^^^^^^^
+(APIServer pid=19965)     )
+(APIServer pid=19965)     ^
+(APIServer pid=19965)   File "/home/rock/.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/asyncio/runners.py", line 195, in run
+(APIServer pid=19965)     return runner.run(main)
+(APIServer pid=19965)            ~~~~~~~~~~^^^^^^
+(APIServer pid=19965)   File "/home/rock/.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/asyncio/runners.py", line 118, in run
+(APIServer pid=19965)     return self._loop.run_until_complete(task)
+(APIServer pid=19965)            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+(APIServer pid=19965)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=19965)     return await main
+(APIServer pid=19965)            ^^^^^^^^^^
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 471, in run_server
+(APIServer pid=19965)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 490, in run_server_worker
+(APIServer pid=19965)     async with build_async_engine_client(
+(APIServer pid=19965)                ~~~~~~~~~~~~~~~~~~~~~~~~~^
+(APIServer pid=19965)         args,
+(APIServer pid=19965)         ^^^^^
+(APIServer pid=19965)         client_config=client_config,
+(APIServer pid=19965)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)     ) as engine_client:
+(APIServer pid=19965)     ^
+(APIServer pid=19965)   File "/home/rock/.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 214, in __aenter__
+(APIServer pid=19965)     return await anext(self.gen)
+(APIServer pid=19965)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 96, in build_async_engine_client
+(APIServer pid=19965)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=19965)                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+(APIServer pid=19965)         engine_args,
+(APIServer pid=19965)         ^^^^^^^^^^^^
+(APIServer pid=19965)     ...<2 lines>...
+(APIServer pid=19965)         client_config=client_config,
+(APIServer pid=19965)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)     ) as engine:
+(APIServer pid=19965)     ^
+(APIServer pid=19965)   File "/home/rock/.local/share/uv/python/cpython-3.13-linux-x86_64-gnu/lib/python3.13/contextlib.py", line 214, in __aenter__
+(APIServer pid=19965)     return await anext(self.gen)
+(APIServer pid=19965)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/entrypoints/openai/api_server.py", line 137, in build_async_engine_client_from_engine_args
+(APIServer pid=19965)     async_llm = AsyncLLM.from_vllm_config(
+(APIServer pid=19965)         vllm_config=vllm_config,
+(APIServer pid=19965)     ...<6 lines>...
+(APIServer pid=19965)         client_index=client_index,
+(APIServer pid=19965)     )
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/engine/async_llm.py", line 225, in from_vllm_config
+(APIServer pid=19965)     return cls(
+(APIServer pid=19965)         vllm_config=vllm_config,
+(APIServer pid=19965)     ...<9 lines>...
+(APIServer pid=19965)         client_index=client_index,
+(APIServer pid=19965)     )
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/engine/async_llm.py", line 154, in __init__
+(APIServer pid=19965)     self.engine_core = EngineCoreClient.make_async_mp_client(
+(APIServer pid=19965)                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+(APIServer pid=19965)         vllm_config=vllm_config,
+(APIServer pid=19965)         ^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)     ...<4 lines>...
+(APIServer pid=19965)         client_index=client_index,
+(APIServer pid=19965)         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)     )
+(APIServer pid=19965)     ^
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=19965)     return func(*args, **kwargs)
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/engine/core_client.py", line 127, in make_async_mp_client
+(APIServer pid=19965)     return AsyncMPClient(*client_args)
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=19965)     return func(*args, **kwargs)
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/engine/core_client.py", line 911, in __init__
+(APIServer pid=19965)     super().__init__(
+(APIServer pid=19965)     ~~~~~~~~~~~~~~~~^
+(APIServer pid=19965)         asyncio_mode=True,
+(APIServer pid=19965)         ^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)     ...<3 lines>...
+(APIServer pid=19965)         client_addresses=client_addresses,
+(APIServer pid=19965)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)     )
+(APIServer pid=19965)     ^
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/v1/engine/core_client.py", line 562, in __init__
+(APIServer pid=19965)     self.input_socket = self.resources.input_socket = make_zmq_socket(
+(APIServer pid=19965)                                                       ~~~~~~~~~~~~~~~^
+(APIServer pid=19965)         self.ctx, addresses.inputs[0], zmq.ROUTER, bind=True
+(APIServer pid=19965)         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=19965)     )
+(APIServer pid=19965)     ^
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/vllm/utils/network_utils.py", line 309, in make_zmq_socket
+(APIServer pid=19965)     socket.bind(path)
+(APIServer pid=19965)     ~~~~~~~~~~~^^^^^^
+(APIServer pid=19965)   File "/home/rock/projects/porto/.venv-py313-repair/lib/python3.13/site-packages/zmq/sugar/socket.py", line 320, in bind
+(APIServer pid=19965)     super().bind(addr)
+(APIServer pid=19965)     ~~~~~~~~~~~~^^^^^^
+(APIServer pid=19965)   File "zmq/backend/cython/_zmq.py", line 1002, in zmq.backend.cython._zmq.Socket.bind
+(APIServer pid=19965)     raise ZMQError(msg=msg)
+(APIServer pid=19965)     
+(APIServer pid=19965) zmq.error.ZMQError: ipc path "/home/rock/projects/llm-order-scrubbing/results/tenant-background-20261105-01/runtime/b3930921-4dc9-43db-b901-7a2fef069ca1" is longer than 107 characters (sizeof(sockaddr_un.sun_path)). zmq.IPC_PATH_MAX_LEN constant can be used to check addr length (if it is defined). (addr='ipc:///home/rock/projects/llm-order-scrubbing/results/tenant-background-20261105-01/runtime/b3930921-4dc9-43db-b901-7a2fef069ca1')

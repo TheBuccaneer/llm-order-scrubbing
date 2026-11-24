@@ -1,0 +1,199 @@
+{
+  "input_hashes_unchanged": 64,
+  "replay_causality_checks": 720,
+  "synthetic_no_late_invariance": true,
+  "synthetic_late_counterexample": true,
+  "hidden_offset_pair_bootstrap": {
+    "observed": {
+      "logistic": {
+        "BA": 1.0,
+        "AUC": 1.0,
+        "pair_bootstrap95": [
+          [
+            1.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "rbf": {
+        "BA": 1.0,
+        "AUC": 1.0,
+        "pair_bootstrap95": [
+          [
+            1.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ]
+      },
+      "forest": {
+        "BA": 1.0,
+        "AUC": 1.0,
+        "pair_bootstrap95": [
+          [
+            1.0,
+            1.0
+          ],
+          [
+            1.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    "group": {
+      "logistic": {
+        "BA": 0.5,
+        "AUC": 0.46875,
+        "pair_bootstrap95": [
+          [
+            0.5,
+            0.15625
+          ],
+          [
+            0.5,
+            0.75
+          ]
+        ]
+      },
+      "rbf": {
+        "BA": 0.5,
+        "AUC": 0.28125,
+        "pair_bootstrap95": [
+          [
+            0.3125,
+            0.03125
+          ],
+          [
+            0.6875,
+            0.515625
+          ]
+        ]
+      },
+      "forest": {
+        "BA": 0.375,
+        "AUC": 0.3515625,
+        "pair_bootstrap95": [
+          [
+            0.125,
+            0.09375
+          ],
+          [
+            0.625,
+            0.609375
+          ]
+        ]
+      }
+    },
+    "request": {
+      "logistic": {
+        "BA": 0.3125,
+        "AUC": 0.296875,
+        "pair_bootstrap95": [
+          [
+            0.125,
+            0.015625
+          ],
+          [
+            0.5625,
+            0.625
+          ]
+        ]
+      },
+      "rbf": {
+        "BA": 0.375,
+        "AUC": 0.3125,
+        "pair_bootstrap95": [
+          [
+            0.1875,
+            0.03125
+          ],
+          [
+            0.625,
+            0.609375
+          ]
+        ]
+      },
+      "forest": {
+        "BA": 0.375,
+        "AUC": 0.2578125,
+        "pair_bootstrap95": [
+          [
+            0.25,
+            0.0625
+          ],
+          [
+            0.5,
+            0.515625
+          ]
+        ]
+      }
+    },
+    "vector": {
+      "logistic": {
+        "BA": 0.5,
+        "AUC": 0.5625,
+        "pair_bootstrap95": [
+          [
+            0.5,
+            0.25
+          ],
+          [
+            0.5,
+            0.828125
+          ]
+        ]
+      },
+      "rbf": {
+        "BA": 0.5,
+        "AUC": 0.328125,
+        "pair_bootstrap95": [
+          [
+            0.3125,
+            0.078125
+          ],
+          [
+            0.6875,
+            0.578125
+          ]
+        ]
+      },
+      "forest": {
+        "BA": 0.375,
+        "AUC": 0.3515625,
+        "pair_bootstrap95": [
+          [
+            0.1875,
+            0.109375
+          ],
+          [
+            0.625,
+            0.609375
+          ]
+        ]
+      }
+    }
+  },
+  "zero_late_8_iid_one_sided95_upper": 0.31234397806636793,
+  "notes": "Bootstrap is exploratory, 8 pairs with fixed heterogeneous offsets, no population privacy bound.",
+  "bootstrap_method": {
+    "unit": "matched warm/cold pair",
+    "pairs": 8,
+    "resamples": 2000,
+    "seed": 202611034401,
+    "interval": "percentile 2.5/97.5; rows lower/upper, columns BA/AUC",
+    "training": "fresh direct dev only; refitted fixed models exactly as in analysis",
+    "includes_controls": false
+  },
+  "program_sha256": "6b120066cc5e719a5fea21bb1a30eb11f7d9440e91b5d4c27a3a810837652e7b",
+  "groups_checked": 240,
+  "existing_synchronous_integrity_checks": "8/8 old dev/test datasets, no errors",
+  "tracked_old_tenant_data_diff": "none"
+}

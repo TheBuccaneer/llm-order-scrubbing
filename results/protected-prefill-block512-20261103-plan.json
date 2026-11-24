@@ -1,0 +1,17 @@
+{
+  "frozen_at_utc": "2026-11-03 12:52:41",
+  "status": "fixed before reading any new GPU result; implementation preceded the first functional run",
+  "change": "public 512-token protected chunks, 2048-token worker buffer, same canonical normalizer and shared decode",
+  "mechanism": "cold A: 9 to 2 model calls; B: 9 to 2 model calls; warm A: one 36-token suffix call in both policies",
+  "new_public_windows_ms": {"A": [0, 200], "B": [200, 650]},
+  "new_join_ms": 700,
+  "old_public_windows_ms": {"A": [0, 230], "B": [230, 890]},
+  "old_join_ms": 940,
+  "budget_rationale": "Engineering target exploiting fewer weight-streaming and dispatch passes. Retains 200ms for A (old actual cold 197-201ms plus intake), 450ms for B (old actual 598-623ms), and unchanged 50ms normalization reserve. These are public design budgets, NOT analytically proved runtime bounds or a fit to new GPU observations. No post-result adjustment.",
+  "cache_provenance": "512-token policy creates its standalone A cache with the same 512+36 recipe as its cold A. Original policies keep 64-token preparation. Warm A reads 512 in protected modes; native release baseline remains 544.",
+  "shared_decode": "all policies use original scheduler budget 256 and threshold 64; same 2048-token allocated worker buffer for every policy in this comparison",
+  "functional_check": "one cold/warm pair, all-layer active KV hash and all five output sequences; hashing uses fixed extra 500ms functional budget, not latency samples",
+  "cost_check": "two cold/warm pairs per policy: new protected, old protected, release1240, ignore_hits; same existing paired case order seed; no new attacker",
+  "failure_policy": "abort on missed public phase deadline; never release ready subsets or move public join based on private cache status",
+  "claims_excluded": ["proven GPU timing noninterference", "general workload/runtime bound", "novelty", "energy measurements"]
+}

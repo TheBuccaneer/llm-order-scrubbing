@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "scope": "existing-data manuscript exports; no GPU experiment or observer training",
+  "input_hashes_checked": 29,
+  "csv_row_counts": {
+    "c1_observers.csv": 8,
+    "c2_client_times.csv": 24,
+    "c2_observers.csv": 3,
+    "c3_existing_observers.csv": 6,
+    "c3_medians.csv": 18,
+    "c3_test_cohorts.csv": 144
+  },
+  "figures_checked": 3,
+  "visual_review": "all three PNG previews inspected; labels and data visible",
+  "tracked_diff_whitespace_check": "passed",
+  "new_output_sha256": {
+    "c1_observers.csv": "5395d65beace1047e3c0bd09f86693751c75a4a07baf2d071335332e6b0780d1",
+    "c2_client_times.csv": "a56c821107d7387e265d05f092ed1224c0febbd2ad4becac4e490c0643b19119",
+    "c2_observers.csv": "41ae505105128e5e827a2533fd6b256760c4bca3289a9ef6691ebaef57f3974b",
+    "c3_existing_observers.csv": "20594d93e8b44a1aba33bdf2e1e59498c9aa64d887e5b1de05973c9bb7eb3cb3",
+    "c3_medians.csv": "a50f69fcab23584e1ff930b69736219d87d10b9b71fd3c1476608d9e5ba3f377",
+    "c3_test_cohorts.csv": "85d1738ac276803b316d0ff8f0720f340243791a83cce35acc3094417acdec51",
+    "fig1_rank_and_time.pdf": "29c4ac87e9174f7128b714b946bc459674a31676ce174ad60fe10772a71e3d5a",
+    "fig1_rank_and_time.png": "64d256b15e4a3d4af83089c7d9110085cfa9a5958296a51446979244040b7d69",
+    "fig2_separate_namespaces.pdf": "68d218044e44dee940e74aa51c09f510487e3d0560ed04542ed7c1380c8267d1",
+    "fig2_separate_namespaces.png": "c215059b488c837f38d3db5e55fddd679088825f06e25d6029d92d6d40d83729",
+    "fig3_matched_costs.pdf": "7185883d329b06b699539113e7912846fbeb325626b5e21bb36860ff45807bcc",
+    "fig3_matched_costs.png": "c3868e6aa3b44974211f272730878f1e8a6fb8c6a77f5025acb85e1ce6d986b9",
+    "manifest.json": "d06381ca9bc6a11d568d7e65dd1ae870e67f0726e6feafaee23d3b3db5d98906"
+  }
+}

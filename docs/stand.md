@@ -1,8 +1,353 @@
 # Projektstand
 
-Stand: 03.11.2026
+Stand: 05.11.2026
 
 ## Aktuelle Etappe
+
+**C2-Lasttest abgeschlossen: Ergebnis B und unabhängig D. Forschung für C1/C2 beendet.**
+Alle 24 Warm/Kalt-Paardifferenzen sind positiv: erste vollständige
+B-Antwort kalt minus warm median 100,73 ms, geschichtetes 95-%-
+Paarbootstrapintervall 87,14–107,26 ms, exakter Vorzeichentest
+p=5,96×10⁻⁸. Der Effekt bleibt unter dem einen festen C-Lastprofil.
+Beide alten Klassifikatoren nennen jedoch alle 48 Hauptfälle „kalt“:
+BA jeweils 50 %, zugleich AUC jeweils 1,00 mit unveränderten Scores.
+Das ist verlorene Kalibrierung bei erhaltener Ranginformation, kein
+Verschwinden des Seitenkanals. Beide Beobachter nennen auch alle acht
+Abwesenheits- und acht andere-kalte-Kontrollen „kalt“; keine eindeutige
+Dokument- oder Anwesenheitsinferenz.
+
+64/64 Messfälle vollständig, 256 B-Antworten ohne Hits; A warm544/kalt0.
+C verarbeitet jeweils 548 Prompt- und 256 Ausgabetokens. In allen 64
+Fällen C-Fortschritt bereits vor der ersten B-Vollantwort; keine
+Behauptung gleicher tatsächlicher GPU-Auslastung. Keine Messfehler,
+Timeouts oder Ersatzfälle. Alle 956 vorherigen Ergebnisdateien und
+eingefrorenen Quellen/Beobachter unverändert; Backend/Proxy beendet.
+
+Bericht: `docs/tenant-hintergrundlast-20261105.md`.
+Daten: `results/tenant-background-20261105-02/`, aktiver Vorabcommit
+`64086bd3ea75e793655849382b07d2b53a3f0f2c`. Der erste Freeze `b39ac44`
+scheiterte bei sieben Backendstarts vor Modellladen und jeglicher
+A/B/C-Messung am zu langen IPC-Pfad. Alle Fehlstarts bleiben unter
+`...-01` erhalten; zwei Protokollfassungen ausdrücklich dokumentiert.
+Nur temporärer Pfad korrigiert, gleiche 64 Fälle, Last und Modellbytes;
+keine erhobene Kohorte wiederholt. Kein Push.
+
+C1 ausschließlich offline ergänzt: alle 72 alten vollständigen BOS-Blöcke
+geben erst nach dem letzten Backendempfang am Proxy frei; Abstand zum
+ersten Clientempfang median 0,542 ms, kein weiterer C1-GPU-Test.
+Artefakt: `paper/c1-proxy-mechanism-20261105.json`.
+
+**Nächster verbindlicher Schritt:** fünfseitiges englisches ICCAI-Paper
+mit C1/C2 als Hauptbeiträgen schreiben und im offiziellen Format setzen.
+Aktuelle Planung: `paper/short-paper-plan-20261105.md` (fünf zweispaltige
+Seiten einschließlich Referenzen). Keine neue Explorationsphase,
+Lastprofile, Angreifer oder Forschungstests. C3 bleibt als vorhandenes
+Implementierungs-/Kostenresultat erhalten, kein dritter Hauptbeitrag.
+
+### Vorheriger Abschluss: C3-Positivkontrolle
+
+**Abschließende C3-Positivkontrolle bestanden; experimentelle Arbeit beendet.**
+Die neue Policy `direct` verwendet den unveränderten C3-Piloten mit
+512/2048 und nativen privaten Cachetreffern, ohne Schutz oder Verzögerung.
+Zwölf neue Trainings- und 24 Prüfpaare, Plan vor GPU-Start gespeichert,
+Modelle und Skalierung vor der Prüfserie eingefroren. T1 und T2 treffen
+beide 48/48 Prüfkohorten, BA=AUC=1; gemeinsamer Paar-Labeltausch-p=0,000200.
+Erste B-Latenz kalt minus warm im Mittel 113,39 ms, nominales
+95-%-Paarbootstrapintervall 103,96–123,03 ms; alle 24 Differenzen positiv.
+
+72/72 Kohorten, 360 vollständige Antworten, keine Fehler oder fehlenden
+Antworten. A tatsächlich warm544/kalt0, alle 288 B-Antworten ohne Hits.
+Direct hat keine Join-Deadline, daher kein definierter Overrunendpunkt.
+Alle Quellen/Snapshots, Prompts und 900 alte Ergebnisdateien unverändert;
+GPU-Engine beendet, kein Push. Vergleich und methodische Unterschiede:
+`docs/protected-prefill-prototyp-20261103.md`, neuer Datensatz
+`results/protected-prefill-direct-20261104-01/`.
+
+**C3-Entscheidung:** ungeschütztes Signal für die eingefrorenen Rezepte
+belegt; Protected Prefill bleibt Implementierungs-/Normalisierungs- und
+Kostenfallstudie mit beobachterbezogener Einordnung. Alte Schutzintervalle
+bleiben breit, alte Policies wurden nicht gleichzeitig neu gemessen;
+keine Timing-Sicherheitsgarantie aus der Positivkontrolle ableiten.
+
+**Nächster verbindlicher Schritt:** englisches Paper schreiben und im
+offiziellen ICCAI-Format auf bis zu zehn einspaltige Seiten inklusive
+Referenzen setzen. Keine weitere Forschungsmessung oder Schutzentwicklung.
+
+### Vorherige Etappe: Manuskriptstruktur
+
+**Manuskriptphase: weitere Protected-Prefill-Entwicklung gestoppt.**
+Die ausgearbeitete Struktur steht in
+`paper/manuskriptstruktur-20261103.md`: drei empirische Contributions mit
+Evidenz, engster Vorarbeit und Geltungsgrenzen, ein Budget für acht
+einspaltige ACM-Seiten inklusive Literatur, zwei Tabellen und drei aus
+vorhandenen Daten erzeugte Abbildungen unter `paper/assets-20261103/`.
+
+Paperlinie: (1) vollständige Clientzeiten können nach BOS informativ
+bleiben; (2) getrennte Cache-Salts verhindern den konditionalen
+Konkurrenz-Zeitkanal im geprüften Szenario nicht; (3) die normalisierte
+Protected-Prefill-Konstruktion spart im konfigurationsgleichen warmen
+Vergleich Ausführungsintervall, erhöht aber individuelle Antwortlatenz.
+Der logische Beweis ist unterstützend, keine Timing-Sicherheitsgarantie.
+Keine allgemeine neue Angriffsmethode oder überlegene Verteidigung behauptet.
+
+Die Abbildungen verwenden nur vorhandene Analysen und Rohdaten; keine
+neuen Messungen, Beobachterfits oder Unsicherheitsschätzungen. Ihre
+Eingänge sind mit SHA-256 im Manifest gebunden, die PNGs visuell geprüft.
+Die textliche T1-Fehlerbeschreibung im Zeitfensterbericht wurde anhand der
+vorhandenen Konfusionsmatrix korrigiert: zwei warme Fälle als kalt,
+nicht umgekehrt. Messdateien bleiben unverändert.
+
+**Nächster Schritt:** englisches Manuskript schreiben und Satzumfang
+prüfen, ohne weitere Forschungsexperimente zur Voraussetzung zu machen.
+
+### Vorheriger Stand: formaler Vertrag
+
+**Quellcodegebundene logische Nichtinterferenz hergeleitet.** Kompakter
+Bericht: `docs/protected-prefill-nichtinterferenz-20261103.md`.
+Der Satz betrifft B-Antwortzuordnung und logische gemeinsame
+Decodeentscheidungen erfolgreicher, fehlerfreier geschlossener Kohorten
+im expliziten funktionalen Backendmodell. Er setzt Gleichheit am Join
+nicht voraus: isolierte B-Ausführung, Snapshot/Clear/Scatter, frische
+KV-Manager, feste Kapazitäten und Workerinstallation stellen die benötigte
+B-Projektion her. As private Nutzdaten müssen für diesen Satz nicht gleich
+sein. Kontrollierte Cacheherkunft und gleiche Rechenform liefern im Modell
+zusätzlich die stärkere aktive KV-Normalform.
+
+**Keine reale Timing-/HTTP-Reihenfolge- oder Fehler-Nichtinterferenz
+bewiesen.** Warm kann die Frist einhalten, kalt bei gleicher Zusatzlast
+abbrechen; Erfolg gegen 500 ist sichtbar. Ein explizites Gegenbeispiel
+und die fehlende cacheunabhängige Laufzeit-/Admissioninvariante sind
+dokumentiert. Ein einheitlicher Fehlertext oder späterer Fehlertermin
+repariert diesen Unterschied nicht. Produktive adaptive Zusatzanfragen
+während Decode sind nicht implementiert; nur ordnungsgemäße Wiederholung
+nach Reset mit logischen Beobachtungen fällt unter die Induktion.
+
+CPU-Prüfer `src/protected_prefill_contract_checks.py` und Ergebnis
+`results/protected-prefill-contract-20261103/checks.json`: echte KV-Manager
+und echter Kopierkörper auf CPU, getrennte A-Payloads/Quelladressen,
+gleiche kanonische B-Werte aller 28 Schichten, gelöschte Restbereiche;
+echte Stop-/Deadlineguards geprüft. Unterstützende Instanzen, keine
+Maschinenverifikation der GPU-Bibliotheken. Keine Produktionskorrektur,
+kein neuer Scheduler und keine GPU-Serie; alte Rohdaten unverändert.
+
+Vier engste Originaltexte gezielt nachgeprüft: Time Protection, IFS,
+Predictive Mitigation und SafeKV. Möglicher Beitrag ist der konkrete
+hinreichende vLLM-Wiedereintrittsvertrag. Weder notwendige/minimale
+Kanonisierung noch neue allgemeine Timingabwehr nachgewiesen; globale
+Neuheitsentscheidung bleibt offen. SIDE weiterhin L1.
+
+### Abgeschlossene CUDA-Hardwareentscheidung
+
+**CUDA-Hardwareentscheidung abgeschlossen: kein Zweirunner-Scheduler.**
+Der vorab fixierte Minimalpilot unter
+`results/protected-prefill-cuda-20261103-01/` verwendet die echten
+Eager-Forwardformen A512/A36 und B2048/B144 bei einmal vorhandenen
+Qwen-Gewichten, geklonten Eingaben/Attention-Metadaten und zwei Streams.
+Kein zweiter Scheduler, keine Graph- oder Parametersuche.
+
+Zwölf kalte Paare: seriell Mittel 618,15 ms, parallel 571,66 ms;
+Gewinn 46,49 ms, einseitige 95-%-Untergrenze 40,10 ms. Sechs warme Paare:
+490,98/480,84 ms, Gewinn 10,14 ms. Gefordert waren mindestens 66 ms
+plus vorab gewählte 20 ms Reserve. Maximaler kalter Parallellauf 589,28 ms
+passt zudem nicht unter das 589,43-ms-Joinlimit zuzüglich Integration,
+Normalisierung und Reserve. **Hardwaregate nicht bestanden; keine
+Implementierung der Zwei-Runner-Konstruktion begonnen.**
+
+Alle 36 Replays liefern bitgleiche aktive KV-Daten aller 28 Schichten
+und Frontier-Logits, warm/kalt sowie seriell/parallel. Gemessen ist reale
+Dauer inklusive Eager-Host-Enqueue, Synchronisierung und Konkurrenz;
+vollständiger Scheduler/CPU-Sampler/KV-Normalisierung sind noch nicht
+enthalten. Diese zusätzlichen Kosten würden den Befund nicht verbessern.
+Die funktionierende ursprüngliche Normalisierung und der frühere private
+Rechenvorteil bleiben erhalten. Keine weitere Architektur oder Messserie
+begonnen; alte Rohdaten/Enginequellen unverändert, GPU-Engine beendet.
+Tabelle, Messgrenzen und Reproduktion im bestehenden Prototypbericht.
+
+### Vorherige Offline-Konstruktionsprüfung
+
+**Kritischer Pfad analysiert, keine neue Implementierung oder GPU-Messung.**
+Die 72 vorhandenen geschützten Gate-Traces sind offline zerlegt unter
+`results/protected-prefill-critical-path-20261103/`. Mit unveränderten
+seriellen Operationskosten bleiben selbst nach optimistischem Streichen
+aller Leerlauf-/Steuerungslücken 929,74 ms ab Epoch bzw. ungefähr 926,57 ms
+eigener B-Latenz. Das reicht nicht gegen Ignore-Hits warm 910,87 ms.
+Dies ist ein Trace-Replay im vorhandenen Kostenmodell, keine allgemeine
+Hardwareuntergrenze. Ein früherer 512-Token-Join verschiebt 180 gemeinsame
+Suffix-Tokens auf denselben Antwortpfad; kein belegter 110-ms-Gewinn.
+
+**Konkrete Bauhypothese:** A und B in zwei getrennten Prefill-Runnern auf
+getrennten CUDA-Streams innerhalb eines geschlossenen geschützten Fensters
+starten; unveränderte Modellgewichte teilen, anschließend beide drainen,
+kanonisch normalisieren und vollständige Workerzustände zusammenführen.
+Öffentlicher Join müsste bei höchstens 589,43 ms liegen. Dafür sind nach
+alten Operationskosten 31–66 ms effektive Überlappung nötig, zuzüglich
+Reserve und neuer Orchestrierungskosten. Der existierende einzelne Runner
+ist wegen `execute_model_state`, veränderlichem Inputbatch und globalem
+Forwardkontext dafür ungeeignet; separater Runnerzustand und kontrolliertes
+Host-Enqueue sind der benannte Implementierungsweg.
+
+Die alten Traces enthalten keine gleichzeitigen Kernel-/Belegungsdaten.
+Die Abhängigkeitsstruktur erlaubt das Ziel, beweist aber die nötige
+Hardwareüberlappung nicht. **Kein positiver Hardware-Machbarkeitsbefund;
+entsprechend dem Auftrag noch nicht programmiert.**
+
+Öffentliche Zweikohorten-Pipeline ebenfalls konkret gerechnet: zwei
+geschützte Phasen bis 1400 ms, anschließend gemeinsames Zehner-Decode.
+Für110 ms weniger Engine-Ausführungszeit je Kohorte müsste dieses
+≤ 423,77 ms dauern (nicht gemessen). Dann etwa 1824/1124 ms individuelle
+Latenz bei nur 912 ms mittlerem Serviceabstand. Das ist eine Kosten-/
+Durchsatzalternative, kein belegter Latenzgewinn. Engine-Wallspannen sind
+dabei keine isolierten CUDA-Kernelzeiten. Vollständiger Ablauf, Quoten,
+vLLM-Eingriffspunkte und Annahmen im bestehenden Prototypbericht.
+
+### Abgeschlossenes Contribution-Gate vor Konstruktionsprüfung
+
+**Das konfigurationskontrollierte Contribution-Gate ist abgeschlossen,
+insgesamt nicht bestanden.** Alle drei Verfahren nutzen jetzt dieselben
+512-Token-Chunks, 2048-Token-Budgets und dieselbe Cachevorbereitung;
+auch die gemeinsamen Decode-Einstellungen stimmen überein.
+`results/protected-prefill-gate-20261103-01/` enthält den vorab fixierten
+Plan und Quellcode, 216 neue Kohorten/1080 Antworten, trainierte Modelle
+vor Testbeginn sowie Auswertung und Prüfnachweise. Je Verfahren zwölf
+Trainingspaare und 24 getrennte Prüfpaare, keine Nachjustierung.
+
+Auf den Prüfdaten warm: Protected Prefill A/B median 1024,69/1021,61 ms;
+Ignore-Hits 912,94/910,87 ms, Release-only 784,63/1240,07 ms.
+**Der frühere Latenzvorteil gegenüber Ignore-Hits bestätigt sich unter
+gleicher Konfiguration nicht.** Warmer CUDA-Vorteil bleibt: 814,52 statt
+922,82 ms, gepaarte mittlere Einsparung 107,99 ms, simultane einseitige
+95-%-Bootstrap-Untergrenze 102,67 ms. Keine Energiemessung; kalt kein
+CUDA-Vorteil gegenüber Ignore-Hits.
+
+Beide neuen Zeitbeobachter bleiben trainiert eingefroren: geschützte
+Test-BA 54,17/58,33 %, AUC 0,530/0,528. Gemeinsamer Permutationswert
+p=0,595: kein signifikanter Kanal durch diese Beobachter. Die gemeinsame
+Unsicherheitsobergrenze von BA/AUC liegt aber bei 0,215 statt unter dem
+vorab verlangten Abstand 0,15 von Zufall. **Schutzgate unentschieden bzw.
+nicht bestanden, keine Behauptung bewiesener Vertraulichkeit.**
+
+Unveränderter Normalisierer erneut all-layer-bytegleich im Funktionspaar;
+dieselben fünf Tokenfolgen in allen 72 geschützten Kohorten. 0/72 Overruns,
+minimale Joinreserve 8,75 ms. Konfiguration, Normalisierung, beobachtete
+Verfügbarkeit und warmer Rechenvorteil bestanden; gleichzeitiger Nachweis
+von Beobachtungsarmut und Kostenvorteil bleibt offen. Konstruktion behalten,
+keine neue Methode oder Parametersuche begonnen. Vollständiger Befund:
+`docs/protected-prefill-prototyp-20261103.md`. 74 alte Rohdateien unverändert,
+alle GPU-Engines beendet, kein Commit/Push.
+
+### Abgenommene Zwischenoptimierung vor Konfigurationskontrolle
+
+Die bestehende Konstruktion ist **strukturell beschleunigt**: öffentlich
+feste 512-Token-Prefillblöcke reduzieren kaltes A und B von jeweils neun
+auf zwei Modellaufrufe. Letztes B-Prefill und Normalisierung teilen ein
+geschütztes Schlussfenster. Der öffentliche Join sinkt von **940 auf
+700 ms**. Kein früherer Join nach Cachetreffern, keine bereite Teilmenge.
+Der ausführbare Modus heißt `protected_block512` (`--block-prefill`).
+
+Der neue GPU-Funktionstest `results/protected-prefill-block512-20261103-kv03/`
+belegt erneut identische aktive KV-Daten aller 28 Schichten, kanonische
+Metadaten und fünf gleiche Tokenfolgen warm/kalt bei 512 privaten Hits.
+Der anschließende kleine Kostenvergleich unter
+`results/protected-prefill-block512-20261103-pilot01/` umfasst 16 Kohorten,
+80 Antworten und die drei festgelegten Vergleichsverfahren. B warm
+median 1020,31 ms statt 1260,48 beim alten Schutz und 1240,07 bei
+Release-only; A 1023,70 statt 766,40 bei Release-only. CUDA-Intervalle
+inklusive Kopieren warm 814,98 statt 1203,14 ms bei Ignore-Hits.
+Kein Vorteil für beide Mandanten gegenüber Release-only behauptet.
+
+Die erste getrennte B-Frist von 650 ms scheiterte zweimal; die Reparatur
+fasst B und Normalisierung innerhalb des unveränderten öffentlichen
+J=700 zusammen. Pläne und Fehler bleiben erhalten, keine Nachjustierung
+im anschließenden Kostenvergleich. Kleinste beobachtete Joinreserve
+10,81 ms; Warm/Kalt-Zeitdifferenz von B weiterhin 3,70 ms. Keine allgemeine
+Laufzeitschranke, Zeitvertraulichkeit oder Methodenneuheit bewiesen.
+Vollständiger Befund und Reproduktion im bestehenden Prototypbericht.
+Der HTTP-Adapter ist weiterhin auf dem bisherigen 940-ms-Stand.
+
+### Abgenommener Ausgangsprototyp
+
+Der **Protected-Prefill-/Shared-Decode-Prototyp ist implementiert und auf
+der RTX 3090 ausgeführt**. Einstieg und vollständiger technischer Befund:
+`docs/protected-prefill-prototyp-20261103.md`. Dateien:
+`src/protected_prefill_scheduler.py`, `src/tenant_kv_partition.py`,
+`src/protected_prefill_pilot.py` und der lokale HTTP-Server
+`src/protected_prefill_server.py`. Keine installierten vLLM-Dateien geändert.
+
+Konstruiert sind echte Tenant-KV-Pools (128/256 Blöcke), geschützte
+Schedulerfenster, Parken bei 548 verarbeiteten Prompttokens plus einem
+Ausgabetoken, echte kanonische GPU-KV-Kopie mit vollständigem
+Metadatenneuaufbau, CUDA-Drain und Worker-Blocktabellenersetzung vor
+gemeinsamem Decode. Die numerische Rechenform wurde repariert:
+geschütztes A nutzt 512 statt 544 Cachetokens, damit warm und kalt
+denselben letzten 36-Token-Chunk berechnen. Der GPU-Funktionstest
+`results/protected-prefill-20261103-aligned-kv01/` weist identische
+SHA-256 über aktive KV-Daten aller 28 Schichten sowie identische
+Tokenausgaben aller fünf Requests nach. Kaltes A: 0 Treffer, warmes
+A: 512; B jeweils 0. Echte KV-Manager-/Quotenchecks stehen ausführbar in
+`src/protected_prefill_checks.py`.
+
+Der korrigierte kleine Kostenpilot
+`results/protected-prefill-20261103-pilot04/` enthält 16 Kohorten/80
+Vollantworten; zwei Warm/Kalt-Paare pro Policy, keine neuen trainierten
+Angreifer. Feste öffentliche Fenster aus früherem Smoke-Test, J=940 ms.
+Warme geschützte Modellarbeit: 2303 statt 2815 Tokens bei Ignore-Hits;
+CUDA-Inferenz plus Kopieren etwa 949 statt 1211 ms. B-Latenz warm median
+1264,71 ms gegenüber Release-only 1240,08 ms; A 1268,02 gegenüber
+773,93 ms. **Keine Latenzdominanz oder formale Vertraulichkeit behauptet.**
+Metadaten-/Queue-/Frontier-/Workerprüfungen melden keine Fehler.
+
+Der echte HTTP-Test unter `results/protected-prefill-20261103-http02/`
+lieferte warm/kalt je fünf vollständige Antworten, gleiche Texte und
+keine Cachezähler/fremden Datensätze an B. Getrennte lokale Rollen,
+feste Intakekohorte und kontrollierte Cacheherkunft sind Teil des
+Prototypvertrags. Die aktiven Bytes und logischen Zustände sind geprüft;
+physische Mikrocache-/Takt-/Temperatur- und Host-Zeitunabhängigkeit ist
+nicht allgemein bewiesen. Die dokumentierten früheren Auditurteile unten
+gelten für den damaligen Stand vor dieser Implementierung.
+
+### Vorheriger Stand vor der Implementierung
+
+Die **Neuheitsprüfung ist noch nicht bis zu einer wissenschaftlich
+abgegrenzten Methodenkandidatin abgeschlossen**. Die frühere Einordnung
+des Entwurfs als bereits begründbare Kandidatin wurde korrigiert.
+Der neue Forschungsauftrag zur Security-Systems-Erweiterung hat bislang
+einen technischen Entwurf mit nicht belegter Methodenneuheit geliefert;
+Entscheidung und Schutzvertrag stehen in
+`docs/cache-state-oblivious-kandidatin-20261103.md`,
+die Originaltextabgrenzung in `docs/security-novelty-matrix-20261103.md`.
+Öffentliche Fenster, TDMA, selektiver Privacy-Schutz und Ausgabetimer sind
+bekannt; neuheitsfähig wäre erst ein konkret begründeter und günstigerer
+normalisierter Übergang von geschütztem Prefill zu gemeinsamem Decode.
+Die zusätzliche enge Vorarbeit IFS (CCS 2021) ist berücksichtigt.
+**SIDE ist nur L1:** Verlags-/Repositorysuche lieferte keinen Volltext,
+auch der Nutzer hat keinen. Eine abschließende Abgrenzung bleibt offen.
+
+Das Offline-Replay `src/tenant_release_feasibility.py` liest 240 alte
+Gruppen / 960 B-Antworten ohne Rohdatenänderung. Protokoll:
+`docs/tenant-release-replay-protokoll-20261103.md`; Ergebnisse, Eingabehashes,
+Rechenkontrollen und Literaturfassungen:
+`results/tenant-release-feasibility-20261103/`.
+Alle Termine stammen nur aus alter Entwicklung. Auf dem Test mit
+verborgenem A-Start deckt eine individuelle öffentliche 1240-ms-Frist
+96/96 Antworten, kostet B median 222,58 ms Zusatzwartezeit und verzögert
+A im festen B-only-Szenario nicht. Vier frühere öffentliche Termine
+senken Bs Median auf 132,11 ms, erzeugen jedoch vier Spätantworten in
+drei Fällen. Das belegt Kosten/Transfergrenzen, **keinen** Vorteil einer
+neuen Enginepolicy und keine formale Vertraulichkeit. Die neu trainierten
+Beobachter, Frontend-Zeitreste und kleinen Stichproben sind dokumentiert.
+
+**Entscheidende Lücke:** Die vorgeschlagene Normalisierung ist nur
+vorausgesetzt, nicht konstruiert; der bedingte Sicherheitsbeweis löst
+sie nicht. Es fehlt ein gegenüber bekannten Bausteinen eigenständiger
+Mechanismus oder eine neue scharfe Grenze. Eine zusätzliche einfache
+Baseline ist gezielte Prefix-Neuberechnung; der installierte interne
+`skip_reading_prefix_cache`-Pfad wurde lesend geprüft. Deren Leistungs-
+und Sicherheitswerte sind ungemessen. Der Neuheitsauftrag bleibt offen,
+unabhängig von der zusätzlichen SIDE-Volltextlücke.
+Keine Verteidigungsimplementierung, kein neuer GPU-Lauf,
+kein Commit und kein Push in dieser Etappe. Der alte empirische Bestand
+bleibt erhalten. Die folgenden Abschnitte halten frühere Etappen fest.
+
 Der **Audit-Entscheidungstest mit verborgener A-Startzeit** ist in
 `docs/tenant-zeitfenster-20261103.md` dokumentiert; Rohdaten
 unter `results/tenant-offset-20261103/`. Mit festen, getrennten

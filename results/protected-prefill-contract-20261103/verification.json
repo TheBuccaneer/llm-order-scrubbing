@@ -1,0 +1,273 @@
+{
+  "status": "manual source-bound logical proof sketch plus CPU witnesses; no GPU or full-stack formal verification",
+  "report_sha256": "d75429a8879e1cda4a4ff33d156013101472d63a9fc5665993bf7da874dd978c",
+  "report_words": 2974,
+  "exact_observation": "request-indexed B response values and logical core decode scheduling; no real client timestamps or HTTP send/receive order",
+  "theorem_scope": "successful fault-free closed 1A/4B cohorts, functional per-request backend, fixed min=max16 and valid private partition state",
+  "join_equivalence": "derived from isolated B computation, actual copy algebra, fresh manager construction and mandatory worker installation before first forward",
+  "assumptions_not_discharged": [
+    "GPU/backend functional correctness and opaque functional library state",
+    "cache-independent successful deadline domain",
+    "real time/network/OS scheduling equivalence"
+  ],
+  "adaptive_scope": "no productive in-cohort arrivals; induction only across reset-separated successful rounds using logical observations",
+  "necessary_engine_patch": false,
+  "production_sources_unchanged": true,
+  "prior_raw_files_checked": 74,
+  "previous_gate_and_CUDA_raw_and_analyses_unchanged": true,
+  "references_rechecked": [
+    "Time Protection:3.2,4.3",
+    "IFS:3.1-3.3,4.1-4.2",
+    "Predictive Mitigation:2.2,3-4 relevant paragraphs",
+    "SafeKV v2:4.3,6"
+  ],
+  "source_map": {
+    "protected_prefill_scheduler.py": {
+      "tenant_of": {
+        "line": 21,
+        "end_line": 26
+      },
+      "__init__": {
+        "line": 36,
+        "end_line": 48
+      },
+      "configure_cohort": {
+        "line": 50,
+        "end_line": 124
+      },
+      "_record": {
+        "line": 128,
+        "end_line": 132
+      },
+      "_fail": {
+        "line": 134,
+        "end_line": 136
+      },
+      "_frontier": {
+        "line": 138,
+        "end_line": 142
+      },
+      "_require_frontier": {
+        "line": 144,
+        "end_line": 153
+      },
+      "state_snapshot": {
+        "line": 155,
+        "end_line": 182
+      },
+      "_sleep_until": {
+        "line": 184,
+        "end_line": 187
+      },
+      "_select_phase": {
+        "line": 189,
+        "end_line": 246
+      },
+      "schedule": {
+        "line": 248,
+        "end_line": 334
+      },
+      "update_from_output": {
+        "line": 336,
+        "end_line": 350
+      },
+      "end_cohort": {
+        "line": 352,
+        "end_line": 364
+      }
+    },
+    "tenant_kv_partition.py": {
+      "__init__": {
+        "line": 26,
+        "end_line": 50
+      },
+      "_new_manager": {
+        "line": 52,
+        "end_line": 67
+      },
+      "_manager": {
+        "line": 69,
+        "end_line": 75
+      },
+      "get_computed_blocks": {
+        "line": 77,
+        "end_line": 96
+      },
+      "set_protected_alignment": {
+        "line": 98,
+        "end_line": 107
+      },
+      "allocate_slots": {
+        "line": 109,
+        "end_line": 110
+      },
+      "free": {
+        "line": 112,
+        "end_line": 113
+      },
+      "get_blocks": {
+        "line": 115,
+        "end_line": 116
+      },
+      "get_block_ids": {
+        "line": 118,
+        "end_line": 119
+      },
+      "cache_blocks": {
+        "line": 121,
+        "end_line": 122
+      },
+      "remove_skipped_blocks": {
+        "line": 124,
+        "end_line": 125
+      },
+      "get_num_common_prefix_blocks": {
+        "line": 127,
+        "end_line": 130
+      },
+      "new_step_starts": {
+        "line": 132,
+        "end_line": 134
+      },
+      "take_new_block_ids": {
+        "line": 136,
+        "end_line": 138
+      },
+      "take_events": {
+        "line": 140,
+        "end_line": 141
+      },
+      "evict_blocks": {
+        "line": 143,
+        "end_line": 153
+      },
+      "reset_prefix_cache": {
+        "line": 155,
+        "end_line": 159
+      },
+      "reset_all": {
+        "line": 161,
+        "end_line": 175
+      },
+      "all_physical_block_ids": {
+        "line": 179,
+        "end_line": 181
+      },
+      "make_prefix_cache_stats": {
+        "line": 183,
+        "end_line": 195
+      },
+      "usage": {
+        "line": 198,
+        "end_line": 201
+      },
+      "plan_canonical": {
+        "line": 203,
+        "end_line": 249
+      },
+      "commit_canonical": {
+        "line": 251,
+        "end_line": 280
+      },
+      "snapshot": {
+        "line": 282,
+        "end_line": 309
+      },
+      "_free_ids": {
+        "line": 312,
+        "end_line": 319
+      }
+    },
+    "protected_prefill_pilot.py": {
+      "gpu_canonical_copy": {
+        "line": 33,
+        "end_line": 83
+      },
+      "main": {
+        "line": 270,
+        "end_line": 345
+      },
+      "__init__": {
+        "line": 87,
+        "end_line": 135
+      },
+      "add": {
+        "line": 137,
+        "end_line": 148
+      },
+      "drain": {
+        "line": 150,
+        "end_line": 184
+      },
+      "normalize": {
+        "line": 186,
+        "end_line": 199
+      },
+      "prepare": {
+        "line": 201,
+        "end_line": 211
+      },
+      "case": {
+        "line": 213,
+        "end_line": 267
+      },
+      "observe_schedule": {
+        "line": 129,
+        "end_line": 134
+      },
+      "release": {
+        "line": 154,
+        "end_line": 161
+      },
+      "timed": {
+        "line": 119,
+        "end_line": 126
+      }
+    },
+    "protected_prefill_server.py": {
+      "execute": {
+        "line": 167,
+        "end_line": 196
+      },
+      "main": {
+        "line": 199,
+        "end_line": 252
+      },
+      "finish": {
+        "line": 38,
+        "end_line": 40
+      },
+      "__init__": {
+        "line": 44,
+        "end_line": 52
+      },
+      "log_message": {
+        "line": 58,
+        "end_line": 59
+      },
+      "send_json": {
+        "line": 61,
+        "end_line": 70
+      },
+      "do_GET": {
+        "line": 72,
+        "end_line": 73
+      },
+      "do_POST": {
+        "line": 75,
+        "end_line": 164
+      },
+      "deliver": {
+        "line": 180,
+        "end_line": 183
+      }
+    }
+  },
+  "trusted_backend_source_sha256": {
+    "model_executor/models/qwen2.py": "f94a099ef0a2d6d4143830836cfa282497ac103b4eba21a73dab74790614bcfe",
+    "v1/sample/sampler.py": "b93600890dabde54310a39b34cf2a96173fbb66211b9d4a74386c1ab9ee4ae5e",
+    "v1/attention/backends/flash_attn.py": "1a56d1f828f14cdff853e8d606c0f0807fda4d75ea7c8b2ac3340a97909deeef",
+    "v1/core/kv_cache_manager.py": "fee4f3f63a1ed0478e7c1636a0bb7ce1d5db206e3e547994577984a408959249",
+    "v1/core/block_pool.py": "2ea932628ac6a06607dd48ded7a908f705b55c3eb6801232264ee2db142c6cd9"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "offline trace extraction and dependency/cost construction only",
+  "no_new_scheduler_code": true,
+  "no_new_GPU_trials": true,
+  "gate_source_files_unchanged": 5,
+  "prior_raw_files_unchanged": 74,
+  "gate_raw_and_analysis_unchanged": true,
+  "extracted_rows": 72,
+  "new_analysis_sha256": "3f2ec3c7fd3aeea7afd1d3c6d1af803736b5daa50c8735c578262a62ee099989",
+  "phase_records_sha256": "961db2b4c212cf73a6601d301a6cb4660d0a49a802c18d6967ac093bd8beab53",
+  "latency_vs_service_cost_distinguished": true,
+  "implementation_decision": "not started: no affirmative evidence for required concurrent hardware overlap; pipeline does not shorten individual latency in this schedule"
+}

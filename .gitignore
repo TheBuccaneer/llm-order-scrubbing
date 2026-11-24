@@ -8,6 +8,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+results/protected-prefill*/local-tokens.json
 
 # Modelle und Rohdaten
 *.safetensors

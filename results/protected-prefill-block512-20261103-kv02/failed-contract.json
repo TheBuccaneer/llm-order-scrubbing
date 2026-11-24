@@ -1,0 +1,483 @@
+{
+  "mode": "protected_block512",
+  "condition": "cold",
+  "error": "ProtectedPrefillError('GPU step finished after its public protected-window boundary')",
+  "trace": [
+    {
+      "event": "configure",
+      "elapsed_ms": 6.55827,
+      "windows_ms": [
+        [
+          0.0,
+          200.0,
+          "A"
+        ],
+        [
+          200.0,
+          650.0,
+          "B"
+        ]
+      ],
+      "join_ms": 1150,
+      "request_ids": [
+        "A:1:A-a8d0025c",
+        "B:2:A-adabf809",
+        "B:3:B-9b1eaf80",
+        "B:4:C-806db4c6",
+        "B:5:D-86a1ab6b"
+      ],
+      "prefill_chunk_tokens": 512
+    },
+    {
+      "event": "schedule",
+      "elapsed_ms": 6.771725,
+      "phase": "prefill",
+      "owner": "A",
+      "scheduled_tokens": {
+        "A:1:A-a8d0025c": 512
+      },
+      "remapped_ids": [],
+      "running": [
+        "A:1:A-a8d0025c"
+      ]
+    },
+    {
+      "event": "gpu_output_drained",
+      "elapsed_ms": 124.876722,
+      "phase": "prefill",
+      "request_ids": [
+        "A:1:A-a8d0025c"
+      ]
+    },
+    {
+      "event": "schedule",
+      "elapsed_ms": 125.038556,
+      "phase": "prefill",
+      "owner": "A",
+      "scheduled_tokens": {
+        "A:1:A-a8d0025c": 36
+      },
+      "remapped_ids": [],
+      "running": [
+        "A:1:A-a8d0025c"
+      ]
+    },
+    {
+      "event": "gpu_output_drained",
+      "elapsed_ms": 146.533347,
+      "phase": "prefill",
+      "request_ids": [
+        "A:1:A-a8d0025c"
+      ]
+    },
+    {
+      "event": "schedule",
+      "elapsed_ms": 200.363446,
+      "phase": "prefill",
+      "owner": "B",
+      "scheduled_tokens": {
+        "B:2:A-adabf809": 512,
+        "B:3:B-9b1eaf80": 512,
+        "B:4:C-806db4c6": 512,
+        "B:5:D-86a1ab6b": 512
+      },
+      "remapped_ids": [],
+      "running": [
+        "A:1:A-a8d0025c",
+        "B:2:A-adabf809",
+        "B:3:B-9b1eaf80",
+        "B:4:C-806db4c6",
+        "B:5:D-86a1ab6b"
+      ]
+    },
+    {
+      "event": "gpu_output_drained",
+      "elapsed_ms": 613.201116,
+      "phase": "prefill",
+      "request_ids": [
+        "B:2:A-adabf809",
+        "B:3:B-9b1eaf80",
+        "B:4:C-806db4c6",
+        "B:5:D-86a1ab6b"
+      ]
+    },
+    {
+      "event": "schedule",
+      "elapsed_ms": 613.452972,
+      "phase": "prefill",
+      "owner": "B",
+      "scheduled_tokens": {
+        "B:2:A-adabf809": 36,
+        "B:3:B-9b1eaf80": 36,
+        "B:4:C-806db4c6": 36,
+        "B:5:D-86a1ab6b": 36
+      },
+      "remapped_ids": [],
+      "running": [
+        "A:1:A-a8d0025c",
+        "B:2:A-adabf809",
+        "B:3:B-9b1eaf80",
+        "B:4:C-806db4c6",
+        "B:5:D-86a1ab6b"
+      ]
+    },
+    {
+      "event": "gpu_output_drained",
+      "elapsed_ms": 669.978113,
+      "phase": "prefill",
+      "request_ids": [
+        "B:2:A-adabf809",
+        "B:3:B-9b1eaf80",
+        "B:4:C-806db4c6",
+        "B:5:D-86a1ab6b"
+      ]
+    },
+    {
+      "event": "contract_failure",
+      "elapsed_ms": 669.984003,
+      "message": "GPU step finished after its public protected-window boundary"
+    }
+  ],
+  "state": {
+    "requests": [
+      {
+        "request_id": "A:1:A-a8d0025c",
+        "tenant": "A",
+        "prompt_tokens": 548,
+        "computed_tokens": 548,
+        "total_logical_tokens": 549,
+        "output_tokens": 1,
+        "first_output_token_ids": [
+          576
+        ],
+        "cached_tokens": 0,
+        "output_placeholders": 0,
+        "is_prefill_chunk": false,
+        "external_computed_tokens": 0,
+        "speculative_tokens": [],
+        "preemptions": 0,
+        "status": "RUNNING",
+        "block_ids": [
+          [
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70
+          ]
+        ]
+      },
+      {
+        "request_id": "B:2:A-adabf809",
+        "tenant": "B",
+        "prompt_tokens": 548,
+        "computed_tokens": 548,
+        "total_logical_tokens": 549,
+        "output_tokens": 1,
+        "first_output_token_ids": [
+          576
+        ],
+        "cached_tokens": 0,
+        "output_placeholders": 0,
+        "is_prefill_chunk": false,
+        "external_computed_tokens": 0,
+        "speculative_tokens": [],
+        "preemptions": 0,
+        "status": "RUNNING",
+        "block_ids": [
+          [
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137,
+            138,
+            139,
+            140,
+            141,
+            142,
+            143,
+            144,
+            145,
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154,
+            155,
+            156,
+            157,
+            158,
+            159,
+            160,
+            257,
+            258,
+            259
+          ]
+        ]
+      },
+      {
+        "request_id": "B:3:B-9b1eaf80",
+        "tenant": "B",
+        "prompt_tokens": 548,
+        "computed_tokens": 548,
+        "total_logical_tokens": 549,
+        "output_tokens": 1,
+        "first_output_token_ids": [
+          576
+        ],
+        "cached_tokens": 0,
+        "output_placeholders": 0,
+        "is_prefill_chunk": false,
+        "external_computed_tokens": 0,
+        "speculative_tokens": [],
+        "preemptions": 0,
+        "status": "RUNNING",
+        "block_ids": [
+          [
+            161,
+            162,
+            163,
+            164,
+            165,
+            166,
+            167,
+            168,
+            169,
+            170,
+            171,
+            172,
+            173,
+            174,
+            175,
+            176,
+            177,
+            178,
+            179,
+            180,
+            181,
+            182,
+            183,
+            184,
+            185,
+            186,
+            187,
+            188,
+            189,
+            190,
+            191,
+            192,
+            260,
+            261,
+            262
+          ]
+        ]
+      },
+      {
+        "request_id": "B:4:C-806db4c6",
+        "tenant": "B",
+        "prompt_tokens": 548,
+        "computed_tokens": 548,
+        "total_logical_tokens": 549,
+        "output_tokens": 1,
+        "first_output_token_ids": [
+          576
+        ],
+        "cached_tokens": 0,
+        "output_placeholders": 0,
+        "is_prefill_chunk": false,
+        "external_computed_tokens": 0,
+        "speculative_tokens": [],
+        "preemptions": 0,
+        "status": "RUNNING",
+        "block_ids": [
+          [
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            209,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215,
+            216,
+            217,
+            218,
+            219,
+            220,
+            221,
+            222,
+            223,
+            224,
+            263,
+            264,
+            265
+          ]
+        ]
+      },
+      {
+        "request_id": "B:5:D-86a1ab6b",
+        "tenant": "B",
+        "prompt_tokens": 548,
+        "computed_tokens": 548,
+        "total_logical_tokens": 549,
+        "output_tokens": 1,
+        "first_output_token_ids": [
+          576
+        ],
+        "cached_tokens": 0,
+        "output_placeholders": 0,
+        "is_prefill_chunk": false,
+        "external_computed_tokens": 0,
+        "speculative_tokens": [],
+        "preemptions": 0,
+        "status": "RUNNING",
+        "block_ids": [
+          [
+            225,
+            226,
+            227,
+            228,
+            229,
+            230,
+            231,
+            232,
+            233,
+            234,
+            235,
+            236,
+            237,
+            238,
+            239,
+            240,
+            241,
+            242,
+            243,
+            244,
+            245,
+            246,
+            247,
+            248,
+            249,
+            250,
+            251,
+            252,
+            253,
+            254,
+            255,
+            256,
+            266,
+            267,
+            268
+          ]
+        ]
+      }
+    ],
+    "running": [
+      "A:1:A-a8d0025c",
+      "B:2:A-adabf809",
+      "B:3:B-9b1eaf80",
+      "B:4:C-806db4c6",
+      "B:5:D-86a1ab6b"
+    ],
+    "waiting": [],
+    "inflight": [],
+    "scheduled_token_budget": 256,
+    "prefill_chunk_threshold": 64,
+    "prev_step": [
+      "B:2:A-adabf809",
+      "B:3:B-9b1eaf80",
+      "B:4:C-806db4c6",
+      "B:5:D-86a1ab6b"
+    ]
+  },
+  "steps": [
+    {
+      "phase": "prefill",
+      "tokens": {
+        "A:1:A-a8d0025c": 512
+      },
+      "scheduled_tokens": 512
+    },
+    {
+      "phase": "prefill",
+      "tokens": {
+        "A:1:A-a8d0025c": 36
+      },
+      "scheduled_tokens": 36
+    },
+    {
+      "phase": "prefill",
+      "tokens": {
+        "B:2:A-adabf809": 512,
+        "B:3:B-9b1eaf80": 512,
+        "B:4:C-806db4c6": 512,
+        "B:5:D-86a1ab6b": 512
+      },
+      "scheduled_tokens": 2048
+    },
+    {
+      "phase": "prefill",
+      "tokens": {
+        "B:2:A-adabf809": 36,
+        "B:3:B-9b1eaf80": 36,
+        "B:4:C-806db4c6": 36,
+        "B:5:D-86a1ab6b": 36
+      },
+      "scheduled_tokens": 144
+    }
+  ]
+}

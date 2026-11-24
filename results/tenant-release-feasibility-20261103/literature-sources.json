@@ -1,0 +1,248 @@
+{
+  "cutoff": "2026-11-03",
+  "scope": "targeted review, not exhaustive; unresolved SIDE full text",
+  "sources": [
+    {
+      "name": "fairinference",
+      "url": "https://arxiv.org/pdf/2609.18112v1",
+      "sha256": "77356387bd25a14fc29560e4b0f254d05ae90d1a01da3efacbfb3606141b4d5c",
+      "bytes": 1902742,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "2–5.7, Algorithms 2/3, 6–7.1; PDF page 6 visually checked",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/fairinference.pdf"
+    },
+    {
+      "name": "kvgov",
+      "url": "https://arxiv.org/pdf/2608.09225v1",
+      "sha256": "6743c519d28513a57182aca6115af8f935241baea7bd3e709cf0a6e5177c1372",
+      "bytes": 278235,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "2.3, 4.1–4.3, 5, 7",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/kvgov.pdf"
+    },
+    {
+      "name": "prefixwall",
+      "url": "https://arxiv.org/pdf/2603.10726v2",
+      "sha256": "1813fcf1c3e0fe2f7325994f9c821762889b9dfba6551222fdf62a2b42749395",
+      "bytes": 1034587,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "2.4, 3–5",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/prefixwall.pdf"
+    },
+    {
+      "name": "cache-solidarity",
+      "url": "https://arxiv.org/pdf/2603.10726v1",
+      "sha256": "37a57c7aca84c7368ea68ae2ae93b681433cba59fee659f9657767f6fad44da7",
+      "bytes": 1030809,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "overview, design; earlier version of PrefixWall",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/cache-solidarity.pdf"
+    },
+    {
+      "name": "safekv",
+      "url": "https://arxiv.org/pdf/2508.08438v2",
+      "sha256": "3e7c3406d613bbf80a4b05ca8eee5026222eedfa57abcc028ac0d82d8a76bbb7",
+      "bytes": 2998160,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "3–4, 6–7",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/safekv.pdf"
+    },
+    {
+      "name": "pacer",
+      "url": "https://www.usenix.org/system/files/sec22-mehta.pdf",
+      "sha256": "af5f96f08d89cde6a2ff18ee87372ac2eefd97f870a411e857af423e3e29575a",
+      "bytes": 1175683,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "2.2–4, 6",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/pacer.pdf"
+    },
+    {
+      "name": "accumulate",
+      "url": "https://arxiv.org/pdf/1302.6123",
+      "sha256": "d934384ef0ae5451aba6c32d72a547fd778debfaf54d72d4b958981da5ba2751",
+      "bytes": 656084,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "III–VI, Theorems 5.1/5.2",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/accumulate.pdf"
+    },
+    {
+      "name": "workconserving",
+      "url": "https://arxiv.org/pdf/1403.1276",
+      "sha256": "83c0aa328f206f72ad04b523d7c0a2572b5bc321b1aa0d13837e1182de1d0b07",
+      "bytes": 873027,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "II, IV-E, Theorem 4.7",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/workconserving.pdf"
+    },
+    {
+      "name": "onesided",
+      "url": "https://people.csail.mit.edu/devadas/pubs/one_sided_noise.pdf",
+      "sha256": "667236ef4432140155cebce3bc0e181dcf6e07ba182fad235343034d63b8fa4e",
+      "bytes": 2193900,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "1.2, 2, 3–5, Theorem 4, 5.2",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/onesided.pdf"
+    },
+    {
+      "name": "netshaper",
+      "url": "https://www.usenix.org/system/files/sec24-sabzi.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "sarathi",
+      "url": "https://arxiv.org/pdf/2403.02310",
+      "sha256": "45f59f4474de29baf4d315c785b850625548b69a9bc7be2e036d6fc59f54b54a",
+      "bytes": 1945812,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "3.2, 4.1–4.3, 5.4; v3",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/sarathi.pdf"
+    },
+    {
+      "name": "optional-privacy",
+      "url": "https://www.cis.upenn.edu/~sga001/papers/ifs-ccs21.pdf",
+      "sha256": "e309f2df82794ed47b9b491f0096c0fc2946dfcfaca6d962e6bab02eb6b31447",
+      "bytes": 665137,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "3–5, 7–8; PDF page 4 visually checked",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/optional-privacy.pdf"
+    },
+    {
+      "name": "predictive",
+      "url": "https://www.cs.cornell.edu/andru/papers/mitigation.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "netshaper",
+      "url": "https://www.usenix.org/system/files/usenixsecurity24-sabzi.pdf",
+      "sha256": "ec723cbb55460f70295cad599aa998b3750dfa62ace94985610624eb30d183a9",
+      "bytes": 1821795,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "2.3, 3–4.3, 5, final USENIX version",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/netshaper.pdf"
+    },
+    {
+      "name": "predictive2010",
+      "url": "https://www.cs.cornell.edu/andru/papers/ccs10.pdf",
+      "sha256": "88c62a0eba51e89784041571009ab9e164e0de3ce53481a42b3855366dd7d15f",
+      "bytes": 464163,
+      "status": "downloaded",
+      "read_level": "L1",
+      "read_sections": "abstract and historical relation only",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/predictive2010.pdf"
+    },
+    {
+      "name": "predictive2011",
+      "url": "https://www.cs.cornell.edu/andru/papers/ccs11.pdf",
+      "sha256": "586e0de94a6929dc29bfe2c947433caa30d655d608622e2db4419628ec1deb4f",
+      "bytes": 411142,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "2–5, 6",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/predictive2011.pdf"
+    },
+    {
+      "name": "information-schedulers",
+      "url": "https://arxiv.org/pdf/1306.3484",
+      "sha256": "f23044f0d38fb12615003a5b9178b4815be0001087e517c0c8e57158c0fb0b70",
+      "bytes": 1402389,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "II, III-E, IV, Theorems 3.6/4.2/4.3",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/information-schedulers.pdf"
+    },
+    {
+      "name": "timeprotection",
+      "url": "https://www.sigops.org/s/conferences/eurosys/2019/papers/EuroSys19_paper_104.pdf",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "timeprotection",
+      "url": "https://yuval.yarom.org/pdfs/GeYCH19.pdf",
+      "sha256": "c721d53a4a5ef5a331bbd28aea74f3abfb7a01b8912cbb655a37b0644d6a9323",
+      "bytes": 1179700,
+      "status": "downloaded",
+      "read_level": "L2",
+      "read_sections": "3.2, 4.3, 5.1",
+      "temporary_pdf_path": "/home/rock/projects/llm-order-scrubbing/.tmp/security-audit-20261103/timeprotection.pdf"
+    },
+    {
+      "name": "SIDE",
+      "url": "https://doi.org/10.1109/TMC.2026.3729753",
+      "read_level": "L1",
+      "status": "full text unavailable",
+      "access_checks": [
+        "IEEE publisher abstract",
+        "IEEE PDF request returned HTTP 418",
+        "OpenAlex reported closed/no repository fulltext",
+        "author/title searches; user has no fulltext"
+      ]
+    },
+    {
+      "name": "P-PAS",
+      "url": "https://arxiv.org/html/2608.15171v1",
+      "read_level": "L2",
+      "read_sections": "3, Algorithm 1, 4–5",
+      "status": "read online"
+    },
+    {
+      "name": "Cascade",
+      "url": "https://arxiv.org/html/2608.06557v1",
+      "read_level": "L2",
+      "read_sections": "IV-A–IV-C, V-A",
+      "status": "read online"
+    },
+    {
+      "name": "EdgePace",
+      "url": "https://arxiv.org/html/2610.37307v1",
+      "read_level": "L2",
+      "read_sections": "3.1–3.3, 4.1",
+      "status": "read online"
+    },
+    {
+      "name": "KV-Cloak",
+      "url": "https://www.ndss-symposium.org/wp-content/uploads/2026-f258-paper.pdf",
+      "read_level": "L1/introduction",
+      "status": "scope screening only"
+    },
+    {
+      "name": "vLLM 0.17.1 scheduler config",
+      "url": "https://docs.vllm.ai/en/v0.17.1/api/vllm/config/scheduler/",
+      "read_level": "L2",
+      "read_sections": "scheduler_cls, policy and local installed source",
+      "status": "read online and local"
+    },
+    {
+      "name": "vLLM prefix cache",
+      "url": "https://docs.vllm.ai/en/v0.17.1/design/prefix_caching/",
+      "read_level": "L2",
+      "read_sections": "Cache Isolation for Security",
+      "status": "read online"
+    },
+    {
+      "name": "vLLM current security",
+      "url": "https://docs.vllm.ai/en/latest/usage/security/",
+      "read_level": "L2",
+      "read_sections": "Multi-Tenant Deployments, dated 2026-10-30",
+      "status": "read online"
+    }
+  ],
+  "search_families": [
+    "named mandatory papers and author PDFs",
+    "LLM + cache state / oblivious scheduling / noninterference / timing isolation",
+    "LLM + prefill/decode + timing side-channel defense",
+    "GPU temporal isolation, time protection, optional client privacy",
+    "recent phase-aware schedulers through 2026-11-03"
+  ]
+}

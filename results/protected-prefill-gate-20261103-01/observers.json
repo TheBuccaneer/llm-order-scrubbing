@@ -1,0 +1,130 @@
+{
+  "train_sha256": "9459b70443b0ab578c20b69ebdf70de7c09e13bec397e0ba3eafa3790c1af3db",
+  "train_cohorts": 72,
+  "sklearn_version": "1.8.0",
+  "features": "B A/B/C/D own released-minus-sent milliseconds plus failure bit; no A/backend/cache fields",
+  "stump_feature": "min(B released_ns)-min(B sent_ns); failure observed_failure_ns-min(B sent_ns)",
+  "threshold_tie": "direction -1 before +1; ascending train midpoints; first maximum retained",
+  "models": {
+    "protected_block512": {
+      "stump": {
+        "direction": 1,
+        "threshold_ms": 1020.6392515,
+        "train_balanced_accuracy": 0.6666666666666667
+      },
+      "logistic": {
+        "mean": [
+          1022.0331352083334,
+          1020.895781833333,
+          1019.7358870416668,
+          1018.5903894166669,
+          0.0
+        ],
+        "scale": [
+          3.4876114681169117,
+          3.4942380940828617,
+          3.5017489021624133,
+          3.516921926320445,
+          1.0
+        ],
+        "coefficient": [
+          0.0269355723494677,
+          0.014895213936614644,
+          0.004973548438137454,
+          -0.012549078776674124,
+          0.0
+        ],
+        "intercept": -6.551014199693845e-06,
+        "classes": [
+          0,
+          1
+        ],
+        "C": 1,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      },
+      "train_sha256": "f05de99cd067e2a69f33864229abd17767bdcc6a3053f29f90ae7721488ec3f7",
+      "train_cohorts": 24
+    },
+    "ignore_hits": {
+      "stump": {
+        "direction": -1,
+        "threshold_ms": 909.1161875,
+        "train_balanced_accuracy": 0.75
+      },
+      "logistic": {
+        "mean": [
+          914.9538904583333,
+          913.8052232083336,
+          912.6372448333333,
+          933.3002088749998,
+          0.0
+        ],
+        "scale": [
+          10.81606919712482,
+          10.826122242152183,
+          10.834231731410968,
+          10.863097330798752,
+          1.0
+        ],
+        "coefficient": [
+          -0.16724708265657798,
+          -0.1511670800603924,
+          -0.13762742495975966,
+          -0.146017635532953,
+          0.0
+        ],
+        "intercept": -0.019774480202195414,
+        "classes": [
+          0,
+          1
+        ],
+        "C": 1,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      },
+      "train_sha256": "604e0dfa8263293c99f0f1c543d17f3d14a5404be85083f005d2151c62daadfd",
+      "train_cohorts": 24
+    },
+    "release1240": {
+      "stump": {
+        "direction": -1,
+        "threshold_ms": 1240.0697645,
+        "train_balanced_accuracy": 0.6666666666666667
+      },
+      "logistic": {
+        "mean": [
+          1240.0659287916667,
+          1240.0647130000002,
+          1240.0687505833334,
+          1240.0736695833334,
+          0.0
+        ],
+        "scale": [
+          0.010486358877053738,
+          0.017497330463058906,
+          0.014346709767752083,
+          0.04372948075279212,
+          1.0
+        ],
+        "coefficient": [
+          -0.10457869012159339,
+          -0.26634982601497914,
+          -0.07211628788264099,
+          -0.6334805191927635,
+          0.0
+        ],
+        "intercept": -0.024966401924340496,
+        "classes": [
+          0,
+          1
+        ],
+        "C": 1,
+        "solver": "lbfgs",
+        "max_iter": 1000
+      },
+      "train_sha256": "56b0e4fe4ee1dcc1c60c61170877d2064d33f36091bbd75017f27c3c6c847d37",
+      "train_cohorts": 24
+    }
+  }
+}

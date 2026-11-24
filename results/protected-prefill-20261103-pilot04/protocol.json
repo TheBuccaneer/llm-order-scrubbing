@@ -1,0 +1,43 @@
+{
+  "status": "functional development pilot, not confirmation or hardware security proof",
+  "public_windows_ms": {
+    "A": [
+      0,
+      230
+    ],
+    "B": [
+      230,
+      890
+    ]
+  },
+  "join_ms": 940,
+  "pairs": 2,
+  "policies": [
+    "protected",
+    "release1240",
+    "ignore_hits",
+    "direct"
+  ],
+  "attacker": "no new classifier; existing first/full-completion timing diagnostic only",
+  "observations": "in-process serving harness full response availability, no HTTP/network",
+  "model": "/home/rock/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+  "kv_quotas": {
+    "A": 128,
+    "B": 256
+  },
+  "block_size": 16,
+  "calibration_source": "results/protected-prefill-20261103-smoke01/trials.jsonl",
+  "calibration_phase_durations": [
+    {
+      "A": 197.144485,
+      "B": 604.0350470000001
+    },
+    {
+      "A": 21.276802,
+      "B": 630.14336
+    }
+  ],
+  "protected_A_prefix_alignment_tokens": 64,
+  "expected_protected_warm_hits": 512,
+  "audit_kv_bytes": false
+}
